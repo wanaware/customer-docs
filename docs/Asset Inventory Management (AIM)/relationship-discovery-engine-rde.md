@@ -16,9 +16,14 @@ Within the intricate architecture of this knowledge graph, the RDE meticulously 
   The RDE provides an intuitive visualization of both the physical and logical connections among assets. This 	includes a clear depiction of their organization within the infrastructure, offering a transparent picture 		of the network architecture. This topological insight is invaluable for understanding data flow, identifying 	 bottlenecks, and planning infrastructure expansions.
 </Accordion>
 
-Topology: The RDE provides an intuitive visualization of both the physical and logical connections among assets. This includes a clear depiction of their organization within the infrastructure, offering a transparent picture of the network architecture. This topological insight is invaluable for understanding data flow, identifying bottlenecks, and planning infrastructure expansions.
-Security Controls: A crucial aspect of the RDE's capability is its ability to map out and apply security measures. This includes a comprehensive understanding of elements like firewalls, access control lists (ACLs), and security groups, and how they are applied to different assets. This mapping significantly aids in the proactive identification of vulnerabilities, ensuring robust compliance with security policies and regulatory frameworks.
-Routing Flows: The RDE meticulously traces data paths between assets, providing profound insights into network performance, enabling efficient troubleshooting of connectivity issues, and facilitating the optimization of data transfer. This detailed understanding of routing is vital for maintaining high availability and ensuring optimal application performance.
+<Accordion title="Security Controls" icon="fa-info-circle">
+  A crucial aspect of the RDE's capability is its ability to map out and apply security measures. This includes a comprehensive understanding of elements like firewalls, access control lists (ACLs), and security groups, and how they are applied to different assets. This mapping significantly aids in the proactive identification of vulnerabilities, ensuring robust compliance with security policies and regulatory frameworks.
+</Accordion>
+
+<Accordion title="Routing Flows" icon="fa-info-circle">
+  The RDE meticulously traces data paths between assets, providing profound insights into network performance, enabling efficient troubleshooting of connectivity issues, and facilitating the optimization of data transfer. This detailed understanding of routing is vital for maintaining high availability and ensuring optimal application performance.
+</Accordion>
+
 The robust construction of this dynamic knowledge graph is further enhanced by the strategic integration of static templates and advanced machine learning (ML) algorithms. Static templates serve as predefined structures for common asset types, significantly streamlining the categorization and connection of new data based on established patterns.
 
 Complementing this, sophisticated ML algorithms continuously analyze incoming data. These algorithms are designed to discover novel relationships and identify anomalies that might be missed by traditional rule-based systems. This continuous analysis enriches the graph with previously unknown connections, uncovering hidden dependencies and potential risks.
