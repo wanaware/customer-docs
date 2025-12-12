@@ -1,0 +1,2163 @@
+openapi: 3.0.3
+info:
+  title: Function Integrator API
+  description: >-
+    API for managing functions, structure tags, data tags, and their
+    relationships
+  version: 1.0.0
+  contact:
+    name: Wanaware Function Integrator
+servers:
+  - url: https://api.wanaware.com/v1
+    description: Production server
+  - url: https://staging-api.wanaware.com/v1
+    description: Staging server
+paths:
+  /structure-tags:
+    get:
+      summary: Get structure tags
+      description: Retrieve structure tags with optional filtering and selection options
+      parameters:
+        - name: ids
+          in: query
+          description: Array of structure tag IDs to filter by
+          schema:
+            type: array
+            items:
+              type: string
+        - name: onlyRootTags
+          in: query
+          description: Return only root-level tags
+          schema:
+            type: boolean
+            default: false
+        - name: tree
+          in: query
+          description: Include tree structure
+          schema:
+            type: boolean
+            default: false
+        - name: childTree
+          in: query
+          description: Include child tree
+          schema:
+            type: boolean
+            default: false
+        - name: parentTree
+          in: query
+          description: Include parent tree
+          schema:
+            type: boolean
+            default: false
+        - name: functionRelationship
+          in: query
+          description: Include function relationships
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Successfully retrieved structure tags
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StructureTagResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create structure tags
+      description: Create one or more structure tags
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/StructureTagInput'
+      responses:
+        '201':
+          description: Structure tags created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StructureTagResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /structure-tags/{id}:
+    put:
+      summary: Update structure tag
+      description: Update a structure tag by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Structure tag ID
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StructureTagInput'
+      responses:
+        '200':
+          description: Structure tag updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StructureTagResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /structure-tags/batch-delete:
+    delete:
+      summary: Delete structure tags
+      description: Delete multiple structure tags by IDs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              required:
+                - ids
+      responses:
+        '200':
+          description: Structure tags deleted successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StructureTagResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /structure-tags/by-function:
+    get:
+      summary: Get structure tags by function IDs
+      description: Retrieve structure tags associated with specific function IDs
+      parameters:
+        - name: functionIDs
+          in: query
+          required: true
+          description: Array of function IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved structure tags by function IDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StructureTagByFunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-subtypes:
+    get:
+      summary: Get function sub types
+      description: Retrieve function sub types by ID
+      parameters:
+        - name: id
+          in: query
+          description: Function sub type ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved function sub types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create function sub type
+      description: Create a new function sub type
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FunctionSubTypeInput'
+      responses:
+        '201':
+          description: Function sub type created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-subtypes/{id}:
+    put:
+      summary: Update function sub type
+      description: Update a function sub type by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Function sub type ID
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FunctionSubTypeInput'
+      responses:
+        '200':
+          description: Function sub type updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Delete function sub type
+      description: Delete a function sub type by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Function sub type ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Function sub type deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-subtypes/counts:
+    get:
+      summary: Get function subtype counts
+      description: Get function subtype counts for a specific function type
+      parameters:
+        - name: functionType
+          in: query
+          required: true
+          description: Function type to filter by
+          schema:
+            $ref: '#/components/schemas/FunctionType'
+        - name: siteId
+          in: query
+          description: Site ID to filter by
+          schema:
+            type: string
+        - name: fromDate
+          in: query
+          description: Start date for filtering
+          schema:
+            type: string
+            format: date-time
+        - name: toDate
+          in: query
+          description: End date for filtering
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Successfully retrieved function subtype counts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionSubTypeCountResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /functions:
+    get:
+      summary: Get functions
+      description: Retrieve functions with comprehensive filtering and pagination
+      parameters:
+        - name: page
+          in: query
+          description: Page number for pagination
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: size
+          in: query
+          description: Number of items per page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 10
+        - name: functionType
+          in: query
+          description: Filter by function type
+          schema:
+            $ref: '#/components/schemas/FunctionType'
+        - name: functionSubType
+          in: query
+          description: Filter by function sub types
+          schema:
+            type: array
+            items:
+              type: string
+        - name: name
+          in: query
+          description: Filter by function name
+          schema:
+            type: string
+        - name: source
+          in: query
+          description: Filter by source
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Source'
+        - name: dataTagIDs
+          in: query
+          description: Filter by data tag IDs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: structureTagIDs
+          in: query
+          description: Filter by structure tag IDs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: includeAttributes
+          in: query
+          description: Include function attributes
+          schema:
+            type: boolean
+            default: true
+        - name: includeParents
+          in: query
+          description: Include parent functions
+          schema:
+            type: boolean
+            default: true
+        - name: includeDataTags
+          in: query
+          description: Include data tags
+          schema:
+            type: boolean
+            default: true
+        - name: includeStructureTags
+          in: query
+          description: Include structure tags
+          schema:
+            type: boolean
+            default: true
+        - name: includeFunctionInterfaces
+          in: query
+          description: Include function interfaces
+          schema:
+            type: boolean
+            default: true
+        - name: includeFunctionIPs
+          in: query
+          description: Include function IPs
+          schema:
+            type: boolean
+            default: true
+        - name: includeRelatives
+          in: query
+          description: Include function relatives
+          schema:
+            type: boolean
+            default: true
+        - name: sortField
+          in: query
+          description: Field to sort by
+          schema:
+            type: string
+            enum:
+              - NAME
+              - CREATED_AT
+              - UPDATED_AT
+        - name: sortOrder
+          in: query
+          description: Sort order
+          schema:
+            type: string
+            enum:
+              - ASC
+              - DESC
+            default: ASC
+      responses:
+        '200':
+          description: Successfully retrieved functions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PagedFunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create functions
+      description: Create one or more functions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/FunctionInput'
+      responses:
+        '201':
+          description: Functions created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateFunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /functions/{id}:
+    put:
+      summary: Update function
+      description: Update a function by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Function ID
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FunctionInput'
+      responses:
+        '200':
+          description: Function updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /functions/batch-delete:
+    delete:
+      summary: Delete functions
+      description: Delete multiple functions by IDs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              required:
+                - ids
+      responses:
+        '200':
+          description: Functions deleted successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /functions/by-external-id:
+    put:
+      summary: Update functions by external ID
+      description: Update functions using their external IDs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/FunctionInput'
+      responses:
+        '200':
+          description: Functions updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateFunctionByExternalIDResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /functions/by-external-id/{externalId}:
+    delete:
+      summary: Delete function by external ID
+      description: Delete a function by its external ID
+      parameters:
+        - name: externalId
+          in: path
+          required: true
+          description: Function external ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Function deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attributes/{id}:
+    get:
+      summary: Get function attribute
+      description: Retrieve function attribute by ID with optional filtering
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Function attribute ID
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: Maximum number of results
+          schema:
+            type: integer
+            minimum: 1
+            default: 100
+        - name: offset
+          in: query
+          description: Offset for pagination
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: attributeType
+          in: query
+          description: Filter by attribute type
+          schema:
+            type: string
+        - name: attributeSubType
+          in: query
+          description: Filter by attribute sub type
+          schema:
+            type: string
+        - name: externalID
+          in: query
+          description: Filter by external ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved function attribute
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionAttributeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Update function attribute
+      description: Update a function attribute by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Function attribute ID
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FunctionAttributeInput'
+      responses:
+        '200':
+          description: Function attribute updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionAttributeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attributes:
+    post:
+      summary: Create function attributes
+      description: Create one or more function attributes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/FunctionAttributeInput'
+      responses:
+        '201':
+          description: Function attributes created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attribute-types:
+    get:
+      summary: Get function attribute types
+      description: Retrieve function attribute types with optional ID filtering
+      parameters:
+        - name: ids
+          in: query
+          description: Array of function attribute type IDs
+          schema:
+            type: array
+            items:
+              type: integer
+      responses:
+        '200':
+          description: Successfully retrieved function attribute types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create function attribute types
+      description: Create one or more function attribute types
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CreateFunctionAttributeTypeInput'
+      responses:
+        '201':
+          description: Function attribute types created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Update function attribute types
+      description: Update multiple function attribute types
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/UpdateFunctionAttributeTypeInput'
+      responses:
+        '200':
+          description: Function attribute types updated successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attribute-types/batch-delete:
+    delete:
+      summary: Delete function attribute types
+      description: Delete multiple function attribute types by IDs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: integer
+              required:
+                - ids
+      responses:
+        '200':
+          description: Function attribute types deleted successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attribute-subtypes:
+    get:
+      summary: Get function attribute subtypes
+      description: Retrieve function attribute subtypes with optional ID filtering
+      parameters:
+        - name: ids
+          in: query
+          description: Array of function attribute subtype IDs
+          schema:
+            type: array
+            items:
+              type: integer
+      responses:
+        '200':
+          description: Successfully retrieved function attribute subtypes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create function attribute subtypes
+      description: Create one or more function attribute subtypes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CreateFunctionAttributeSubTypeInput'
+      responses:
+        '201':
+          description: Function attribute subtypes created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Update function attribute subtypes
+      description: Update multiple function attribute subtypes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/UpdateFunctionAttributeSubTypeInput'
+      responses:
+        '200':
+          description: Function attribute subtypes updated successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-attribute-subtypes/batch-delete:
+    delete:
+      summary: Delete function attribute subtypes
+      description: Delete multiple function attribute subtypes by IDs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: integer
+              required:
+                - ids
+      responses:
+        '200':
+          description: Function attribute subtypes deleted successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionAttributeSubTypeResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /data-tags:
+    get:
+      summary: Get data tags
+      description: Retrieve data tags with filtering options
+      parameters:
+        - name: ids
+          in: query
+          required: true
+          description: Array of data tag IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved data tags
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataTagResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /data-tags/by-function:
+    get:
+      summary: Get data tags by function IDs
+      description: Retrieve data tags associated with specific function IDs
+      parameters:
+        - name: functionIDs
+          in: query
+          required: true
+          description: Array of function IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved data tags by function IDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataTagByFunctionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-interfaces:
+    get:
+      summary: Get function interfaces
+      description: Retrieve function interfaces with filtering options
+      parameters:
+        - name: functionIDs
+          in: query
+          description: Array of function IDs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: ids
+          in: query
+          description: Array of function interface IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved function interfaces
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FunctionInterfaceResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-ip-blocks:
+    get:
+      summary: Get function IP blocks
+      description: Retrieve function IP blocks with pagination
+      parameters:
+        - name: functionID
+          in: query
+          required: true
+          description: Function ID to filter by
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: true
+          description: Page number
+          schema:
+            type: integer
+            minimum: 1
+        - name: size
+          in: query
+          required: true
+          description: Size of each page
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Successfully retrieved function IP blocks
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PagedFunctionIPResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /data-tag-function-relationships:
+    get:
+      summary: Get data tag function relationships
+      description: Retrieve data tag function relationships with filtering
+      parameters:
+        - name: ids
+          in: query
+          required: true
+          description: Array of relationship IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved data tag function relationships
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataTagFunctionRelationshipResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /structure-tag-function-relationships:
+    get:
+      summary: Get structure tag function relationships
+      description: Retrieve structure tag function relationships with filtering
+      parameters:
+        - name: ids
+          in: query
+          required: true
+          description: Array of relationship IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved structure tag function relationships
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StructureTagFunctionRelationResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    post:
+      summary: Create structure tag function relationships
+      description: Create one or more structure tag function relationships
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/StructureTagFunctionRelationInput'
+      responses:
+        '201':
+          description: Structure tag function relationships created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: >-
+                    #/components/schemas/StructureTagFunctionRelationMutationResponse
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /structure-tag-function-relationships/batch-delete:
+    delete:
+      summary: Delete structure tag function relationships
+      description: >-
+        Delete structure tag function relationships by providing structureTagID
+        and functionID pairs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/StructureTagFunctionIdsInput'
+      responses:
+        '200':
+          description: Structure tag function relationships deleted successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: >-
+                    #/components/schemas/StructureTagFunctionRelationMutationResponse
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /interface-ip-address-function-relationships:
+    get:
+      summary: Get interface IP address function relationships
+      description: Retrieve interface IP address function relationships with filtering
+      parameters:
+        - name: ids
+          in: query
+          description: Array of relationship IDs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: functionIPIDs
+          in: query
+          description: Array of function IP IDs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: functionInterfaceIDs
+          in: query
+          description: Array of function interface IDs
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successfully retrieved interface IP address function relationships
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntIPAddrFunctionRelationResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /function-cnames:
+    get:
+      summary: Get function CNAMEs
+      description: Retrieve function CNAME by filter criteria
+      parameters:
+        - name: id
+          in: query
+          required: true
+          description: Function CNAME ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved function CNAME
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FunctionCnameResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /analytics/elements-by-asset-density:
+    get:
+      summary: Get elements by asset density
+      description: Retrieve elements ranked by asset density with optional filtering
+      parameters:
+        - name: structureID
+          in: query
+          description: >-
+            Structure ID to limit results to Elements within a specific
+            Structure
+          schema:
+            type: string
+        - name: collectionID
+          in: query
+          description: >-
+            Collection ID to limit results to Elements that belong to the given
+            Collection
+          schema:
+            type: string
+        - name: sort
+          in: query
+          description: Sorting preference for list order by number of linked asset count
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+            default: desc
+      responses:
+        '200':
+          description: Successfully retrieved elements by asset density
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ElementsByAssetDensityResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /analytics/top-environments:
+    get:
+      summary: Get top environments by asset count
+      description: >-
+        Retrieve top 5 environments by asset count with optional filtering and
+        timeframe
+      parameters:
+        - name: structureID
+          in: query
+          description: Structure ID to filter assets that belong to the given Structure
+          schema:
+            type: string
+        - name: collectionID
+          in: query
+          description: Collection ID to filter assets that belong to the given Collection
+          schema:
+            type: string
+        - name: elementID
+          in: query
+          description: Element ID to filter assets that belong to the given Element
+          schema:
+            type: string
+        - name: sort
+          in: query
+          description: Sorting order for ranking by asset count
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+            default: desc
+        - name: timeframe
+          in: query
+          description: The period (in days) for which asset counts are calculated
+          schema:
+            type: integer
+            default: 30
+      responses:
+        '200':
+          description: Successfully retrieved top environments
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TopEnvironmentsResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /analytics/unclassified-assets:
+    post:
+      summary: Get unclassified assets analytics
+      description: Retrieve analytics for unclassified assets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnclassifiedAssetsInput'
+      responses:
+        '200':
+          description: Successfully retrieved unclassified assets analytics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnclassifiedAssetsResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    FunctionType:
+      type: string
+      enum:
+        - Assets
+        - Element
+        - Collection
+        - Environment
+        - Structure
+      description: Type of function
+    Source:
+      type: string
+      enum:
+        - MANUAL
+        - AWS
+        - AZURE
+        - GCP
+        - TERRAFORM
+        - ANSIBLE
+      description: Source of the function data
+    StructureTagResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Name of the structure tag
+        description:
+          type: string
+          description: Description of the structure tag
+        parentID:
+          type: string
+          description: ID of parent structure tag
+        tagType:
+          type: string
+          description: Type of the tag
+        logo:
+          type: string
+          description: Logo URL for the tag
+        customerID:
+          type: string
+          description: Customer ID
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/StructureTagResponse'
+          description: Child structure tags
+        functions:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Associated functions
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+    StructureTagInput:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the structure tag
+        description:
+          type: string
+          description: Description of the structure tag
+        parentID:
+          type: string
+          description: ID of parent structure tag
+        tagType:
+          type: string
+          description: Type of the tag
+        logo:
+          type: string
+          description: Logo URL for the tag
+    StructureTagByFunctionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        parentID:
+          type: string
+          description: ID of parent structure tag
+        functionID:
+          type: string
+          description: Associated function ID
+        relationshipID:
+          type: string
+          description: Relationship ID
+        customerID:
+          type: string
+          description: Customer ID
+        description:
+          type: string
+          description: Description of the structure tag
+        name:
+          type: string
+          description: Name of the structure tag
+        tagType:
+          type: string
+          description: Type of the tag
+        logo:
+          type: string
+          description: Logo URL for the tag
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/StructureTagByFunctionResponse'
+          description: Child structure tags
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+    FunctionSubTypeResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Name of the function sub type
+        description:
+          type: string
+          description: Description of the function sub type
+    FunctionSubTypeInput:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the function sub type
+        description:
+          type: string
+          description: Description of the function sub type
+    FunctionSubTypeCountResponse:
+      type: object
+      properties:
+        originalData:
+          type: array
+          items:
+            type: object
+            properties:
+              functionSubType:
+                type: string
+                description: Function sub type name
+              count:
+                type: integer
+                description: Count of functions
+          description: Original data with counts
+        filteredData:
+          type: object
+          description: Filtered data based on criteria
+    PagedFunctionResponse:
+      type: object
+      properties:
+        totalRowCount:
+          type: integer
+          description: Total number of functions
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Array of functions
+    FunctionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Function name
+        description:
+          type: string
+          description: Function description
+        functionType:
+          $ref: '#/components/schemas/FunctionType'
+        functionSubType:
+          type: string
+          description: Function sub type
+        externalID:
+          type: string
+          description: External identifier
+        source:
+          type: array
+          items:
+            $ref: '#/components/schemas/Source'
+          description: Data sources
+        accountID:
+          type: string
+          description: Account identifier
+        status:
+          type: string
+          enum:
+            - Discovery
+            - Inventory
+            - Classified
+          description: Function status
+        map:
+          type: object
+          additionalProperties: true
+          description: Key-value pairs for additional data
+        hash:
+          type: string
+          description: Function hash
+        parents:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Parent functions
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Child functions
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionAttributeResponse'
+          description: Function attributes
+        dataTags:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataTagResponse'
+          description: Associated data tags
+        structureTags:
+          type: array
+          items:
+            $ref: '#/components/schemas/StructureTagResponse'
+          description: Associated structure tags
+        functionInterfaces:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionInterfaceResponse'
+          description: Function interfaces
+        functionIPs:
+          $ref: '#/components/schemas/PagedFunctionIPResponse'
+        relatives:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionRelativeResponse'
+          description: Related functions
+        customerID:
+          type: string
+          description: Customer ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+    FunctionInput:
+      type: object
+      required:
+        - name
+        - functionType
+      properties:
+        externalID:
+          type: string
+          description: External identifier
+        name:
+          type: string
+          description: Function name
+        description:
+          type: string
+          description: Function description
+        source:
+          type: array
+          items:
+            $ref: '#/components/schemas/Source'
+          description: Data sources
+        accountID:
+          type: string
+          description: Account identifier
+        functionSubType:
+          type: string
+          description: Function sub type
+        functionType:
+          $ref: '#/components/schemas/FunctionType'
+        status:
+          type: string
+          enum:
+            - Discovery
+            - Inventory
+            - Classified
+          description: Function status
+        map:
+          type: object
+          additionalProperties: true
+          description: Key-value pairs for additional data
+        attributes:
+          $ref: '#/components/schemas/FunctionAttributeInput'
+    CreateFunctionResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Created functions
+    UpdateFunctionByExternalIDResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionResponse'
+          description: Updated functions
+    FunctionAttributeResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Attribute name
+        attributeType:
+          type: string
+          description: Attribute type
+        attributeSubType:
+          type: string
+          description: Attribute sub type
+        externalID:
+          type: string
+          description: External identifier
+        required:
+          type: boolean
+          description: Whether the attribute is required
+        functionID:
+          type: string
+          description: Associated function ID
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionAttributeResponse'
+          description: Child attributes
+        mappedTo:
+          type: array
+          items:
+            type: string
+          description: Mapped attributes
+        relatedTo:
+          type: array
+          items:
+            type: string
+          description: Related attributes
+    FunctionAttributeInput:
+      type: object
+      required:
+        - name
+        - attributeType
+      properties:
+        name:
+          type: string
+          description: Attribute name
+        required:
+          type: boolean
+          description: Whether the attribute is required
+        attributeType:
+          type: string
+          description: Attribute type
+        attributeSubType:
+          type: string
+          description: Attribute sub type
+        externalID:
+          type: string
+          description: External identifier
+        functionID:
+          type: string
+          description: Associated function ID
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionAttributeInput'
+          description: Child attributes
+    FunctionAttributeTypeResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier
+        name:
+          type: string
+          description: Attribute type name
+        description:
+          type: string
+          description: Attribute type description
+        attributeSubTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionAttributeSubTypeResponse'
+          description: Associated subtypes
+    CreateFunctionAttributeTypeInput:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Attribute type name
+        description:
+          type: string
+          description: Attribute type description
+        attributeSubTypes:
+          type: array
+          items:
+            type: string
+          description: Sub type names to create
+    UpdateFunctionAttributeTypeInput:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+          description: Attribute type ID
+        name:
+          type: string
+          description: Attribute type name
+        description:
+          type: string
+          description: Attribute type description
+    FunctionAttributeSubTypeResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier
+        name:
+          type: string
+          description: Attribute subtype name
+        parentAttributeTypeId:
+          type: integer
+          description: Parent attribute type ID
+    CreateFunctionAttributeSubTypeInput:
+      type: object
+      required:
+        - name
+        - parentAttributeTypeId
+      properties:
+        name:
+          type: string
+          description: Attribute subtype name
+        parentAttributeTypeId:
+          type: integer
+          description: Parent attribute type ID
+    UpdateFunctionAttributeSubTypeInput:
+      type: object
+      required:
+        - id
+        - name
+        - parentAttributeTypeId
+      properties:
+        id:
+          type: integer
+          description: Attribute subtype ID
+        name:
+          type: string
+          description: Attribute subtype name
+        parentAttributeTypeId:
+          type: integer
+          description: Parent attribute type ID
+    DataTagResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Data tag name
+        description:
+          type: string
+          description: Data tag description
+        customerID:
+          type: string
+          description: Customer ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+    DataTagByFunctionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Data tag name
+        functionID:
+          type: string
+          description: Associated function ID
+    FunctionInterfaceResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        customerID:
+          type: string
+          description: Customer ID
+        interface:
+          type: string
+          description: Interface name/identifier
+        interfaceSubtype:
+          type: string
+          description: Interface subtype
+        interfaceType:
+          type: string
+          description: Interface type
+        functionID:
+          type: string
+          description: Associated function ID
+    PagedFunctionIPResponse:
+      type: object
+      properties:
+        totalCount:
+          type: integer
+          description: Total count of IP addresses
+        totalPages:
+          type: integer
+          description: Total number of pages
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunctionIPBlockResponse'
+          description: Function IP block data
+    FunctionIPBlockResponse:
+      type: object
+      properties:
+        functionID:
+          type: string
+          description: Associated function ID
+        ipBlock:
+          type: string
+          description: IP block identifier
+        subnet:
+          type: string
+          description: Subnet information
+        map:
+          type: object
+          additionalProperties: true
+          description: Additional IP block metadata
+        ipAddress:
+          $ref: '#/components/schemas/IPAddressResponse'
+    IPAddressResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: IP address ID
+        ipVersion:
+          type: string
+          description: IP version (IPv4/IPv6)
+        ipType:
+          type: string
+          description: IP address type
+        ipAddress:
+          type: string
+          description: IP address
+        ipSubtype:
+          type: string
+          description: IP address subtype
+    FunctionRelativeResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Relationship ID
+        sourceFunctionID:
+          type: string
+          description: Source function ID
+        targetFunctionID:
+          type: string
+          description: Target function ID
+        relationType:
+          type: string
+          description: Type of relationship
+        biDirectional:
+          type: boolean
+          description: Whether relationship is bi-directional
+        tags:
+          type: array
+          items:
+            type: string
+          description: Relationship tags
+    DataTagFunctionRelationshipResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Relationship ID
+        function:
+          $ref: '#/components/schemas/FunctionResponse'
+        dataTag:
+          $ref: '#/components/schemas/DataTagResponse'
+        relationship:
+          type: string
+          description: Type of relationship
+    StructureTagFunctionRelationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Relationship ID
+        function:
+          $ref: '#/components/schemas/FunctionResponse'
+    StructureTagFunctionRelationInput:
+      type: object
+      required:
+        - functionID
+        - structureTagID
+      properties:
+        functionID:
+          type: string
+          description: Function ID
+        structureTagID:
+          type: string
+          description: Structure tag ID
+    StructureTagFunctionRelationMutationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Relationship ID
+        functionID:
+          type: string
+          description: Function ID
+        structureTagID:
+          type: string
+          description: Structure tag ID
+    StructureTagFunctionIdsInput:
+      type: object
+      required:
+        - structureTagID
+        - functionID
+      properties:
+        structureTagID:
+          type: string
+          description: Structure tag ID
+        functionID:
+          type: string
+          description: Function ID
+    IntIPAddrFunctionRelationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Relationship ID
+        functionIP:
+          $ref: '#/components/schemas/IPAddressResponse'
+        functionInterface:
+          $ref: '#/components/schemas/FunctionInterfaceResponse'
+    FunctionCnameResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Function CNAME ID
+        cname:
+          type: string
+          description: CNAME record
+        customerID:
+          type: string
+          description: Customer ID
+        vpcID:
+          type: string
+          description: VPC ID
+        map:
+          type: object
+          additionalProperties: true
+          description: Additional CNAME metadata
+    ElementsByAssetDensityResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp of the analysis
+        elements:
+          type: array
+          items:
+            type: object
+            properties:
+              functionID:
+                type: string
+                description: Element function ID
+              name:
+                type: string
+                description: Element name
+              linkedAssetCount:
+                type: integer
+                description: Number of linked assets
+              percentage:
+                type: number
+                format: double
+                description: Percentage of total assets
+          description: Elements ranked by asset density
+    TopEnvironmentsResponse:
+      type: object
+      properties:
+        environments:
+          type: array
+          items:
+            type: object
+            properties:
+              environmentID:
+                type: string
+                description: Environment ID
+              environmentName:
+                type: string
+                description: Environment name
+              environmentType:
+                type: string
+                description: Environment type
+              assetCounts:
+                type: object
+                properties:
+                  currentPeriod:
+                    type: integer
+                    description: Asset count for current period
+                  previousPeriod:
+                    type: integer
+                    description: Asset count for previous period
+          description: Top environments by asset count
+        totalAssets:
+          type: integer
+          description: Total number of assets
+        timeframe:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date-time
+              description: Start date of the timeframe
+            endDate:
+              type: string
+              format: date-time
+              description: End date of the timeframe
+    UnclassifiedAssetsInput:
+      type: object
+      required:
+        - organizationId
+      properties:
+        organizationId:
+          type: string
+          description: Organization ID
+        environment:
+          type: string
+          description: Environment filter (e.g., "aggregated")
+        timeRange:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date-time
+              description: Start date for analysis
+            endDate:
+              type: string
+              format: date-time
+              description: End date for analysis
+    UnclassifiedAssetsResponse:
+      type: object
+      properties:
+        summary:
+          type: object
+          properties:
+            environment:
+              type: string
+              description: Environment name
+            percentUnclassified:
+              type: number
+              format: double
+              description: Percentage of unclassified assets
+            totalUnclassified:
+              type: integer
+              description: Total count of unclassified assets
+            topHotspot:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: Hotspot type
+                id:
+                  type: string
+                  description: Hotspot ID
+                name:
+                  type: string
+                  description: Hotspot name
+                count:
+                  type: integer
+                  description: Count of unclassified assets
+                percent:
+                  type: number
+                  format: double
+                  description: Percentage of unclassified assets in hotspot
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        details:
+          type: object
+          additionalProperties: true
+          description: Additional error details
+  responses:
+    BadRequest:
+      description: Bad request - invalid parameters or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token for authentication
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for authentication
+security:
+  - BearerAuth: []
+  - ApiKeyAuth: []
+tags:
+  - name: Structure Tags
+    description: Operations related to structure tags and their relationships
+  - name: Functions
+    description: Operations related to functions (assets, elements, collections, etc.)
+  - name: Function Subtypes
+    description: Operations related to function subtypes
+  - name: Function Attributes
+    description: Operations related to function attributes and their types
+  - name: Data Tags
+    description: Operations related to data tags and their relationships
+  - name: Function Interfaces
+    description: Operations related to function interfaces and IP addresses
+  - name: Relationships
+    description: Operations related to various entity relationships
+  - name: Analytics
+    description: Analytics and reporting operations

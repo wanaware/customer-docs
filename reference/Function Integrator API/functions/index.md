@@ -1,0 +1,4 @@
+---
+title: /functions
+hidden: false
+---
