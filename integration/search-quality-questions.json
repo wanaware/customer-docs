@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "minimumCorrectPercent": 90,
+  "requirements": {
+    "citationsRequired": true,
+    "unsupportedQuestionsMustEscalate": true,
+    "forbiddenSources": [
+      "private repositories",
+      "customer data",
+      "internal engineering documentation"
+    ]
+  },
+  "questions": [
+    {
+      "question": "I just signed in. What should I do first?",
+      "expectedSlug": "/docs/your-first-30-minutes",
+      "mustMention": ["Assets", "relationship"],
+      "mustNotMention": ["internal architecture"]
+    },
+    {
+      "question": "What am I allowed to change in the demo?",
+      "expectedSlug": "/docs/use-the-demo-safely",
+      "mustMention": ["shared", "recover"],
+      "mustNotMention": ["production credentials"]
+    },
+    {
+      "question": "How do I find an asset by name?",
+      "expectedSlug": "/docs/find-filter-and-inspect-assets",
+      "mustMention": ["search", "Inventory"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How do I see what an asset is connected to?",
+      "expectedSlug": "/docs/view-asset-relationships",
+      "mustMention": ["Relationship", "Graph"],
+      "mustNotMention": []
+    },
+    {
+      "question": "Why is the Bulk Upload action missing?",
+      "expectedSlug": "/docs/bulk-import-validation-failures",
+      "mustMention": ["permission", "availability"],
+      "mustNotMention": []
+    },
+    {
+      "question": "My CSV import failed. How do I fix it?",
+      "expectedSlug": "/docs/bulk-import-validation-failures",
+      "mustMention": ["validation", "row"],
+      "mustNotMention": []
+    },
+    {
+      "question": "My imported assets are not appearing.",
+      "expectedSlug": "/docs/missing-stale-or-duplicate-assets",
+      "mustMention": ["filters", "refresh"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How do I add an AWS account?",
+      "expectedSlug": "/docs/connect-an-aws-account",
+      "mustMention": ["role", "test"],
+      "mustNotMention": ["secret access key"]
+    },
+    {
+      "question": "The AWS connection test failed.",
+      "expectedSlug": "/docs/integration-connection-failures",
+      "mustMention": ["Role ARN", "External ID"],
+      "mustNotMention": ["send credentials"]
+    },
+    {
+      "question": "How do I organize assets by site?",
+      "expectedSlug": "/docs/create-elements-and-collections",
+      "mustMention": ["Element", "Collection"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How can I model my environment hierarchy?",
+      "expectedSlug": "/docs/create-and-manage-structures",
+      "mustMention": ["Structure", "type"],
+      "mustNotMention": []
+    },
+    {
+      "question": "Why is a relationship I expect not shown?",
+      "expectedSlug": "/docs/missing-or-unexpected-relationships",
+      "mustMention": ["filters", "data"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How do I configure availability monitoring?",
+      "expectedSlug": "/docs/configure-a-monitor-and-worker",
+      "mustMention": ["Availability", "Worker"],
+      "mustNotMention": []
+    },
+    {
+      "question": "My monitor never runs.",
+      "expectedSlug": "/docs/monitors-or-workers-not-running",
+      "mustMention": ["Worker", "subscription"],
+      "mustNotMention": []
+    },
+    {
+      "question": "Pulse has no results for my asset.",
+      "expectedSlug": "/docs/missing-observability-or-pulse-data",
+      "mustMention": ["time range", "monitor"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How do I investigate an alert?",
+      "expectedSlug": "/docs/investigate-with-observability-and-pulse",
+      "mustMention": ["Observability", "Pulse"],
+      "mustNotMention": []
+    },
+    {
+      "question": "How do I invite a teammate?",
+      "expectedSlug": "/docs/invite-users-and-assign-roles",
+      "mustMention": ["IAM", "role"],
+      "mustNotMention": []
+    },
+    {
+      "question": "Why can my teammate not see a page I can see?",
+      "expectedSlug": "/docs/missing-pages-actions-or-permissions",
+      "mustMention": ["role", "administrator"],
+      "mustNotMention": []
+    },
+    {
+      "question": "I cannot complete MFA sign-in.",
+      "expectedSlug": "/docs/sign-in-password-and-mfa",
+      "mustMention": ["time", "Support"],
+      "mustNotMention": ["MFA code in email"]
+    },
+    {
+      "question": "The documentation did not solve my issue. What should I send Support?",
+      "expectedSlug": "/docs/contact-wanaware-support",
+      "mustMention": ["timestamp", "page URL", "never send"],
+      "mustNotMention": ["password", "access token value"]
+    }
+  ]
+}

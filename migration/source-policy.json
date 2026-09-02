@@ -1,0 +1,17 @@
+{
+  "legacySystem": "Stonly",
+  "status": "outdated",
+  "allowedUse": [
+    "topic inventory",
+    "legacy guide identifier",
+    "redirect planning"
+  ],
+  "prohibitedUse": [
+    "procedural source",
+    "behavioral evidence",
+    "permission evidence",
+    "current terminology source",
+    "screenshot source"
+  ],
+  "replacementRule": "Rebuild every replacement from released product behavior and obtain Product and Support approval before publication."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@wanaware/customer-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Content-quality checks for the public WanAware customer knowledge base",
+  "scripts": {
+    "check": "node scripts/validate-content.mjs"
+  }
+}

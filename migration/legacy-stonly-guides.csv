@@ -1,0 +1,55 @@
+guide_id,source_title,disposition,target_slug,validation_note
+Q3RyAkvVSh,How to Login to WanAware?,merge,/docs/sign-in-password-and-mfa,Replace legacy screens with the released sign-in flow
+GtQssRlRke,How to Recover your Account Password?,merge,/docs/sign-in-password-and-mfa,Combine sign-in and recovery guidance
+DgjZDiRvap,How to Access Structures?,merge,/docs/create-and-manage-structures,Access belongs with the Structure task
+r6Tl7bfiWU,How to Edit a Component in Structure?,rewrite,/docs/create-and-manage-structures,Use current Structure terminology and controls
+LC8oBjyOF5,How to Delete a Component in Structure?,rewrite,/docs/create-and-manage-structures,Include current deletion impact and recovery guidance
+HYiTiYu6Ta,How to Add a Component in Structure?,rewrite,/docs/create-and-manage-structures,Use current Structure type and name flow
+wKRfM0BchK,How to Access Discovery?,merge,/docs/find-filter-and-inspect-assets,Explain Discovery beside Inventory
+5xWdC6PYN5,How to Edit an Asset?,merge,/docs/find-filter-and-inspect-assets,Inspection article links to available asset actions
+bNJyp0aHBu,How to Delete an Asset?,defer,,Requires destructive-action validation for each supported role
+EWj2Qy8IN2,How to Add an Asset?,rewrite,/docs/add-or-import-assets,Use the released single-asset form
+DBvmRK5pHk,How to Bulk Upload Assets?,rewrite,/docs/add-or-import-assets,Use the released import and validation flow
+fvlVj6QNg6,How to Access Integrations?,merge,/docs/connect-an-aws-account,Access is covered in the current AWS task
+sZFY2jCVDK,How to Edit an Integration?,defer,,Requires validation of released edit controls and side effects
+FGvbkSSIqm,How to Delete an Integration?,defer,,Requires deletion impact and recovery validation
+m7QQcoW62p,How to Add an Integration?,rewrite,/docs/connect-an-aws-account,Initial v1 covers the verified AWS integration
+QIGHGvaK6e,How to Access Elements?,merge,/docs/create-elements-and-collections,Access belongs with the Element task
+ZuFetEAllV,How to Edit Element?,rewrite,/docs/create-elements-and-collections,Use current Element fields and actions
+vY49AAlCJV,How to Delete an Element?,defer,,Requires destructive-action validation and dependency behavior
+gboOUsF7bP,How to Add an Element?,rewrite,/docs/create-elements-and-collections,Use the released add Element form
+r6V9ArtiJz,How to Export Elements in a .CSV File?,defer,,Export behavior is outside the initial verified workflow
+p0LAS7QX20,How to Apply Filters to the Elements Grid?,merge,/docs/create-elements-and-collections,Keep filtering as supporting guidance in the Element workflow
+JKJcNbPxof,How to Customize Columns on Elements Grid?,defer,,Column behavior must be revalidated against released UI
+kVeUuVhzZt,How to Add a Collection?,rewrite,/docs/create-elements-and-collections,Use current Collections tab and actions
+xtiXiEOQh6,How to Add Target to a Collection?,rewrite,/docs/create-elements-and-collections,Replace legacy Target wording with current asset association flow
+lWwAGh7bpC,How to Add a Monitor to a Target?,rewrite,/docs/configure-a-monitor-and-worker,Use the released four-step monitor wizard
+5fpEqXj3kA,How to Add a Performance Monitor Analyzer?,rewrite,/docs/configure-a-monitor-and-worker,Replace Analyzer terminology with current monitor type
+eoOwh94BcJ,How to View Analytics for Performance Monitor Analyzer?,rewrite,/docs/investigate-with-observability-and-pulse,Use current Observability investigation flow
+FGQoNHlsVQ,How to Add an Availability Monitor Analyzer?,rewrite,/docs/configure-a-monitor-and-worker,Replace Analyzer terminology with Availability monitor
+ABJmN9dhOL,How to Add Security Monitor Analyzer?,rewrite,/docs/configure-a-monitor-and-worker,Replace Analyzer terminology with Security monitor
+RhpHJa23by,How to Edit Monitor Analyzer Interval?,defer,,Interval editing requires released-UI and permission validation
+6dGbSEmDbq,How to Delete a Monitor Analyzer?,defer,,Requires destructive-action and data-retention validation
+A3xWp4RhdM,How to Delete a Target?,archive,,Legacy Target workflow is replaced by current asset and collection terminology
+KfUntJi5LN,How to Delete a Collection?,defer,,Requires dependency and recovery validation
+uhfAqpMW5k,How to Access Workers?,merge,/docs/configure-a-monitor-and-worker,Worker access is a prerequisite to monitoring
+xrQfrp4Ecu,How to Delete a Worker Group?,defer,,Requires destructive-action and monitor-impact validation
+w8HV66VuMv,How to Delete a Worker?,defer,,Requires destructive-action and monitor-impact validation
+yj2hHRIfWt,How to Add a Worker Group?,defer,,Worker provisioning must be validated for the released deployment model
+YeU5oAXv9r,How to Export Workers Data in a .CSV File?,defer,,Export behavior is outside the initial verified workflow
+7mS6PZXcTx,How to Add a Worker?,defer,,Worker provisioning must be validated for the released deployment model
+aU71Apcasi,How to View Company Information?,defer,,Add to the next administration content wave
+1XjjPjuM9t,How to Configure Incident Management?,defer,,Requires a verified released incident-management flow
+Vwpg6fLfOu,How to Access Users?,merge,/docs/invite-users-and-assign-roles,Use current IAM navigation and terminology
+aoKHK8YuSS,How to Create a User?,rewrite,/docs/invite-users-and-assign-roles,Use invitation terminology and released IAM actions
+nsq5GHzPbK,How to Delete a User?,defer,,Requires account-impact and recovery validation
+ztEZ7VoPmc,How to Associate Additional Roles to a User?,rewrite,/docs/invite-users-and-assign-roles,Use current role assignment flow
+4mIjjWGDQv,How to Deactivate a User?,defer,,Requires account-impact and reactivation validation
+OJNIwGT7VO,How to View Support Tickets?,archive,/docs/contact-wanaware-support,Released support path is email rather than the legacy ticket UI
+uaxKVHijzA,How to Create a Support Ticket?,archive,/docs/contact-wanaware-support,Released support path is email with an evidence checklist
+pa7R6wMlSa,How to View User Profile?,defer,,Add to a later profile and preferences content wave
+zIdmJJJzzA,How to Deactivate your Account?,defer,,Requires account-impact and recovery validation
+HrmV09LQeN,How to Change Account Password?,merge,/docs/sign-in-password-and-mfa,Combine password tasks in one troubleshooting article
+Q5vbRBeBjE,How to Enable Multi-Factor Authentication?,merge,/docs/sign-in-password-and-mfa,Combine MFA setup and recovery guidance
+LeOGr3JXiv,How to Configure Notifications?,defer,,Add after the released notification settings are validated
+uwyG10iwjt,How to Sign Up for WanAware Referrals Program?,archive,,Not part of the released customer product workflow

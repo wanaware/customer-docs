@@ -1,0 +1,35 @@
+{
+  "projectName": "WanAware Documentation",
+  "tagline": "Find your assets, understand their relationships, and act with confidence.",
+  "publicBaseUrl": "https://docs.wanaware.com",
+  "gitRepository": "wanaware/customer-docs",
+  "liveBranch": "v1.0",
+  "reviewBranch": "v1.0_docs-v1",
+  "visibility": "public",
+  "topLevelAreas": [
+    "Guides",
+    "API Reference"
+  ],
+  "launchSettings": {
+    "goalOrientedLandingPage": true,
+    "search": true,
+    "pageQualityVoting": true,
+    "metrics": true,
+    "askAi": false,
+    "recipes": false,
+    "changelog": false,
+    "discussions": false
+  },
+  "askAiGate": {
+    "allV1PagesApproved": true,
+    "benchmarkMinimumCorrectPercent": 90,
+    "answersRequireCitations": true,
+    "unsupportedQuestionsRequireSupportHandoff": true,
+    "publicContentOnly": true
+  },
+  "notes": [
+    "Apply launch settings only after Product and Support approve the v1 pull request.",
+    "Keep API Reference separate from task-oriented Guides.",
+    "Do not connect ReadMe to any private engineering repository."
+  ]
+}
