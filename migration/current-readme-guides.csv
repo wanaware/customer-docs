@@ -1,0 +1,6 @@
+source_path,source_title,disposition,target_slug,reason
+/docs/getting-started,Getting Started,rewrite,/docs/welcome-to-wanaware,Replace stock ReadMe copy with customer-first orientation and first-30-minute path
+/docs/asset-discovery,Asset Discovery,merge,/docs/find-filter-and-inspect-assets,Discovery is covered as a product view within the current asset workflow
+/docs/asset-inventory,Asset Inventory,merge,/docs/find-filter-and-inspect-assets,Inventory search filtering and inspection belong in one customer task
+/docs/relationship-discovery-engine-rde,Relationship Discovery Engine (RDE),rewrite,/docs/relationship-discovery-engine,Keep a concise customer concept and link to the relationship task
+/docs/knowledge-discovery-engine-kde,Knowledge Discovery Engine (KDE),archive,,No released customer task was verified for the v1 knowledge base

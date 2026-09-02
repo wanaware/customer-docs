@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "documentationBaseUrl": "https://docs.wanaware.com",
+  "fallback": "/docs/welcome-to-wanaware",
+  "routes": [
+    {
+      "portalRoute": "/launchpad",
+      "article": "/docs/your-first-30-minutes",
+      "label": "Get started"
+    },
+    {
+      "portalRoute": "/assets/inventory",
+      "article": "/docs/find-filter-and-inspect-assets",
+      "label": "Find and inspect assets"
+    },
+    {
+      "portalRoute": "/assets/discovery",
+      "article": "/docs/add-or-import-assets",
+      "label": "Add or import assets"
+    },
+    {
+      "portalRoute": "/assets/:assetId/*",
+      "article": "/docs/view-asset-relationships",
+      "label": "View asset relationships"
+    },
+    {
+      "portalRoute": "/structures",
+      "article": "/docs/create-and-manage-structures",
+      "label": "Manage Structures"
+    },
+    {
+      "portalRoute": "/elements",
+      "article": "/docs/create-elements-and-collections",
+      "label": "Manage Elements and Collections"
+    },
+    {
+      "portalRoute": "/observability/inventory",
+      "article": "/docs/configure-a-monitor-and-worker",
+      "label": "Configure monitoring"
+    },
+    {
+      "portalRoute": "/observability/:scope/:scopeId/*",
+      "article": "/docs/investigate-with-observability-and-pulse",
+      "label": "Investigate a result"
+    },
+    {
+      "portalRoute": "/workers",
+      "article": "/docs/monitors-or-workers-not-running",
+      "label": "Troubleshoot Workers"
+    },
+    {
+      "portalRoute": "/pulse",
+      "article": "/docs/investigate-with-observability-and-pulse",
+      "label": "Use Pulse"
+    },
+    {
+      "portalRoute": "/administration/iam",
+      "article": "/docs/invite-users-and-assign-roles",
+      "label": "Manage access"
+    },
+    {
+      "portalRoute": "/administration/integrations/*",
+      "article": "/docs/connect-an-aws-account",
+      "label": "Connect AWS"
+    },
+    {
+      "portalRoute": "/support",
+      "article": "/docs/contact-wanaware-support",
+      "label": "Contact Support"
+    },
+    {
+      "portalRoute": "/auth/login",
+      "article": "/docs/sign-in-password-and-mfa",
+      "label": "Sign-in help"
+    },
+    {
+      "portalRoute": "/auth/forgot-password",
+      "article": "/docs/sign-in-password-and-mfa",
+      "label": "Password help"
+    },
+    {
+      "portalRoute": "/auth/reset-password",
+      "article": "/docs/sign-in-password-and-mfa",
+      "label": "Password help"
+    }
+  ]
+}

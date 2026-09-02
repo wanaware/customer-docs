@@ -1,0 +1,50 @@
+{
+  "status": "blocked-pending-review",
+  "branch": "v1.0_docs-v1",
+  "publishBranch": "v1.0",
+  "blockingChecks": [
+    {
+      "check": "Every workflow run in the released demo with a normal customer role",
+      "status": "pending"
+    },
+    {
+      "check": "Every administrative workflow run with the appropriate administrator role",
+      "status": "pending"
+    },
+    {
+      "check": "Current screenshots added with useful alt text and no customer or internal data",
+      "status": "pending"
+    },
+    {
+      "check": "Product approval for behavioral accuracy",
+      "status": "pending"
+    },
+    {
+      "check": "Support approval for clarity, diagnostics, and escalation instructions",
+      "status": "pending"
+    },
+    {
+      "check": "Five captioned Loom recordings embedded after released-UI review",
+      "status": "pending"
+    },
+    {
+      "check": "Three to five unfamiliar users observed on the first-30-minute path with at least 80 percent reaching an asset relationship without live help",
+      "status": "pending"
+    },
+    {
+      "check": "Ten priority searches return a relevant article in the first three results",
+      "status": "pending"
+    },
+    {
+      "check": "No broken critical links, customer data, secrets, private endpoints, or internal architecture",
+      "status": "automated-check-passing"
+    }
+  ],
+  "launchActionsAfterApproval": [
+    "merge the approved pull request into v1.0",
+    "apply the ReadMe project settings in integration/readme-settings.json",
+    "create the redirects in integration/readme-redirects.csv",
+    "verify the public navigation, search, voting, metrics, llms.txt, and mcp output",
+    "keep Ask AI disabled until its separate benchmark gate passes"
+  ]
+}

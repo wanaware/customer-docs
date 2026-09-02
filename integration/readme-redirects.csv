@@ -1,0 +1,6 @@
+source_path,target_path,redirect_type,status
+/docs/getting-started,/docs/welcome-to-wanaware,301,pending-launch
+/docs/asset-discovery,/docs/find-filter-and-inspect-assets,301,pending-launch
+/docs/asset-inventory,/docs/find-filter-and-inspect-assets,301,pending-launch
+/docs/relationship-discovery-engine-rde,/docs/relationship-discovery-engine,301,pending-launch
+/docs/knowledge-discovery-engine-kde,/docs/welcome-to-wanaware,302,pending-product-decision
