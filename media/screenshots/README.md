@@ -1,10 +1,10 @@
 # Screenshot publishing standard
 
-WanAware screenshots use a focused product capture inside a consistent branded frame. The treatment borrows the useful part of Linear's documentation pattern: one legible UI state, generous padding, rounded corners, and a quiet gradient that separates the product from the article.
+WanAware screenshots use a full-width product capture inside a consistent branded frame. The treatment borrows the useful part of Linear's documentation pattern: one legible UI state, comfortable spacing, rounded corners, and a quiet navy surface with a restrained cyan highlight.
 
 ## What each screenshot must do
 
-- Answer one question or show one consequential step. Split a long workflow into separate checkpoints instead of shrinking an entire page into one image.
+- Answer one question or show one consequential step. Preserve the complete application content width; split a long workflow into separate checkpoints instead of shrinking an entire page into one image.
 - Keep the WanAware UI unchanged. Do not invent values, move controls, blur labels, or edit the visible product state.
 - Crop browser chrome, the account switcher, unrelated navigation, empty space, internal URLs, identifiers, notifications, and customer or secret data.
 - Use environment-neutral sample values. The capture workspace is provenance, not part of the customer instruction.
@@ -15,7 +15,7 @@ WanAware screenshots use a focused product capture inside a consistent branded f
 1. Use a 1720 × 1024 browser viewport in Light mode unless the article specifically explains themes.
 2. Put the released UI into the exact checkpoint the article describes. Do not save or submit a consequential change merely to obtain a screenshot.
 3. Capture the browser content to a temporary PNG outside the repository.
-4. Choose a tight crop containing the page title or step heading, the relevant fields or choices, and the action the reader needs next.
+4. Crop out only unrelated navigation and empty space below the last useful checkpoint. Keep the full application content width, page title or step heading, relevant fields or choices, and the action the reader needs next.
 5. Run the framing command:
 
    ```bash
@@ -23,7 +23,7 @@ WanAware screenshots use a focused product capture inside a consistent branded f
      --input /tmp/capture.png \
      --source-out media/screenshots/source/example.png \
      --output media/screenshots/example.png \
-     --crop 230,70,1460,700
+     --crop 63,0,1658,760
    ```
 
 6. Inspect the source crop and framed PNG. The publishing image must be 750–1000 pixels wide, remain readable at normal article width, and be 250 KB or less.

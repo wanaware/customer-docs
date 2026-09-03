@@ -97,7 +97,7 @@
       "article": "/docs/add-an-asset",
       "alt": "Add Asset form showing the selected Asset Type, status, tags, schema tabs, and catalog-backed fields.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v1",
+      "style": "wanaware-framed-v2",
       "status": "captured-pending-product-support-review"
     },
     {
@@ -107,7 +107,7 @@
       "article": "/docs/add-an-asset",
       "alt": "Add Asset step for finding and selecting the Asset Type that determines the remaining fields.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v1",
+      "style": "wanaware-framed-v2",
       "status": "captured-pending-product-support-review"
     },
     {
@@ -117,7 +117,7 @@
       "article": "/docs/bulk-upload-assets",
       "alt": "Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v1",
+      "style": "wanaware-framed-v2",
       "status": "captured-pending-product-support-review"
     },
     {
@@ -225,7 +225,7 @@
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v1",
+      "style": "wanaware-framed-v2",
       "status": "captured-pending-product-support-review"
     },
     {

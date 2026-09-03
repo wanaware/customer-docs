@@ -18,7 +18,7 @@ Options:
   --source-out PATH    Safe, cropped source retained for future reframing.
   --output PATH        Linear-style framed PNG for publishing.
   --crop X,Y,W,H       Crop that removes browser chrome, navigation, identifiers, and empty space.
-  --max-inner-width N  Maximum inner screenshot width (default: 860).
+  --max-inner-width N  Maximum inner screenshot width (default: 936).
   --max-inner-height N Maximum inner screenshot height (default: 860).
   --canvas-width N     Output width (default: 1000).
 `);
@@ -56,28 +56,29 @@ function integerOption(value, fallback) {
 }
 
 function backgroundSvg(width, height, radius, inset) {
-  const shadowY = inset.top + 18;
+  const shadowY = inset.top + 10;
   const shadowHeight = height - inset.top - inset.bottom;
   return Buffer.from(`
     <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
       <defs>
         <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#0B5F75"/>
-          <stop offset="0.46" stop-color="#27B7C7"/>
-          <stop offset="1" stop-color="#9BE7C4"/>
+          <stop offset="0" stop-color="#07131F"/>
+          <stop offset="0.58" stop-color="#10283A"/>
+          <stop offset="1" stop-color="#123D49"/>
         </linearGradient>
-        <radialGradient id="glow" cx="78%" cy="15%" r="72%">
-          <stop offset="0" stop-color="#E1FFF0" stop-opacity="0.72"/>
-          <stop offset="0.48" stop-color="#8FE6D5" stop-opacity="0.18"/>
-          <stop offset="1" stop-color="#07182A" stop-opacity="0"/>
+        <radialGradient id="glow" cx="82%" cy="0%" r="85%">
+          <stop offset="0" stop-color="#42D6D0" stop-opacity="0.24"/>
+          <stop offset="0.42" stop-color="#2B8E9A" stop-opacity="0.10"/>
+          <stop offset="1" stop-color="#07131F" stop-opacity="0"/>
         </radialGradient>
         <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
-          <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#03101D" flood-opacity="0.42"/>
+          <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#020912" flood-opacity="0.48"/>
         </filter>
       </defs>
       <rect width="${width}" height="${height}" rx="${radius}" fill="url(#background)"/>
       <rect width="${width}" height="${height}" rx="${radius}" fill="url(#glow)"/>
-      <rect x="${inset.left}" y="${shadowY}" width="${width - inset.left - inset.right}" height="${shadowHeight}" rx="18" fill="#07182A" opacity="0.34" filter="url(#shadow)"/>
+      <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="${radius}" fill="none" stroke="#8AD9DE" stroke-opacity="0.18"/>
+      <rect x="${inset.left}" y="${shadowY}" width="${width - inset.left - inset.right}" height="${shadowHeight}" rx="14" fill="#020912" opacity="0.44" filter="url(#shadow)"/>
     </svg>
   `);
 }
@@ -132,12 +133,12 @@ const cropped = await sharp(input)
 await sharp(cropped).toFile(sourceOutput);
 
 const source = await sharp(cropped).metadata();
-const maxInnerWidth = integerOption(args['max-inner-width'], 860);
+const maxInnerWidth = integerOption(args['max-inner-width'], 936);
 const maxInnerHeight = integerOption(args['max-inner-height'], 860);
 const sourceIsPortrait = source.height > source.width * 1.15;
 const canvasWidth = integerOption(args['canvas-width'], 1000);
-const horizontalPadding = sourceIsPortrait ? 100 : 70;
-const verticalPadding = sourceIsPortrait ? 72 : 58;
+const horizontalPadding = sourceIsPortrait ? 64 : 32;
+const verticalPadding = sourceIsPortrait ? 48 : 36;
 const availableWidth = Math.min(maxInnerWidth, canvasWidth - horizontalPadding * 2);
 const scale = Math.min(availableWidth / source.width, maxInnerHeight / source.height);
 const innerWidth = Math.max(1, Math.round(source.width * scale));
@@ -152,7 +153,7 @@ const inner = await sharp(cropped)
   .png()
   .toBuffer();
 
-const background = backgroundSvg(canvasWidth, canvasHeight, 32, {
+const background = backgroundSvg(canvasWidth, canvasHeight, 24, {
   left,
   right: canvasWidth - left - innerWidth,
   top,
@@ -162,7 +163,7 @@ const background = backgroundSvg(canvasWidth, canvasHeight, 32, {
 const framed = sharp(background).composite([
   { input: inner, left, top },
   {
-    input: Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${innerWidth}" height="${innerHeight}"><rect x="0.5" y="0.5" width="${innerWidth - 1}" height="${innerHeight - 1}" rx="16" fill="none" stroke="#FFFFFF" stroke-opacity="0.30"/></svg>`),
+    input: Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${innerWidth}" height="${innerHeight}"><rect x="0.5" y="0.5" width="${innerWidth - 1}" height="${innerHeight - 1}" rx="16" fill="none" stroke="#DDFBFF" stroke-opacity="0.24"/></svg>`),
     left,
     top
   }

@@ -473,8 +473,8 @@ if (screenshotManifest) {
       if (!screenshot.sourceFile || !existsSync(join(root, screenshot.sourceFile))) {
         fail(screenshotManifestFile, `captured screenshot is missing its safe source crop: ${screenshot.sourceFile || screenshot.file}`);
       }
-      if (screenshot.style !== 'wanaware-framed-v1') {
-        fail(screenshotManifestFile, `captured screenshot must use wanaware-framed-v1: ${screenshot.file}`);
+      if (screenshot.style !== 'wanaware-framed-v2') {
+        fail(screenshotManifestFile, `captured screenshot must use wanaware-framed-v2: ${screenshot.file}`);
       }
       if (!/^\d{4}-\d{2}-\d{2}$/.test(screenshot.captureDate || '')) {
         fail(screenshotManifestFile, `captured screenshot needs a YYYY-MM-DD captureDate: ${screenshot.file}`);
