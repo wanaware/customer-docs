@@ -62,18 +62,7 @@ The navigation requirement controls entry to an area. Create, update, delete, pu
 
 ## How the records fit together
 
-```mermaid
-flowchart LR
-  source["Integration or bulk import"] --> asset["Asset in Discovery or Inventory"]
-  assetType["Asset Type<br/>defines fields"] --> asset
-  catalog["Service Catalog<br/>supplies managed choices"] --> assetType
-  structure["Structure"] -->|"Structure Tag"| element["Element<br/>Application, Service, or Site"]
-  structure -->|"Structure Tag"| collection["Collection"]
-  structure -.->|"Structure Tag, where supported"| asset
-  element -->|contains| collection
-  collection -->|groups| asset
-  asset -->|supported connection| related["Related Asset"]
-```
+![Diagram showing an Integration flowing through Discovery to Inventory, then Assets organized with Structure Tags, Elements, and Collections.](../../media/diagrams/product-model.svg)
 
 An Asset can arrive from an Integration or a bulk import. A Collection groups existing Assets inside an Element. A Structure Tag attaches an Element, Collection, or other supported record to the Structure hierarchy; matching names alone do not create that attachment.
 

@@ -192,7 +192,7 @@ const highConfidenceSecretPatterns = [
 ];
 
 for (const file of allFiles) {
-  if (!['.md', '.json', '.yaml', '.yml', '.csv'].includes(extname(file))) continue;
+  if (!['.md', '.json', '.yaml', '.yml', '.csv', '.svg'].includes(extname(file))) continue;
   const source = readFileSync(file, 'utf8');
   for (const [pattern, label] of highConfidenceSecretPatterns) {
     if (pattern.test(source)) fail(file, `contains a forbidden ${label} pattern`);
@@ -203,6 +203,7 @@ const excludedFamilyPattern = /\b(?:workers?|observability|pulse|monitors?|monit
 const publicScopeFiles = [
   ...markdownFiles,
   ...walk(join(root, 'recordings')).filter((file) => extname(file) === '.md'),
+  ...walk(join(root, 'media/diagrams')).filter((file) => extname(file) === '.svg'),
   join(root, 'integration/portal-help-links.json'),
   join(root, 'integration/search-quality-questions.json')
 ];
@@ -225,7 +226,7 @@ const productMapMarkers = [
   '## Navigation and permission map',
   '| Portal path | Permission that makes it visible |',
   '## How the records fit together',
-  '```mermaid',
+  '../../media/diagrams/product-model.svg',
   '## These sound alike',
   'capitalized words',
   '`read my_launchpad`',
