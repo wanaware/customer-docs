@@ -65,6 +65,13 @@ release-status: draft
 
 1. Open **Administration → Asset Types**.
 2. Select **+ Create New Asset Type**.
+
+![Custom Asset Types list showing example schemas, field and catalog counts, status, and row actions.](https://files.readme.io/6a507606bff13008017d964bafa784edadad162e6f4778216f6305a767972a41-asset-types-list.png)
+
+![Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.](https://files.readme.io/1523cc67fdbfbe4f4479c6d63aacf244a13f3df11191c2279bfe88229319d8b0-asset-type-starting-options.png)
+
+All three paths create a custom draft. The difference is how the first set of sections and fields is produced; nothing is published from this screen.
+
 3. Choose one starting option:
    - **Generate with AI** for a suggested starting schema. Review every field before saving.
    - **Utilize a Template** when an available template closely matches the use case.

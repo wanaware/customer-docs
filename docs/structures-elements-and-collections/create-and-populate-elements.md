@@ -67,7 +67,11 @@ release-status: draft
 1. Open **Functions → Elements**.
 2. Select **+ Add Element**.
 3. Enter a unique **Element Name**.
+
+![Add Element form showing Element Name, Structure Tags, Element Type, and the Add Element action.](https://files.readme.io/d0e0c023592ec82df58171b3df7be6c2c8309df05cb6a874ae9f3cf9913fd5e4-element-add.png)
 4. Select **Element Type**.
+
+![Add Element form showing Application, Service, and Site as the available Element Type choices.](https://files.readme.io/37d8082f76db6a8f4d3335eb6d766b55e9e6900f56a00fb42ddfbfefab5cd029-element-type-options.png)
 5. Add existing **Structure Tags** when the placement is already approved.
 6. For a Site, prepare to complete **Site Assets** and **Location** after creation; Applications and Services do not use those Site-only tabs.
 7. Select **Add Element**.
@@ -81,6 +85,8 @@ release-status: draft
 3. Add approved Data Tags and **Structure Tags**.
 4. Open **Collections** to review or add asset groups.
 5. For a Site, open **Site Assets** and **Location**.
+
+![Site Element location step showing Physical and Cloud choices and the released address fields.](https://files.readme.io/7a189dbd74f7519f7531bb5b5ec6581c128d5ee12032e68f7a16c69033ecef27-element-site-location-fields.png)
 6. Save each changed area and refresh the page.
 
 **Expected result:** The name, tags, Collections, and supported Site information remain after refresh.

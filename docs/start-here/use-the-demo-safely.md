@@ -70,6 +70,8 @@ release-status: draft
 
 **Expected result:** Your exploration does not create a save confirmation, unsaved-change bar, invitation, import job, or billing action.
 
+![Launchpad showing example workspace summaries, available widgets, and links into detailed product areas.](https://files.readme.io/4110fc0e44ac5a1c2e80f05909c954f86f11daaa682ef188a05aaa43d3117d03-launchpad-overview.png)
+
 ## Ask before making these changes
 
 - Create, edit, attach, detach, publish, hide, restore, or delete a shared record

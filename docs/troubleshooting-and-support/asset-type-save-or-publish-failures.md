@@ -42,6 +42,8 @@ WanAware displays **Save Draft** while creating a draft and **Save Changes** whi
 5. Save and verify the Service Catalog before publishing.
 6. Refresh once and reopen the same Asset Type by ID.
 
+![Draft Asset Type builder showing name, description, tabs, groups, Service Catalog support, and field actions.](https://files.readme.io/857bd9b513b60ae05f4707291230a74af4ecaf6dd9ed40411e407fefe46a61c9-asset-type-field-builder.png)
+
 ## Common causes and fixes
 
 | Symptom | Likely cause | What to do |

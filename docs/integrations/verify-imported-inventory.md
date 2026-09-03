@@ -63,8 +63,12 @@ release-status: draft
 1. Open **Functions → Assets → Inventory**.
 2. Clear all search terms and filters.
 3. Search for a known source identifier.
+
+![Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.](https://files.readme.io/774951d14c429216eaee3e6dbd0d3669db23958ebbe371c86761a9215a279a8e-asset-inventory-table-and-filters.png)
 4. Open the matching asset.
 5. Confirm its name, Asset Type, provider, source account context, and important detail fields.
+
+![Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.](https://files.readme.io/f2860c4ff35f029d8eb212855afa8553adb364a83ff9dada649026d0107faff8-asset-details-fields.png)
 6. Repeat with a second source record of a different supported type.
 
 **Expected result:** Each record appears once and shows the intended Integration as its source.

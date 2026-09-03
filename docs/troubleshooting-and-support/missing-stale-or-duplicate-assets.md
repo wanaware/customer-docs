@@ -42,6 +42,8 @@ Do not delete or recreate an Asset until you have checked its source identity an
 5. Confirm that the latest integration collection or bulk import finished.
 6. Open each apparent duplicate and compare source, account, type, and unique ID.
 
+![Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.](https://files.readme.io/774951d14c429216eaee3e6dbd0d3669db23958ebbe371c86761a9215a279a8e-asset-inventory-table-and-filters.png)
+
 ## Common causes and fixes
 
 | Symptom | Likely cause | What to do |

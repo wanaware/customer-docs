@@ -63,9 +63,13 @@ release-status: draft
 ## Create a Structure
 
 1. Open **Functions → Structures**.
+
+![Structure hierarchy showing an example company and its top-level organizational nodes.](https://files.readme.io/1b5ecefc90dd8392bcc3478cdb33897388dd8600701ba35ab5c451068066f39e-structure-hierarchy.png)
 2. Select **Add Structure**.
 3. Choose the **Structure Type**.
 4. Enter a clear **Name**.
+
+![Add Structure dialog showing the Structure Type and required Structure Name fields.](https://files.readme.io/d4b714512e888faa25ab82f3e25aca497940fa05ac54b3ad04de8f2db553fd2f-structure-add.png)
 5. Select the intended parent shown by the form for that Structure Type.
 6. Review the placement preview.
 7. Select **Save**.
@@ -78,6 +82,8 @@ If a parent cannot be selected, the type may not be valid at that level. Choose 
 
 1. Select the existing node.
 2. Open its edit action.
+
+![Structure actions menu showing view, attachment, child Structure, and edit choices.](https://files.readme.io/5417aaec8dd89edc0762a780bff6557500e4aea23a9eef710929552ffe343aab-structure-actions.png)
 3. Confirm the node's ID and attachments.
 4. Change only the approved name or supported setting.
 5. Select **Save** and reopen the node.

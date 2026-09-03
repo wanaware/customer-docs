@@ -60,9 +60,13 @@ release-status: draft
 
 1. Open the intended asset and confirm its unique identifier.
 2. Find the Data Tags or **Structure Tags** control.
+
+![Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.](https://files.readme.io/f2860c4ff35f029d8eb212855afa8553adb364a83ff9dada649026d0107faff8-asset-details-fields.png)
 3. Search for the existing tag.
 4. Select it to assign the tag, or clear it to remove the tag assignment.
 5. Use the page's save action when an unsaved-change bar appears.
+
+![Asset Type-specific fields with catalog choices and the Review, Discard, and Save All change bar.](https://files.readme.io/dc19a8cdd65daeff63526f23b19056842e0d385ea08ee764442a7decd06b4c41-asset-schema-fields-and-save.png)
 
 **Expected result:** The selected tags remain after a page refresh.
 

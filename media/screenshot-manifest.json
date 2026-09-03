@@ -6,14 +6,14 @@
   "defaultTheme": "Light",
   "sourceDirectory": "media/screenshots",
   "publishedBaseUrl": null,
-  "captureStatus": "blocked-pending-sanitization-and-product-support-review",
+  "captureStatus": "action-coverage-capture-in-progress",
   "rules": {
     "format": "png",
     "fullColumnWidthPixels": {
-      "minimum": 750,
-      "maximum": 1000
+      "minimum": 1500,
+      "maximum": 2200
     },
-    "maximumFileSizeBytes": 256000,
+    "maximumFileSizeBytes": 512000,
     "requiredReviews": [
       "Product",
       "Support"
@@ -38,8 +38,11 @@
       "id": "start-launchpad",
       "file": "media/screenshots/launchpad-overview.png",
       "article": "/docs/use-launchpad",
-      "alt": "Launchpad showing sanitized workspace summaries and links into detailed WanAware areas.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Launchpad showing example workspace summaries, available widgets, and links into detailed product areas.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/launchpad-overview.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "start-navigation",
@@ -52,15 +55,21 @@
       "id": "integrations-selection",
       "file": "media/screenshots/integration-provider-selection.png",
       "article": "/docs/aws",
-      "alt": "Integrations page showing the Amazon Web Services adapter with no account details visible.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Integrations page showing the available provider adapter, connection count, and Connect account action.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/integration-provider-selection.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "integrations-setup",
       "file": "media/screenshots/integration-provider-setup.png",
       "article": "/docs/aws",
-      "alt": "AWS integration setup form before any account details have been entered.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Provider setup showing Connect, Test, and Crawl checkpoints before any account details are entered.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/integration-provider-setup.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "integrations-status",
@@ -78,31 +87,53 @@
     },
     {
       "id": "assets-inventory",
-      "file": "media/screenshots/asset-inventory.png",
+      "file": "media/screenshots/asset-inventory-table-and-filters.png",
       "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory filtered to example records in the table view.",
-      "status": "blocked-pending-sanitized-recapture"
-    },
-    {
-      "id": "assets-filter",
-      "file": "media/screenshots/asset-search-and-filters.png",
-      "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory search narrowed to one example asset.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-inventory-table-and-filters.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "assets-create",
       "file": "media/screenshots/add-asset-form.png",
+      "sourceFile": "media/screenshots/source/add-asset-form.png",
       "article": "/docs/add-an-asset",
-      "alt": "Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Add Asset form showing status, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-create-type-cards",
+      "file": "media/screenshots/add-asset-type-cards.png",
+      "sourceFile": "media/screenshots/source/add-asset-type-cards.png",
+      "article": "/docs/add-an-asset",
+      "alt": "Add Asset picker in Cards view with an example Asset Type selected.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-create-type-list",
+      "file": "media/screenshots/add-asset-type-list.png",
+      "sourceFile": "media/screenshots/source/add-asset-type-list.png",
+      "article": "/docs/add-an-asset",
+      "alt": "Add Asset picker in List view with an example Asset Type selected.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-import",
       "file": "media/screenshots/bulk-import-upload.png",
+      "sourceFile": "media/screenshots/source/bulk-import-upload.png",
       "article": "/docs/bulk-upload-assets",
-      "alt": "Bulk-import uploader ready for a sanitized file based on the current template.",
-      "status": "pending-feature-verification"
+      "alt": "Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-validation",
@@ -136,15 +167,21 @@
       "id": "assets-discovery-move",
       "file": "media/screenshots/discovery-move-to-inventory.png",
       "article": "/docs/review-discovery-and-move-assets-to-inventory",
-      "alt": "Discovery table with reviewed rows selected and the Move To Inventory action visible.",
-      "status": "pending-sanitized-capture"
+      "alt": "Discovery table with an example row selected and the Move To Inventory action available.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/discovery-move-to-inventory.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "assets-details",
-      "file": "media/screenshots/asset-details.png",
+      "file": "media/screenshots/asset-details-fields.png",
       "article": "/docs/populate-asset-details",
-      "alt": "Sanitized asset detail page showing the editable name and Asset Type-specific tabs.",
-      "status": "pending-identifier-safe-capture"
+      "alt": "Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-details-fields.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "assets-tags",
@@ -157,64 +194,91 @@
       "id": "assets-schema-fields",
       "file": "media/screenshots/asset-schema-fields-and-save.png",
       "article": "/docs/populate-asset-details",
-      "alt": "Asset Type-specific fields with a catalog-backed choice and the unsaved-change bar.",
-      "status": "pending-demo-records"
+      "alt": "Asset Type-specific fields with catalog choices and the Review, Discard, and Save All change bar.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-schema-fields-and-save.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "assets-relationship-graph",
       "file": "media/screenshots/asset-relationship-graph.png",
       "article": "/docs/view-asset-relationships",
-      "alt": "Relationship Graph grouped by Structure around an example asset.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Relationship Graph showing an example Asset, grouping controls, connected nodes, and hop-depth choices.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-relationship-graph.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "connection-target",
       "file": "media/screenshots/add-connection-target-asset.png",
       "article": "/docs/add-a-network-connection",
-      "alt": "Add Connection step for selecting a different eligible target asset.",
-      "status": "pending-eligible-demo-assets"
+      "alt": "Add Connection target selector filtered to one eligible example Asset with its source indicated.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/add-connection-target-asset.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "connection-ip-block",
       "file": "media/screenshots/add-connection-ip-block.png",
       "article": "/docs/add-a-network-connection",
-      "alt": "Add Connection IP block step using sanitized documentation values.",
-      "status": "pending-eligible-demo-assets"
+      "alt": "Add Connection IP block step using reserved example IPv4 addresses and a new-block selection.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/add-connection-ip-block.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "connection-endpoints",
       "file": "media/screenshots/add-connection-endpoints.png",
       "article": "/docs/add-a-network-connection",
-      "alt": "Add Connection endpoint step with sanitized source and target selections.",
-      "status": "pending-eligible-demo-assets"
+      "alt": "Add Connection endpoint step with example source and target interfaces and reserved IP addresses.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/add-connection-endpoints.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "connection-preview",
-      "file": "media/screenshots/add-connection-preview-and-result.png",
+      "file": "media/screenshots/add-connection-preview-conflict.png",
       "article": "/docs/add-a-network-connection",
-      "alt": "Connection preview and successful network connection result for example assets.",
-      "status": "pending-eligible-demo-assets"
+      "alt": "Connection preview showing planned operations and a blocking assignment conflict before creation.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/add-connection-preview-conflict.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "asset-types-list",
       "file": "media/screenshots/asset-types-list.png",
       "article": "/docs/create-a-custom-asset-type",
-      "alt": "Custom Asset Types list showing example schemas and their published status.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Custom Asset Types list showing example schemas, field and catalog counts, status, and row actions.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-types-list.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "asset-types-start",
       "file": "media/screenshots/asset-type-starting-options.png",
+      "sourceFile": "media/screenshots/source/asset-type-starting-options.png",
       "article": "/docs/create-a-custom-asset-type",
-      "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "asset-types-fields",
       "file": "media/screenshots/asset-type-field-builder.png",
       "article": "/docs/configure-asset-type-sections-and-fields",
-      "alt": "Draft Asset Type field builder with a section, field settings, and catalog support.",
-      "status": "pending-demo-records"
+      "alt": "Draft Asset Type builder showing name, description, tabs, groups, Service Catalog support, and field actions.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/asset-type-field-builder.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "asset-types-lifecycle",
@@ -284,21 +348,30 @@
       "file": "media/screenshots/structure-hierarchy.png",
       "article": "/docs/create-and-manage-structures",
       "alt": "Structure hierarchy showing an example company and its top-level organizational nodes.",
-      "status": "blocked-pending-sanitized-recapture"
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/structure-hierarchy.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "elements-create-details",
-      "file": "media/screenshots/element-create-and-details.png",
+      "file": "media/screenshots/element-add.png",
       "article": "/docs/create-and-populate-elements",
-      "alt": "Add Element form and sanitized Site detail tabs for an example Element.",
-      "status": "pending-demo-records"
+      "alt": "Add Element form showing Element Name, Structure Tags, Element Type, and the Add Element action.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/element-add.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "collections-assets",
-      "file": "media/screenshots/collection-create-and-assets.png",
+      "file": "media/screenshots/collection-details-and-assets.png",
       "article": "/docs/create-collections-and-add-assets",
-      "alt": "Expanded Collection showing its sanitized associated assets and the Add Asset action.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Collection details showing editable tags, associated example Assets, row actions, and Add Asset.",
+      "status": "captured-pending-product-support-review",
+      "sourceFile": "media/screenshots/source/collection-details-and-assets.png",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4"
     },
     {
       "id": "organization-attachments",
@@ -362,6 +435,319 @@
       "article": "/docs/view-billing-history-and-invoices",
       "alt": "Billing History with sample entries and invoice references masked for documentation review.",
       "status": "pending-masked-test-data"
+    },
+    {
+      "id": "assets-inventory-map",
+      "file": "media/screenshots/asset-inventory-map.png",
+      "sourceFile": "media/screenshots/source/asset-inventory-map.png",
+      "article": "/docs/find-filter-and-inspect-assets",
+      "alt": "Asset Inventory Map showing mapped Site clusters, coverage counts, Fit assets, and map controls.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-inventory-graph",
+      "file": "media/screenshots/asset-inventory-graph.png",
+      "sourceFile": "media/screenshots/source/asset-inventory-graph.png",
+      "article": "/docs/find-filter-and-inspect-assets",
+      "alt": "Asset Inventory Graph showing scope, grouping controls, relationship insights, and an example Asset node.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-discovery-confirm",
+      "file": "media/screenshots/discovery-move-confirmation.png",
+      "sourceFile": "media/screenshots/source/discovery-move-confirmation.png",
+      "article": "/docs/review-discovery-and-move-assets-to-inventory",
+      "alt": "Move Assets confirmation showing the selected Asset count and the final Move action.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-delete-confirm",
+      "file": "media/screenshots/delete-asset-confirmation.png",
+      "sourceFile": "media/screenshots/source/delete-asset-confirmation.png",
+      "article": "/docs/delete-assets-safely",
+      "alt": "Delete Asset confirmation with the example Asset shown and record identifiers masked.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "asset-types-field-types",
+      "file": "media/screenshots/asset-type-field-types.png",
+      "sourceFile": "media/screenshots/source/asset-type-field-types.png",
+      "article": "/docs/configure-asset-type-sections-and-fields",
+      "alt": "Asset Type field editor showing an example field and the available field-type menu.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "asset-types-field-rule",
+      "file": "media/screenshots/asset-type-field-rule.png",
+      "sourceFile": "media/screenshots/source/asset-type-field-rule.png",
+      "article": "/docs/configure-asset-type-sections-and-fields",
+      "alt": "Asset Type field editor showing required state and a conditional visibility rule builder.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "structures-actions",
+      "file": "media/screenshots/structure-actions.png",
+      "sourceFile": "media/screenshots/source/structure-actions.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Structure actions menu showing view, attachment, child Structure, and edit choices.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "structures-add",
+      "file": "media/screenshots/structure-add.png",
+      "sourceFile": "media/screenshots/source/structure-add.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Add Structure dialog showing the Structure Type and required Structure Name fields.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "elements-type-options",
+      "file": "media/screenshots/element-type-options.png",
+      "sourceFile": "media/screenshots/source/element-type-options.png",
+      "article": "/docs/create-and-populate-elements",
+      "alt": "Add Element form showing Application, Service, and Site as the available Element Type choices.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "elements-site-fields",
+      "file": "media/screenshots/element-site-location-fields.png",
+      "sourceFile": "media/screenshots/source/element-site-location-fields.png",
+      "article": "/docs/create-and-populate-elements",
+      "alt": "Site Element location step showing Physical and Cloud choices and the released address fields.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "collections-add-asset",
+      "file": "media/screenshots/collection-add-asset.png",
+      "sourceFile": "media/screenshots/source/collection-add-asset.png",
+      "article": "/docs/create-collections-and-add-assets",
+      "alt": "Select Asset dialog showing search, row selection, and Associate Asset for Collection membership.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "site-assets",
+      "file": "media/screenshots/site-assets.png",
+      "sourceFile": "media/screenshots/source/site-assets.png",
+      "article": "/docs/manage-site-details",
+      "alt": "Site Assets tab showing Structure Tags, search, Add Asset, association source, and detach actions.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "site-location",
+      "file": "media/screenshots/site-location.png",
+      "sourceFile": "media/screenshots/source/site-location.png",
+      "article": "/docs/manage-site-details",
+      "alt": "Site Location tab showing list and map choices, mapped Asset count, Fit site, and map controls.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "integrations-test-success",
+      "file": "media/screenshots/integration-test-success.png",
+      "article": "/docs/add-an-integration",
+      "alt": "Saved Integration showing the released successful connection-test result and its account context masked.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "connection-create-success",
+      "file": "media/screenshots/add-connection-success.png",
+      "article": "/docs/add-a-network-connection",
+      "alt": "Network connection created confirmation shown after the reviewed target, IP block, and endpoints are saved.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "integrations-collection-submitted",
+      "file": "media/screenshots/integration-collection-submitted.png",
+      "article": "/docs/refresh-integration-data",
+      "alt": "Saved Integration showing that one inventory collection request was accepted for background processing.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "integrations-delete-confirm",
+      "file": "media/screenshots/integration-delete-confirmation.png",
+      "article": "/docs/aws",
+      "alt": "Integration deletion confirmation with the saved account identity masked and the destructive consequence visible.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "assets-create-success",
+      "file": "media/screenshots/add-asset-success.png",
+      "article": "/docs/add-an-asset",
+      "alt": "Asset Added confirmation showing the saved status and the View Asset, Add Another, and Done next actions.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "assets-bulk-normalization",
+      "file": "media/screenshots/asset-bulk-normalization-progress.png",
+      "article": "/docs/bulk-upload-assets",
+      "alt": "Asset bulk-upload normalization progress showing current job state without any customer file or record names.",
+      "status": "pending-release-equivalent-verification"
+    },
+    {
+      "id": "assets-bulk-completion",
+      "file": "media/screenshots/asset-bulk-completion-report.png",
+      "article": "/docs/bulk-upload-assets",
+      "alt": "Asset bulk-upload completion showing successful and failed row counts plus the Download Report action.",
+      "status": "pending-release-equivalent-verification"
+    },
+    {
+      "id": "asset-types-save-draft",
+      "file": "media/screenshots/asset-type-save-draft-result.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "asset-types-publish-confirm",
+      "file": "media/screenshots/asset-type-publish-confirmation.png",
+      "article": "/docs/publish-and-verify-an-asset-type",
+      "alt": "Asset Type publication confirmation showing the read-only consequence before the destructive action is confirmed.",
+      "status": "pending-product-approval"
+    },
+    {
+      "id": "structures-edit",
+      "file": "media/screenshots/structure-edit.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Edit Structure dialog showing the selected node, editable name, hierarchy context, and Save action.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "structures-delete-confirm",
+      "file": "media/screenshots/structure-delete-confirmation.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Structure deletion confirmation showing the selected example node and the impact warning before confirmation.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "elements-create-success",
+      "file": "media/screenshots/element-create-success.png",
+      "article": "/docs/create-and-populate-elements",
+      "alt": "Element Added confirmation showing the created Element type and the released next actions for that record.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "elements-delete-confirm",
+      "file": "media/screenshots/element-delete-confirmation.png",
+      "article": "/docs/create-and-populate-elements",
+      "alt": "Element deletion confirmation showing the example record and its attachment impact before confirmation.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "collections-create",
+      "file": "media/screenshots/collection-create.png",
+      "article": "/docs/create-collections-and-add-assets",
+      "alt": "Add Collection form showing the parent Element, Collection name, Structure Tags, and Save action.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "collections-delete-confirm",
+      "file": "media/screenshots/collection-delete-confirmation.png",
+      "article": "/docs/create-collections-and-add-assets",
+      "alt": "Collection deletion confirmation showing the selected example Collection and its membership impact.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "elements-structure-tag-save",
+      "file": "media/screenshots/element-structure-tag-save.png",
+      "article": "/docs/attach-elements-to-structures",
+      "alt": "Element details showing the Structure Tag selector, a selected hierarchy path, and the enabled Save action.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "collections-structure-tag-save",
+      "file": "media/screenshots/collection-structure-tag-save.png",
+      "article": "/docs/attach-collections-to-structures",
+      "alt": "Collection details showing the Structure Tag selector, a selected hierarchy path, and the enabled Save action.",
+      "status": "pending-documentation-record"
+    },
+    {
+      "id": "administration-user-create",
+      "file": "media/screenshots/iam-create-user.png",
+      "article": "/docs/invite-users-and-assign-roles",
+      "alt": "Create User form showing sanitized name, email, Role selection, validation, and the Create User action.",
+      "status": "pending-sanitized-user"
+    },
+    {
+      "id": "administration-company-logo",
+      "file": "media/screenshots/company-logo-preview.png",
+      "article": "/docs/manage-company-settings",
+      "alt": "Organization Information showing the company logo preview and Save control with identifiers removed.",
+      "status": "pending-identifier-safe-capture"
+    },
+    {
+      "id": "personal-profile-general",
+      "file": "media/screenshots/profile-general-settings.png",
+      "article": "/docs/manage-profile-and-security",
+      "alt": "Personal General settings showing name, timezone, time and date formats, avatar control, and Save action.",
+      "status": "pending-identifier-safe-capture"
+    },
+    {
+      "id": "personal-password",
+      "file": "media/screenshots/profile-change-password.png",
+      "article": "/docs/manage-profile-and-security",
+      "alt": "Change Password form showing password requirements and action controls with every entered value blank.",
+      "status": "pending-identifier-safe-capture"
+    },
+    {
+      "id": "personal-mfa-setup",
+      "file": "media/screenshots/profile-mfa-setup.png",
+      "article": "/docs/manage-profile-and-security",
+      "alt": "Authenticator App setup flow before any QR code or recovery code is generated or exposed.",
+      "status": "pending-identifier-safe-capture"
+    },
+    {
+      "id": "personal-recovery-codes",
+      "file": "media/screenshots/profile-recovery-code-actions.png",
+      "article": "/docs/manage-profile-and-security",
+      "alt": "Recovery Codes section showing Copy, Download, and Regenerate actions with every code fully excluded.",
+      "status": "pending-identifier-safe-capture"
+    },
+    {
+      "id": "administration-payment-form",
+      "file": "media/screenshots/billing-payment-method-form.png",
+      "article": "/docs/manage-payment-methods",
+      "alt": "Add Payment Method form using only masked test details and showing the fields reviewed before submission.",
+      "status": "pending-masked-test-data"
+    },
+    {
+      "id": "administration-invoice-view",
+      "file": "media/screenshots/billing-invoice-view.png",
+      "article": "/docs/view-billing-history-and-invoices",
+      "alt": "Invoice view showing a masked sample company, billing period, status, and the available download action.",
+      "status": "pending-masked-test-data"
+    },
+    {
+      "id": "catalog-save-result",
+      "file": "media/screenshots/service-catalog-save-result.png",
+      "article": "/docs/create-a-custom-service-catalog",
+      "alt": "Service Catalog showing the newly saved example entry under the intended draft Asset Type.",
+      "status": "pending-demo-records"
     }
-  ]
+  ],
+  "generatedStyleReference": "media/screenshots/style/wanaware-docs-backdrop.png"
 }

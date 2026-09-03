@@ -42,6 +42,8 @@ A relationship can appear after both assets are present and the applicable relat
 5. Wait for active collection or import processing to finish.
 6. Compare the source properties that should connect the two assets.
 
+![Relationship Graph showing an example Asset, grouping controls, connected nodes, and hop-depth choices.](https://files.readme.io/e7db6b94b13b42103b48e405a82aa443fbbba2af036bdbfc2996c4d8b8170c41-asset-relationship-graph.png)
+
 ## Common causes and fixes
 
 | Symptom | Likely cause | What to do |

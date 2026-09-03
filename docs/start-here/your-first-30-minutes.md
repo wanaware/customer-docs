@@ -71,6 +71,8 @@ release-status: draft
 
 1. Open **Launchpad** from the left navigation.
 2. Review the summaries available to your role.
+
+![Launchpad showing example workspace summaries, available widgets, and links into detailed product areas.](https://files.readme.io/4110fc0e44ac5a1c2e80f05909c954f86f11daaa682ef188a05aaa43d3117d03-launchpad-overview.png)
 3. In the left navigation, open **Functions → Assets**.
 4. Select **Inventory**.
 
@@ -85,6 +87,8 @@ If a page is missing, see [Missing pages, actions, or permissions](https://docs.
 3. Select the asset row or node.
 4. Confirm the asset name, type, and source context.
 
+![Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.](https://files.readme.io/774951d14c429216eaee3e6dbd0d3669db23958ebbe371c86761a9215a279a8e-asset-inventory-table-and-filters.png)
+
 **Expected result:** The asset detail page opens with the tabs supported by its Asset Type.
 
 ## 3. Understand its details
@@ -92,6 +96,8 @@ If a page is missing, see [Missing pages, actions, or permissions](https://docs.
 1. Review the asset name and Data Tags.
 2. Review any **Structure Tags** to see where the asset is organized.
 3. Open each available detail tab and note any fields that are incomplete.
+
+![Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.](https://files.readme.io/f2860c4ff35f029d8eb212855afa8553adb364a83ff9dada649026d0107faff8-asset-details-fields.png)
 4. Do not edit data during this path unless the workspace owner has asked you to.
 
 ## 4. Follow one relationship
@@ -100,6 +106,8 @@ If a page is missing, see [Missing pages, actions, or permissions](https://docs.
 2. Find the focused asset.
 3. Follow one connecting line to another node.
 4. Select that node and identify the connected resource.
+
+![Relationship Graph showing an example Asset, grouping controls, connected nodes, and hop-depth choices.](https://files.readme.io/e7db6b94b13b42103b48e405a82aa443fbbba2af036bdbfc2996c4d8b8170c41-asset-relationship-graph.png)
 5. Clear filters before deciding that a relationship is missing.
 
 **Expected result:** You can describe one relationship in plain language.

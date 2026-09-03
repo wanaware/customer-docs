@@ -67,6 +67,8 @@ release-status: draft
 4. Return to the Asset table and select the exact row. For one record, you may instead use its **Actions** menu if **Delete** is present there.
 5. Select **Delete**.
 6. Read the confirmation message and verify the count and identity.
+
+![Delete Asset confirmation with the example Asset shown and record identifiers masked.](https://files.readme.io/d581c900bc65fd9b730dc5ced9c030effcedb3cae1d50073397820d1d35ba877-delete-asset-confirmation.png)
 7. Confirm deletion.
 
 **Expected result:** WanAware accepts the deletion and removes the Asset from the active table after processing.

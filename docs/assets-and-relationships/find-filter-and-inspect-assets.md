@@ -72,6 +72,8 @@ release-status: draft
 5. If more than one row remains, compare **Type**, **Asset Name**, **Data Tags**, **Structure Tags**, **Elements/Collections**, and **Source**.
 6. Open the likely match and confirm its Asset ID, Asset Type, source context, and schema details.
 
+![Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.](https://files.readme.io/774951d14c429216eaee3e6dbd0d3669db23958ebbe371c86761a9215a279a8e-asset-inventory-table-and-filters.png)
+
 **Expected result:** One record matches both the visible identity and its stable source or Asset ID.
 
 If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
@@ -83,6 +85,8 @@ If no record matches, repeat the same search in the other Asset tab. Do not crea
 3. Compare the visible count with Table.
 4. Select a marker or supported map item and confirm it opens the expected Asset.
 
+![Asset Inventory Map showing mapped Site clusters, coverage counts, Fit assets, and map controls.](https://files.readme.io/00b5db984df67ef12e5918108cb0a3441c417fcb3a3a222cf4da603a76667f17-asset-inventory-map.png)
+
 **Expected result:** The Map shows Assets that contain supported location data. The Table still lists Assets that lack usable location data.
 
 ## Use Graph
@@ -91,6 +95,8 @@ If no record matches, repeat the same search in the other Asset tab. Do not crea
 2. Apply the smallest useful search or filter scope.
 3. Select a node and verify its name and Asset identity before following an edge.
 4. Open the Asset's **Relationship Graph** for record-specific relationship investigation.
+
+![Asset Inventory Graph showing scope, grouping controls, relationship insights, and an example Asset node.](https://files.readme.io/7513307ac9b0ffc6439cb078aa582881594b9ea1cc92b907ce734dd54d814474-asset-inventory-graph.png)
 
 **Expected result:** The Graph presents supported connections for the current scope. Use the Table to confirm whether an Asset exists in Inventory.
 

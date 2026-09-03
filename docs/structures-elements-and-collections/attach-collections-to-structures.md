@@ -62,6 +62,8 @@ release-status: draft
 2. Open **Collections** and expand the intended Collection.
 3. Find **Structure Tags**.
 4. Select the intended Structure Tag to attach the Collection, or clear the tag to detach the Collection.
+
+![Collection details showing editable tags, associated example Assets, row actions, and Add Asset.](https://files.readme.io/e1dd388be88ea2f72a8d8a63520e4e733518bfcfb32b8198abbdd52ff286b632-collection-details-and-assets.png)
 5. Save the Collection.
 
 **Expected result:** After reopening, the Collection displays the intended Structure Tag.

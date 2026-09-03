@@ -61,9 +61,13 @@ release-status: draft
 
 1. Open **Functions → Elements** and select the Element.
 2. Open **Collections**.
+
+![Collection details showing editable tags, associated example Assets, row actions, and Add Asset.](https://files.readme.io/e1dd388be88ea2f72a8d8a63520e4e733518bfcfb32b8198abbdd52ff286b632-collection-details-and-assets.png)
 3. Select **+ Add Collection**.
 4. Enter a clear Collection name.
 5. Search for and select the intended assets.
+
+![Select Asset dialog showing search, row selection, and Associate Asset for Collection membership.](https://files.readme.io/b98f77f4169b02437520e6cb9c5727c1eea7044f600d0509af464013123b90a1-collection-add-asset.png)
 6. Confirm each asset's name, Asset Type, and unique identifier.
 7. Save the Collection.
 

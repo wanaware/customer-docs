@@ -15,7 +15,7 @@ metadata:
     - external ID
   robots: index
 ---
-{/* kb-meta
+<!-- kb-meta
 content-type: workflow
 audience: customer administrator, cloud administrator
 permission: read integrations and create integrations
@@ -27,7 +27,7 @@ last-verified-release: pending
 screenshot-set: integrations-provider-aws
 video-status: not-planned
 release-status: draft
-*/}
+-->
 
 # Amazon Web Services integration adapter
 
@@ -68,7 +68,11 @@ release-status: draft
 1. Open **Administration → Integrations**.
 2. Expand **Amazon Web Services**.
 3. For **AWS Account Inventory**, select **Connect account**.
+
+![Integrations page showing the available provider adapter, connection count, and Connect account action.](https://files.readme.io/af342b7fc96185427330417c532aee1aaed27fbdd5956c429ee096a4f4f3dac6-integration-provider-selection.png)
 4. Enter a recognizable account name and the 12-digit **AWS account ID**.
+
+![Provider setup showing Connect, Test, and Crawl checkpoints before any account details are entered.](https://files.readme.io/57151f307e11fc71ab6b99b1b84fdd20f2701c60511699a70cc6ceb8cc792df2-integration-provider-setup.png)
 
 5. Select **Generate AWS setup**.
 6. Open the generated CloudFormation setup and review it in the intended AWS account and Region.
