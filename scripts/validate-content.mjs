@@ -1,5 +1,5 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
-import { dirname, extname, join, relative, resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { basename, dirname, extname, join, relative, resolve } from 'node:path';
 import process from 'node:process';
 
 const root = process.cwd();
@@ -18,13 +18,36 @@ function fail(file, message) {
   errors.push(`${relative(root, file)}: ${message}`);
 }
 
+function parseJson(file) {
+  try {
+    return JSON.parse(readFileSync(file, 'utf8'));
+  } catch (error) {
+    fail(file, `invalid JSON: ${error.message}`);
+    return null;
+  }
+}
+
+function metadataValue(block, field) {
+  return block.match(new RegExp(`^${field}:\\s*(.+)$`, 'm'))?.[1]?.trim();
+}
+
+function slugForMarkdown(file) {
+  const name = basename(file, '.md');
+  return name === 'index' ? basename(dirname(file)) : name;
+}
+
 const markdownFiles = walk(docsRoot).filter((file) => extname(file) === '.md');
 const allFiles = walk(root);
 const slugFiles = new Set(markdownFiles.map((file) => file.replace(/\.md$/, '')));
+const publicSlugs = new Set(markdownFiles.map((file) => `/docs/${slugForMarkdown(file)}`));
+
+if (publicSlugs.size !== markdownFiles.length) {
+  fail(docsRoot, 'two or more guide pages resolve to the same public slug');
+}
 
 for (const file of markdownFiles) {
-  const text = readFileSync(file, 'utf8');
-  const frontmatter = text.match(/^---\n([\s\S]*?)\n---\n/);
+  const source = readFileSync(file, 'utf8');
+  const frontmatter = source.match(/^---\n([\s\S]*?)\n---\n/);
 
   if (!frontmatter) {
     fail(file, 'missing YAML frontmatter');
@@ -35,46 +58,75 @@ for (const file of markdownFiles) {
     if (!frontmatter[1].includes(field)) fail(file, `frontmatter is missing ${field}`);
   }
 
-  if (!/^# .+/m.test(text.slice(frontmatter[0].length))) {
+  if (!/^# .+/m.test(source.slice(frontmatter[0].length))) {
     fail(file, 'missing an H1 heading');
   }
 
   const isCategory = file.endsWith('/index.md');
   if (!isCategory) {
-    const metadata = text.match(/<!-- kb-meta\n([\s\S]*?)\n-->/);
+    const metadata = source.match(/<!-- kb-meta\n([\s\S]*?)\n-->/);
     if (!metadata) {
       fail(file, 'missing kb-meta block');
     } else {
-      for (const field of [
-        'content-type:',
-        'audience:',
-        'permission:',
-        'product-area:',
-        'content-owner:',
-        'review-owner:',
-        'last-verified:'
-      ]) {
-        if (!metadata[1].includes(field)) fail(file, `kb-meta is missing ${field}`);
+      const requiredMetadata = [
+        'content-type',
+        'audience',
+        'permission',
+        'product-area',
+        'content-owner',
+        'review-owner',
+        'last-verified',
+        'last-verified-release',
+        'screenshot-set',
+        'video-status',
+        'release-status'
+      ];
+
+      for (const field of requiredMetadata) {
+        if (!metadataValue(metadata[1], field)) fail(file, `kb-meta is missing ${field}`);
       }
 
-      const contentType = metadata[1].match(/content-type:\s*([^\n]+)/)?.[1]?.trim();
+      const releaseStatus = metadataValue(metadata[1], 'release-status');
+      if (!['draft', 'ready'].includes(releaseStatus)) {
+        fail(file, 'release-status must be draft or ready');
+      }
+
+      if (releaseStatus === 'ready') {
+        for (const field of ['last-verified', 'last-verified-release', 'screenshot-set']) {
+          if (metadataValue(metadata[1], field) === 'pending') {
+            fail(file, `${field} cannot be pending when release-status is ready`);
+          }
+        }
+      }
+
+      const contentType = metadataValue(metadata[1], 'content-type');
       if (contentType === 'workflow' || contentType === 'quickstart') {
         for (const label of ['**Outcome:**', '**For:**', '**Permission:**', '**Time:**', '**Changes made:**']) {
-          if (!text.includes(label)) fail(file, `workflow is missing ${label}`);
+          if (!source.includes(label)) fail(file, `workflow is missing ${label}`);
         }
-        if (!/^## (Check your result|Verify)/m.test(text)) fail(file, 'workflow is missing a success-verification section');
-        if (!text.includes('support@wanaware.com')) fail(file, 'workflow is missing the support handoff');
+        for (const heading of ['## Before you start', '## Learn, show me, do it', '## Get help']) {
+          if (!source.includes(heading)) fail(file, `workflow is missing ${heading}`);
+        }
+        if (!/\n1\.\s/.test(source)) fail(file, 'workflow is missing numbered steps');
+        if (!source.includes('**Expected result:**')) fail(file, 'workflow is missing an expected-result checkpoint');
+        if (!/^## (Check your result|Verify)/m.test(source)) fail(file, 'workflow is missing a success-verification section');
+        const changesMade = source.match(/\*\*Changes made:\*\*\s*([^\n]+)/)?.[1]?.trim() || '';
+        if (!/^None\b/i.test(changesMade) && !/^## (Undo this change|Recover)/m.test(source)) {
+          fail(file, 'workflow changes data but is missing undo or recovery guidance');
+        }
+        if (!source.includes('support@wanaware.com')) fail(file, 'workflow is missing the support handoff');
       }
 
       if (contentType === 'troubleshooting') {
         for (const heading of ['## Fast checks', '## Common causes and fixes', '## Verify the fix', '## Known limitations', '## Get help']) {
-          if (!text.includes(heading)) fail(file, `troubleshooting article is missing ${heading}`);
+          if (!source.includes(heading)) fail(file, `troubleshooting article is missing ${heading}`);
         }
+        if (!source.includes('support@wanaware.com')) fail(file, 'troubleshooting article is missing the support handoff');
       }
     }
   }
 
-  const links = [...text.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
+  const links = [...source.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
   for (const link of links) {
     if (/^(?:https?:|mailto:|#)/.test(link) || link.startsWith('/docs/')) continue;
     const cleanLink = link.split('#')[0];
@@ -82,6 +134,21 @@ for (const file of markdownFiles) {
     const destination = resolve(dirname(file), cleanLink);
     if (!existsSync(destination) && !existsSync(`${destination}.md`) && !slugFiles.has(destination)) {
       fail(file, `broken relative link: ${link}`);
+    }
+  }
+
+  for (const image of source.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {
+    const alt = image[1].trim();
+    const path = image[2].split('#')[0];
+    if (!alt) fail(file, `image is missing alt text: ${path}`);
+    if (/\.gif(?:$|\?)/i.test(path)) fail(file, `GIFs are not allowed: ${path}`);
+    if (!/^(?:https?:|data:)/.test(path)) {
+      const destination = resolve(dirname(file), path);
+      if (!existsSync(destination)) {
+        fail(file, `referenced image does not exist: ${path}`);
+      } else if (statSync(destination).size > 256000) {
+        fail(file, `image exceeds 250 KB: ${path}`);
+      }
     }
   }
 }
@@ -93,10 +160,21 @@ for (const orderFile of walk(docsRoot).filter((file) => file.endsWith('_order.ya
     .map((line) => line.match(/^\s*-\s+(.+?)\s*$/)?.[1])
     .filter(Boolean);
 
+  if (new Set(entries).size !== entries.length) fail(orderFile, 'contains a duplicate entry');
+
   for (const entry of entries) {
     if (!existsSync(join(directory, entry)) && !existsSync(join(directory, `${entry}.md`))) {
       fail(orderFile, `ordered entry does not exist: ${entry}`);
     }
+  }
+
+  const childrenThatNeedOrdering = readdirSync(directory, { withFileTypes: true })
+    .filter((entry) => entry.name !== 'index.md' && entry.name !== '_order.yaml')
+    .filter((entry) => entry.isDirectory() || extname(entry.name) === '.md')
+    .map((entry) => entry.isDirectory() ? entry.name : basename(entry.name, '.md'));
+
+  for (const child of childrenThatNeedOrdering) {
+    if (!entries.includes(child)) fail(orderFile, `content is missing from order: ${child}`);
   }
 }
 
@@ -107,26 +185,125 @@ const highConfidenceSecretPatterns = [
   [/\beyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\b/, 'JWT'],
   [/(?:client_secret|api_key|access_token)\s*[:=]\s*["'][^"']{8,}["']/i, 'assigned secret value'],
   [/https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?/i, 'local-only URL'],
+  [/https?:\/\/[a-z0-9-]+\.dev\.wanaware\.com/i, 'internal environment URL'],
   [/wanaware\/wanaware-doc/i, 'private engineering repository name'],
-  [/support@readme\.io|Welcome to ReadMe|Developer Hub/i, 'stock ReadMe content']
+  [/support@readme\.io|Welcome to ReadMe|Developer Hub/i, 'stock ReadMe content'],
+  [/\b\d{12}\b/, 'unmasked 12-digit account identifier']
 ];
 
 for (const file of allFiles) {
   if (!['.md', '.json', '.yaml', '.yml', '.csv'].includes(extname(file))) continue;
-  const text = readFileSync(file, 'utf8');
+  const source = readFileSync(file, 'utf8');
   for (const [pattern, label] of highConfidenceSecretPatterns) {
-    if (pattern.test(text)) fail(file, `contains a forbidden ${label} pattern`);
+    if (pattern.test(source)) fail(file, `contains a forbidden ${label} pattern`);
   }
 }
 
-const legacyPolicy = JSON.parse(readFileSync(join(root, 'migration/source-policy.json'), 'utf8'));
-if (legacyPolicy.status !== 'outdated') {
-  fail(join(root, 'migration/source-policy.json'), 'all Stonly material must remain marked outdated');
+const excludedFamilyPattern = /\b(?:workers?|observability|pulse|monitors?|monitoring|fleet manager)\b/i;
+const publicScopeFiles = [
+  ...markdownFiles,
+  ...walk(join(root, 'recordings')).filter((file) => extname(file) === '.md'),
+  join(root, 'integration/portal-help-links.json'),
+  join(root, 'integration/search-quality-questions.json')
+];
+
+for (const file of publicScopeFiles) {
+  if (excludedFamilyPattern.test(readFileSync(file, 'utf8'))) {
+    fail(file, 'contains first-release-excluded product terminology');
+  }
 }
 
-const benchmark = JSON.parse(readFileSync(join(root, 'integration/search-quality-questions.json'), 'utf8'));
-if (benchmark.questions.length !== 20) {
-  fail(join(root, 'integration/search-quality-questions.json'), 'Ask AI benchmark must contain exactly 20 questions');
+const genericIntegration = join(docsRoot, 'integrations/add-an-integration.md');
+const providerNamePattern = /\b(?:AWS|Amazon Web Services|Azure|Google Cloud|GCP|Oracle Cloud|VMware)\b/i;
+if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
+  fail(genericIntegration, 'provider-neutral integration guide contains a provider name');
+}
+
+const routeMapFile = join(root, 'integration/portal-help-links.json');
+const routeMap = parseJson(routeMapFile);
+if (routeMap) {
+  for (const [index, route] of (routeMap.routes || []).entries()) {
+    for (const field of ['portalRoute', 'article', 'label']) {
+      if (!route[field]) fail(routeMapFile, `route ${index + 1} is missing ${field}`);
+    }
+    if (route.article && !publicSlugs.has(route.article)) {
+      fail(routeMapFile, `route ${index + 1} points to unknown article ${route.article}`);
+    }
+  }
+}
+
+const benchmarkFile = join(root, 'integration/search-quality-questions.json');
+const benchmark = parseJson(benchmarkFile);
+if (benchmark) {
+  if (benchmark.questions?.length !== 20) {
+    fail(benchmarkFile, 'Ask AI benchmark must contain exactly 20 questions');
+  }
+  for (const [index, question] of (benchmark.questions || []).entries()) {
+    if (!publicSlugs.has(question.expectedSlug)) {
+      fail(benchmarkFile, `question ${index + 1} points to unknown article ${question.expectedSlug}`);
+    }
+  }
+}
+
+const screenshotManifestFile = join(root, 'media/screenshot-manifest.json');
+const screenshotManifest = parseJson(screenshotManifestFile);
+if (screenshotManifest) {
+  const screenshots = screenshotManifest.screenshots || [];
+  if (screenshots.length < 30 || screenshots.length > 40) {
+    fail(screenshotManifestFile, 'launch screenshot inventory must remain approximately 33 items');
+  }
+  const ids = new Set();
+  const files = new Set();
+  for (const [index, screenshot] of screenshots.entries()) {
+    if (!screenshot.id || ids.has(screenshot.id)) fail(screenshotManifestFile, `screenshot ${index + 1} has a missing or duplicate id`);
+    if (!screenshot.file || files.has(screenshot.file)) fail(screenshotManifestFile, `screenshot ${index + 1} has a missing or duplicate file`);
+    ids.add(screenshot.id);
+    files.add(screenshot.file);
+    if (!/\.png$/i.test(screenshot.file || '')) fail(screenshotManifestFile, `screenshot ${index + 1} must use PNG`);
+    const altLength = (screenshot.alt || '').trim().length;
+    if (altLength < 40 || altLength > 150) fail(screenshotManifestFile, `screenshot ${index + 1} alt text must be 40–150 characters`);
+    if (!publicSlugs.has(screenshot.article)) fail(screenshotManifestFile, `screenshot ${index + 1} points to unknown article ${screenshot.article}`);
+    if (/^(?:captured|approved)/.test(screenshot.status || '')) {
+      const path = join(root, screenshot.file);
+      if (!existsSync(path)) fail(screenshotManifestFile, `captured screenshot is missing: ${screenshot.file}`);
+      else if (statSync(path).size > 256000) fail(screenshotManifestFile, `captured screenshot exceeds 250 KB: ${screenshot.file}`);
+    }
+  }
+}
+
+const recordingFiles = walk(join(root, 'recordings')).filter((file) => extname(file) === '.md');
+if (recordingFiles.length !== 5) fail(join(root, 'recordings'), 'launch requires exactly five recording scripts');
+for (const file of recordingFiles) {
+  const source = readFileSync(file, 'utf8');
+  for (const marker of ['**Status:**', '**Target length:**', '**Embed in:**', '## Recording guardrails', '## Transcript']) {
+    if (!source.includes(marker)) fail(file, `recording script is missing ${marker}`);
+  }
+}
+
+const legacyPolicyFile = join(root, 'migration/source-policy.json');
+const legacyPolicy = parseJson(legacyPolicyFile);
+if (legacyPolicy?.status !== 'outdated') {
+  fail(legacyPolicyFile, 'all Stonly material must remain marked outdated');
+}
+
+const legacyRegisterFile = join(root, 'migration/legacy-stonly-guides.csv');
+const legacyRows = readFileSync(legacyRegisterFile, 'utf8').trim().split('\n').slice(1);
+if (legacyRows.length !== 54) fail(legacyRegisterFile, 'legacy register must contain all 54 Stonly guides');
+for (const [index, row] of legacyRows.entries()) {
+  const [, , disposition, target] = row.split(',');
+  if (!['rewrite', 'merge', 'archive', 'redirect'].includes(disposition)) {
+    fail(legacyRegisterFile, `row ${index + 2} has invalid disposition ${disposition}`);
+  }
+  if (target && !publicSlugs.has(target)) {
+    fail(legacyRegisterFile, `row ${index + 2} points to unknown article ${target}`);
+  }
+}
+
+const redirectsFile = join(root, 'integration/readme-redirects.csv');
+const redirectRows = readFileSync(redirectsFile, 'utf8').trim().split('\n').slice(1);
+for (const [index, row] of redirectRows.entries()) {
+  const [, target] = row.split(',');
+  if (!publicSlugs.has(target)) fail(redirectsFile, `row ${index + 2} points to unknown article ${target}`);
 }
 
 if (errors.length) {
@@ -135,4 +312,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Documentation checks passed for ${markdownFiles.length} guide pages.`);
+console.log(`Documentation checks passed for ${markdownFiles.length} guide pages, ${screenshotManifest?.screenshots?.length || 0} screenshot slots, and ${recordingFiles.length} recording scripts.`);

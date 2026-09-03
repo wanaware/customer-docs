@@ -23,6 +23,10 @@ product-area: Support
 content-owner: Support
 review-owner: Product
 last-verified: pending
+last-verified-release: pending
+screenshot-set: support-contact
+video-status: not-planned
+release-status: draft
 -->
 
 # Contact WanAware Support
@@ -35,7 +39,7 @@ Send one issue per email so the subject, evidence, and resolution stay together.
 
 - Company or account name
 - Affected user's business email
-- Relevant asset, integration, monitor, Worker, Element, Collection, Structure, or Pulse execution ID
+- Relevant asset, integration, Asset Type, catalog entry, Element, Collection, Structure, invoice, or transaction ID
 - Date, time, and time zone when the problem occurred
 - WanAware page URL
 - Steps that reproduce the problem

@@ -24,6 +24,10 @@ product-area: IAM
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: troubleshoot-permissions
+video-status: not-planned
+release-status: draft
 -->
 
 # Missing pages, actions, or permissions
@@ -45,8 +49,7 @@ WanAware hides navigation and actions that are not available to the current role
 | A navigation item is missing | The role lacks the feature permission | Ask an administrator to review the role in **Administration → IAM → Roles**. |
 | The page opens but Add, Edit, or Delete is missing | View access exists without write access | Request the smallest create, update, or delete permission needed. |
 | A `403` page appears | The URL is valid, but the user is not authorized | Return to an available page and ask an administrator to review the role. |
-| **Observability Subscription Required** appears | The company lacks an active Observability plan | A billing administrator must add or restore the subscription. |
-| Pulse content says access is required | The role or subscription does not include Pulse | Ask an administrator to confirm Pulse access. |
+| A billing or subscription message appears | The company plan does not include the requested released area | Ask a billing administrator to confirm the current plan before changing it. |
 | The same role behaves differently in another company | Role assignments and subscriptions differ by organization | Verify the selected workspace and company-specific assignment. |
 
 ## Verify the fix

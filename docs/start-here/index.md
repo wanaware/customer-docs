@@ -1,11 +1,11 @@
 ---
 title: Start here
-excerpt: Learn what WanAware does and reach your first useful asset relationship.
+excerpt: Choose a short path to explore WanAware or begin building your environment.
 deprecated: false
 hidden: false
 metadata:
   title: Start here | WanAware Documentation
-  description: Start using WanAware and learn the path from inventory to asset relationships.
+  description: Choose the WanAware onboarding path that matches what you need to accomplish.
   keywords:
     - getting started
     - onboarding
@@ -15,6 +15,9 @@ metadata:
 
 # Start here
 
-New to WanAware? Begin with [Your first 30 minutes](your-first-30-minutes). It takes you through the shortest useful path: open your inventory, choose an asset, and understand one of its relationships.
+You do not need to learn every part of WanAware before you can get value from it.
 
-Use the other pages in this section when you need a product map, terminology, or guidance for working safely in a shared demo.
+- **Explore WanAware** if your environment already has data. In about 30 minutes, you will find an asset, review its details, and understand one useful relationship.
+- **Build your environment** if you are setting up the workspace. You will add a data source, define how assets should be described, and organize them for your team.
+
+[Choose your path](choose-your-path) explains where to begin. If you are evaluating a shared workspace, read [Use the demo safely](use-the-demo-safely) before making changes.

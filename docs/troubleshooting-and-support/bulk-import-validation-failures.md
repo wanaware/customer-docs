@@ -23,6 +23,10 @@ product-area: Assets
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: troubleshoot-bulk-import
+video-status: not-planned
+release-status: draft
 -->
 
 # Bulk-import validation failures

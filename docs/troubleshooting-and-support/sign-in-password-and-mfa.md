@@ -23,6 +23,10 @@ product-area: Authentication
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: troubleshoot-authentication
+video-status: not-planned
+release-status: draft
 -->
 
 # Sign-in, password, and MFA problems

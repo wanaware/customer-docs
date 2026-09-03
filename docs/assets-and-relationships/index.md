@@ -1,11 +1,11 @@
 ---
 title: Assets and relationships
-excerpt: Bring asset data into WanAware, inspect it, and understand how resources connect.
+excerpt: Add, find, enrich, and connect the resources WanAware tracks.
 deprecated: false
 hidden: false
 metadata:
   title: Assets and relationships | WanAware Documentation
-  description: Add integrations and assets, search inventory, and explore relationships in WanAware.
+  description: Add or import assets, complete their details, and understand supported relationships.
   keywords:
     - assets
     - inventory
@@ -16,6 +16,6 @@ metadata:
 
 # Assets and relationships
 
-Assets are the resources WanAware tracks. Start by [adding an integration](add-an-integration) or adding an asset, then confirm that the resource appears in **Functions → Assets → Inventory**.
+Assets are the resources WanAware tracks. Add them manually, import them, or bring them in through an integration. Then complete the fields defined by their Asset Type and use **Relationship Graph** to understand connected context.
 
-Open an asset to review its details and **Relationship Graph**. If the data is missing or looks wrong, use the troubleshooting pages linked from each workflow.
+Relationships can come from supported source data or a specific WanAware workflow. The available **Add Connection** flow creates supported network connections; it is not a general tool for drawing arbitrary relationships.

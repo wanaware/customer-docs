@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "account": "Harbor Meridian Systems",
+  "recordPrefix": "Docs Demo",
+  "defaultTheme": "Light",
+  "sourceDirectory": "media/screenshots",
+  "captureStatus": "pending-first-release-ui-and-review",
+  "rules": {
+    "format": "png",
+    "fullColumnWidthPixels": {
+      "minimum": 750,
+      "maximum": 1000
+    },
+    "maximumFileSizeBytes": 256000,
+    "requiredReviews": [
+      "Product",
+      "Support"
+    ],
+    "forbiddenContent": [
+      "real customer data",
+      "account identifiers",
+      "payment details",
+      "browser profiles",
+      "unrelated tabs",
+      "email addresses",
+      "notifications",
+      "account menus",
+      "internal URLs",
+      "credentials",
+      "tokens",
+      "secret values"
+    ]
+  },
+  "screenshots": [
+    {
+      "id": "start-launchpad",
+      "file": "media/screenshots/launchpad-overview.png",
+      "article": "/docs/use-launchpad",
+      "alt": "Launchpad showing sanitized workspace summaries and links into detailed WanAware areas.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "start-navigation",
+      "file": "media/screenshots/first-release-navigation.png",
+      "article": "/docs/product-map-and-terminology",
+      "alt": "WanAware first-release navigation with Functions and Administration sections expanded.",
+      "status": "pending-product-flag"
+    },
+    {
+      "id": "integrations-selection",
+      "file": "media/screenshots/integration-provider-selection.png",
+      "article": "/docs/add-an-integration",
+      "alt": "Integrations page showing the provider selection area with no account details visible.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "integrations-setup",
+      "file": "media/screenshots/integration-provider-setup.png",
+      "article": "/docs/add-an-integration",
+      "alt": "Sanitized provider setup form showing where an administrator enters approved connection details.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "integrations-status",
+      "file": "media/screenshots/integration-connected-status.png",
+      "article": "/docs/add-an-integration",
+      "alt": "Integration card showing a successful connection status with identifiers removed by cropping.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "integrations-refresh",
+      "file": "media/screenshots/integration-refresh-action.png",
+      "article": "/docs/refresh-integration-data",
+      "alt": "Integration actions showing the released test and inventory refresh controls.",
+      "status": "pending-safe-demo-connection"
+    },
+    {
+      "id": "assets-inventory",
+      "file": "media/screenshots/asset-inventory.png",
+      "article": "/docs/find-filter-and-inspect-assets",
+      "alt": "Asset Inventory containing sanitized Docs Demo records in the table view.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "assets-filter",
+      "file": "media/screenshots/asset-search-and-filters.png",
+      "article": "/docs/find-filter-and-inspect-assets",
+      "alt": "Asset Inventory search and filter controls narrowing the result to a Docs Demo asset.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "assets-create",
+      "file": "media/screenshots/add-asset-form.png",
+      "article": "/docs/add-or-import-assets",
+      "alt": "Add Asset form showing Asset Type, status, name, and required detail fields.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "assets-bulk-import",
+      "file": "media/screenshots/bulk-import-upload.png",
+      "article": "/docs/add-or-import-assets",
+      "alt": "Bulk-import uploader ready for a sanitized file based on the current template.",
+      "status": "pending-feature-verification"
+    },
+    {
+      "id": "assets-bulk-validation",
+      "file": "media/screenshots/bulk-import-validation.png",
+      "article": "/docs/bulk-import-validation-failures",
+      "alt": "Bulk-import validation results showing accepted and rejected documentation rows.",
+      "status": "pending-feature-verification"
+    },
+    {
+      "id": "assets-details",
+      "file": "media/screenshots/asset-details.png",
+      "article": "/docs/populate-asset-details",
+      "alt": "Sanitized asset detail page showing the editable name and Asset Type-specific tabs.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "assets-tags",
+      "file": "media/screenshots/asset-data-and-structure-tags.png",
+      "article": "/docs/manage-asset-and-structure-tags",
+      "alt": "Asset detail controls for adding Data Tags and Structure Tags.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "assets-schema-fields",
+      "file": "media/screenshots/asset-schema-fields-and-save.png",
+      "article": "/docs/populate-asset-details",
+      "alt": "Asset Type-specific fields with a catalog-backed choice and the unsaved-change bar.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "assets-relationship-graph",
+      "file": "media/screenshots/asset-relationship-graph.png",
+      "article": "/docs/view-asset-relationships",
+      "alt": "Relationship Graph centered on a Docs Demo asset and one sanitized connected resource.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "connection-target",
+      "file": "media/screenshots/add-connection-target-asset.png",
+      "article": "/docs/add-a-network-connection",
+      "alt": "Add Connection step for selecting a different eligible target asset.",
+      "status": "pending-eligible-demo-assets"
+    },
+    {
+      "id": "connection-ip-block",
+      "file": "media/screenshots/add-connection-ip-block.png",
+      "article": "/docs/add-a-network-connection",
+      "alt": "Add Connection IP block step using sanitized documentation values.",
+      "status": "pending-eligible-demo-assets"
+    },
+    {
+      "id": "connection-endpoints",
+      "file": "media/screenshots/add-connection-endpoints.png",
+      "article": "/docs/add-a-network-connection",
+      "alt": "Add Connection endpoint step with sanitized source and target selections.",
+      "status": "pending-eligible-demo-assets"
+    },
+    {
+      "id": "connection-preview",
+      "file": "media/screenshots/add-connection-preview-and-result.png",
+      "article": "/docs/add-a-network-connection",
+      "alt": "Connection preview and successful network connection result for Docs Demo assets.",
+      "status": "pending-eligible-demo-assets"
+    },
+    {
+      "id": "asset-types-list",
+      "file": "media/screenshots/asset-types-list.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Asset Types list showing sanitized Draft and Published status examples.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "asset-types-start",
+      "file": "media/screenshots/asset-type-starting-options.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "asset-types-fields",
+      "file": "media/screenshots/asset-type-field-builder.png",
+      "article": "/docs/configure-asset-type-sections-and-fields",
+      "alt": "Draft Asset Type field builder with a section, field settings, and catalog support.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "asset-types-lifecycle",
+      "file": "media/screenshots/asset-type-draft-and-publish.png",
+      "article": "/docs/publish-and-verify-an-asset-type",
+      "alt": "Draft Asset Type and publication confirmation explaining the read-only consequence.",
+      "status": "pending-product-approval"
+    },
+    {
+      "id": "catalog-workspace",
+      "file": "media/screenshots/service-catalog-workspace.png",
+      "article": "/docs/create-a-custom-service-catalog",
+      "alt": "Service Catalog workspace with a sanitized draft Asset Type selected.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "catalog-entry",
+      "file": "media/screenshots/service-catalog-entry-form.png",
+      "article": "/docs/create-a-custom-service-catalog",
+      "alt": "Service Catalog entry form with sanitized name, description, and attribute fields.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "catalog-components",
+      "file": "media/screenshots/service-catalog-models-components.png",
+      "article": "/docs/add-catalog-entries-and-compatibility",
+      "alt": "Catalog hierarchy showing documentation-only parent, model, module, and software entries.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "catalog-compatibility",
+      "file": "media/screenshots/service-catalog-compatibility.png",
+      "article": "/docs/add-catalog-entries-and-compatibility",
+      "alt": "Compatibility selector showing approved documentation-only catalog relationships.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "structures-hierarchy",
+      "file": "media/screenshots/structure-hierarchy.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Structure hierarchy containing a small set of Docs Demo nodes and their valid placement.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "elements-create-details",
+      "file": "media/screenshots/element-create-and-details.png",
+      "article": "/docs/create-and-populate-elements",
+      "alt": "Add Element form and sanitized Site detail tabs for a Docs Demo Element.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "collections-assets",
+      "file": "media/screenshots/collection-create-and-assets.png",
+      "article": "/docs/create-collections-and-add-assets",
+      "alt": "Collection form selecting sanitized assets inside a Docs Demo Element.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "organization-attachments",
+      "file": "media/screenshots/element-and-collection-structure-tags.png",
+      "article": "/docs/attach-elements-to-structures",
+      "alt": "Element and Collection details showing their saved Structure Tag attachments.",
+      "status": "pending-demo-records"
+    },
+    {
+      "id": "administration-iam",
+      "file": "media/screenshots/invitations-and-roles.png",
+      "article": "/docs/invite-users-and-assign-roles",
+      "alt": "IAM page showing a sanitized pending invitation and assigned customer role.",
+      "status": "pending-sanitized-user"
+    },
+    {
+      "id": "administration-company-profile",
+      "file": "media/screenshots/company-and-profile-settings.png",
+      "article": "/docs/manage-company-settings",
+      "alt": "Sanitized company settings and personal profile controls with private fields cropped.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "personal-theme",
+      "file": "media/screenshots/theme-settings-light-and-dark.png",
+      "article": "/docs/choose-a-theme",
+      "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
+      "status": "pending-capture"
+    },
+    {
+      "id": "administration-billing",
+      "file": "media/screenshots/billing-plans-payment-history.png",
+      "article": "/docs/understand-billing",
+      "alt": "Billing tabs for Plans, Payment and Billing, and Billing History with all sensitive values hidden by the product or crop.",
+      "status": "pending-masked-test-data"
+    }
+  ]
+}

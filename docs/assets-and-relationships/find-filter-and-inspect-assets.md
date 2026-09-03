@@ -1,18 +1,16 @@
 ---
-title: Find, filter, and inspect assets
-excerpt: Locate an asset in Discovery or Inventory and open the correct detail record.
+title: Find, filter, export, and inspect assets
+excerpt: Locate an asset, confirm that it is the right record, and export the current result when available.
 deprecated: false
 hidden: false
 metadata:
-  title: Find, filter, and inspect assets | WanAware Documentation
-  description: Search, filter, and inspect WanAware assets in table, map, or graph view.
+  title: Find, filter, export, and inspect assets | WanAware Documentation
+  description: Search, filter, export, and inspect WanAware asset inventory.
   keywords:
     - search assets
     - filter inventory
+    - export assets
     - asset details
-    - discovery
-    - table view
-    - graph view
   robots: index
 ---
 
@@ -24,66 +22,63 @@ product-area: Assets
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: assets-find-filter
+video-status: not-planned
+release-status: draft
 -->
 
-# Find, filter, and inspect assets
+# Find, filter, export, and inspect assets
 
-**Outcome:** Locate the intended asset and verify that you opened the correct record.
+**Outcome:** Locate the intended asset, confirm its identity, and export the visible result when the action is available.
 
 **For:** Customer administrators, engineers, and support staff
-**Permission:** Assets
+**Permission:** Assets; export may require an additional permission
 **Time:** 3–5 minutes
-**Changes made:** None
+**Changes made:** None; exporting downloads a copy
 
-## Find an asset
+## Before you start
+
+Gather the most specific value you know: full name, provider identifier, IP address, account, Site, or Asset Type.
+
+## Find and inspect an asset
 
 1. Open **Functions → Assets**.
-2. Choose **Inventory** for maintained records or **Discovery** for discovered records still under review.
-3. Use **Table**, **Map**, or **Graph** view as available.
-4. In table view, search using the most specific known value: full name, provider identifier, IP address, or another unique field.
+2. Choose **Inventory** or **Discovery**.
+3. Select the available Table, Map, or Graph view.
+4. Search with the most specific known value.
 5. Apply filters only after checking the unfiltered result.
-6. Select the asset row or graph node.
+6. Select the asset row or node.
+7. Compare its name, Asset Type, status, provider or source, and unique identifier.
 
-**Expected result:** The detail page opens and shows the asset name, type, status, and type-specific tabs.
+**Expected result:** The correct asset opens with the detail tabs supported by its Asset Type.
 
-## Narrow a graph safely
+If no result appears, select **Clear All Filters**, check both Inventory and Discovery, and confirm the company workspace.
 
-1. Use graph search to select a known asset.
-2. Open **Filters** to narrow by asset type, site, Structure, or Element when those values exist.
-3. Use **Group by** to organize the visualization without changing the underlying relationships.
-4. Select **Clear All Filters** before deciding that an asset is missing.
+## Export a result
 
-## Confirm the record
+1. Return to the asset table.
+2. Apply the search and filters for the exact records you need.
+3. Review the visible count and columns.
+4. Select the available export action.
+5. Store the downloaded file according to your company's data-handling policy.
 
-Before editing or reporting a problem, compare:
-
-- Asset name and type
-- Inventory or Discovery status
-- Provider or source details
-- Account, site, Element, or Structure context
-- Unique asset identifier
-
-Two records with similar names may represent different provider resources.
+**Expected result:** The export reflects the selected scope or current result described by the export dialog. Treat exported asset data as potentially sensitive.
 
 ## Check your result
 
-You have the correct asset when its unique identifier and source context match the resource you expected.
+You have the correct record when its unique identifier and source context match the resource you intended. If you exported data, compare a sample of rows with the table before sharing the file.
 
-## If the asset is missing
+## Undo this change
 
-1. Clear all filters and search terms.
-2. Check both **Inventory** and **Discovery**.
-3. Confirm that you are in the correct company workspace.
-4. Ask an administrator whether your role includes Assets.
-5. If the asset came from an integration, confirm that its latest sync, import, or crawl completed.
-6. Follow [Missing, stale, or duplicate assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets).
+Search and filter changes do not alter assets. Delete an exported file from local or shared storage when it is no longer needed.
 
 ## Learn, show me, do it
 
 - **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** Use the asset portion of **Demo orientation and your first 30 minutes** when the Loom clip is published.
+- **Show me:** The first-30-minutes clip includes the basic search path after publication.
 - **Do it:** Open `/assets/inventory` in your WanAware workspace.
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Cannot%20find%20a%20WanAware%20asset) with your company, expected asset name or ID, source account, current workspace, page URL, filters used, timestamp and time zone, and a screenshot. Never send credentials or tokens.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Cannot%20find%20a%20WanAware%20asset) with your company, affected user, expected asset name or sanitized ID, source account, page URL, filters, timestamp and time zone, and a screenshot. Never send credentials, tokens, secrets, or an unredacted export.

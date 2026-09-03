@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 metadata:
   title: Troubleshooting and support | WanAware Documentation
-  description: Fix common WanAware access, asset, integration, monitoring, and Pulse problems.
+  description: Fix common WanAware access, integration, asset, relationship, configuration, and billing problems.
   keywords:
     - troubleshooting
     - error
