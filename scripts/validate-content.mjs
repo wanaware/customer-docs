@@ -219,6 +219,69 @@ if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
   fail(genericIntegration, 'provider-neutral integration guide contains a provider name');
 }
 
+const productMapFile = join(docsRoot, 'start-here/product-map-and-terminology.md');
+const productMap = readFileSync(productMapFile, 'utf8');
+const productMapMarkers = [
+  '## Navigation and permission map',
+  '| Portal path | Permission that makes it visible |',
+  '## How the records fit together',
+  '```mermaid',
+  '## These sound alike',
+  'capitalized words',
+  '`read my_launchpad`',
+  '`read structures`',
+  '`read assets`',
+  '`read elements`',
+  '`view general` and `view company_information`',
+  '`read integrations`',
+  '`read users`',
+  '`read asset_types_builder`',
+  '`read service_catalog`',
+  '`read billing`, `read billing_history`, `read my_subscriptions`, and `read payment_methods`',
+  '`view my_profile`',
+  '`view support`',
+  '/assets/inventory',
+  '/administration/service-catalog'
+];
+for (const marker of productMapMarkers) {
+  if (!productMap.includes(marker)) {
+    fail(productMapFile, `product map is missing required content: ${marker}`);
+  }
+}
+
+const glossaryTerms = [
+  'Integration',
+  'Asset',
+  'Discovery',
+  'Inventory',
+  'Asset Type',
+  'Service Catalog',
+  'Relationship',
+  'Structure',
+  'Structure Tag',
+  'Data Tag',
+  'Element',
+  'Site',
+  'Collection',
+  'Role',
+  'Permission'
+];
+for (const term of glossaryTerms) {
+  const heading = `### ${term}`;
+  const start = productMap.indexOf(heading);
+  if (start === -1) {
+    fail(productMapFile, `glossary is missing ${term}`);
+    continue;
+  }
+  const nextTerm = productMap.indexOf('\n### ', start + heading.length);
+  const nextSection = productMap.indexOf('\n## ', start + heading.length);
+  const candidates = [nextTerm, nextSection].filter(index => index !== -1);
+  const end = candidates.length ? Math.min(...candidates) : productMap.length;
+  const section = productMap.slice(start, end);
+  if (!section.includes('- **Where:**')) fail(productMapFile, `${term} is missing Where`);
+  if (!section.includes('- **See also:**')) fail(productMapFile, `${term} is missing See also`);
+}
+
 const routeMapFile = join(root, 'integration/portal-help-links.json');
 const routeMap = parseJson(routeMapFile);
 if (routeMap) {
