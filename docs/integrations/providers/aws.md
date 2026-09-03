@@ -1,6 +1,8 @@
 ---
 title: Amazon Web Services integration adapter
-excerpt: Prepare the current AWS account inventory connection without using access keys.
+excerpt: >-
+  Prepare the current AWS account inventory connection without using access
+  keys.
 deprecated: false
 hidden: false
 metadata:
@@ -13,8 +15,7 @@ metadata:
     - external ID
   robots: index
 ---
-
-<!-- kb-meta
+{/* kb-meta
 content-type: workflow
 audience: customer administrator, cloud administrator
 permission: ADMINISTRATION, INTEGRATIONS
@@ -26,7 +27,7 @@ last-verified-release: pending
 screenshot-set: integrations-provider-aws
 video-status: not-planned
 release-status: draft
--->
+*/}
 
 # Amazon Web Services integration adapter
 
@@ -34,8 +35,7 @@ release-status: draft
 
 **For:** WanAware customer administrators and AWS account administrators
 **Permission:** Manage Integrations in WanAware and create the requested stack in the AWS account
-**Time:** About 10–20 minutes, plus stack deployment time
-**Changes made:** Saves an AWS connection in WanAware and creates provider-side resources through CloudFormation
+**Time:** About 10 minutes, plus stack deployment time<br />**Changes made:** Saves an AWS connection in WanAware and creates provider-side resources through CloudFormation
 
 ## Before you start
 
