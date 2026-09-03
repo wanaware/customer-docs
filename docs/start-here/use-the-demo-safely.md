@@ -46,7 +46,7 @@ release-status: draft
 ## Before you start
 
 - Confirm that you are in the intended company workspace.
-- Use only sanitized test information approved by the workspace owner.
+- Ask the workspace owner to approve sanitized test information before use.
 - Give temporary records a clear prefix your team recognizes, such as `Test`.
 - Keep a list of anything you create so it can be reviewed and removed safely.
 
@@ -91,14 +91,20 @@ Never enter production credentials, passwords, tokens, private keys, real custom
 
 ## Check your result
 
-You are ready to continue when you can identify which actions are read-only, which require approval, and how every temporary record you create will be removed.
+Continue after you can identify the read-only actions and the actions that require approval. Record how to remove every temporary record you create.
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](product-map-and-terminology)
-- **Show me:** The first-30-minutes clip will include these safety rules after review.
-- **Do it:** Open `/launchpad` and follow [Your first 30 minutes](your-first-30-minutes).
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** The first-30-minutes safety clip is pending workflow verification and approval.
+- **Do it:** Open `/launchpad` and follow [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes).
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Accidental%20change%20in%20a%20WanAware%20workspace) with your company, affected user, record ID, page URL, action, timestamp and time zone, screenshot or exact message, and expected versus actual behavior. Never send passwords, credentials, tokens, payment details, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Accidental%20change%20in%20a%20WanAware%20workspace) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Record ID and the action taken
+- Screenshot or exact message and expected versus actual behavior
+
+Never send passwords, credentials, tokens, payment details, or secret values.

@@ -88,18 +88,18 @@ If the save fails, keep the form open, record the exact error, and correct only 
 
 ## Undo this change
 
-Correct an editable value and save again. If the record should not exist, follow [Delete Assets safely](delete-assets-safely) after checking Relationships, Structure Tags, and Collection membership. Do not delete a record merely to change a field.
+Correct an editable value and save again. If the record should not exist, follow [Delete Assets safely](https://docs.wanaware.com/docs/delete-assets-safely) after checking Relationships, Structure Tags, and Collection membership. Do not delete a record merely to change a field.
 
 ## Learn, show me, do it
 
-- **Learn:** [Add or import Assets](add-or-import-assets)
-- **Show me:** The add-or-import clip will be embedded after Product and Support review.
+- **Learn:** [Add or import Assets](https://docs.wanaware.com/docs/add-or-import-assets)
+- **Show me:** The add-or-import clip is pending Product and Support review.
 - **Do it:** Open `/assets/inventory`, then select **+ Add Asset → Add Manual Asset**.
 
 ## Next steps
 
-- [Populate Asset details](populate-asset-details)
-- [Find, filter, and inspect Assets](find-filter-and-inspect-assets)
+- [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ## Get help
 

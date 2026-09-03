@@ -38,7 +38,7 @@ WanAware hides navigation and actions that are not available to the current Role
 
 1. Confirm the company workspace shown in WanAware.
 2. Refresh once after a role or subscription change.
-3. Find the area in the [navigation and permission map](../start-here/product-map-and-terminology#navigation-and-permission-map). If more than one permission is listed, your Role needs all of them.
+3. Find the area in the [navigation and permission map](https://docs.wanaware.com/docs/product-map-and-terminology#navigation-and-permission-map). If more than one permission is listed, your Role needs all of them.
 4. Ask a customer administrator to compare your active Roles with a user who can complete the task.
 5. Confirm that the feature is included in the company's active subscription.
 6. Check whether the instructions apply to the released Portal version.
@@ -53,7 +53,7 @@ WanAware hides navigation and actions that are not available to the current Role
 | A billing or subscription message appears | The company plan does not include the requested released area | Ask a billing administrator to confirm the current plan before changing it. |
 | The same Role behaves differently in another company | Role assignments and subscriptions differ by organization | Verify the selected workspace and company-specific assignment. |
 
-These navigation requirements are easy to misread:
+These navigation requirements do not always match the visible page name:
 
 | Missing area | Exact navigation requirement |
 | --- | --- |
@@ -70,7 +70,7 @@ Sign out and back in only if the administrator confirms that access changed. Ope
 
 ## Known limitations
 
-Support should not grant broad access without authorization from the customer's administrator. Screenshots of another user's role do not replace an approved access request.
+Ask the customer's administrator to approve access changes. A screenshot of another user's Role does not replace that approval.
 
 ## Get help
 

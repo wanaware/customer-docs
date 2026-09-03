@@ -46,7 +46,7 @@ release-status: draft
 ## Before you start
 
 - Search existing Asset Types for the same concept.
-- Write a one-sentence purpose and identify the first asset that will use it.
+- Write a one-sentence purpose and identify the first Asset that uses this type.
 - Choose a durable customer-facing name.
 - Use a clearly labeled test type when you are learning or validating this workflow.
 
@@ -66,11 +66,14 @@ release-status: draft
 1. Open **Administration → Asset Types**.
 2. Select **+ Create New Asset Type**.
 3. Choose one starting option:
-   - **Generate with AI** for a suggested starting schema that you will review field by field.
+   - **Generate with AI** for a suggested starting schema. Review every field before saving.
    - **Utilize a Template** when an available template closely matches the use case.
    - **Start from Scratch** when you need full control or a small schema.
 
-4. For **Generate with AI**, enter the business purpose and the kinds of details the Asset must store; review every suggested section and field. For **Utilize a Template**, select the closest template and remove fields the Asset will not use. For **Start from Scratch**, enter the name and description before adding sections.
+4. Complete the selected starting flow:
+   - For **Generate with AI**, enter the business purpose and the Asset details the schema must store. Review every suggested section and field.
+   - For **Utilize a Template**, select the closest template. Remove fields that do not apply to this Asset Type.
+   - For **Start from Scratch**, enter the name and description before adding sections.
 5. Enter the Asset Type **Name** and **Description**.
 6. Review the generated or copied sections and fields.
 7. Select **Save Draft**.
@@ -92,15 +95,21 @@ Delete only an unused draft after confirming it has no catalog entries or test a
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset Type and Service Catalog clip will show all three starting options after publication.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The starting-options clip is pending workflow verification and approval.
 - **Do it:** Open `/administration/asset-types/create` in your WanAware workspace.
 
 ## Next steps
 
-- [Configure Asset Type sections and fields](configure-asset-type-sections-and-fields)
-- [Create a custom Service Catalog](create-a-custom-service-catalog)
+- [Configure Asset Type sections and fields](https://docs.wanaware.com/docs/configure-asset-type-sections-and-fields)
+- [Create a custom Service Catalog](https://docs.wanaware.com/docs/create-a-custom-service-catalog)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20creating%20a%20WanAware%20Asset%20Type) with your company, affected user, draft name or ID, selected starting option, page URL, timestamp and time zone, reproduction steps, and exact error. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20creating%20a%20WanAware%20Asset%20Type) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Draft name or ID and selected starting option
+- Reproduction steps and the exact error
+
+Never send passwords, credentials, tokens, or secret values.

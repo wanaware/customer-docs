@@ -88,15 +88,21 @@ Edit or remove an unused custom entry only while the draft lifecycle permits it 
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset Type and Service Catalog clip will include the first catalog entry after publication.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The first-entry clip is pending workflow verification and approval.
 - **Do it:** Open `/administration/service-catalog` in your WanAware workspace.
 
 ## Next steps
 
-- [Add catalog entries and compatibility](add-catalog-entries-and-compatibility)
-- [Publish and verify an Asset Type](publish-and-verify-an-asset-type)
+- [Add catalog entries and compatibility](https://docs.wanaware.com/docs/add-catalog-entries-and-compatibility)
+- [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20creating%20a%20WanAware%20Service%20Catalog) with your company, affected user, draft Asset Type ID, catalog entry name and type, page URL, timestamp and time zone, reproduction steps, and exact error. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20creating%20a%20WanAware%20Service%20Catalog) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Draft Asset Type ID, catalog entry name, and entry type
+- Reproduction steps and the exact error
+
+Never send passwords, credentials, tokens, or secret values.

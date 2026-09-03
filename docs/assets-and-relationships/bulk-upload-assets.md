@@ -128,18 +128,18 @@ If the browser closes or the outcome is uncertain, search for several unique nam
 - For a partial success, create a new file containing only rows that were not created.
 - For an invalid row, correct the named field using a fresh template if the schema changed.
 - For a failed row, preserve its error and row number for Support.
-- To stop before **Confirm & Normalize**, close the uploader; no normalized Assets should be created. After confirmation, treat created records as real shared data and use [Delete Assets safely](delete-assets-safely) only after checking dependencies.
+- To stop before **Confirm & Normalize**, close the uploader; no normalized Assets should be created. After confirmation, treat created records as real shared data and use [Delete Assets safely](https://docs.wanaware.com/docs/delete-assets-safely) only after checking dependencies.
 
 ## Learn, show me, do it
 
-- **Learn:** [Add or import Assets](add-or-import-assets)
-- **Show me:** The add-or-import clip will be embedded after the full release-equivalent test passes.
+- **Learn:** [Add or import Assets](https://docs.wanaware.com/docs/add-or-import-assets)
+- **Show me:** The add-or-import clip requires a successful release-equivalent test before publication.
 - **Do it:** Open `/assets/inventory` and select **+ Add Asset → Add Bulk Asset**. Contextual help may also open from `/assets/inventory/bulk/upload` or `/assets/discovery/bulk/upload`.
 
 ## Next steps
 
-- [Review Discovery and move Assets to Inventory](review-discovery-and-move-assets-to-inventory)
-- [Bulk-import validation failures](../troubleshooting-and-support/bulk-import-validation-failures)
+- [Review Discovery and move Assets to Inventory](https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory)
+- [Bulk-import validation failures](https://docs.wanaware.com/docs/bulk-import-validation-failures)
 
 ## Get help
 

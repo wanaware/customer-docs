@@ -46,7 +46,7 @@ release-status: draft
 
 - Write down the pages and actions the person must use; do not copy an administrator Role by default.
 - Keep another active administrator with IAM access before reducing your own permissions.
-- Review the [navigation permission map](../start-here/product-map-and-terminology#navigation-and-permission-map) for non-obvious requirements.
+- Review the [navigation permission map](https://docs.wanaware.com/docs/product-map-and-terminology#navigation-and-permission-map) for Permissions whose names differ from their UI labels.
 
 ## Field and option guide
 
@@ -62,7 +62,7 @@ release-status: draft
 2. Select **Create Role**.
 3. Enter **Role Name** using a job or responsibility, not a person's name.
 4. In **Permissions**, expand each product area and select the required actions.
-5. Recheck navigation dependencies. For example, Billing requires all four read permissions listed in [Understand billing](understand-billing).
+5. Recheck navigation dependencies. For example, Billing requires all four read permissions listed in [Understand billing](https://docs.wanaware.com/docs/understand-billing).
 6. Select **Create Role**.
 
 **Expected result:** The Role opens or appears in the Roles list with the selected Permissions.
@@ -90,7 +90,7 @@ Restore the previous Permission list and save again. If the Role is no longer ne
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Roles and Permissions](understand-roles-and-permissions)
+- **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 - **Show me:** Use the written steps until an IAM recording is approved.
 - **Do it:** Open `/administration/iam/roles` in your WanAware workspace.
 

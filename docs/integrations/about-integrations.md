@@ -45,11 +45,11 @@ Provider adapters explain fields, source-side resources, permissions, and cleanu
 
 - Get approval from the source-system owner.
 - Use the least access the released adapter supports.
-- Know which company workspace will receive the data.
+- Confirm the company workspace that receives the data.
 - Understand which source-side resources remain if the WanAware integration is removed.
 - Never send authorization values to Support.
 
-Continue with [Add an integration](add-an-integration).
+Continue with [Add an integration](https://docs.wanaware.com/docs/add-an-integration).
 
 ## Get help
 

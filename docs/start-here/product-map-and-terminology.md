@@ -58,7 +58,7 @@ Permissions are written as `action resource`. When a row lists more than one per
 | **Theme Settings** | Choose your personal Light or Dark appearance and an available preset. | Top-bar drawer; no page URL | Available to a signed-in user; there is no separate feature permission. |
 | **Support** | Open the in-product Support area. | `/support` | `view support` |
 
-The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [Missing pages, actions, or permissions](../troubleshooting-and-support/missing-pages-actions-or-permissions).
+The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## How the records fit together
 
@@ -89,111 +89,111 @@ An Asset can arrive from an Integration or a bulk upload. A Collection groups ex
 A managed connection between WanAware and a supported data source. Each provider can have its own adapter instructions.
 
 - **Where:** **Administration → Integrations** (`/administration/integrations`)
-- **See also:** [About integrations](../integrations/about-integrations)
+- **See also:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
 
 ### Asset
 
 A resource tracked by WanAware. An Asset has an Asset Type, status, details, tags, and Relationships.
 
 - **Where:** **Functions → Assets → Inventory** (`/assets/inventory`)
-- **See also:** [Find, filter, and inspect Assets](../assets-and-relationships/find-filter-and-inspect-assets)
+- **See also:** [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ### Discovery
 
 The workspace for Assets that have been found or are still being reviewed.
 
 - **Where:** **Functions → Assets → Discovery** (`/assets/discovery`)
-- **See also:** [Find, filter, and inspect Assets](../assets-and-relationships/find-filter-and-inspect-assets)
+- **See also:** [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ### Inventory
 
 The maintained set of Assets used throughout WanAware.
 
 - **Where:** **Functions → Assets → Inventory** (`/assets/inventory`)
-- **See also:** [Verify imported Inventory](../integrations/verify-imported-inventory)
+- **See also:** [Verify imported Inventory](https://docs.wanaware.com/docs/verify-imported-inventory)
 
 ### Asset Type
 
 The schema that defines an Asset's sections, fields, dependencies, and catalog support.
 
 - **Where:** **Administration → Asset Types** (`/administration/asset-types`)
-- **See also:** [Understand Asset Types and Service Catalogs](../asset-types-and-service-catalog/understand-asset-types-and-service-catalogs)
+- **See also:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
 
 ### Service Catalog
 
 Managed information used by an Asset Type, including manufacturers, models, modules, software, specifications, attributes, and compatibility where supported.
 
 - **Where:** **Administration → Service Catalog** (`/administration/service-catalog`)
-- **See also:** [Create a custom Service Catalog](../asset-types-and-service-catalog/create-a-custom-service-catalog)
+- **See also:** [Create a custom Service Catalog](https://docs.wanaware.com/docs/create-a-custom-service-catalog)
 
 ### Relationship
 
 A connection derived from supported data or created by a specific product flow. WanAware does not provide a general-purpose action for drawing arbitrary Relationships.
 
 - **Where:** **Functions → Assets → [Asset] → Relationship Graph** (`/assets/{assetId}/summary/relationship-graph`)
-- **See also:** [View Asset Relationships](../assets-and-relationships/view-asset-relationships)
+- **See also:** [View Asset Relationships](https://docs.wanaware.com/docs/view-asset-relationships)
 
 ### Structure
 
 A hierarchy made from supported Structure types such as Company, Organization, Group, and Vendor.
 
 - **Where:** **Functions → Structures** (`/structures`)
-- **See also:** [Create and manage Structures](../structures-elements-and-collections/create-and-manage-structures)
+- **See also:** [Create and manage Structures](https://docs.wanaware.com/docs/create-and-manage-structures)
 
 ### Structure Tag
 
 An attachment to a Structure node. Structure Tags connect supported records, including Elements and Collections, to the hierarchy.
 
 - **Where:** The details for a supported Asset, Element, or Collection; there is no separate Structure Tag page.
-- **See also:** [Manage Data Tags and Structure Tags](../assets-and-relationships/manage-asset-and-structure-tags)
+- **See also:** [Manage Data Tags and Structure Tags](https://docs.wanaware.com/docs/manage-asset-and-structure-tags)
 
 ### Data Tag
 
 A label used to classify or filter supported records without attaching them to the Structure hierarchy.
 
 - **Where:** The details for a supported Asset, Element, or Collection; there is no separate Data Tag page.
-- **See also:** [Manage Data Tags and Structure Tags](../assets-and-relationships/manage-asset-and-structure-tags)
+- **See also:** [Manage Data Tags and Structure Tags](https://docs.wanaware.com/docs/manage-asset-and-structure-tags)
 
 ### Element
 
 An Application, Service, or Site used to represent an operational unit.
 
 - **Where:** **Functions → Elements** (`/elements`)
-- **See also:** [Create and populate Elements](../structures-elements-and-collections/create-and-populate-elements)
+- **See also:** [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
 
 ### Site
 
 A location-oriented type of Element. A Site can include supported Site Assets and Location details.
 
 - **Where:** **Functions → Elements → [Site]** (`/elements/{elementId}/site-assets`)
-- **See also:** [Manage Site details](../structures-elements-and-collections/manage-site-details)
+- **See also:** [Manage Site details](https://docs.wanaware.com/docs/manage-site-details)
 
 ### Collection
 
 A named group of existing Assets inside an Element.
 
 - **Where:** **Functions → Elements → [Element] → Collections** (`/elements/{elementId}/collections`)
-- **See also:** [Create Collections and add Assets](../structures-elements-and-collections/create-collections-and-add-assets)
+- **See also:** [Create Collections and add Assets](https://docs.wanaware.com/docs/create-collections-and-add-assets)
 
 ### Role
 
 A named set of Permissions assigned to members. A Role controls which pages and actions a member can use.
 
 - **Where:** **Administration → IAM → Roles** (`/administration/iam/roles`)
-- **See also:** [Understand Roles and Permissions](../administration-and-personal-settings/understand-roles-and-permissions)
+- **See also:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 
 ### Permission
 
 An allowed action on a resource, such as `read assets`. Permissions are collected into Roles rather than assigned as navigation labels.
 
 - **Where:** **Administration → IAM → Roles → [Role]** (`/administration/iam/roles/{roleKey}`)
-- **See also:** [Missing pages, actions, or permissions](../troubleshooting-and-support/missing-pages-actions-or-permissions)
+- **See also:** [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
 
 ## Learn, show me, do it
 
 - **Learn:** Use this page as the glossary and navigation map for the first release.
 - **Show me:** Use the short clips linked from the matching task guides after publication.
-- **Do it:** Start with [Choose your path](choose-your-path).
+- **Do it:** Start with [Choose your path](https://docs.wanaware.com/docs/choose-your-path).
 
 ## Get help
 

@@ -77,8 +77,8 @@ Open **Theme Settings** and choose the previous mode and preset.
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** This article will show approved Light and Dark screenshots after capture.
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** Approved Light and Dark screenshots are pending capture and privacy review.
 - **Do it:** Select **Theme Settings** in your WanAware workspace.
 
 ## Get help

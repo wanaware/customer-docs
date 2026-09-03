@@ -46,7 +46,7 @@ release-status: draft
 
 ## Before you start
 
-- Select the correct draft custom Asset Type.
+- Select the intended custom Asset Type and confirm its status is **Draft**.
 - Agree on naming conventions and sources.
 - Start with one complete manufacturer or provider family.
 - Confirm which parent record is required before adding a Model, Module, or Software item.
@@ -98,15 +98,21 @@ Remove an incorrect compatibility selection and save again. Before editing or re
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset Type and Service Catalog clip will include compatibility verification after publication.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The compatibility clip is pending workflow verification and approval.
 - **Do it:** Open `/administration/service-catalog` and select the draft Asset Type.
 
 ## Next steps
 
-- [Publish and verify an Asset Type](publish-and-verify-an-asset-type)
-- [Populate asset details](../assets-and-relationships/populate-asset-details)
+- [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
+- [Populate asset details](https://docs.wanaware.com/docs/populate-asset-details)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Service%20Catalog%20entry%20help) with your company, affected user, Asset Type ID, entry IDs, expected compatibility, page URL, timestamp and time zone, reproduction steps, and exact error. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Service%20Catalog%20entry%20help) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Asset Type ID, entry IDs, and expected compatibility
+- Reproduction steps and the exact error
+
+Never send passwords, credentials, tokens, or secret values.

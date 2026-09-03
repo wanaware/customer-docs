@@ -38,7 +38,7 @@ A relationship can appear after both assets are present and the applicable relat
 1. Confirm the focused asset and company workspace.
 2. Clear graph filters and grouping.
 3. Return to the smallest graph depth, then expand gradually.
-4. Confirm that both expected assets exist and have the correct provider identifiers.
+4. Confirm that both expected Assets exist and have the correct provider IDs.
 5. Wait for active collection or import processing to finish.
 6. Compare the source properties that should connect the two assets.
 
@@ -62,4 +62,10 @@ Not every pair of assets should have a direct relationship, and not every asset 
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20relationship%20graph%20problem) with your company, both asset IDs and types, source account, page URL, graph depth and filters, latest collection or import time and time zone, expected relationship, actual result, and a screenshot. Never send source-system credentials or secrets.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Relationship%20graph%20problem) and include:
+
+- Company, page URL, graph depth, filters, timestamp, and time zone
+- Both Asset IDs, Asset Types, provider IDs, and source account
+- Expected Relationship, actual result, and a sanitized screenshot
+
+Never send source-system credentials or secrets.

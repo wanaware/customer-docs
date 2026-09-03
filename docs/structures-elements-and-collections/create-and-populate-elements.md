@@ -97,16 +97,22 @@ Remove an incorrect tag or asset attachment from the Element. Before deleting th
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
-- **Show me:** The organization clip will show Element creation and enrichment after publication.
-- **Do it:** Open `/elements` in your WanAware workspace.
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- **Show me:** The Element creation clip is pending workflow verification and approval.
+- **Do it:** Open **Functions → Elements** (`/elements`).
 
 ## Next steps
 
-- [Attach Elements to Structures](attach-elements-to-structures)
-- [Create Collections and add assets](create-collections-and-add-assets)
-- [Manage Site details](manage-site-details)
+- [Attach Elements to Structures](https://docs.wanaware.com/docs/attach-elements-to-structures)
+- [Create Collections and add assets](https://docs.wanaware.com/docs/create-collections-and-add-assets)
+- [Manage Site details](https://docs.wanaware.com/docs/manage-site-details)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Element%20help) with your company, affected user, Element type and ID, page URL, timestamp and time zone, failed tab or field, reproduction steps, and exact error. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Element%20help) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Element Type, Element ID, and failed tab or field
+- Reproduction steps and the exact error
+
+Never send passwords, credentials, tokens, or secret values.

@@ -67,7 +67,7 @@ release-status: draft
 
 ## Configure the draft
 
-1. Open **Administration → Asset Types**.
+1. Open **Administration → Asset Types** (`/administration/asset-types`).
 2. Select the draft Asset Type.
 3. Confirm its **Name** and **Description**.
 4. Add or rename sections so each one represents a clear group of details.
@@ -93,14 +93,14 @@ While the Asset Type is a draft, restore the previous setting or remove an unuse
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset Type and Service Catalog clip will include the field builder after publication.
-- **Do it:** Open `/administration/asset-types` and select a draft Asset Type.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The field-builder clip is pending workflow verification and approval.
+- **Do it:** Open **Administration → Asset Types** (`/administration/asset-types`) and select a draft Asset Type.
 
 ## Next steps
 
-- [Create a custom Service Catalog](create-a-custom-service-catalog)
-- [Add catalog entries and compatibility](add-catalog-entries-and-compatibility)
+- [Create a custom Service Catalog](https://docs.wanaware.com/docs/create-a-custom-service-catalog)
+- [Add catalog entries and compatibility](https://docs.wanaware.com/docs/add-catalog-entries-and-compatibility)
 
 ## Get help
 

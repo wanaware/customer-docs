@@ -1,10 +1,10 @@
 ---
-title: View asset relationships
+title: View Asset Relationships
 excerpt: Read an asset's Relationship Graph and open connected context.
 deprecated: false
 hidden: false
 metadata:
-  title: View asset relationships | WanAware Documentation
+  title: View Asset Relationships | WanAware Documentation
   description: Open and interpret the WanAware Relationship Graph for an asset.
   keywords:
     - Relationship Graph
@@ -28,9 +28,9 @@ video-status: planned
 release-status: draft
 -->
 
-# View asset relationships
+# View Asset Relationships
 
-**Outcome:** Identify how one asset is connected to another resource and open the connected record.
+**Outcome:** Identify how one Asset is connected to another resource and open the connected record.
 
 **For:** Customer administrators, engineers, and support staff
 **Permission:** `read assets`
@@ -90,12 +90,12 @@ Open the connected asset and confirm its name, Asset Type, and source context ma
 - Wait for active ingestion and relationship processing to finish.
 - Clear graph filters and reduce grouping.
 - Compare the graph with source properties.
-- Use [Missing or unexpected relationships](../troubleshooting-and-support/missing-or-unexpected-relationships).
+- Use [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
 
 ## Learn, show me, do it
 
-- **Learn:** [Relationship Discovery Engine](relationship-discovery-engine)
-- **Show me:** The captioned relationship clip will be embedded after review.
+- **Learn:** [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine)
+- **Show me:** The captioned relationship clip is pending workflow verification and approval.
 - **Do it:** Open an asset in `/assets/inventory` and select **Relationship Graph**.
 
 ## Get help

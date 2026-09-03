@@ -100,7 +100,7 @@ Removing the WanAware connection does not automatically delete the CloudFormatio
 
 ## Learn, show me, do it
 
-- **Learn:** [About integrations](../about-integrations)
+- **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
 - **Show me:** Use the general integration clip for the shared WanAware steps after publication.
 - **Do it:** Open `/administration/integrations` in your WanAware workspace.
 

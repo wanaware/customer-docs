@@ -74,7 +74,7 @@ release-status: draft
 
 **Expected result:** One record matches both the visible identity and its stable source or Asset ID.
 
-If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [Missing, stale, or duplicate Assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
+If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
 
 ## Use Map
 
@@ -83,7 +83,7 @@ If no record matches, repeat the same search in the other Asset tab. Do not crea
 3. Compare the visible count with Table.
 4. Select a marker or supported map item and confirm it opens the expected Asset.
 
-**Expected result:** Assets with supported location data appear in geographic context. Records without a usable location can remain available in Table but absent from Map.
+**Expected result:** The Map shows Assets that contain supported location data. The Table still lists Assets that lack usable location data.
 
 ## Use Graph
 
@@ -92,7 +92,7 @@ If no record matches, repeat the same search in the other Asset tab. Do not crea
 3. Select a node and verify its name and Asset identity before following an edge.
 4. Open the Asset's **Relationship Graph** for record-specific relationship investigation.
 
-**Expected result:** The Graph presents supported connections for the current scope. It is a navigation and investigation view, not proof that every Inventory record or every possible relationship is shown.
+**Expected result:** The Graph presents supported connections for the current scope. Use the Table to confirm whether an Asset exists in Inventory.
 
 ## Verify
 
@@ -104,15 +104,21 @@ Search and filter changes do not alter Assets. To recover from a confusing view,
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** The first-30-minutes clip will include Table search and identity checks after review.
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** The Table search clip is pending workflow verification and approval.
 - **Do it:** Open `/assets/inventory`.
 
 ## Next steps
 
-- [Populate Asset details](populate-asset-details)
-- [View Asset Relationships](view-asset-relationships)
+- [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [View Asset Relationships](https://docs.wanaware.com/docs/view-asset-relationships)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Cannot%20find%20a%20WanAware%20Asset) with your company, affected user, expected Asset name or sanitized ID, source, selected tab and view, page URL, filters, timestamp and time zone, and a sanitized screenshot. Never send passwords, credentials, access tokens, secrets, or an unredacted data export.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Cannot%20find%20a%20WanAware%20Asset) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Expected Asset name or sanitized ID, source, selected tab, view, and filters
+- A sanitized screenshot
+
+Never send passwords, credentials, access tokens, secrets, or an unredacted data export.

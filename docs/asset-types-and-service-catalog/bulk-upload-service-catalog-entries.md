@@ -49,7 +49,7 @@ release-status: draft
 
 ## Before you start
 
-- Complete [Prepare a Service Catalog bulk-upload file](prepare-a-service-catalog-bulk-upload-file).
+- Complete [Prepare a Service Catalog bulk-upload file](https://docs.wanaware.com/docs/prepare-a-service-catalog-bulk-upload-file).
 - Keep the exact submitted file or pasted range for later reconciliation.
 - For existing-provider imports, verify each provider ID against the selected catalog.
 - Understand that mixed input can be split into separate processing jobs.
@@ -118,14 +118,14 @@ If the outcome is partial, do not resubmit the entire source. Build a retry set 
 
 ## Learn, show me, do it
 
-- **Learn:** [Prepare a Service Catalog bulk-upload file](prepare-a-service-catalog-bulk-upload-file)
+- **Learn:** [Prepare a Service Catalog bulk-upload file](https://docs.wanaware.com/docs/prepare-a-service-catalog-bulk-upload-file)
 - **Show me:** This video remains blocked until the complete workflow succeeds in a release-equivalent environment.
 - **Do it:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
 
 ## Next steps
 
-- [Publish and verify an Asset Type](publish-and-verify-an-asset-type)
-- [Service Catalog failures](../troubleshooting-and-support/service-catalog-failures)
+- [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
+- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

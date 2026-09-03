@@ -1,5 +1,5 @@
 ---
-title: Verify imported inventory
+title: Verify imported Inventory
 excerpt: Confirm that an integration produced the expected asset records and source context.
 deprecated: false
 hidden: false
@@ -27,7 +27,7 @@ video-status: planned
 release-status: draft
 -->
 
-# Verify imported inventory
+# Verify imported Inventory
 
 **Outcome:** Find a known source record and confirm that WanAware imported it into the correct workspace.
 
@@ -67,9 +67,9 @@ release-status: draft
 5. Confirm its name, Asset Type, provider, source account context, and important detail fields.
 6. Repeat with a second source record of a different supported type.
 
-**Expected result:** Each record appears once and can be traced to the intended integration.
+**Expected result:** Each record appears once and shows the intended Integration as its source.
 
-If a record is missing, also check **Discovery** and wait for active processing to finish. Then use [Missing, stale, or duplicate assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets).
+If a record is missing, also check **Discovery** and wait for active processing to finish. Then use [Missing, stale, or duplicate assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets).
 
 ## Check your result
 
@@ -77,9 +77,9 @@ Compare the source and WanAware side by side. Record the source identifier, WanA
 
 ## Learn, show me, do it
 
-- **Learn:** [About integrations](about-integrations)
-- **Show me:** The integration/import clip will include this verification after publication.
-- **Do it:** Open `/assets/inventory` in your WanAware workspace.
+- **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
+- **Show me:** The Integration verification clip is pending workflow verification and approval.
+- **Do it:** Open **Functions → Assets → Inventory** (`/assets/inventory`).
 
 ## Get help
 

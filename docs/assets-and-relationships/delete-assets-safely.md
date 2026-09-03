@@ -86,14 +86,14 @@ There is no documented self-service restore for this release. If deletion was ac
 
 ## Learn, show me, do it
 
-- **Learn:** [Find, filter, and inspect Assets](find-filter-and-inspect-assets)
+- **Learn:** [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 - **Show me:** No deletion video is planned because the action is consequential.
 - **Do it:** Open `/assets/inventory` or `/assets/discovery` and select only the reviewed record.
 
 ## Next steps
 
-- [Missing, stale, or duplicate Assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets)
-- [Contact WanAware Support](../troubleshooting-and-support/contact-wanaware-support)
+- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [Contact WanAware Support](https://docs.wanaware.com/docs/contact-wanaware-support)
 
 ## Get help
 

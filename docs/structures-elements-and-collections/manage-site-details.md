@@ -83,7 +83,7 @@ Detach an incorrect Site Asset rather than deleting the asset. Restore the previ
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
 - **Show me:** Use the written steps until a Site-specific clip is approved.
 - **Do it:** Open `/elements`, select a Site, and use **Site Assets** and **Location**.
 

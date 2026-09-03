@@ -34,7 +34,7 @@ Use this page when Billing is missing, a payment or plan action fails, an invoic
 
 ## Fast checks
 
-1. Confirm the company workspace and billing role.
+1. Confirm the company workspace and Billing Role.
 2. Refresh once and reopen **Administration → Billing**.
 3. Check **Plans**, **Payment & Billing**, and **Billing History** for the current state.
 4. Confirm the billing address and masked payment method are current without copying full details.
@@ -58,8 +58,16 @@ Reopen the relevant billing tab and confirm the current plan, status, usage, mas
 
 ## Known limitations
 
-Support cannot accept full payment details by email. Some changes have future effective dates or are not immediately reversible. Do not run a purchase or cancellation as a test.
+Support cannot accept full payment details by email. Some changes take effect on a later date, and the Portal does not provide an immediate reversal.
+
+Do not run a purchase or cancellation as a test.
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20billing%20or%20payment%20failure) with your company, affected user, billing tab, sanitized invoice or transaction reference, page URL, timestamp and time zone, expected versus actual result, and exact error. Never send full payment details, passwords, credentials, invoices with private data, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20billing%20or%20payment%20failure) and include:
+
+- Company, affected user, Billing tab, page URL, timestamp, and time zone
+- Sanitized invoice or transaction reference
+- Expected versus actual result and the exact error
+
+Never send full payment details, passwords, credentials, invoices with private data, tokens, or secret values.

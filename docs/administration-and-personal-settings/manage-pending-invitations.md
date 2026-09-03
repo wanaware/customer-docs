@@ -76,7 +76,7 @@ A sent email cannot be recalled. If the address or Role is wrong, do not forward
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Roles and Permissions](understand-roles-and-permissions)
+- **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 - **Show me:** Use the written steps until an IAM recording is approved.
 - **Do it:** Open `/administration/iam` in your WanAware workspace.
 

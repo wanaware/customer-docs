@@ -92,15 +92,21 @@ Restore the previous editable value when possible. Before removing a Structure, 
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
-- **Show me:** The organization clip will show a small hierarchy after publication.
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- **Show me:** The Structure hierarchy clip is pending workflow verification and approval.
 - **Do it:** Open `/structures` in your WanAware workspace.
 
 ## Next steps
 
-- [Create and populate Elements](create-and-populate-elements)
-- [Attach Elements to Structures](attach-elements-to-structures)
+- [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
+- [Attach Elements to Structures](https://docs.wanaware.com/docs/attach-elements-to-structures)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Structure%20help) with your company, affected user, Structure name and ID, parent ID, page URL, timestamp and time zone, reproduction steps, and expected versus actual placement. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Structure%20help) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Structure name and ID and the intended parent ID
+- Reproduction steps and expected versus actual placement
+
+Never send passwords, credentials, tokens, or secret values.

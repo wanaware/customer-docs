@@ -1,5 +1,5 @@
 ---
-title: Manage Data Tags and Structure Tags on an asset
+title: Manage Data Tags and Structure Tags on an Asset
 excerpt: Use descriptive Data Tags and hierarchy-based Structure Tags without confusing their purposes.
 deprecated: false
 hidden: false
@@ -27,14 +27,14 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage Data Tags and Structure Tags on an asset
+# Manage Data Tags and Structure Tags on an Asset
 
-**Outcome:** Apply the correct kind of tag and verify the asset appears in the intended context.
+**Outcome:** Apply the correct kind of tag and verify the Asset appears in the intended context.
 
 **For:** Customer administrators and engineers
 **Permission:** `update assets`
 **Time:** 3–5 minutes
-**Changes made:** Changes a shared asset's descriptive or organizational attachments
+**Changes made:** Changes a shared Asset's descriptive or organizational tag assignments
 
 ## If you're stuck
 
@@ -61,26 +61,26 @@ release-status: draft
 1. Open the intended asset and confirm its unique identifier.
 2. Find the Data Tags or **Structure Tags** control.
 3. Search for the existing tag.
-4. Select it to add the attachment, or clear it to remove the attachment.
+4. Select it to assign the tag, or clear it to remove the tag assignment.
 5. Use the page's save action when an unsaved-change bar appears.
 
 **Expected result:** The selected tags remain after a page refresh.
 
-If a tag does not appear, confirm that it exists, applies to the current company, and your role can create the relationship.
+If a tag does not appear, confirm that it exists and belongs to the current company. Then confirm that your Role permits the tag assignment.
 
 ## Check your result
 
-Refresh the asset, then use the inventory filter for the selected tag. Confirm that the asset appears once in the expected result.
+Refresh the Asset, then use the Inventory filter for the selected tag. Confirm that the Asset appears once in the expected result.
 
 ## Undo this change
 
-Remove the tag you added or reapply the one you removed, then save and verify again. Removing a tag should not be used as a substitute for deleting its Structure.
+Remove the tag you added or reapply the tag you removed. Save and verify the Asset again. To remove a Structure, follow the Structure deletion guidance instead.
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](../structures-elements-and-collections/understand-structures-elements-and-collections)
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
 - **Show me:** Use the written steps until a tag-specific clip is approved.
-- **Do it:** Open an asset from `/assets/inventory`.
+- **Do it:** Open an Asset from **Functions → Assets → Inventory** (`/assets/inventory`).
 
 ## Get help
 

@@ -34,7 +34,7 @@ release-status: draft
 **For:** Customer administrators
 **Permission:** `view general`, `view company_information`, and `update company_information`
 **Time:** 5–10 minutes
-**Changes made:** Changes settings shared by company members
+**Changes made:** Updates settings shared by company members
 
 ## If you're stuck
 
@@ -82,7 +82,7 @@ Restore the recorded value and save again. Contact Support if the setting has no
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand roles and permissions](understand-roles-and-permissions)
+- **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 - **Show me:** Use the written steps until a company-settings clip is approved.
 - **Do it:** Open `/administration/general/company` in your WanAware workspace.
 

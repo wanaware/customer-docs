@@ -1,10 +1,10 @@
 ---
-title: Create Collections and add assets
+title: Create Collections and add Assets
 excerpt: Create a Collection inside an Element and add the intended existing assets.
 deprecated: false
 hidden: false
 metadata:
-  title: Create Collections and add assets | WanAware Documentation
+  title: Create Collections and add Assets | WanAware Documentation
   description: Create a WanAware Collection and associate existing assets with it.
   keywords:
     - Add Collection
@@ -27,14 +27,14 @@ video-status: planned
 release-status: draft
 -->
 
-# Create Collections and add assets
+# Create Collections and add Assets
 
 **Outcome:** Create a named Collection inside an Element and add the intended assets once.
 
 **For:** Customer administrators and engineers
 **Permission:** `create element_collections` and `update element_collections`
 **Time:** 5–10 minutes
-**Changes made:** Creates a shared Collection and asset associations
+**Changes made:** Creates a shared Collection and assigns Assets to it
 
 ## If you're stuck
 
@@ -71,14 +71,14 @@ release-status: draft
 
 If an asset is missing from the selector, clear its filters and confirm that the asset is in Inventory and visible to your role.
 
-## Add or remove assets later
+## Add or remove Assets later
 
 1. Open the Collection.
 2. Use its edit or asset-selection action.
-3. Add or clear the intended asset selection.
+3. Select an Asset to add it, or clear its selection to remove it from the Collection.
 4. Save and reopen the Collection.
 
-Associating an asset does not create a duplicate asset. Removing an association does not delete the asset.
+Adding an Asset to a Collection does not create another Asset. Removing an Asset from the Collection does not delete it from Inventory.
 
 ## Check your result
 
@@ -86,19 +86,25 @@ Open the Collection and compare every listed asset ID with the intended set. Con
 
 ## Undo this change
 
-Detach an incorrect asset from the Collection. Before deleting the Collection, review all assets and Structure Tags attached to it. Do not delete the assets themselves.
+Remove an incorrect Asset from the Collection. Before deleting the Collection, review its Assets and Structure Tags. Do not delete the Assets themselves.
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
-- **Show me:** The organization clip will show Collection creation and asset selection after publication.
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- **Show me:** The Collection workflow clip is pending workflow verification and approval.
 - **Do it:** Open `/elements`, choose an Element, and select **Collections**.
 
 ## Next steps
 
-- [Attach Collections to Structures](attach-collections-to-structures)
-- [Manage Site details](manage-site-details)
+- [Attach Collections to Structures](https://docs.wanaware.com/docs/attach-collections-to-structures)
+- [Manage Site details](https://docs.wanaware.com/docs/manage-site-details)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Collection%20help) with your company, affected user, Element and Collection IDs, affected asset ID, page URL, timestamp and time zone, and expected versus actual membership. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Collection%20help) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Element ID, Collection ID, and affected Asset ID
+- Expected versus actual Collection membership
+
+Never send passwords, credentials, tokens, or secret values.

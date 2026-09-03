@@ -1,5 +1,5 @@
 ---
-title: Missing, stale, or duplicate assets
+title: Missing, stale, or duplicate Assets
 excerpt: Determine whether filters, workspace context, crawl timing, status, or source identity explains an asset problem.
 deprecated: false
 hidden: false
@@ -29,9 +29,9 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Missing, stale, or duplicate assets
+# Missing, stale, or duplicate Assets
 
-Do not delete or recreate an asset until you have checked its source identity and processing state.
+Do not delete or recreate an Asset until you have checked its source identity and processing state.
 
 ## Fast checks
 
@@ -47,9 +47,9 @@ Do not delete or recreate an asset until you have checked its source identity an
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
 | Asset is missing from the current table | Filter, pagination, status, or workspace mismatch | Clear the view and search Inventory and Discovery in the correct company. |
-| Newly connected resource is missing | Collection or ingestion is still processing | Wait for completion and refresh; do not run repeated overlapping collections. |
-| Asset details look old | Source has not been collected since the change | Verify the integration, run one approved collection, and allow processing to finish. |
-| Two assets have the same display name | They are different source resources or one was created manually | Compare source account, provider ID, type, and WanAware asset ID. |
+| Newly connected resource is missing | WanAware is still processing collection or ingestion | Wait for completion and refresh; do not run repeated overlapping collections. |
+| Asset details look old | The latest collection occurred before the source change | Verify the Integration, run one approved collection, and allow processing to finish. |
+| Two Assets have the same display name | They represent different source resources, or someone created one manually | Compare source account, provider ID, Asset Type, and WanAware Asset ID. |
 | Two records represent the same source ID | Deduplication or mapping may need review | Preserve both records and send their IDs to Support. |
 
 ## Verify the fix
@@ -62,4 +62,10 @@ Display names are not always unique. A correct inventory may contain similarly n
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Missing%20stale%20or%20duplicate%20WanAware%20asset) with your company, all relevant asset IDs, provider ID, source account, latest collection or import time and time zone, page URL, filters checked, and screenshots. Never send provider credentials or secret properties.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Missing%20stale%20or%20duplicate%20WanAware%20Asset) and include:
+
+- Company, page URL, filters checked, timestamp, and time zone
+- All relevant Asset IDs, provider ID, and source account
+- Latest collection or import time and sanitized screenshots
+
+Never send provider credentials or secret properties.

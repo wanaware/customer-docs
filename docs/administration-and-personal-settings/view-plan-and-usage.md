@@ -71,8 +71,8 @@ Refresh **Plans** and confirm the same plan and usage return. If usage differs f
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand billing](understand-billing)
-- **Show me:** Billing visuals use masked test data and will be added after privacy review.
+- **Learn:** [Understand billing](https://docs.wanaware.com/docs/understand-billing)
+- **Show me:** Billing visuals require masked test data and privacy approval before publication.
 - **Do it:** Open `/administration/billing` in your WanAware workspace and select **Plans**.
 
 ## Get help

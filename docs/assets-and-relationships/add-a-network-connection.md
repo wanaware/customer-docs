@@ -32,7 +32,7 @@ release-status: draft
 
 ![Diagram comparing Relationships discovered from supported data with the Add Connection workflow.](https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png)
 
-**Outcome:** Connect two eligible assets through the released network connection flow and verify the relationship.
+**Outcome:** Connect two supported network Assets through **Add Connection** and verify the Relationship.
 
 **For:** Customer administrators and network engineers
 **Permission:** `update assets`
@@ -41,16 +41,16 @@ release-status: draft
 
 ## If you're stuck
 
-- **Add Connection** appears only for eligible Assets; it is not a general relationship editor.
+- **Add Connection** appears only on Asset Types that support the network connection workflow.
 - Confirm the source and target are different Assets before entering endpoint data.
 - Stop at **Preview Connection** if the IP block, endpoint direction, or Asset identity is wrong.
 
 ## Before you start
 
-- Confirm both assets exist and represent different resources.
+- Confirm both Assets exist and represent different resources.
 - Gather the approved IP block and endpoint details.
 - Check the current Relationship Graph to avoid a duplicate connection.
-- Use **Add Connection** only for eligible network relationships. WanAware does not provide a general action for arbitrary relationship drawing.
+- Treat a visible **Add Connection** action as the eligibility check. WanAware does not provide a general action for arbitrary Relationship drawing.
 
 ## Field and option guide
 
@@ -65,7 +65,7 @@ release-status: draft
 
 ## Create the connection
 
-1. Open the eligible source asset.
+1. Open a source Asset that displays **Add Connection**.
 2. Select **Add Connection**.
 3. If prompted for a source asset, confirm the correct source.
 4. In **Target asset**, search for and select the other asset.
@@ -77,7 +77,11 @@ release-status: draft
 
 **Expected result:** WanAware shows **Network connection created**.
 
-If the same asset is selected twice, endpoint addresses match when they should not, or required fields are unavailable, return to the relevant step and correct the input before creating the connection.
+If you selected the same Asset twice, return to **Target asset** and choose a different record.
+
+If endpoint addresses are reversed or duplicated, correct **Endpoints** before selecting **Create Connection**.
+
+If a required field is unavailable, stop and contact Support. Do not create the connection with substitute data.
 
 ## Check your result
 
@@ -88,18 +92,20 @@ If the same asset is selected twice, endpoint addresses match when they should n
 
 ## Undo this change
 
-Use the released remove action only after confirming which endpoint, IP block, or relationship record will be affected. If removal behavior is unclear, contact Support before deleting an asset or shared IP block.
+Use the **Remove Connection** action only after confirming the affected Relationship, endpoints, and IP block. Do not delete an Asset to remove a connection.
+
+If **Remove Connection** is absent, contact Support before changing an endpoint or shared IP block.
 
 ## Learn, show me, do it
 
-- **Learn:** [Relationship Discovery Engine](relationship-discovery-engine)
-- **Show me:** The asset-and-relationship clip will include the preview and verification checkpoints after publication.
-- **Do it:** Open an eligible asset in `/assets/inventory` and select **Add Connection**.
+- **Learn:** [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine)
+- **Show me:** The connection preview clip is pending workflow verification and approval.
+- **Do it:** Open a supported Asset in **Functions → Assets → Inventory** (`/assets/inventory`) and select **Add Connection**.
 
 ## Next steps
 
-- [View asset relationships](view-asset-relationships)
-- [Missing or unexpected relationships](../troubleshooting-and-support/missing-or-unexpected-relationships)
+- [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
+- [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

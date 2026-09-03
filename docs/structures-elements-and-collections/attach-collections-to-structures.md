@@ -56,15 +56,15 @@ release-status: draft
 | **Structure Tags** | Existing Structure nodes attachable to the Collection | Select the exact node by hierarchy path |
 | Selected tag | Current attachment | Clear only the tag that should be detached |
 
-## Add or remove the attachment
+## Attach or detach the Collection
 
 1. Open **Functions → Elements** and select the parent Element.
 2. Open **Collections** and expand the intended Collection.
 3. Find **Structure Tags**.
-4. Search for and select the intended Structure node, or clear a selected tag to detach it.
+4. Select the intended Structure Tag to attach the Collection, or clear the tag to detach the Collection.
 5. Save the Collection.
 
-**Expected result:** The intended tag remains selected after the Collection is reopened.
+**Expected result:** After reopening, the Collection displays the intended Structure Tag.
 
 If the change cannot be saved, confirm both Collection update permission and Structure Tag relationship permission.
 
@@ -78,9 +78,9 @@ Remove the tag you added or reapply the one you removed, then save and verify. D
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
-- **Show me:** The organization clip will show the Collection attachment after publication.
-- **Do it:** Open `/elements`, select an Element, and expand the Collection.
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- **Show me:** The Collection attachment clip is pending workflow verification and approval.
+- **Do it:** Open **Functions → Elements** (`/elements`), select an Element, and expand the Collection.
 
 ## Get help
 

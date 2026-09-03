@@ -59,8 +59,16 @@ Publishing can make a custom schema read-only. Treat publication as a release de
 
 ## Plan a small first version
 
-Start with the fields needed for one real workflow. Use names that customers will recognize, define ownership, and test the draft with documentation-only data before publication.
+Start with the fields needed for one real workflow. Use familiar names and assign an owner.
+
+Before publication, test the draft with non-customer sample data.
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20asset%20model%20question) with your company, affected user, draft Asset Type name or ID, page URL, timestamp and time zone, and the model you are trying to represent. Never send passwords, credentials, tokens, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Asset%20model%20question) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Draft Asset Type name or ID
+- The model you are trying to represent
+
+Never send passwords, credentials, tokens, or secret values.

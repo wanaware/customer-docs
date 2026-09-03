@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { basename, dirname, extname, join, relative, resolve } from 'node:path';
+import { basename, dirname, extname, join, relative } from 'node:path';
 import process from 'node:process';
 
 const root = process.cwd();
@@ -46,7 +46,6 @@ function pngDimensions(file) {
 
 const markdownFiles = walk(docsRoot).filter((file) => extname(file) === '.md');
 const allFiles = walk(root);
-const slugFiles = new Set(markdownFiles.map((file) => file.replace(/\.md$/, '')));
 const publicSlugs = new Set(markdownFiles.map((file) => `/docs/${slugForMarkdown(file)}`));
 const publishingManifestFile = join(root, 'media/publishing-manifest.json');
 const publishingManifest = parseJson(publishingManifestFile);
@@ -61,6 +60,16 @@ if (publicSlugs.size !== markdownFiles.length) {
 for (const file of markdownFiles) {
   const source = readFileSync(file, 'utf8');
   const frontmatter = source.match(/^---\n([\s\S]*?)\n---\n/);
+
+  const discouragedProse = [
+    [/\b(?:simply|just|easy|easily|obvious|obviously)\b/i, 'vague ease claim'],
+    [/\bwill\b/i, 'future-tense product or publication claim']
+  ];
+
+  for (const [pattern, label] of discouragedProse) {
+    const match = source.match(pattern);
+    if (match) fail(file, `contains a ReadMe style-guide ${label}: ${match[0]}`);
+  }
 
   if (!frontmatter) {
     fail(file, 'missing YAML frontmatter');
@@ -151,13 +160,18 @@ for (const file of markdownFiles) {
 
   const links = [...source.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
   for (const link of links) {
-    if (/^(?:https?:|mailto:|#)/.test(link) || link.startsWith('/docs/')) continue;
-    const cleanLink = link.split('#')[0];
-    if (!cleanLink) continue;
-    const destination = resolve(dirname(file), cleanLink);
-    if (!existsSync(destination) && !existsSync(`${destination}.md`) && !slugFiles.has(destination)) {
-      fail(file, `broken relative link: ${link}`);
+    if (/^(?:mailto:|#)/.test(link)) continue;
+    if (link.startsWith('https://docs.wanaware.com/docs/')) {
+      const destination = new URL(link).pathname;
+      if (!publicSlugs.has(destination)) fail(file, `broken canonical documentation link: ${link}`);
+      continue;
     }
+    if (/^https?:/.test(link)) continue;
+    if (link.startsWith('/docs/')) {
+      fail(file, `internal documentation link is missing the canonical protocol and host: ${link}`);
+      continue;
+    }
+    fail(file, `repository-relative documentation links fail ReadMe Docs Audit; use the canonical https://docs.wanaware.com/docs/... URL: ${link}`);
   }
 
   for (const image of source.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {

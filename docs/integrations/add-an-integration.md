@@ -46,12 +46,12 @@ release-status: draft
 ## Before you start
 
 - Get approval from the source-system owner.
-- Open the matching [provider adapter](providers) and confirm its requirements.
-- Gather the non-secret account identifiers requested by the released form.
+- Open the matching [provider adapter](https://docs.wanaware.com/docs/providers) and confirm its requirements.
+- Gather the non-secret account identifiers requested by the current provider form.
 - Use the least access supported by the provider.
 - Confirm which WanAware company workspace should receive the inventory.
 
-Only enter an authorization value in a field that the released setup explicitly identifies for that purpose. Never send that value to Support or include it in a screenshot.
+Only enter an authorization value in a field that the current setup explicitly identifies for that purpose. Never send that value to Support or include it in a screenshot.
 
 ## Field and option guide
 
@@ -65,13 +65,13 @@ Only enter an authorization value in a field that the released setup explicitly 
 
 ## Add the integration
 
-1. Open **Administration → Integrations**.
+1. Open **Administration → Integrations** (`/administration/integrations`).
 2. Find the provider you want to connect.
 3. Expand its card.
-4. Use the provider's connect action named in its adapter guide.
+4. Select the provider's connect action named in its adapter guide.
 5. Enter a clear, unique connection name.
 6. Complete the fields described by the provider adapter.
-7. Review any permissions and source-side resources that the setup will create.
+7. Review the Permissions and source-side resources listed in the setup summary.
 8. Select the adapter's documented save or connect button once.
 
 **Expected result:** The connection appears on the provider card with the account context entered during setup.
@@ -87,7 +87,7 @@ If a required field is unclear, stop and check the provider adapter. Do not gues
 
 **Expected result:** WanAware accepts the collection request. Inventory collection can continue after you leave the page.
 
-If the test or request fails, use [Integration connection failures](../troubleshooting-and-support/integration-connection-failures).
+If the test or request fails, use [Integration connection failures](https://docs.wanaware.com/docs/integration-connection-failures).
 
 ## Check your result
 
@@ -96,7 +96,7 @@ If the test or request fails, use [Integration connection failures](../troublesh
 3. Clear filters and search for a known source record.
 4. Open it and confirm its name, Asset Type, provider, and source account context.
 
-The integration is verified only when a known record appears with the expected source context.
+Consider the integration verified after a known record appears with the expected source context.
 
 ## Undo this change
 
@@ -104,15 +104,21 @@ Do not remove a connection by guessing at a control. Removal behavior, imported-
 
 ## Learn, show me, do it
 
-- **Learn:** [About integrations](about-integrations)
-- **Show me:** The captioned integration clip will be embedded after its recording passes review.
-- **Do it:** Open `/administration/integrations` in your WanAware workspace.
+- **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
+- **Show me:** The captioned Integration clip is pending workflow verification and approval.
+- **Do it:** Open **Administration → Integrations** (`/administration/integrations`).
 
 ## Next steps
 
-- [Refresh integration data](refresh-integration-data)
-- [Verify imported inventory](verify-imported-inventory)
+- [Refresh integration data](https://docs.wanaware.com/docs/refresh-integration-data)
+- [Verify imported inventory](https://docs.wanaware.com/docs/verify-imported-inventory)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20integration%20help) with your company, affected user, provider, integration name or ID, failed stage, page URL, timestamp and time zone, reproduction steps, and exact error text. Never send passwords, credentials, tokens, private keys, or secret values.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Integration%20help) and include:
+
+- Company, affected user, page URL, timestamp, and time zone
+- Provider, Integration name or ID, and failed stage
+- Reproduction steps and the exact error text
+
+Never send passwords, credentials, tokens, private keys, or secret values.

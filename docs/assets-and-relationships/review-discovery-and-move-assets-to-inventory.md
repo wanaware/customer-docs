@@ -88,14 +88,14 @@ Do not delete the Asset to reverse an accidental promotion. First confirm whethe
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** The add-or-import clip will include Discovery review after verification.
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** The Discovery review clip is pending workflow verification and approval.
 - **Do it:** Open `/assets/discovery`.
 
 ## Next steps
 
-- [Populate Asset details](populate-asset-details)
-- [Missing, stale, or duplicate Assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets)
+- [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
 
 ## Get help
 

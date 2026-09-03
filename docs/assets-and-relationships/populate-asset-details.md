@@ -1,10 +1,10 @@
 ---
-title: Populate asset details
+title: Populate Asset details
 excerpt: Complete an asset's editable name, tags, schema fields, and catalog-backed selections.
 deprecated: false
 hidden: false
 metadata:
-  title: Populate asset details | WanAware Documentation
+  title: Populate Asset details | WanAware Documentation
   description: Edit and save WanAware asset details, including schema and Service Catalog fields.
   keywords:
     - edit asset details
@@ -28,9 +28,9 @@ video-status: planned
 release-status: draft
 -->
 
-# Populate asset details
+# Populate Asset details
 
-**Outcome:** Complete an asset's editable information and verify that every intended change was saved.
+**Outcome:** Complete an Asset's editable information and verify that every intended change was saved.
 
 **For:** Customer administrators and engineers responsible for asset data
 **Permission:** `update assets`
@@ -46,7 +46,7 @@ release-status: draft
 
 ## Before you start
 
-- Confirm the asset's identity and Asset Type.
+- Confirm the Asset's identity and Asset Type.
 - Gather approved values and their source.
 - Know which fields may be refreshed by an integration.
 - Do not place credentials, personal data, or secret values in names, tags, or free-text fields.
@@ -66,7 +66,7 @@ release-status: draft
 
 ## Edit the name and tags
 
-1. Open **Functions → Assets → Inventory** and select the asset.
+1. Open **Functions → Assets → Inventory** (`/assets/inventory`) and select the Asset.
 2. Confirm its name, Asset Type, and source identifier.
 3. Use the inline name edit control to correct the editable name.
 4. Add or remove Data Tags for descriptive labels.
@@ -88,14 +88,14 @@ If a Structure Tag is unavailable, confirm that the Structure exists and your ro
 
 **Expected result:** The unsaved-change bar clears and the saved values remain visible.
 
-If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [Service Catalog failures](../troubleshooting-and-support/service-catalog-failures).
+If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures).
 
 ## Check your result
 
 1. Refresh the asset page.
 2. Confirm the name, Data Tags, Structure Tags, and changed field values.
 3. Open any dependent field and confirm its selected value is still compatible.
-4. Ask a normal customer user to reopen the asset when the change supports a shared workflow.
+4. Ask a member with `read assets` to reopen the Asset when the change supports a shared workflow.
 
 ## Undo this change
 
@@ -103,14 +103,14 @@ Restore the previous editable value and save again. Remove only the tag you adde
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](../asset-types-and-service-catalog/understand-asset-types-and-service-catalogs)
-- **Show me:** The asset-and-relationship clip will include this workflow after publication.
-- **Do it:** Open `/assets/inventory`, select an asset, and use its editable detail tabs.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The Asset detail clip is pending workflow verification and approval.
+- **Do it:** Open **Functions → Assets → Inventory** (`/assets/inventory`), select an Asset, and use its editable detail tabs.
 
 ## Next steps
 
-- [Manage Data Tags and Structure Tags](manage-asset-and-structure-tags)
-- [View asset relationships](view-asset-relationships)
+- [Manage Data Tags and Structure Tags](https://docs.wanaware.com/docs/manage-asset-and-structure-tags)
+- [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
 
 ## Get help
 

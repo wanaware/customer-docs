@@ -56,7 +56,7 @@ release-status: draft
 
 - Sign in to the company workspace assigned to you.
 - Ask for the name of one known asset if the data is unfamiliar.
-- If the inventory is empty, ask an administrator to [add an integration](../integrations/add-an-integration) or [add or import assets](../assets-and-relationships/add-or-import-assets).
+- If the inventory is empty, ask an administrator to [add an integration](https://docs.wanaware.com/docs/add-an-integration) or [add or import assets](https://docs.wanaware.com/docs/add-or-import-assets).
 
 ## Page and checkpoint guide
 
@@ -76,7 +76,7 @@ release-status: draft
 
 **Expected result:** The inventory opens. Counts and Launchpad cards can vary by role and company configuration.
 
-If a page is missing, see [Missing pages, actions, or permissions](../troubleshooting-and-support/missing-pages-actions-or-permissions).
+If a page is missing, see [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## 2. Find a known asset
 
@@ -115,15 +115,15 @@ You have completed the Explore path when you can answer:
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](product-map-and-terminology)
-- **Show me:** The captioned first-30-minutes clip will be embedded after the recording passes review.
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** The captioned first-30-minutes clip is pending workflow verification and approval.
 - **Do it:** Open `/launchpad` in your WanAware workspace.
 
 ## Next steps
 
-- [Populate asset details](../assets-and-relationships/populate-asset-details)
-- [View asset relationships](../assets-and-relationships/view-asset-relationships)
-- [Build your environment](administrator-setup-path)
+- [Populate asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
+- [Build your environment](https://docs.wanaware.com/docs/administrator-setup-path)
 
 ## Get help
 

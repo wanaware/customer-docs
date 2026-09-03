@@ -42,7 +42,7 @@ release-status: draft
 2. Choose one import type based on whether the parent provider already exists.
 3. Download the current template from the same bulk-upload page; do not reuse an older template.
 4. For existing providers, copy the exact provider ID from the catalog rather than its display name.
-5. Keep a mixed spreadsheet together only when the intended automatic job split is understood and will be reviewed separately.
+5. Keep a mixed spreadsheet together only when you understand the automatic job split and review each resulting job separately.
 
 ## Before you start
 
@@ -108,14 +108,14 @@ Delete or archive the local prepared file according to your data-handling policy
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset Type and Service Catalog clip will be added only after the end-to-end service is verified.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** This clip requires successful end-to-end service verification before publication.
 - **Do it:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
 
 ## Next steps
 
-- [Bulk upload Service Catalog entries](bulk-upload-service-catalog-entries)
-- [Service Catalog failures](../troubleshooting-and-support/service-catalog-failures)
+- [Bulk upload Service Catalog entries](https://docs.wanaware.com/docs/bulk-upload-service-catalog-entries)
+- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

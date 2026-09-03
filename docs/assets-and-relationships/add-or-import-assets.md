@@ -1,5 +1,5 @@
 ---
-title: Add or import assets
+title: Add or import Assets
 excerpt: Create one asset manually or upload a validated file of assets.
 deprecated: false
 hidden: false
@@ -36,26 +36,32 @@ Choose the workflow that matches the number of Assets and the source of truth. B
 
 | Goal | Use | Important checkpoint |
 | --- | --- | --- |
-| Create one record and enter its details now | [Add an Asset](add-an-asset) | Verify the exact name, Asset Type, and initial status after refresh. |
-| Create many records from one Asset Type | [Bulk upload Assets](bulk-upload-assets) | Resolve missing or unknown columns, then reconcile every result state. |
-| Review found records before maintaining them | [Review Discovery and move Assets to Inventory](review-discovery-and-move-assets-to-inventory) | Search Inventory for a duplicate before promotion. |
-| Bring records from a supported external source | [Add an Integration](../integrations/add-an-integration) | Verify connection status, then find imported records by stable identity. |
+| Create one record and enter its details now | [Add an Asset](https://docs.wanaware.com/docs/add-an-asset) | Verify the exact name, Asset Type, and initial status after refresh. |
+| Create many records from one Asset Type | [Bulk upload Assets](https://docs.wanaware.com/docs/bulk-upload-assets) | Resolve missing or unknown columns, then reconcile every result state. |
+| Review found records before maintaining them | [Review Discovery and move Assets to Inventory](https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory) | Search Inventory for a duplicate before promotion. |
+| Bring records from a supported external source | [Add an Integration](https://docs.wanaware.com/docs/add-an-integration) | Verify connection status, then find imported records by stable identity. |
 
-Manual creation is best for a small number of records or a one-off correction. Bulk upload is best when a current template can represent one Asset per row. An Integration remains the better source when the external system should continue supplying inventory data.
+Use manual creation for a small number of records or a one-off correction. Use bulk upload when a current template represents one Asset per row. Use an Integration when an external system remains the source of inventory data.
 
 Regardless of path, search first. A matching display name is not enough to prove two records are different; compare Asset Type, source, and stable identifiers.
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Asset Types and Service Catalogs](../asset-types-and-service-catalog/understand-asset-types-and-service-catalogs)
-- **Show me:** The captioned add-or-import clip will be embedded after its recording passes review.
+- **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
+- **Show me:** The captioned add-or-import clip is pending workflow verification and approval.
 - **Do it:** Open `/assets/inventory`, then select **+ Add Asset**.
 
 ## Next steps
 
-- [Populate Asset details](populate-asset-details)
-- [Find, filter, and inspect Assets](find-filter-and-inspect-assets)
+- [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20adding%20or%20importing%20WanAware%20assets) with your company, affected user, Asset Type, page URL, import timestamp and time zone, row number or asset ID, reproduction steps, and exact validation text. Never attach credentials, tokens, secrets, or customer-sensitive data.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20adding%20or%20importing%20WanAware%20Assets) and include:
+
+- Company, affected user, page URL, import timestamp, and time zone
+- Asset Type, row number, or Asset ID
+- Reproduction steps and the exact validation text
+
+Never attach credentials, tokens, secrets, or customer-sensitive data.
