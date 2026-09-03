@@ -1,11 +1,11 @@
 ---
 title: Welcome to WanAware
-excerpt: Understand the product's main areas and choose the shortest path to useful asset context.
+excerpt: Learn what WanAware helps you understand and where to begin.
 deprecated: false
 hidden: false
 metadata:
   title: Welcome to WanAware | WanAware Documentation
-  description: Learn how WanAware turns asset inventory into organized, observable relationships.
+  description: Learn how WanAware brings asset inventory, relationships, and business context together.
   keywords:
     - what is WanAware
     - WanAware overview
@@ -21,34 +21,29 @@ product-area: Platform
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: start-welcome
+video-status: not-planned
+release-status: draft
 -->
 
 # Welcome to WanAware
 
-WanAware helps you build a working picture of your environment: what assets exist, how they relate, how they are organized, and what their monitoring says.
+WanAware gives your team one place to see the assets in an environment, complete the information people need, and understand how those assets are related.
 
-The quickest way to understand the product is to follow one asset from inventory to its relationship graph.
+The quickest way to see that value is to open a known asset and follow one connection in its **Relationship Graph**. If you are responsible for setup, start with the administrator path and build the model in a deliberate order.
 
-## The customer journey
+## Choose a starting point
 
-1. **Bring in asset data.** [Add an integration](../assets-and-relationships/add-an-integration), add an asset manually, or use bulk import when it is enabled for your account.
-2. **Confirm the inventory.** Search for an asset and check its basic details.
-3. **Explore relationships.** Open the asset's **Relationship Graph** to see connected resources.
-4. **Organize the environment.** Use Structures, Elements, and Collections to reflect operational groupings.
-5. **Monitor what matters.** Add monitors, assign Workers, and review results in Observability.
-6. **Investigate.** Use Pulse diagnostics when Pulse is included in your account and role.
+- [Explore WanAware](your-first-30-minutes): find an asset, review its details, and understand one relationship.
+- [Build your environment](administrator-setup-path): configure integrations, Asset Types, Service Catalogs, Structures, Elements, and Collections.
+- [Use a shared demo safely](use-the-demo-safely): understand what you can change and how to clean up documentation records.
+- [Find a page or term](product-map-and-terminology): use the product map and glossary.
 
-## Where to begin
+## Access varies by role
 
-- New customer: [Your first 30 minutes](your-first-30-minutes)
-- Working in a shared demo: [Use the demo safely](use-the-demo-safely)
-- Looking for a specific page: [Product map and terminology](product-map-and-terminology)
-- Something is not working: [Troubleshooting and support](../troubleshooting-and-support)
-
-## A note about access
-
-WanAware uses role-based access. Two users in the same company may see different pages or actions. When instructions mention a page you cannot see, check with a customer administrator before changing your browser or repeating the operation.
+WanAware uses role-based access. People in the same company may see different pages and actions. If an instruction names an action you cannot see, ask a customer administrator to check your role before treating the missing action as a product problem.
 
 ## Get help
 
-If you cannot find the answer, email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20documentation%20question). Include the page URL and the outcome you were trying to reach. Never send credentials, access tokens, secrets, or private keys.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20documentation%20question) with your company, affected user, page URL, timestamp and time zone, and the outcome you were trying to reach. Never send passwords, credentials, access tokens, secrets, or private keys.

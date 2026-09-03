@@ -1,18 +1,23 @@
 {
-  "status": "blocked-pending-review",
-  "branch": "v1.0_docs-v1",
+  "status": "blocked-pending-release-evidence-and-approval",
+  "branch": "v1.0_kb-first-release",
   "publishBranch": "v1.0",
+  "contentScope": "first-release-customer-guides",
   "blockingChecks": [
     {
-      "check": "Every workflow run in the released demo with a normal customer role",
+      "check": "All launch workflows run in Harbor Meridian Systems with a normal customer role and the appropriate administrator role",
       "status": "pending"
     },
     {
-      "check": "Every administrative workflow run with the appropriate administrator role",
+      "check": "The first-release feature flags and navigation are active for all media captures",
       "status": "pending"
     },
     {
-      "check": "Current screenshots added with useful alt text and no customer or internal data",
+      "check": "Approximately 33 current screenshots captured, optimized, reviewed, and linked with useful alt text",
+      "status": "pending"
+    },
+    {
+      "check": "Five captioned Loom clips recorded, embedded, and matched to committed transcripts",
       "status": "pending"
     },
     {
@@ -20,31 +25,31 @@
       "status": "pending"
     },
     {
-      "check": "Support approval for clarity, diagnostics, and escalation instructions",
+      "check": "Support approval for clarity, diagnostic value, and escalation instructions",
       "status": "pending"
     },
     {
-      "check": "Five captioned Loom recordings embedded after released-UI review",
+      "check": "Priority search phrases return a relevant page in the first three results",
       "status": "pending"
     },
     {
-      "check": "Three to five unfamiliar users observed on the first-30-minute path with at least 80 percent reaching an asset relationship without live help",
+      "check": "Three to five unfamiliar users complete the Explore path, with at least 80 percent reaching an asset relationship without live help",
       "status": "pending"
     },
     {
-      "check": "Ten priority searches return a relevant article in the first three results",
+      "check": "Rendered ReadMe preview and Docs Audit pass with zero broken critical links or inaccessible launch pages",
       "status": "pending"
     },
     {
-      "check": "No broken critical links, customer data, secrets, private endpoints, or internal architecture",
-      "status": "automated-check-passing"
+      "check": "Repository documentation validator passes",
+      "status": "passing"
     }
   ],
   "launchActionsAfterApproval": [
     "merge the approved pull request into v1.0",
-    "apply the ReadMe project settings in integration/readme-settings.json",
-    "create the redirects in integration/readme-redirects.csv",
-    "verify the public navigation, search, voting, metrics, llms.txt, and mcp output",
-    "keep Ask AI disabled until its separate benchmark gate passes"
+    "apply integration/readme-settings.json",
+    "apply integration/readme-redirects.csv",
+    "verify navigation, search, voting, metrics, llms.txt, and mcp output",
+    "keep Ask AI disabled until its independent benchmark gate passes"
   ]
 }

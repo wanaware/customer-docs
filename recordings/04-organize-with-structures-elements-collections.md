@@ -1,39 +1,40 @@
 # Organize assets with Structures, Elements, and Collections
 
+**Status:** Pending Harbor Meridian Systems capture, captions, Product review, and Support review
 **Target length:** 2 minutes 45 seconds
-**Embed in:** `/docs/create-elements-and-collections`
-**Audience:** Operators who organize the environment
+**Embed in:** `/docs/create-and-manage-structures`, `/docs/create-and-populate-elements`, and `/docs/create-collections-and-add-assets`
+**Audience:** Administrators and engineers who organize an environment
 
-## Before recording
+## Recording guardrails
 
-- Use fictional names such as `Demo East`, `Demo Site 01`, and `Demo Network Devices`.
-- Use a role that can create and edit Structures and Elements.
-- Confirm deletion behavior separately; do not demonstrate deletion in this introductory clip.
+- Use `Docs Demo Organization`, `Docs Demo Site 01`, and `Docs Demo Network Devices`.
+- Use a role that can create and update all three record types and their attachments.
+- Do not demonstrate deletion. Clean up in reverse order after recording.
 
-## Shot list and narration
+## Shot list and captions
 
 | Time | On screen | Narration and captions |
 | --- | --- | --- |
-| 0:00–0:20 | Structures page | WanAware gives you three related tools for organization. Structures describe a hierarchy. Elements represent places or logical units in that hierarchy. Collections group assets for a shared purpose. |
-| 0:20–0:50 | Add Structure | Open Structures and choose Add Structure. Select a Structure type, enter the fictional name `Demo East`, review the placement, and save. Confirm that the new Structure appears where you intended. |
-| 0:50–1:25 | Elements, Add Element | Open Elements and choose Add Element. Select the required Element type, enter `Demo Site 01` if the name is not generated automatically, and assign the appropriate Structure tags. Save and verify the Element. |
-| 1:25–1:55 | Collections tab, Add Collection | Open Collections and choose Add Collection. Name it `Demo Network Devices` and save. A Collection is useful when assets share an operational purpose that is not the same as hierarchy. |
-| 1:55–2:20 | Add Asset to Site or Collection | Use Add Asset to Site or the available Collection action to associate a fictional asset. Verify the asset appears in the intended Element or Collection before adding more. |
-| 2:20–2:35 | Structure and Collection comparison | Use Structures for hierarchy, Elements for the actual units in that model, and Collections for flexible grouping. Avoid creating duplicate categories with slightly different names. |
-| 2:35–2:45 | Support footer | The written guides contain permission, recovery, and deletion checks. Never place credentials or secrets in names, descriptions, or tags. |
+| 0:00–0:22 | Structure hierarchy | Structures describe hierarchy. Elements represent Applications, Services, or Sites. Collections group existing assets inside an Element. |
+| 0:22–0:50 | Add Structure | Open Structures, select Add Structure, choose the supported type, enter `Docs Demo Organization`, choose its valid placement, and save. |
+| 0:50–1:20 | Add Element | Open Elements, select Add Element, enter `Docs Demo Site 01`, choose Site, and add the intended Structure Tag. Save and open the Element. |
+| 1:20–1:42 | Site details | For a Site, review Site Assets and Location. Add only sanitized documentation assets and approved location data. |
+| 1:42–2:12 | Add Collection | In Collections, select Add Collection, name it `Docs Demo Network Devices`, select the intended assets, and save. |
+| 2:12–2:32 | Collection Structure Tags | Expand the Collection, add the intended Structure Tag, save, and reopen it. The tag is the saved hierarchy attachment. |
+| 2:32–2:45 | Verification | Confirm the Structure placement, Element details, Collection membership, and both Structure Tag attachments before adding more records. |
 
 ## Transcript
 
-WanAware gives you three related tools for organization. Structures describe a hierarchy. Elements represent places or logical units in that hierarchy. Collections group assets for a shared purpose.
+Structures describe hierarchy. Elements represent Applications, Services, or Sites. Collections group existing assets inside an Element.
 
-Open Structures and choose Add Structure. Select a Structure type, enter the fictional name `Demo East`, review the placement, and save. Confirm that the new Structure appears where you intended.
+Open Structures, select Add Structure, choose the supported type, enter `Docs Demo Organization`, choose its valid placement, and save.
 
-Open Elements and choose Add Element. Select the required Element type, enter `Demo Site 01` if the name is not generated automatically, and assign the appropriate Structure tags. Save and verify the Element.
+Open Elements, select Add Element, enter `Docs Demo Site 01`, choose Site, and add the intended Structure Tag. Save and open the Element.
 
-Open Collections and choose Add Collection. Name it `Demo Network Devices` and save. A Collection is useful when assets share an operational purpose that is not the same as hierarchy.
+For a Site, review Site Assets and Location. Add only sanitized documentation assets and approved location data.
 
-Use Add Asset to Site or the available Collection action to associate a fictional asset. Verify the asset appears in the intended Element or Collection before adding more.
+In Collections, select Add Collection, name it `Docs Demo Network Devices`, select the intended assets, and save.
 
-Use Structures for hierarchy, Elements for the actual units in that model, and Collections for flexible grouping. Avoid creating duplicate categories with slightly different names.
+Expand the Collection, add the intended Structure Tag, save, and reopen it. The tag is the saved hierarchy attachment.
 
-The written guides contain permission, recovery, and deletion checks. Never place credentials or secrets in names, descriptions, or tags.
+Confirm the Structure placement, Element details, Collection membership, and both Structure Tag attachments before adding more records.

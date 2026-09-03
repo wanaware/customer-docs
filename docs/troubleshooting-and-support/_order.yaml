@@ -4,6 +4,8 @@
 - missing-stale-or-duplicate-assets
 - bulk-import-validation-failures
 - missing-or-unexpected-relationships
-- monitors-or-workers-not-running
-- missing-observability-or-pulse-data
+- asset-type-save-or-publish-failures
+- service-catalog-failures
+- structure-element-or-collection-attachment-failures
+- billing-and-payment-failures
 - contact-wanaware-support

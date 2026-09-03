@@ -1,0 +1,97 @@
+---
+title: Add catalog entries and compatibility
+excerpt: Add supported catalog records and define which models, components, or software work together.
+deprecated: false
+hidden: false
+metadata:
+  title: Add catalog entries and compatibility | WanAware Documentation
+  description: Add manufacturers, models, modules, software, specifications, attributes, and compatibility in Service Catalog.
+  keywords:
+    - catalog entry
+    - model compatibility
+    - module
+    - software
+    - specification
+  robots: index
+---
+
+<!-- kb-meta
+content-type: workflow
+audience: customer administrator, data model owner
+permission: SERVICE_CATALOG_UPDATE
+product-area: Asset Types and Service Catalog
+content-owner: Product
+review-owner: Support
+last-verified: 2026-09-03
+last-verified-release: pending
+screenshot-set: service-catalog-entries
+video-status: planned
+release-status: draft
+-->
+
+# Add catalog entries and compatibility
+
+**Outcome:** Build the managed choices needed by a draft Asset Type and verify their compatibility relationships.
+
+**For:** Customer administrators and data model owners
+**Permission:** Update Service Catalog
+**Time:** 15–30 minutes
+**Changes made:** Adds or changes shared catalog entries and compatibility
+
+## Before you start
+
+- Select the correct draft custom Asset Type.
+- Agree on naming conventions and sources.
+- Start with one complete manufacturer or provider family.
+- Confirm which parent record is required before adding a Model, Module, or Software item.
+
+## Add entries
+
+1. Open **Administration → Service Catalog** and select the draft Asset Type.
+2. Select **Add**.
+3. Choose an available top-level type such as **Manufacturer**, **Provider**, **Carrier**, or **Carrier Loop**.
+4. Enter its name, description, and approved custom data.
+5. Save the entry.
+6. Select the appropriate parent, then add **Model** where supported.
+7. Under the required manufacturer context, add **Module** or **Software** where supported.
+8. Add the available specifications and catalog attributes.
+9. Save after each coherent group of changes.
+
+**Expected result:** The hierarchy shows each entry under the intended parent with its saved details.
+
+![Service Catalog item showing a documentation-only service or circuit type and its specifications.](../../media/screenshots/service-catalog-models-components.png)
+
+If an option is absent, first select the parent that makes the child type valid. Do not create a differently named substitute.
+
+## Define compatibility
+
+1. Open the catalog entry that provides compatibility settings.
+2. Search for the supported models or components.
+3. Select only combinations approved for the customer workflow.
+4. Save the entry.
+5. Reopen it and confirm the selected compatible items remain.
+
+**Expected result:** Asset fields can present compatible downstream choices based on the selected parent value.
+
+## Check your result
+
+Use a documentation-only asset after the catalog is saved. Select the parent catalog value and confirm the expected compatible options appear without near-duplicates.
+
+## Undo this change
+
+Remove an incorrect compatibility selection and save again. Before editing or removing a catalog record, confirm whether it is used by any asset or dependent entry.
+
+## Learn, show me, do it
+
+- **Learn:** [Understand Asset Types and Service Catalogs](understand-asset-types-and-service-catalogs)
+- **Show me:** The Asset Type and Service Catalog clip will include compatibility verification after publication.
+- **Do it:** Open `/administration/service-catalog` and select the draft Asset Type.
+
+## Next steps
+
+- [Publish and verify an Asset Type](publish-and-verify-an-asset-type)
+- [Populate asset details](../assets-and-relationships/populate-asset-details)
+
+## Get help
+
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20Service%20Catalog%20entry%20help) with your company, affected user, Asset Type ID, entry IDs, expected compatibility, page URL, timestamp and time zone, reproduction steps, and exact error. Never send passwords, credentials, tokens, or secret values.

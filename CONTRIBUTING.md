@@ -1,20 +1,32 @@
 # Contributing to WanAware customer documentation
 
-## Before writing
+WanAware customer documentation is public. Describe only released, observable product behavior. Do not include source code, private architecture, credentials, trade secrets, internal URLs, or customer data.
 
-- Confirm that the workflow is available in the released Portal.
-- Test it with a normal customer role and an appropriate administrator role.
-- Identify the exact permission that controls the page or action.
-- Use a demo workspace with no real customer information.
+## Choose the content type
+
+- **Tutorial:** A guided learning path that reaches a meaningful customer outcome.
+- **Workflow:** Numbered instructions for one task.
+- **Reference:** Factual information a customer looks up while working.
+- **Concept:** An explanation of terminology or how product records fit together.
+- **Troubleshooting:** A symptom-first path from fast checks to verified recovery and Support.
+
+Keep one primary purpose per page. Link to nearby troubleshooting instead of adding a long error appendix to every workflow.
+
+## Work on the correct branch
+
+- Use `v1.0_kb-first-release` for the first-release ReadMe preview and review.
+- Keep upcoming product behavior on an unpublished feature branch.
+- Merge to `v1.0` only after Product and Support approval.
+- Do not modify API Reference files as part of customer workflow documentation.
 
 ## Required page metadata
 
-Use ReadMe-supported frontmatter and the private HTML metadata block shown below. Update `last-verified` whenever the procedure is retested.
+Use ReadMe-supported frontmatter and the `kb-meta` block below.
 
 ```markdown
 ---
 title: Page title
-excerpt: One sentence describing the outcome.
+excerpt: One sentence describing the customer outcome.
 deprecated: false
 hidden: false
 metadata:
@@ -32,55 +44,80 @@ permission: ASSETS
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: YYYY-MM-DD
+last-verified: pending
+last-verified-release: pending
+screenshot-set: assets-example
+video-status: not-planned
+release-status: draft
 -->
 ```
 
-## Workflow article contract
+Use `release-status: draft` while any verification, screenshot, video, or review evidence is pending. Change it to `ready` only when the page has a verified release and date, approved media, and both required reviews.
 
-Every workflow must state:
+## Workflow page contract
 
-- Outcome, audience, permission, and approximate time
-- Prerequisites and side effects
-- Numbered steps using the current UI labels
+Every workflow must include:
+
+- Outcome, audience, permission, time, and changes made
+- Prerequisites and warnings before consequential actions
+- Numbered steps using released UI labels
 - Expected results at important checkpoints
-- A final success check
-- Common failures beside the relevant step
-- Undo or deletion guidance when data changes
-- Learn, Show me, and Do it links when available
-- Related next steps and the standard support footer
+- Troubleshooting beside the step where failure occurs
+- A final verification procedure
+- Undo, detach, or deletion guidance when data changes
+- Learn, Show me, and Do it links where available
+- Related next steps and the standard Support footer
 
-## Troubleshooting article contract
+The article is authoritative. Hide an embedded clip as soon as its UI or behavior becomes inaccurate.
 
-Every troubleshooting article must include:
+## Troubleshooting page contract
 
-- The exact symptom or error wording
-- Fast checks in the order customers should try them
-- Likely cause and fix pairs
-- A verification step
-- Known limitations
-- The standard evidence checklist and support link
+Begin with the visible symptom or error. Then include **Fast checks**, **Common causes and fixes**, **Verify the fix**, **Known limitations**, and **Get help**.
 
-## Screenshot and video rules
+## Integration writing
 
-- Use only non-customer demo data.
-- Crop out browser profiles, unrelated tabs, personal notifications, account menus, and tokens.
-- Add useful alt text; do not repeat the surrounding sentence.
-- Caption every Loom recording and include its transcript in `recordings/`.
-- Keep videos between one and three minutes.
-- Written instructions remain authoritative.
+Keep the core integration guides provider-neutral. Put source-specific fields, permissions, setup resources, and cleanup in `docs/integrations/providers/`. A new provider should add an adapter without rewriting the customer onboarding path.
 
-## Legacy Stonly content
+## Harbor Meridian Systems media
 
-Every legacy Stonly guide is outdated. Use the legacy register only to identify customer topics and redirect destinations. Never reuse its steps, screenshots, labels, permissions, or behavioral claims. Rebuild replacement guidance from the released WanAware product and validate it with Product and Support.
+- Use only the Harbor Meridian Systems account and records whose names begin with `Docs Demo`.
+- Use Light mode by default; show Light and Dark only in the theme article.
+- Capture static PNG files at 750–1000 pixels for a full-column image and 250 KB or less.
+- Write useful alt text between 40 and 150 characters.
+- Crop browser profiles, unrelated tabs, emails, notifications, account menus, internal URLs, identifiers, payment details, credentials, tokens, and secret values.
+- Never cosmetically alter visible product UI. If a release-excluded area is central to the screen, wait for the correct product flag.
+- Use only masked test information for billing. Never purchase, cancel, or change a real payment method to create documentation.
+- Keep `media/screenshot-manifest.json` current and remove every temporary `Docs Demo` record after verification.
 
-## Review gate
+If relative images do not render in the ReadMe preview, keep the versioned PNG files and add their ReadMe-hosted URLs to a checked manifest before changing article links.
 
-A page can merge only after:
+## Product diagrams
 
-- Product has run the procedure and approved its accuracy.
-- Support has confirmed that the recovery and escalation guidance is sufficient.
-- Links, images, spelling, metadata, and search terms pass automated checks.
-- The diff contains no secrets, customer data, internal URLs, or private architecture.
+Keep editable D2 source beside each generated SVG in `media/diagrams/`. D2 source is authoritative; customer articles embed the generated SVG.
 
-Use [Contact WanAware Support](./docs/troubleshooting-and-support/contact-wanaware-support.md) as the evidence-checklist source for every support footer. Add article-specific identifiers when they help Support diagnose the problem, but never request a password, credential, token, private key, or secret value.
+Render the product model with D2 v0.8.2, the bundled ELK layout engine, and the pinned dark theme:
+
+```sh
+d2 --layout elk --theme 200 --pad 36 --omit-version media/diagrams/product-model.d2 media/diagrams/product-model.svg
+```
+
+Review the generated SVG at the final article width, then run `npm run check`. Do not add remote icons, customer data, internal identifiers, or first-release-excluded features to a diagram.
+
+## Legacy Stonly material
+
+Every legacy Stonly guide is outdated. Use the migration register only to identify topics and redirect candidates. Never reuse its steps, screenshots, labels, permissions, or behavioral claims.
+
+## Review and release gate
+
+Before publication:
+
+1. Run every procedure in Harbor Meridian Systems with a normal customer role and the appropriate administrator role.
+2. Verify permissions, side effects, background processing, messages, recovery, links, media, and cleanup.
+3. Run `npm run check`.
+4. Render the ReadMe branch preview and run Docs Audit.
+5. Obtain Product approval for behavior and Support approval for clarity, diagnosis, and escalation.
+6. Confirm the complete pull request does not contain planning, agent instruction, handoff, or status documents.
+
+## Standard Support evidence
+
+Every unresolved path leads to [Contact WanAware Support](./docs/troubleshooting-and-support/contact-wanaware-support.md). Ask for company, affected user, relevant record IDs, timestamp and time zone, page URL, reproduction steps, expected versus actual behavior, and a screenshot or exact error. Explicitly warn customers never to send passwords, credentials, tokens, keys, payment details, or secret values.

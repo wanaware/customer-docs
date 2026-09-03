@@ -1,17 +1,16 @@
 ---
 title: Relationship Discovery Engine
-excerpt: Understand how WanAware turns normalized asset data into useful resource relationships.
+excerpt: Understand how supported data becomes useful asset relationships.
 deprecated: false
 hidden: false
 metadata:
   title: Relationship Discovery Engine | WanAware Documentation
-  description: Learn what WanAware's Relationship Discovery Engine produces and how customers use its results.
+  description: Learn what WanAware's Relationship Discovery Engine produces and what it needs.
   keywords:
     - Relationship Discovery Engine
     - RDE
     - topology
     - asset graph
-    - relationships
   robots: index
 ---
 
@@ -23,46 +22,41 @@ product-area: Assets
 content-owner: Product
 review-owner: Support
 last-verified: pending
+last-verified-release: pending
+screenshot-set: assets-rde-concept
+video-status: not-planned
+release-status: draft
 -->
 
 # Relationship Discovery Engine
 
-The Relationship Discovery Engine (RDE) builds connections between assets after WanAware has received and normalized their source data. Its output powers relationship views used for inventory context, organization, monitoring, and investigation.
+The Relationship Discovery Engine (RDE) builds supported connections after WanAware receives and normalizes asset data. Its results appear in relationship views across the asset experience.
 
-## What RDE does
+## What RDE uses
 
-RDE evaluates the identifiers and properties available for supported asset types, then creates relationships that match the platform's approved relationship rules. A relationship may describe containment, dependency, adjacency, ownership, or another supported association.
+RDE evaluates the identifiers and properties available for supported Asset Types, then applies approved relationship rules. Useful results depend on:
 
-RDE does not guess from a resource name alone. Useful relationships depend on complete, current source data and applicable rules for the asset types involved.
+- Both resources existing in WanAware
+- Current, complete identifying data
+- Finished ingestion and relationship processing
+- An applicable rule for the Asset Types involved
 
-## When relationships appear
+RDE does not infer a relationship from a similar name alone.
 
-Relationship processing happens after asset ingestion. A newly connected account or large crawl can therefore show assets before every expected relationship is available.
+## How relationships are created
 
-The timing depends on:
+A relationship may be discovered from supported source data or created through a specific product flow, such as **Add Connection** for eligible network assets. WanAware does not provide a general-purpose action for drawing arbitrary relationships.
 
-- Whether the provider crawl or import finished
-- Whether both sides of the relationship exist in WanAware
-- Whether required identifying properties were supplied
-- Whether the involved asset types have an applicable relationship rule
+## What graph controls do
 
-## How customers use the result
-
-- Open an asset's **Relationship Graph** to inspect its immediate context.
-- Use the aggregate Assets **Graph** view to explore a broader environment.
-- Narrow the view by asset type, Site, Element, or Structure.
-- Follow connected resources while investigating monitor or Pulse evidence.
-
-## What RDE does not change
-
-Exploring, filtering, grouping, or changing graph depth does not edit the underlying asset or create new source-system relationships.
+Search, filters, grouping, focus, and depth change what you can see. They do not edit the underlying assets or relationships.
 
 ## Next steps
 
 - [View asset relationships](view-asset-relationships)
+- [Add a supported network connection](add-a-network-connection)
 - [Missing or unexpected relationships](../troubleshooting-and-support/missing-or-unexpected-relationships)
-- [Investigate with Observability and Pulse](../monitor-and-investigate/investigate-with-observability-and-pulse)
 
 ## Get help
 
-If a relationship appears wrong, do not delete source assets as a first response. Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20relationship%20data%20question) with the two asset IDs, source account, page URL, timestamp and time zone, and a screenshot of the connection. Never send provider credentials or secrets.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20relationship%20data%20question) with your company, affected user, both sanitized asset IDs, source context, page URL, timestamp and time zone, and a screenshot. Never send passwords, credentials, tokens, or secret values.

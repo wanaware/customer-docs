@@ -1,17 +1,16 @@
 ---
 title: Add or import assets
-excerpt: Add one asset manually or use bulk upload when it is available for your account.
+excerpt: Create one asset manually or upload a validated file of assets.
 deprecated: false
 hidden: false
 metadata:
   title: Add or import assets | WanAware Documentation
-  description: Add a WanAware asset manually and understand when bulk upload is available.
+  description: Add a WanAware asset manually or use bulk upload and verify the result.
   keywords:
     - add asset
     - bulk upload assets
     - import assets
     - inventory
-    - discovery
   robots: index
 ---
 
@@ -22,75 +21,85 @@ permission: ASSETS_CREATE
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
+last-verified-release: pending
+screenshot-set: assets-add-import
+video-status: planned
+release-status: draft
 -->
 
 # Add or import assets
 
-**Outcome:** Create an asset and confirm that it appears in the intended workspace.
+**Outcome:** Create asset records and confirm that they appear in the intended workspace.
 
 **For:** Customer administrators and engineers
 **Permission:** Create Assets
-**Time:** 5 minutes for one asset; bulk imports vary
-**Changes made:** Creates inventory or discovery records
+**Time:** About 5 minutes for one asset; bulk imports vary
+**Changes made:** Creates shared asset records
 
 ## Before you start
 
-- Choose whether the asset belongs in **Inventory** or **Discovery**.
-- Confirm the correct asset type and required fields.
-- Use demo values in a shared evaluation workspace.
-- For bulk upload, prepare a file that matches the current template and size limits shown by the uploader.
+- Search for the asset first to avoid duplicates.
+- Choose **Inventory** or **Discovery** according to your team's process.
+- Confirm the correct Asset Type and its required fields.
+- In Harbor Meridian Systems, use names that begin with `Docs Demo`.
+- For bulk upload, use the current template from the uploader and sanitized data only.
 
 ## Add one asset
 
-1. Open **Functions → Assets → Inventory** or **Discovery**.
-2. Select **Add Asset** if your role provides that action.
+1. Open **Functions → Assets → Inventory**.
+2. Select **Add Asset**.
 3. Choose the **Asset Type**.
-4. Confirm the **Status** toggle: **Inventory** or **Discovery**.
-5. Enter **Asset Name** and the required fields for the selected type.
-6. Add Data Tags or Structure Tags only when they have a clear owner and purpose.
+4. Set **Status** to **Inventory** or **Discovery**.
+5. Enter **Asset Name** and the required fields shown for the Asset Type.
+6. Add Data Tags or Structure Tags only when their purpose is clear.
 7. Select **Add Asset**.
 
-**Expected result:** WanAware shows **Asset Added!** and identifies the workspace where it was added.
+![Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.](../../media/screenshots/add-asset-form.png)
 
-8. Select **View Asset** to confirm the new record, **Add Another** to continue, or **Done** to close the workflow.
+**Expected result:** WanAware shows **Asset Added!** and identifies where the asset was added.
+
+8. Select **View Asset** to verify it, **Add Another** to continue, or **Done** to close.
+
+If the expected fields are missing, stop and confirm the Asset Type. Changing type later may not preserve every value.
 
 ## Import assets in bulk
 
-Bulk upload may be hidden or disabled for some accounts and Portal releases.
+1. Open the bulk-upload action from Assets when it is available to your role.
+2. Download the current template.
+3. Keep its column names unchanged and enter one asset per row.
+4. Upload the file.
+5. Review the validation results before submitting.
+6. Correct rejected rows in the source file and upload the corrected file.
+7. Submit only after the accepted and rejected counts make sense.
 
-1. Open the bulk-upload action only when it is visible for your account.
-2. Download or use the template provided by the current uploader.
-3. Keep column names unchanged and use one asset per row.
-4. Upload the file and review validation results before submitting.
-5. Correct rejected rows rather than repeatedly submitting the same file.
-6. Submit the validated import.
+**Expected result:** The uploader accepts valid rows and reports rejected rows with validation details. Processing may continue in the background.
 
-**Expected result:** The uploader reports accepted and rejected records. Accepted records appear in the selected workspace after processing.
-
-If bulk upload is not visible, add assets manually or ask your customer administrator whether the feature is enabled. If validation fails, use [Bulk-import validation failures](../troubleshooting-and-support/bulk-import-validation-failures).
+For rejected rows, use [Bulk-import validation failures](../troubleshooting-and-support/bulk-import-validation-failures).
 
 ## Check your result
 
-1. Return to **Assets → Inventory** or **Discovery**.
-2. Clear old filters.
-3. Search for the new asset name.
-4. Open the record and confirm its status, type, and required fields.
+1. Open **Assets → Inventory** or **Discovery** according to the selected status.
+2. Clear existing filters.
+3. Search for a unique new asset name.
+4. Open the asset and confirm its name, Asset Type, status, and required fields.
+5. For bulk import, compare the submitted count with accepted, rejected, and visible records.
 
 ## Undo this change
 
-Deleting an asset can affect Structures, Elements, Collections, monitors, and relationships. Do not delete it just to correct one field.
-
-- Use the supported edit action for a field correction.
-- Delete only after reviewing dependencies and confirming that the record is not shared.
-- In a demo, ask the demo owner before deleting anything.
+Correct an editable field instead of deleting the asset. Before deletion, review its relationships, Structure Tags, and Element or Collection attachments. Remove only documentation records you created and have verified are not shared.
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** The Loom recording **Add or import assets and confirm they appeared** will be embedded here after approval.
-- **Do it:** Open `/assets/inventory` or `/assets/discovery` in your WanAware workspace.
+- **Learn:** [Understand Asset Types and Service Catalogs](../asset-types-and-service-catalog/understand-asset-types-and-service-catalogs)
+- **Show me:** The captioned add-or-import clip will be embedded after its Harbor Meridian Systems recording passes review.
+- **Do it:** Open `/assets/new` or `/assets/new/bulk` in your WanAware workspace.
+
+## Next steps
+
+- [Populate asset details](populate-asset-details)
+- [Find, filter, and inspect assets](find-filter-and-inspect-assets)
 
 ## Get help
 
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20adding%20or%20importing%20WanAware%20assets). Include your company, asset type, intended status, page URL, timestamp and time zone, and the exact validation error. Do not attach a file containing credentials or customer-sensitive data.
+Email [support@wanaware.com](mailto:support@wanaware.com?subject=Help%20adding%20or%20importing%20WanAware%20assets) with your company, affected user, Asset Type, page URL, import timestamp and time zone, row number or asset ID, reproduction steps, and exact validation text. Never attach credentials, tokens, secrets, or customer-sensitive data.

@@ -1,14 +1,23 @@
 {
   "projectName": "WanAware Documentation",
-  "tagline": "Find your assets, understand their relationships, and act with confidence.",
+  "tagline": "Find your assets, complete their context, and understand how they connect.",
   "publicBaseUrl": "https://docs.wanaware.com",
   "gitRepository": "wanaware/customer-docs",
   "liveBranch": "v1.0",
-  "reviewBranch": "v1.0_docs-v1",
+  "reviewBranch": "v1.0_kb-first-release",
   "visibility": "public",
   "topLevelAreas": [
     "Guides",
     "API Reference"
+  ],
+  "guideCategories": [
+    "Start Here",
+    "Integrations",
+    "Assets and Relationships",
+    "Asset Types and Service Catalog",
+    "Structures, Elements, and Collections",
+    "Administration and Personal Settings",
+    "Troubleshooting and Support"
   ],
   "launchSettings": {
     "goalOrientedLandingPage": true,
@@ -20,16 +29,23 @@
     "changelog": false,
     "discussions": false
   },
+  "publicContentExports": {
+    "llmsTxt": "approved public Guides and API Reference only",
+    "mcp": "approved public Guides and API Reference only",
+    "excludeDraftBranches": true,
+    "excludePrivateSources": true
+  },
   "askAiGate": {
-    "allV1PagesApproved": true,
+    "allV1PagesApproved": false,
     "benchmarkMinimumCorrectPercent": 90,
     "answersRequireCitations": true,
     "unsupportedQuestionsRequireSupportHandoff": true,
     "publicContentOnly": true
   },
   "notes": [
-    "Apply launch settings only after Product and Support approve the v1 pull request.",
-    "Keep API Reference separate from task-oriented Guides.",
-    "Do not connect ReadMe to any private engineering repository."
+    "Apply launch settings only after Product and Support approve the final release pull request.",
+    "Keep API Reference separate and unchanged by the customer guide release.",
+    "Do not connect ReadMe to a private engineering repository.",
+    "Do not export preview or unapproved content through llms.txt or mcp."
   ]
 }

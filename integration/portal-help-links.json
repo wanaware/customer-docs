@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "documentationBaseUrl": "https://docs.wanaware.com",
   "fallback": "/docs/welcome-to-wanaware",
   "routes": [
@@ -9,19 +9,49 @@
       "label": "Get started"
     },
     {
+      "portalRoute": "/administration/integrations",
+      "article": "/docs/add-an-integration",
+      "label": "Add an integration"
+    },
+    {
+      "portalRoute": "/administration/integrations/*",
+      "article": "/docs/integration-connection-failures",
+      "label": "Troubleshoot an integration"
+    },
+    {
       "portalRoute": "/assets/inventory",
       "article": "/docs/find-filter-and-inspect-assets",
       "label": "Find and inspect assets"
     },
     {
       "portalRoute": "/assets/discovery",
-      "article": "/docs/add-or-import-assets",
-      "label": "Add or import assets"
+      "article": "/docs/find-filter-and-inspect-assets",
+      "label": "Find discovered assets"
     },
     {
-      "portalRoute": "/assets/:assetId/*",
+      "portalRoute": "/assets/new",
+      "article": "/docs/add-or-import-assets",
+      "label": "Add an asset"
+    },
+    {
+      "portalRoute": "/assets/new/bulk",
+      "article": "/docs/add-or-import-assets",
+      "label": "Import assets"
+    },
+    {
+      "portalRoute": "/assets/:assetId/summary/*",
+      "article": "/docs/populate-asset-details",
+      "label": "Complete asset details"
+    },
+    {
+      "portalRoute": "/assets/:assetId/summary/relationship-graph",
       "article": "/docs/view-asset-relationships",
-      "label": "View asset relationships"
+      "label": "Understand relationships"
+    },
+    {
+      "portalRoute": "/assets/:assetId/add-connection",
+      "article": "/docs/add-a-network-connection",
+      "label": "Add a network connection"
     },
     {
       "portalRoute": "/structures",
@@ -30,38 +60,83 @@
     },
     {
       "portalRoute": "/elements",
-      "article": "/docs/create-elements-and-collections",
-      "label": "Manage Elements and Collections"
+      "article": "/docs/create-and-populate-elements",
+      "label": "Manage Elements"
     },
     {
-      "portalRoute": "/observability/inventory",
-      "article": "/docs/configure-a-monitor-and-worker",
-      "label": "Configure monitoring"
+      "portalRoute": "/elements/:elementId/collections",
+      "article": "/docs/create-collections-and-add-assets",
+      "label": "Manage Collections"
     },
     {
-      "portalRoute": "/observability/:scope/:scopeId/*",
-      "article": "/docs/investigate-with-observability-and-pulse",
-      "label": "Investigate a result"
+      "portalRoute": "/elements/:elementId/site-assets",
+      "article": "/docs/manage-site-details",
+      "label": "Manage Site assets"
     },
     {
-      "portalRoute": "/workers",
-      "article": "/docs/monitors-or-workers-not-running",
-      "label": "Troubleshoot Workers"
+      "portalRoute": "/elements/:elementId/location",
+      "article": "/docs/manage-site-details",
+      "label": "Manage Site location"
     },
     {
-      "portalRoute": "/pulse",
-      "article": "/docs/investigate-with-observability-and-pulse",
-      "label": "Use Pulse"
+      "portalRoute": "/administration/asset-types",
+      "article": "/docs/understand-asset-types-and-service-catalogs",
+      "label": "Understand Asset Types"
+    },
+    {
+      "portalRoute": "/administration/asset-types/create",
+      "article": "/docs/create-a-custom-asset-type",
+      "label": "Create an Asset Type"
+    },
+    {
+      "portalRoute": "/administration/asset-types/edit/:assetTypeId",
+      "article": "/docs/configure-asset-type-sections-and-fields",
+      "label": "Configure an Asset Type"
+    },
+    {
+      "portalRoute": "/administration/service-catalog",
+      "article": "/docs/create-a-custom-service-catalog",
+      "label": "Configure Service Catalog"
+    },
+    {
+      "portalRoute": "/administration/service-catalog/:assetTypeId",
+      "article": "/docs/add-catalog-entries-and-compatibility",
+      "label": "Manage catalog entries"
+    },
+    {
+      "portalRoute": "/administration/service-catalog/:assetTypeId/bulk-upload",
+      "article": "/docs/service-catalog-failures",
+      "label": "Service Catalog upload help"
     },
     {
       "portalRoute": "/administration/iam",
       "article": "/docs/invite-users-and-assign-roles",
-      "label": "Manage access"
+      "label": "Manage users and roles"
     },
     {
-      "portalRoute": "/administration/integrations/*",
-      "article": "/docs/add-an-integration",
-      "label": "Add an integration"
+      "portalRoute": "/administration/general/company",
+      "article": "/docs/manage-company-settings",
+      "label": "Manage company settings"
+    },
+    {
+      "portalRoute": "/profile/general",
+      "article": "/docs/manage-profile-and-security",
+      "label": "Manage your profile"
+    },
+    {
+      "portalRoute": "/profile/security",
+      "article": "/docs/manage-profile-and-security",
+      "label": "Manage your security"
+    },
+    {
+      "portalRoute": "ui:theme-settings",
+      "article": "/docs/choose-a-theme",
+      "label": "Choose a theme"
+    },
+    {
+      "portalRoute": "/administration/billing",
+      "article": "/docs/understand-billing",
+      "label": "Understand billing"
     },
     {
       "portalRoute": "/support",
