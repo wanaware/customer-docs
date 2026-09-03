@@ -21,7 +21,7 @@ permission: ASSETS
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: assets-find-filter
 video-status: not-planned
@@ -41,6 +41,8 @@ release-status: draft
 
 Gather the most specific value you know: full name, provider identifier, IP address, account, Site, or Asset Type.
 
+![Asset Inventory filtered to sanitized Harbor Meridian records.](../../media/screenshots/asset-inventory.png)
+
 ## Find and inspect an asset
 
 1. Open **Functions → Assets**.
@@ -52,6 +54,8 @@ Gather the most specific value you know: full name, provider identifier, IP addr
 7. Compare its name, Asset Type, status, provider or source, and unique identifier.
 
 **Expected result:** The correct asset opens with the detail tabs supported by its Asset Type.
+
+![Asset Inventory search narrowed to one sanitized asset.](../../media/screenshots/asset-search-and-filters.png)
 
 If no result appears, select **Clear All Filters**, check both Inventory and Discovery, and confirm the company workspace.
 

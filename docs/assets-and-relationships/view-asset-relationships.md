@@ -21,7 +21,7 @@ permission: ASSETS
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: assets-relationship-graph
 video-status: planned
@@ -49,6 +49,8 @@ Find a known asset in **Functions → Assets → Inventory** and verify its iden
 4. Select the neighboring node to review its label and available details.
 5. Change relationship depth only when more context is needed.
 6. Use search or focus controls to return to a known resource.
+
+![Relationship Graph grouped by Structure around a sanitized Harbor Meridian asset.](../../media/screenshots/asset-relationship-graph.png)
 
 **Expected result:** You can name the focused asset, one connected resource, and the represented relationship.
 

@@ -20,7 +20,7 @@ permission: ELEMENT_COLLECTIONS_CREATE, ELEMENT_COLLECTIONS_UPDATE
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: collections-create-assets
 video-status: planned
@@ -57,6 +57,8 @@ release-status: draft
 If an asset is missing from the selector, clear its filters and confirm that the asset is in Inventory and visible to your role.
 
 ## Add or remove assets later
+
+![Expanded Collection showing its sanitized associated assets and the Add Asset action.](../../media/screenshots/collection-create-and-assets.png)
 
 1. Open the Collection.
 2. Use its edit or asset-selection action.

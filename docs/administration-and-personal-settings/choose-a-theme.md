@@ -21,7 +21,7 @@ permission: authenticated user
 product-area: Personal settings
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: personal-theme
 video-status: not-planned
@@ -47,6 +47,8 @@ Theme changes affect your view. They do not change company data or another membe
 2. Choose **Light** or **Dark** mode.
 3. Select an available assigned or color preset.
 4. Close the Theme Settings panel.
+
+![Theme Settings showing the available Light and Dark modes and color presets.](../../media/screenshots/theme-settings-light-and-dark.png)
 
 **Expected result:** The Portal updates immediately and keeps your selection when you move to another page.
 

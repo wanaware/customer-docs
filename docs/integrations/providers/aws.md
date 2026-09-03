@@ -21,7 +21,7 @@ permission: ADMINISTRATION, INTEGRATIONS
 product-area: Integrations
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: integrations-provider-aws
 video-status: not-planned
@@ -44,12 +44,17 @@ release-status: draft
 - Use the released generated stack; do not substitute long-lived access keys.
 - Review the stack's permissions before deployment.
 
+![Integrations page showing the Amazon Web Services adapter with no account details visible.](../../../media/screenshots/integration-provider-selection.png)
+
 ## Complete the adapter fields
 
 1. Open **Administration → Integrations**.
 2. Expand **Amazon Web Services**.
 3. For **AWS Account Inventory**, select **Connect account**.
 4. Enter a recognizable account name and the 12-digit **AWS account ID**.
+
+![AWS integration setup form before any account details have been entered.](../../../media/screenshots/integration-provider-setup.png)
+
 5. Select **Generate AWS setup**.
 6. Open the generated CloudFormation setup and review it in the intended AWS account and Region.
 7. Deploy the stack after the account owner approves it.

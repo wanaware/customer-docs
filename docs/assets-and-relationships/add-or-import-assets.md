@@ -21,7 +21,7 @@ permission: ASSETS_CREATE
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: assets-add-import
 video-status: planned
@@ -54,6 +54,8 @@ release-status: draft
 5. Enter **Asset Name** and the required fields shown for the Asset Type.
 6. Add Data Tags or Structure Tags only when their purpose is clear.
 7. Select **Add Asset**.
+
+![Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.](../../media/screenshots/add-asset-form.png)
 
 **Expected result:** WanAware shows **Asset Added!** and identifies where the asset was added.
 

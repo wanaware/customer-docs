@@ -20,7 +20,7 @@ permission: ELEMENTS_UPDATE, STRUCTURE_TAG_RELATIONSHIP
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: elements-structure-tags
 video-status: planned
@@ -43,6 +43,8 @@ release-status: draft
 - Check current Structure Tags to avoid a duplicate or conflicting attachment.
 
 ## Add or remove the attachment
+
+![Element details showing saved Structure Tags and Collections without record identifiers.](../../media/screenshots/element-and-collection-structure-tags.png)
 
 1. Open **Functions → Elements** and select the Element.
 2. Find **Structure Tags** in the Element details.

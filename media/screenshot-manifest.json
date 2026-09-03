@@ -1,10 +1,11 @@
 {
   "version": 1,
-  "account": "Harbor Meridian Systems",
+  "account": "Demo Org one",
+  "documentationDataset": "Harbor Meridian Systems (HMSD)",
   "recordPrefix": "Docs Demo",
   "defaultTheme": "Light",
   "sourceDirectory": "media/screenshots",
-  "captureStatus": "pending-first-release-ui-and-review",
+  "captureStatus": "in-progress-product-and-support-review-required",
   "rules": {
     "format": "png",
     "fullColumnWidthPixels": {
@@ -37,7 +38,8 @@
       "file": "media/screenshots/launchpad-overview.png",
       "article": "/docs/use-launchpad",
       "alt": "Launchpad showing sanitized workspace summaries and links into detailed WanAware areas.",
-      "status": "pending-capture"
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "start-navigation",
@@ -49,16 +51,18 @@
     {
       "id": "integrations-selection",
       "file": "media/screenshots/integration-provider-selection.png",
-      "article": "/docs/add-an-integration",
-      "alt": "Integrations page showing the provider selection area with no account details visible.",
-      "status": "pending-capture"
+      "article": "/docs/aws",
+      "alt": "Integrations page showing the Amazon Web Services adapter with no account details visible.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "integrations-setup",
       "file": "media/screenshots/integration-provider-setup.png",
-      "article": "/docs/add-an-integration",
-      "alt": "Sanitized provider setup form showing where an administrator enters approved connection details.",
-      "status": "pending-safe-demo-connection"
+      "article": "/docs/aws",
+      "alt": "AWS integration setup form before any account details have been entered.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "integrations-status",
@@ -78,22 +82,25 @@
       "id": "assets-inventory",
       "file": "media/screenshots/asset-inventory.png",
       "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory containing sanitized Docs Demo records in the table view.",
-      "status": "pending-demo-records"
+      "alt": "Asset Inventory filtered to sanitized Harbor Meridian records in the table view.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "assets-filter",
       "file": "media/screenshots/asset-search-and-filters.png",
       "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory search and filter controls narrowing the result to a Docs Demo asset.",
-      "status": "pending-demo-records"
+      "alt": "Asset Inventory search narrowed to one sanitized Harbor Meridian asset.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "assets-create",
       "file": "media/screenshots/add-asset-form.png",
       "article": "/docs/add-or-import-assets",
-      "alt": "Add Asset form showing Asset Type, status, name, and required detail fields.",
-      "status": "pending-capture"
+      "alt": "Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "assets-bulk-import",
@@ -114,14 +121,15 @@
       "file": "media/screenshots/asset-details.png",
       "article": "/docs/populate-asset-details",
       "alt": "Sanitized asset detail page showing the editable name and Asset Type-specific tabs.",
-      "status": "pending-demo-records"
+      "status": "pending-identifier-safe-capture"
     },
     {
       "id": "assets-tags",
       "file": "media/screenshots/asset-data-and-structure-tags.png",
       "article": "/docs/manage-asset-and-structure-tags",
-      "alt": "Asset detail controls for adding Data Tags and Structure Tags.",
-      "status": "pending-demo-records"
+      "alt": "Asset details showing Data Tags, Structure Tags, schema-driven tabs, and editable fields.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "assets-schema-fields",
@@ -134,8 +142,9 @@
       "id": "assets-relationship-graph",
       "file": "media/screenshots/asset-relationship-graph.png",
       "article": "/docs/view-asset-relationships",
-      "alt": "Relationship Graph centered on a Docs Demo asset and one sanitized connected resource.",
-      "status": "pending-demo-records"
+      "alt": "Relationship Graph grouped by Structure around a sanitized Harbor Meridian asset.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "connection-target",
@@ -169,15 +178,17 @@
       "id": "asset-types-list",
       "file": "media/screenshots/asset-types-list.png",
       "article": "/docs/create-a-custom-asset-type",
-      "alt": "Asset Types list showing sanitized Draft and Published status examples.",
-      "status": "pending-demo-records"
+      "alt": "Custom Asset Types list showing sanitized Harbor Meridian schemas and their published status.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "asset-types-start",
       "file": "media/screenshots/asset-type-starting-options.png",
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
-      "status": "pending-capture"
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "asset-types-fields",
@@ -198,7 +209,8 @@
       "file": "media/screenshots/service-catalog-workspace.png",
       "article": "/docs/create-a-custom-service-catalog",
       "alt": "Service Catalog workspace with a sanitized draft Asset Type selected.",
-      "status": "pending-demo-records"
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "catalog-entry",
@@ -211,8 +223,9 @@
       "id": "catalog-components",
       "file": "media/screenshots/service-catalog-models-components.png",
       "article": "/docs/add-catalog-entries-and-compatibility",
-      "alt": "Catalog hierarchy showing documentation-only parent, model, module, and software entries.",
-      "status": "pending-demo-records"
+      "alt": "Service Catalog item showing a documentation-only service or circuit type and its specifications.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "catalog-compatibility",
@@ -225,8 +238,9 @@
       "id": "structures-hierarchy",
       "file": "media/screenshots/structure-hierarchy.png",
       "article": "/docs/create-and-manage-structures",
-      "alt": "Structure hierarchy containing a small set of Docs Demo nodes and their valid placement.",
-      "status": "pending-demo-records"
+      "alt": "Structure hierarchy showing the sanitized Harbor Meridian company and its top-level organizational nodes.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "elements-create-details",
@@ -239,15 +253,17 @@
       "id": "collections-assets",
       "file": "media/screenshots/collection-create-and-assets.png",
       "article": "/docs/create-collections-and-add-assets",
-      "alt": "Collection form selecting sanitized assets inside a Docs Demo Element.",
-      "status": "pending-demo-records"
+      "alt": "Expanded Collection showing its sanitized associated assets and the Add Asset action.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "organization-attachments",
       "file": "media/screenshots/element-and-collection-structure-tags.png",
       "article": "/docs/attach-elements-to-structures",
-      "alt": "Element and Collection details showing their saved Structure Tag attachments.",
-      "status": "pending-demo-records"
+      "alt": "Element details showing saved Structure Tags and Collections without record identifiers.",
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "administration-iam",
@@ -261,14 +277,15 @@
       "file": "media/screenshots/company-and-profile-settings.png",
       "article": "/docs/manage-company-settings",
       "alt": "Sanitized company settings and personal profile controls with private fields cropped.",
-      "status": "pending-capture"
+      "status": "pending-identifier-safe-capture"
     },
     {
       "id": "personal-theme",
       "file": "media/screenshots/theme-settings-light-and-dark.png",
       "article": "/docs/choose-a-theme",
       "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
-      "status": "pending-capture"
+      "status": "captured-needs-review",
+      "capturedOn": "2026-09-03"
     },
     {
       "id": "administration-billing",

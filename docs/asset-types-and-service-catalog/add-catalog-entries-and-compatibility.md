@@ -22,7 +22,7 @@ permission: SERVICE_CATALOG_UPDATE
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: service-catalog-entries
 video-status: planned
@@ -58,6 +58,8 @@ release-status: draft
 9. Save after each coherent group of changes.
 
 **Expected result:** The hierarchy shows each entry under the intended parent with its saved details.
+
+![Service Catalog item showing a documentation-only service or circuit type and its specifications.](../../media/screenshots/service-catalog-models-components.png)
 
 If an option is absent, first select the parent that makes the child type valid. Do not create a differently named substitute.
 

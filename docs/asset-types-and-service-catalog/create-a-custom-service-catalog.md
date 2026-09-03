@@ -20,7 +20,7 @@ permission: SERVICE_CATALOG_UPDATE
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: service-catalog-create
 video-status: planned
@@ -42,6 +42,8 @@ release-status: draft
 - Keep the Asset Type unpublished.
 - Gather the approved catalog names and source references.
 - Search for existing entries before adding a new one.
+
+![Service Catalog workspace showing a sanitized Harbor Meridian catalog, its provider, and service or circuit types.](../../media/screenshots/service-catalog-workspace.png)
 
 ## Start the catalog
 

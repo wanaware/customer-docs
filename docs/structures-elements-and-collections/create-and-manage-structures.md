@@ -22,7 +22,7 @@ permission: STRUCTURES_CREATE
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: structures-create
 video-status: planned
@@ -46,6 +46,8 @@ release-status: draft
 - In Harbor Meridian Systems, start documentation names with `Docs Demo`.
 
 ## Create a Structure
+
+![Structure hierarchy showing the sanitized Harbor Meridian company and its top-level organizational nodes.](../../media/screenshots/structure-hierarchy.png)
 
 1. Open **Functions → Structures**.
 2. Select **Add Structure**.

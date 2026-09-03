@@ -20,7 +20,7 @@ permission: ASSETS_UPDATE
 product-area: Assets
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: assets-tags
 video-status: not-planned
@@ -43,6 +43,8 @@ release-status: draft
 - Search existing tags before creating or applying a near-duplicate.
 
 ## Add or remove tags
+
+![Asset details showing Data Tags, Structure Tags, schema-driven tabs, and editable fields.](../../media/screenshots/asset-data-and-structure-tags.png)
 
 1. Open the intended asset and confirm its unique identifier.
 2. Find the Data Tags or **Structure Tags** control.

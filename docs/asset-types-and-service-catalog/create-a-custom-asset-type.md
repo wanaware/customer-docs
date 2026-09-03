@@ -21,7 +21,7 @@ permission: ASSET_TYPES_BUILDER_CREATE
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-03
 last-verified-release: pending
 screenshot-set: asset-types-create
 video-status: planned
@@ -44,6 +44,8 @@ release-status: draft
 - Choose a durable customer-facing name.
 - In Harbor Meridian Systems, begin documentation types with `Docs Demo`.
 
+![Custom Asset Types list showing sanitized Harbor Meridian schemas and their published status.](../../media/screenshots/asset-types-list.png)
+
 ## Choose a starting option
 
 1. Open **Administration → Asset Types**.
@@ -52,6 +54,9 @@ release-status: draft
    - **Generate with AI** for a suggested starting schema that you will review field by field.
    - **Utilize a Template** when an available template closely matches the use case.
    - **Start from Scratch** when you need full control or a small schema.
+
+![Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.](../../media/screenshots/asset-type-starting-options.png)
+
 4. Complete the prompts for the selected option.
 5. Enter the Asset Type **Name** and **Description**.
 6. Review the generated or copied sections and fields.
