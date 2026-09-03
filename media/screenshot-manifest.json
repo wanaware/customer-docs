@@ -5,7 +5,8 @@
   "recordPrefix": "Docs Demo",
   "defaultTheme": "Light",
   "sourceDirectory": "media/screenshots",
-  "captureStatus": "in-progress-product-and-support-review-required",
+  "publishedBaseUrl": null,
+  "captureStatus": "blocked-pending-sanitization-and-product-support-review",
   "rules": {
     "format": "png",
     "fullColumnWidthPixels": {
@@ -38,8 +39,7 @@
       "file": "media/screenshots/launchpad-overview.png",
       "article": "/docs/use-launchpad",
       "alt": "Launchpad showing sanitized workspace summaries and links into detailed WanAware areas.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "start-navigation",
@@ -53,16 +53,14 @@
       "file": "media/screenshots/integration-provider-selection.png",
       "article": "/docs/aws",
       "alt": "Integrations page showing the Amazon Web Services adapter with no account details visible.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "integrations-setup",
       "file": "media/screenshots/integration-provider-setup.png",
       "article": "/docs/aws",
       "alt": "AWS integration setup form before any account details have been entered.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "integrations-status",
@@ -82,39 +80,64 @@
       "id": "assets-inventory",
       "file": "media/screenshots/asset-inventory.png",
       "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory filtered to sanitized Harbor Meridian records in the table view.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "alt": "Asset Inventory filtered to example records in the table view.",
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "assets-filter",
       "file": "media/screenshots/asset-search-and-filters.png",
       "article": "/docs/find-filter-and-inspect-assets",
-      "alt": "Asset Inventory search narrowed to one sanitized Harbor Meridian asset.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "alt": "Asset Inventory search narrowed to one example asset.",
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "assets-create",
       "file": "media/screenshots/add-asset-form.png",
-      "article": "/docs/add-or-import-assets",
+      "article": "/docs/add-an-asset",
       "alt": "Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "assets-bulk-import",
       "file": "media/screenshots/bulk-import-upload.png",
-      "article": "/docs/add-or-import-assets",
+      "article": "/docs/bulk-upload-assets",
       "alt": "Bulk-import uploader ready for a sanitized file based on the current template.",
       "status": "pending-feature-verification"
     },
     {
       "id": "assets-bulk-validation",
       "file": "media/screenshots/bulk-import-validation.png",
-      "article": "/docs/bulk-import-validation-failures",
+      "article": "/docs/bulk-upload-assets",
       "alt": "Bulk-import validation results showing accepted and rejected documentation rows.",
       "status": "pending-feature-verification"
+    },
+    {
+      "id": "assets-bulk-type-template",
+      "file": "media/screenshots/asset-bulk-type-and-template.png",
+      "article": "/docs/bulk-upload-assets",
+      "alt": "Asset bulk uploader showing Asset Type selection and the current template download action.",
+      "status": "pending-sanitized-capture"
+    },
+    {
+      "id": "assets-bulk-file-check",
+      "file": "media/screenshots/asset-bulk-file-check.png",
+      "article": "/docs/bulk-upload-assets",
+      "alt": "Asset bulk file check showing recognized, missing, and unknown columns before validation.",
+      "status": "pending-sanitized-capture"
+    },
+    {
+      "id": "assets-bulk-result-states",
+      "file": "media/screenshots/asset-bulk-result-states.png",
+      "article": "/docs/bulk-upload-assets",
+      "alt": "Asset validation tabs for Valid, Needs Review, Invalid, Failed, and Corrected rows.",
+      "status": "pending-sanitized-capture"
+    },
+    {
+      "id": "assets-discovery-move",
+      "file": "media/screenshots/discovery-move-to-inventory.png",
+      "article": "/docs/review-discovery-and-move-assets-to-inventory",
+      "alt": "Discovery table with reviewed rows selected and the Move To Inventory action visible.",
+      "status": "pending-sanitized-capture"
     },
     {
       "id": "assets-details",
@@ -128,8 +151,7 @@
       "file": "media/screenshots/asset-data-and-structure-tags.png",
       "article": "/docs/manage-asset-and-structure-tags",
       "alt": "Asset details showing Data Tags, Structure Tags, schema-driven tabs, and editable fields.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "assets-schema-fields",
@@ -142,9 +164,8 @@
       "id": "assets-relationship-graph",
       "file": "media/screenshots/asset-relationship-graph.png",
       "article": "/docs/view-asset-relationships",
-      "alt": "Relationship Graph grouped by Structure around a sanitized Harbor Meridian asset.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "alt": "Relationship Graph grouped by Structure around an example asset.",
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "connection-target",
@@ -171,24 +192,22 @@
       "id": "connection-preview",
       "file": "media/screenshots/add-connection-preview-and-result.png",
       "article": "/docs/add-a-network-connection",
-      "alt": "Connection preview and successful network connection result for Docs Demo assets.",
+      "alt": "Connection preview and successful network connection result for example assets.",
       "status": "pending-eligible-demo-assets"
     },
     {
       "id": "asset-types-list",
       "file": "media/screenshots/asset-types-list.png",
       "article": "/docs/create-a-custom-asset-type",
-      "alt": "Custom Asset Types list showing sanitized Harbor Meridian schemas and their published status.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "alt": "Custom Asset Types list showing example schemas and their published status.",
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "asset-types-start",
       "file": "media/screenshots/asset-type-starting-options.png",
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "asset-types-fields",
@@ -209,8 +228,7 @@
       "file": "media/screenshots/service-catalog-workspace.png",
       "article": "/docs/create-a-custom-service-catalog",
       "alt": "Service Catalog workspace with a sanitized draft Asset Type selected.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "catalog-entry",
@@ -224,8 +242,7 @@
       "file": "media/screenshots/service-catalog-models-components.png",
       "article": "/docs/add-catalog-entries-and-compatibility",
       "alt": "Service Catalog item showing a documentation-only service or circuit type and its specifications.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "catalog-compatibility",
@@ -235,18 +252,45 @@
       "status": "pending-demo-records"
     },
     {
+      "id": "catalog-bulk-import-choice",
+      "file": "media/screenshots/catalog-bulk-import-choice.png",
+      "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
+      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider import choices.",
+      "status": "pending-release-equivalent-verification"
+    },
+    {
+      "id": "catalog-bulk-column-mapping",
+      "file": "media/screenshots/catalog-bulk-column-mapping.png",
+      "article": "/docs/bulk-upload-service-catalog-entries",
+      "alt": "Service Catalog bulk-upload column mapping with an explicit Ignore choice for unused data.",
+      "status": "pending-release-equivalent-verification"
+    },
+    {
+      "id": "catalog-bulk-review-results",
+      "file": "media/screenshots/catalog-bulk-review-results.png",
+      "article": "/docs/bulk-upload-service-catalog-entries",
+      "alt": "Service Catalog entry review showing ready, conflict, and error counts before creation.",
+      "status": "pending-release-equivalent-verification"
+    },
+    {
+      "id": "catalog-bulk-completion",
+      "file": "media/screenshots/catalog-bulk-completion.png",
+      "article": "/docs/bulk-upload-service-catalog-entries",
+      "alt": "Service Catalog import completion with created and failed entry counts and return action.",
+      "status": "blocked-service-not-connected"
+    },
+    {
       "id": "structures-hierarchy",
       "file": "media/screenshots/structure-hierarchy.png",
       "article": "/docs/create-and-manage-structures",
-      "alt": "Structure hierarchy showing the sanitized Harbor Meridian company and its top-level organizational nodes.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "alt": "Structure hierarchy showing an example company and its top-level organizational nodes.",
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "elements-create-details",
       "file": "media/screenshots/element-create-and-details.png",
       "article": "/docs/create-and-populate-elements",
-      "alt": "Add Element form and sanitized Site detail tabs for a Docs Demo Element.",
+      "alt": "Add Element form and sanitized Site detail tabs for an example Element.",
       "status": "pending-demo-records"
     },
     {
@@ -254,22 +298,34 @@
       "file": "media/screenshots/collection-create-and-assets.png",
       "article": "/docs/create-collections-and-add-assets",
       "alt": "Expanded Collection showing its sanitized associated assets and the Add Asset action.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "organization-attachments",
       "file": "media/screenshots/element-and-collection-structure-tags.png",
       "article": "/docs/attach-elements-to-structures",
       "alt": "Element details showing saved Structure Tags and Collections without record identifiers.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
       "id": "administration-iam",
       "file": "media/screenshots/invitations-and-roles.png",
       "article": "/docs/invite-users-and-assign-roles",
       "alt": "IAM page showing a sanitized pending invitation and assigned customer role.",
+      "status": "pending-sanitized-user"
+    },
+    {
+      "id": "administration-roles",
+      "file": "media/screenshots/role-permission-builder.png",
+      "article": "/docs/create-and-edit-roles",
+      "alt": "Role editor showing a sample role name and grouped action-resource Permission selections.",
+      "status": "pending-sanitized-user"
+    },
+    {
+      "id": "administration-pending-invitation",
+      "file": "media/screenshots/pending-invitation-resend.png",
+      "article": "/docs/manage-pending-invitations",
+      "alt": "Sanitized user details showing Pending Invite Status and the Resend invitation action.",
       "status": "pending-sanitized-user"
     },
     {
@@ -284,14 +340,27 @@
       "file": "media/screenshots/theme-settings-light-and-dark.png",
       "article": "/docs/choose-a-theme",
       "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
-      "status": "captured-needs-review",
-      "capturedOn": "2026-09-03"
+      "status": "blocked-pending-sanitized-recapture"
     },
     {
-      "id": "administration-billing",
-      "file": "media/screenshots/billing-plans-payment-history.png",
-      "article": "/docs/understand-billing",
-      "alt": "Billing tabs for Plans, Payment and Billing, and Billing History with all sensitive values hidden by the product or crop.",
+      "id": "administration-billing-plan",
+      "file": "media/screenshots/billing-plan-and-usage.png",
+      "article": "/docs/view-plan-and-usage",
+      "alt": "Plans tab showing a masked Current Plan and Asset Usage without prices or account identifiers.",
+      "status": "pending-masked-test-data"
+    },
+    {
+      "id": "administration-payment-methods",
+      "file": "media/screenshots/billing-payment-methods.png",
+      "article": "/docs/manage-payment-methods",
+      "alt": "Payment and Billing tab showing only masked test payment details and a sanitized Billing Email.",
+      "status": "pending-masked-test-data"
+    },
+    {
+      "id": "administration-billing-history",
+      "file": "media/screenshots/billing-history-invoice.png",
+      "article": "/docs/view-billing-history-and-invoices",
+      "alt": "Billing History with sample entries and invoice references masked for documentation review.",
       "status": "pending-masked-test-data"
     }
   ]

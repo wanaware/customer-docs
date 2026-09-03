@@ -37,7 +37,7 @@ Use this page when sign-in fails, a reset email does not arrive, an invitation d
 
 1. Confirm that you are using the correct WanAware workspace URL.
 2. Enter the business email address that received the invitation.
-3. Use **Continue with Google** only when your company uses that sign-in method for the same email.
+3. Use **Google sign-in** only when your company uses **Continue with Google** for the same email.
 4. Open the newest invitation or password-reset email; older links may no longer be valid.
 5. Check spam and quarantine folders.
 6. Correct the device date and time before retrying MFA.
@@ -47,16 +47,16 @@ Use this page when sign-in fails, a reset email does not arrive, an invitation d
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| “Invalid credentials” or sign-in returns to the login page | Wrong email, password, or sign-in method | Re-enter the invited email and use **Forgot password?** if you use password sign-in. |
+| “Invalid credentials” or password sign-in returns to the login page | Wrong email or password | Re-enter the invited email and use **Forgot password?** for password sign-in. |
 | Reset email does not arrive | Wrong email, mail filtering, or no active account | Check the address and mail filters, then ask an administrator to confirm the member record. |
-| Invitation link fails | An older link was opened or the invitation changed | Ask the administrator to resend the invitation and use only the newest message. |
-| MFA code is rejected | Device time is wrong or the wrong authenticator entry is being used | Sync device time and verify that the authenticator entry is for WanAware. |
-| Google sign-in uses the wrong account | Multiple Google sessions are active | Sign out of the unintended Google account or choose the correct account explicitly. |
+| Invitation link fails | You opened an older link, or the administrator changed the invitation | Ask the administrator to resend the invitation and use only the newest message. |
+| WanAware rejects the MFA code | Device time is wrong, or you selected the wrong authenticator entry | Sync device time and verify that the authenticator entry is for WanAware. |
+| Google sign-in uses the wrong account | Multiple Google sessions are active | Sign out of the unintended Google account or explicitly choose the correct account. |
 | Sign-in works but the wrong company opens | The user belongs to more than one organization | Use the organization selector and choose the intended workspace. |
 
 ## Verify the fix
 
-Sign in, confirm the company workspace, and open one page required for your role. If only the page is missing, use [Missing pages, actions, or permissions](missing-pages-actions-or-permissions).
+Sign in, confirm the company workspace, and open one page required for your role. If only the page is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## Known limitations
 

@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer
-permission: ASSETS
+permission: read assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -43,9 +43,11 @@ RDE evaluates the identifiers and properties available for supported Asset Types
 
 RDE does not infer a relationship from a similar name alone.
 
-## How relationships are created
+## How Relationships are created
 
-A relationship may be discovered from supported source data or created through a specific product flow, such as **Add Connection** for eligible network assets. WanAware does not provide a general-purpose action for drawing arbitrary relationships.
+RDE discovers supported Relationships from source data. Specific product flows create other Relationships. For example, **Add Connection** creates a network Relationship between supported Asset Types.
+
+WanAware does not provide a general-purpose action for drawing arbitrary Relationships.
 
 ## What graph controls do
 
@@ -53,9 +55,9 @@ Search, filters, grouping, focus, and depth change what you can see. They do not
 
 ## Next steps
 
-- [View asset relationships](view-asset-relationships)
-- [Add a supported network connection](add-a-network-connection)
-- [Missing or unexpected relationships](../troubleshooting-and-support/missing-or-unexpected-relationships)
+- [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
+- [Add a supported network connection](https://docs.wanaware.com/docs/add-a-network-connection)
+- [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

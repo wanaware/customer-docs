@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { basename, dirname, extname, join, relative, resolve } from 'node:path';
+import { createHash } from 'node:crypto';
+import { basename, dirname, extname, join, relative } from 'node:path';
 import process from 'node:process';
 
 const root = process.cwd();
@@ -36,10 +37,21 @@ function slugForMarkdown(file) {
   return name === 'index' ? basename(dirname(file)) : name;
 }
 
+function pngDimensions(file) {
+  const buffer = readFileSync(file);
+  const signature = buffer.subarray(0, 8).toString('hex');
+  if (signature !== '89504e470d0a1a0a' || buffer.length < 24) return null;
+  return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+}
+
 const markdownFiles = walk(docsRoot).filter((file) => extname(file) === '.md');
 const allFiles = walk(root);
-const slugFiles = new Set(markdownFiles.map((file) => file.replace(/\.md$/, '')));
 const publicSlugs = new Set(markdownFiles.map((file) => `/docs/${slugForMarkdown(file)}`));
+const publishingManifestFile = join(root, 'media/publishing-manifest.json');
+const publishingManifest = parseJson(publishingManifestFile);
+const publishedMediaByUrl = new Map(
+  (publishingManifest?.assets || []).map((asset) => [asset.publishedUrl, asset])
+);
 
 if (publicSlugs.size !== markdownFiles.length) {
   fail(docsRoot, 'two or more guide pages resolve to the same public slug');
@@ -48,6 +60,16 @@ if (publicSlugs.size !== markdownFiles.length) {
 for (const file of markdownFiles) {
   const source = readFileSync(file, 'utf8');
   const frontmatter = source.match(/^---\n([\s\S]*?)\n---\n/);
+
+  const discouragedProse = [
+    [/\b(?:simply|just|easy|easily|obvious|obviously)\b/i, 'vague ease claim'],
+    [/\bwill\b/i, 'future-tense product or publication claim']
+  ];
+
+  for (const [pattern, label] of discouragedProse) {
+    const match = source.match(pattern);
+    if (match) fail(file, `contains a ReadMe style-guide ${label}: ${match[0]}`);
+  }
 
   if (!frontmatter) {
     fail(file, 'missing YAML frontmatter');
@@ -104,8 +126,11 @@ for (const file of markdownFiles) {
         for (const label of ['**Outcome:**', '**For:**', '**Permission:**', '**Time:**', '**Changes made:**']) {
           if (!source.includes(label)) fail(file, `workflow is missing ${label}`);
         }
-        for (const heading of ['## Before you start', '## Learn, show me, do it', '## Get help']) {
+        for (const heading of ['## If you\'re stuck', '## Before you start', '## Learn, show me, do it', '## Get help']) {
           if (!source.includes(heading)) fail(file, `workflow is missing ${heading}`);
+        }
+        if (!/^## (?:Field|Option|Starting option|Status and action|View and control|Field and relationship|Field and checkpoint|Page and checkpoint|Action-safety).+guide$/m.test(source)) {
+          fail(file, 'workflow is missing a concrete field, option, action, or checkpoint guide');
         }
         if (!/\n1\.\s/.test(source)) fail(file, 'workflow is missing numbered steps');
         if (!source.includes('**Expected result:**')) fail(file, 'workflow is missing an expected-result checkpoint');
@@ -115,6 +140,13 @@ for (const file of markdownFiles) {
           fail(file, 'workflow changes data but is missing undo or recovery guidance');
         }
         if (!source.includes('support@wanaware.com')) fail(file, 'workflow is missing the support handoff');
+        const vagueInstruction = source.match(/\b(?:complete the prompts|fill out (?:the )?descriptive fields|select the appropriate option|when available|available save action|available collection|available option)\b/i);
+        if (vagueInstruction) fail(file, `contains vague instructional wording: ${vagueInstruction[0]}`);
+
+        const permission = metadataValue(metadata[1], 'permission') || '';
+        if (/\b[A-Z][A-Z_]{2,}\b/.test(permission)) {
+          fail(file, 'permission metadata must use exact lowercase action resource wording');
+        }
       }
 
       if (contentType === 'troubleshooting') {
@@ -128,13 +160,18 @@ for (const file of markdownFiles) {
 
   const links = [...source.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
   for (const link of links) {
-    if (/^(?:https?:|mailto:|#)/.test(link) || link.startsWith('/docs/')) continue;
-    const cleanLink = link.split('#')[0];
-    if (!cleanLink) continue;
-    const destination = resolve(dirname(file), cleanLink);
-    if (!existsSync(destination) && !existsSync(`${destination}.md`) && !slugFiles.has(destination)) {
-      fail(file, `broken relative link: ${link}`);
+    if (/^(?:mailto:|#)/.test(link)) continue;
+    if (link.startsWith('https://docs.wanaware.com/docs/')) {
+      const destination = new URL(link).pathname;
+      if (!publicSlugs.has(destination)) fail(file, `broken canonical documentation link: ${link}`);
+      continue;
     }
+    if (/^https?:/.test(link)) continue;
+    if (link.startsWith('/docs/')) {
+      fail(file, `internal documentation link is missing the canonical protocol and host: ${link}`);
+      continue;
+    }
+    fail(file, `repository-relative documentation links fail ReadMe Docs Audit; use the canonical https://docs.wanaware.com/docs/... URL: ${link}`);
   }
 
   for (const image of source.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {
@@ -142,13 +179,18 @@ for (const file of markdownFiles) {
     const path = image[2].split('#')[0];
     if (!alt) fail(file, `image is missing alt text: ${path}`);
     if (/\.gif(?:$|\?)/i.test(path)) fail(file, `GIFs are not allowed: ${path}`);
-    if (!/^(?:https?:|data:)/.test(path)) {
-      const destination = resolve(dirname(file), path);
-      if (!existsSync(destination)) {
-        fail(file, `referenced image does not exist: ${path}`);
-      } else if (statSync(destination).size > 256000) {
-        fail(file, `image exceeds 250 KB: ${path}`);
-      }
+    if (!path.startsWith('https://files.readme.io/')) {
+      fail(file, `customer images must use an approved files.readme.io URL: ${path}`);
+      continue;
+    }
+    const manifestAsset = publishedMediaByUrl.get(path);
+    if (!manifestAsset) {
+      fail(file, `image is missing from media/publishing-manifest.json: ${path}`);
+      continue;
+    }
+    if (manifestAsset.alt !== alt) fail(file, `image alt text differs from the publishing manifest: ${path}`);
+    if (!(manifestAsset.articles || []).includes(`/docs/${slugForMarkdown(file)}`)) {
+      fail(file, `publishing manifest does not associate this image with the article: ${path}`);
     }
   }
 }
@@ -200,6 +242,7 @@ for (const file of allFiles) {
 }
 
 const excludedFamilyPattern = /\b(?:workers?|observability|pulse|monitors?|monitoring|fleet manager)\b/i;
+const captureEnvironmentPattern = /\b(?:Harbor Meridian Systems|HMSD|Docs Demo|Demo Org)\b|demoaccount\.dev/i;
 const publicScopeFiles = [
   ...markdownFiles,
   ...walk(join(root, 'recordings')).filter((file) => extname(file) === '.md'),
@@ -209,8 +252,12 @@ const publicScopeFiles = [
 ];
 
 for (const file of publicScopeFiles) {
-  if (excludedFamilyPattern.test(readFileSync(file, 'utf8'))) {
+  const source = readFileSync(file, 'utf8');
+  if (excludedFamilyPattern.test(source)) {
     fail(file, 'contains first-release-excluded product terminology');
+  }
+  if (captureEnvironmentPattern.test(source)) {
+    fail(file, 'contains media-capture workspace or record identifiers in public content');
   }
 }
 
@@ -222,15 +269,16 @@ if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
 
 const productMapFile = join(docsRoot, 'start-here/product-map-and-terminology.md');
 const productMap = readFileSync(productMapFile, 'utf8');
-const productModelSource = join(root, 'media/diagrams/product-model.d2');
-const productModelSvg = join(root, 'media/diagrams/product-model.svg');
+const productModelSource = join(root, 'media/diagrams/organization-model.d2');
+const productModelSvg = join(root, 'media/diagrams/organization-model.svg');
+const organizationModelUrl = (publishingManifest?.assets || []).find((asset) => asset.id === 'organization-model')?.publishedUrl;
 if (!existsSync(productModelSource)) fail(productModelSource, 'missing editable D2 source');
 if (!existsSync(productModelSvg)) fail(productModelSvg, 'missing generated SVG');
 const productMapMarkers = [
   '## Navigation and permission map',
   '| Portal path | Permission that makes it visible |',
   '## How the records fit together',
-  '../../media/diagrams/product-model.svg',
+  organizationModelUrl,
   '## These sound alike',
   'capitalized words',
   '`read my_launchpad`',
@@ -249,7 +297,7 @@ const productMapMarkers = [
   '/administration/service-catalog'
 ];
 for (const marker of productMapMarkers) {
-  if (!productMap.includes(marker)) {
+  if (!marker || !productMap.includes(marker)) {
     fail(productMapFile, `product map is missing required content: ${marker}`);
   }
 }
@@ -290,12 +338,92 @@ for (const term of glossaryTerms) {
 const routeMapFile = join(root, 'integration/portal-help-links.json');
 const routeMap = parseJson(routeMapFile);
 if (routeMap) {
+  const routeKeys = new Set();
   for (const [index, route] of (routeMap.routes || []).entries()) {
     for (const field of ['portalRoute', 'article', 'label']) {
       if (!route[field]) fail(routeMapFile, `route ${index + 1} is missing ${field}`);
     }
     if (route.article && !publicSlugs.has(route.article)) {
       fail(routeMapFile, `route ${index + 1} points to unknown article ${route.article}`);
+    }
+    if (routeKeys.has(route.portalRoute)) fail(routeMapFile, `route ${index + 1} duplicates ${route.portalRoute}`);
+    routeKeys.add(route.portalRoute);
+  }
+}
+
+if (publishingManifest) {
+  if (publishingManifest.publishingHost !== 'files.readme.io') {
+    fail(publishingManifestFile, 'publishingHost must be files.readme.io');
+  }
+  const ids = new Set();
+  const urls = new Set();
+  for (const [index, asset] of (publishingManifest.assets || []).entries()) {
+    const label = `asset ${index + 1}`;
+    for (const field of ['id', 'source', 'reviewArtifact', 'publishingFile', 'sha256', 'width', 'height', 'bytes', 'alt', 'publishedUrl', 'renderedOn', 'approvalState']) {
+      if (asset[field] === undefined || asset[field] === '') fail(publishingManifestFile, `${label} is missing ${field}`);
+    }
+    if (ids.has(asset.id)) fail(publishingManifestFile, `${label} has duplicate id ${asset.id}`);
+    if (urls.has(asset.publishedUrl)) fail(publishingManifestFile, `${label} has duplicate publishedUrl ${asset.publishedUrl}`);
+    ids.add(asset.id);
+    urls.add(asset.publishedUrl);
+
+    if (!String(asset.source || '').endsWith('.d2')) fail(publishingManifestFile, `${label} source must be D2`);
+    if (!String(asset.reviewArtifact || '').endsWith('.svg')) fail(publishingManifestFile, `${label} review artifact must be SVG`);
+    if (!String(asset.publishingFile || '').endsWith('.png')) fail(publishingManifestFile, `${label} publishing file must be PNG`);
+    if (!String(asset.publishedUrl || '').startsWith('https://files.readme.io/')) fail(publishingManifestFile, `${label} has an unapproved publishing URL`);
+
+    for (const field of ['source', 'reviewArtifact', 'publishingFile']) {
+      const path = join(root, asset[field] || '');
+      if (!existsSync(path)) fail(publishingManifestFile, `${label} ${field} does not exist: ${asset[field]}`);
+    }
+
+    const publishingPath = join(root, asset.publishingFile || '');
+    if (existsSync(publishingPath)) {
+      const bytes = statSync(publishingPath).size;
+      if (bytes !== asset.bytes) fail(publishingManifestFile, `${label} byte count does not match ${asset.publishingFile}`);
+      if (bytes > 256000) fail(publishingManifestFile, `${label} exceeds 250 KB`);
+      const checksum = createHash('sha256').update(readFileSync(publishingPath)).digest('hex');
+      if (checksum !== asset.sha256) fail(publishingManifestFile, `${label} checksum does not match ${asset.publishingFile}`);
+      const dimensions = pngDimensions(publishingPath);
+      if (!dimensions) fail(publishingManifestFile, `${label} is not a valid PNG`);
+      else if (dimensions.width !== asset.width || dimensions.height !== asset.height) {
+        fail(publishingManifestFile, `${label} dimensions do not match ${asset.publishingFile}`);
+      }
+      if (dimensions?.width !== 1440) fail(publishingManifestFile, `${label} publishing PNG must be 1440 pixels wide`);
+    }
+
+    const altLength = String(asset.alt || '').trim().length;
+    if (altLength < 40 || altLength > 150) fail(publishingManifestFile, `${label} alt text must be 40–150 characters`);
+    if (!Array.isArray(asset.articles) || !asset.articles.length) fail(publishingManifestFile, `${label} has no associated articles`);
+    for (const article of asset.articles || []) {
+      if (!publicSlugs.has(article)) fail(publishingManifestFile, `${label} points to unknown article ${article}`);
+    }
+  }
+}
+
+const coverageFile = join(root, 'integration/first-release-coverage.json');
+const coverage = parseJson(coverageFile);
+if (coverage) {
+  const keys = new Set();
+  for (const [index, entry] of (coverage.entries || []).entries()) {
+    const label = `coverage entry ${index + 1}`;
+    for (const field of ['surface', 'routeOrAction', 'permission', 'disposition']) {
+      if (!entry[field]) fail(coverageFile, `${label} is missing ${field}`);
+    }
+    const key = `${entry.surface}|${entry.routeOrAction}`;
+    if (keys.has(key)) fail(coverageFile, `${label} is duplicated`);
+    keys.add(key);
+    if (!['documented', 'unpublished', 'blocked'].includes(entry.disposition)) {
+      fail(coverageFile, `${label} has invalid disposition ${entry.disposition}`);
+    }
+    if (entry.disposition === 'documented' && !publicSlugs.has(entry.article)) {
+      fail(coverageFile, `${label} must point to a published guide article`);
+    }
+    if (entry.disposition === 'blocked' && !publicSlugs.has(entry.article)) {
+      fail(coverageFile, `${label} must point to its draft guide article`);
+    }
+    if (entry.disposition === 'unpublished' && !entry.reason) {
+      fail(coverageFile, `${label} must explain why it is unpublished`);
     }
   }
 }
@@ -317,8 +445,8 @@ const screenshotManifestFile = join(root, 'media/screenshot-manifest.json');
 const screenshotManifest = parseJson(screenshotManifestFile);
 if (screenshotManifest) {
   const screenshots = screenshotManifest.screenshots || [];
-  if (screenshots.length < 30 || screenshots.length > 40) {
-    fail(screenshotManifestFile, 'launch screenshot inventory must remain approximately 33 items');
+  if (screenshots.length < 40 || screenshots.length > 55) {
+    fail(screenshotManifestFile, 'launch screenshot inventory must stay within the approved 40–55 item range');
   }
   const ids = new Set();
   const files = new Set();

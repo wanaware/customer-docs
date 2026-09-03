@@ -1,162 +1,47 @@
 {
-  "version": 2,
+  "version": 3,
   "documentationBaseUrl": "https://docs.wanaware.com",
   "fallback": "/docs/welcome-to-wanaware",
   "routes": [
-    {
-      "portalRoute": "/launchpad",
-      "article": "/docs/your-first-30-minutes",
-      "label": "Get started"
-    },
-    {
-      "portalRoute": "/administration/integrations",
-      "article": "/docs/add-an-integration",
-      "label": "Add an integration"
-    },
-    {
-      "portalRoute": "/administration/integrations/*",
-      "article": "/docs/integration-connection-failures",
-      "label": "Troubleshoot an integration"
-    },
-    {
-      "portalRoute": "/assets/inventory",
-      "article": "/docs/find-filter-and-inspect-assets",
-      "label": "Find and inspect assets"
-    },
-    {
-      "portalRoute": "/assets/discovery",
-      "article": "/docs/find-filter-and-inspect-assets",
-      "label": "Find discovered assets"
-    },
-    {
-      "portalRoute": "/assets/new",
-      "article": "/docs/add-or-import-assets",
-      "label": "Add an asset"
-    },
-    {
-      "portalRoute": "/assets/new/bulk",
-      "article": "/docs/add-or-import-assets",
-      "label": "Import assets"
-    },
-    {
-      "portalRoute": "/assets/:assetId/summary/*",
-      "article": "/docs/populate-asset-details",
-      "label": "Complete asset details"
-    },
-    {
-      "portalRoute": "/assets/:assetId/summary/relationship-graph",
-      "article": "/docs/view-asset-relationships",
-      "label": "Understand relationships"
-    },
-    {
-      "portalRoute": "/assets/:assetId/add-connection",
-      "article": "/docs/add-a-network-connection",
-      "label": "Add a network connection"
-    },
-    {
-      "portalRoute": "/structures",
-      "article": "/docs/create-and-manage-structures",
-      "label": "Manage Structures"
-    },
-    {
-      "portalRoute": "/elements",
-      "article": "/docs/create-and-populate-elements",
-      "label": "Manage Elements"
-    },
-    {
-      "portalRoute": "/elements/:elementId/collections",
-      "article": "/docs/create-collections-and-add-assets",
-      "label": "Manage Collections"
-    },
-    {
-      "portalRoute": "/elements/:elementId/site-assets",
-      "article": "/docs/manage-site-details",
-      "label": "Manage Site assets"
-    },
-    {
-      "portalRoute": "/elements/:elementId/location",
-      "article": "/docs/manage-site-details",
-      "label": "Manage Site location"
-    },
-    {
-      "portalRoute": "/administration/asset-types",
-      "article": "/docs/understand-asset-types-and-service-catalogs",
-      "label": "Understand Asset Types"
-    },
-    {
-      "portalRoute": "/administration/asset-types/create",
-      "article": "/docs/create-a-custom-asset-type",
-      "label": "Create an Asset Type"
-    },
-    {
-      "portalRoute": "/administration/asset-types/edit/:assetTypeId",
-      "article": "/docs/configure-asset-type-sections-and-fields",
-      "label": "Configure an Asset Type"
-    },
-    {
-      "portalRoute": "/administration/service-catalog",
-      "article": "/docs/create-a-custom-service-catalog",
-      "label": "Configure Service Catalog"
-    },
-    {
-      "portalRoute": "/administration/service-catalog/:assetTypeId",
-      "article": "/docs/add-catalog-entries-and-compatibility",
-      "label": "Manage catalog entries"
-    },
-    {
-      "portalRoute": "/administration/service-catalog/:assetTypeId/bulk-upload",
-      "article": "/docs/service-catalog-failures",
-      "label": "Service Catalog upload help"
-    },
-    {
-      "portalRoute": "/administration/iam",
-      "article": "/docs/invite-users-and-assign-roles",
-      "label": "Manage users and roles"
-    },
-    {
-      "portalRoute": "/administration/general/company",
-      "article": "/docs/manage-company-settings",
-      "label": "Manage company settings"
-    },
-    {
-      "portalRoute": "/profile/general",
-      "article": "/docs/manage-profile-and-security",
-      "label": "Manage your profile"
-    },
-    {
-      "portalRoute": "/profile/security",
-      "article": "/docs/manage-profile-and-security",
-      "label": "Manage your security"
-    },
-    {
-      "portalRoute": "ui:theme-settings",
-      "article": "/docs/choose-a-theme",
-      "label": "Choose a theme"
-    },
-    {
-      "portalRoute": "/administration/billing",
-      "article": "/docs/understand-billing",
-      "label": "Understand billing"
-    },
-    {
-      "portalRoute": "/support",
-      "article": "/docs/contact-wanaware-support",
-      "label": "Contact Support"
-    },
-    {
-      "portalRoute": "/auth/login",
-      "article": "/docs/sign-in-password-and-mfa",
-      "label": "Sign-in help"
-    },
-    {
-      "portalRoute": "/auth/forgot-password",
-      "article": "/docs/sign-in-password-and-mfa",
-      "label": "Password help"
-    },
-    {
-      "portalRoute": "/auth/reset-password",
-      "article": "/docs/sign-in-password-and-mfa",
-      "label": "Password help"
-    }
+    { "portalRoute": "/launchpad", "article": "/docs/your-first-30-minutes", "label": "Get started" },
+    { "portalRoute": "/administration/integrations", "article": "/docs/add-an-integration", "label": "Add an integration" },
+    { "portalRoute": "/administration/integrations/*", "article": "/docs/integration-connection-failures", "label": "Troubleshoot an integration" },
+    { "portalRoute": "/assets/inventory", "article": "/docs/find-filter-and-inspect-assets", "label": "Find and inspect Assets" },
+    { "portalRoute": "/assets/discovery", "article": "/docs/review-discovery-and-move-assets-to-inventory", "label": "Review Discovery" },
+    { "portalRoute": "/assets/inventory/bulk/upload", "article": "/docs/bulk-upload-assets", "label": "Bulk upload Assets" },
+    { "portalRoute": "/assets/discovery/bulk/upload", "article": "/docs/bulk-upload-assets", "label": "Bulk upload Assets" },
+    { "portalRoute": "ui:assets-add-manual", "article": "/docs/add-an-asset", "label": "Add an Asset" },
+    { "portalRoute": "ui:assets-add-bulk", "article": "/docs/bulk-upload-assets", "label": "Bulk upload Assets" },
+    { "portalRoute": "ui:assets-delete", "article": "/docs/delete-assets-safely", "label": "Delete Assets safely" },
+    { "portalRoute": "ui:assets-attach-collection", "article": "/docs/create-collections-and-add-assets", "label": "Add Assets to a Collection" },
+    { "portalRoute": "/assets/:assetId/summary/*", "article": "/docs/populate-asset-details", "label": "Complete Asset details" },
+    { "portalRoute": "/assets/:assetId/summary/relationship-graph", "article": "/docs/view-asset-relationships", "label": "Understand Relationships" },
+    { "portalRoute": "/assets/:assetId/add-connection", "article": "/docs/add-a-network-connection", "label": "Add a network connection" },
+    { "portalRoute": "/structures", "article": "/docs/create-and-manage-structures", "label": "Manage Structures" },
+    { "portalRoute": "/elements", "article": "/docs/create-and-populate-elements", "label": "Manage Elements" },
+    { "portalRoute": "/elements/:elementId/collections", "article": "/docs/create-collections-and-add-assets", "label": "Manage Collections" },
+    { "portalRoute": "/elements/:elementId/site-assets", "article": "/docs/manage-site-details", "label": "Manage Site Assets" },
+    { "portalRoute": "/elements/:elementId/location", "article": "/docs/manage-site-details", "label": "Manage Site Location" },
+    { "portalRoute": "/administration/asset-types", "article": "/docs/understand-asset-types-and-service-catalogs", "label": "Understand Asset Types" },
+    { "portalRoute": "/administration/asset-types/create", "article": "/docs/create-a-custom-asset-type", "label": "Create an Asset Type" },
+    { "portalRoute": "/administration/asset-types/edit/:assetTypeId", "article": "/docs/configure-asset-type-sections-and-fields", "label": "Configure an Asset Type" },
+    { "portalRoute": "/administration/service-catalog", "article": "/docs/create-a-custom-service-catalog", "label": "Configure Service Catalog" },
+    { "portalRoute": "/administration/service-catalog/:assetTypeId", "article": "/docs/add-catalog-entries-and-compatibility", "label": "Manage catalog entries" },
+    { "portalRoute": "/administration/service-catalog/:assetTypeId/bulk-upload", "article": "/docs/bulk-upload-service-catalog-entries", "label": "Bulk upload Service Catalog entries" },
+    { "portalRoute": "/administration/iam", "article": "/docs/invite-users-and-assign-roles", "label": "Manage users and Roles" },
+    { "portalRoute": "/administration/iam/roles", "article": "/docs/create-and-edit-roles", "label": "Create and edit Roles" },
+    { "portalRoute": "ui:iam-resend-invitation", "article": "/docs/manage-pending-invitations", "label": "Manage a pending invitation" },
+    { "portalRoute": "/administration/general/company", "article": "/docs/manage-company-settings", "label": "Manage company settings" },
+    { "portalRoute": "/profile/general", "article": "/docs/manage-profile-and-security", "label": "Manage your profile" },
+    { "portalRoute": "/profile/security", "article": "/docs/manage-profile-and-security", "label": "Manage your security" },
+    { "portalRoute": "ui:theme-settings", "article": "/docs/choose-a-theme", "label": "Choose a theme" },
+    { "portalRoute": "/administration/billing", "article": "/docs/understand-billing", "label": "Understand billing" },
+    { "portalRoute": "ui:billing-plans", "article": "/docs/view-plan-and-usage", "label": "View plan and usage" },
+    { "portalRoute": "ui:billing-payment-methods", "article": "/docs/manage-payment-methods", "label": "Manage payment methods" },
+    { "portalRoute": "ui:billing-history", "article": "/docs/view-billing-history-and-invoices", "label": "View billing history and invoices" },
+    { "portalRoute": "/support", "article": "/docs/contact-wanaware-support", "label": "Contact Support" },
+    { "portalRoute": "/auth/login", "article": "/docs/sign-in-password-and-mfa", "label": "Sign-in help" },
+    { "portalRoute": "/auth/forgot-password", "article": "/docs/sign-in-password-and-mfa", "label": "Password help" },
+    { "portalRoute": "/auth/reset-password", "article": "/docs/sign-in-password-and-mfa", "label": "Password help" }
   ]
 }

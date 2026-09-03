@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "publishingHost": "files.readme.io",
+  "generatedWith": "D2 0.8.2 using the ELK layout engine",
+  "assets": [
+    {
+      "id": "asset-lifecycle",
+      "source": "media/diagrams/asset-lifecycle.d2",
+      "reviewArtifact": "media/diagrams/asset-lifecycle.svg",
+      "publishingFile": "media/diagrams/asset-lifecycle.png",
+      "sha256": "c1f8431a2c378a811c8a10c74c4e4bd6b8d91705d70bbfb65108d7218837453b",
+      "width": 1440,
+      "height": 1658,
+      "bytes": 35644,
+      "alt": "Flow showing records moving from an Integration or bulk upload through Discovery into Inventory.",
+      "articles": ["/docs/add-or-import-assets", "/docs/review-discovery-and-move-assets-to-inventory"],
+      "publishedUrl": "https://files.readme.io/7b7bcbd448d2c8b241488410752730034e98dbafee729a7bca8d01ed4388707a-asset-lifecycle.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "organization-model",
+      "source": "media/diagrams/organization-model.d2",
+      "reviewArtifact": "media/diagrams/organization-model.svg",
+      "publishingFile": "media/diagrams/organization-model.png",
+      "sha256": "a38172d58918d89928315f6dbc356eaa05fc6d3c3912ccabdadfd296e8f2e4ce",
+      "width": 1440,
+      "height": 2254,
+      "bytes": 53689,
+      "alt": "Diagram showing Structure Tags attaching Elements and Collections while Collections group Assets.",
+      "articles": ["/docs/product-map-and-terminology", "/docs/understand-structures-elements-and-collections"],
+      "publishedUrl": "https://files.readme.io/24a1f6eb59b16c7bd53f480d9b7c456531a2a5268b2381b83fe96294e4c735d4-organization-model.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "relationship-sources",
+      "source": "media/diagrams/relationship-sources.d2",
+      "reviewArtifact": "media/diagrams/relationship-sources.svg",
+      "publishingFile": "media/diagrams/relationship-sources.png",
+      "sha256": "b56f94cf23e9fdc94f61d549fa07b212a4343a68093328808d9104cef78a0107",
+      "width": 1440,
+      "height": 997,
+      "bytes": 37992,
+      "alt": "Diagram comparing Relationships discovered from supported data with the Add Connection workflow.",
+      "articles": ["/docs/view-asset-relationships", "/docs/add-a-network-connection"],
+      "publishedUrl": "https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-type-catalog-lifecycle",
+      "source": "media/diagrams/asset-type-catalog-lifecycle.d2",
+      "reviewArtifact": "media/diagrams/asset-type-catalog-lifecycle.svg",
+      "publishingFile": "media/diagrams/asset-type-catalog-lifecycle.png",
+      "sha256": "bbcebfebbc9f8f865539cd9eab3d2975d23934c8280ed792c108b2711006d772",
+      "width": 1440,
+      "height": 2803,
+      "bytes": 70670,
+      "alt": "Lifecycle from a draft Asset Type through catalog setup, publication, and Asset verification.",
+      "articles": ["/docs/understand-asset-types-and-service-catalogs", "/docs/publish-and-verify-an-asset-type"],
+      "publishedUrl": "https://files.readme.io/cb7703d05cdaf6c3791c24285a2062234f2e0a0d257c241822a1b6dcd0d6b67e-asset-type-catalog-lifecycle.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-bulk-upload-flow",
+      "source": "media/diagrams/asset-bulk-upload-flow.d2",
+      "reviewArtifact": "media/diagrams/asset-bulk-upload-flow.svg",
+      "publishingFile": "media/diagrams/asset-bulk-upload-flow.png",
+      "sha256": "39fa17369eb05b966e1cf796a3e7dd20ed6d9539db19f343a11b505fcc3fdaf7",
+      "width": 1440,
+      "height": 3032,
+      "bytes": 90366,
+      "alt": "Asset bulk-upload flow from Asset Type selection through validation, normalization, and report review.",
+      "articles": ["/docs/bulk-upload-assets"],
+      "publishedUrl": "https://files.readme.io/123828476154320525ce7fe4339d9d5435fecc8ace0686d2290558040ced0ee7-asset-bulk-upload-flow.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "catalog-bulk-upload-flow",
+      "source": "media/diagrams/catalog-bulk-upload-flow.d2",
+      "reviewArtifact": "media/diagrams/catalog-bulk-upload-flow.svg",
+      "publishingFile": "media/diagrams/catalog-bulk-upload-flow.png",
+      "sha256": "e20af6de183b7b8222e619078fa253986ace0ae8ebd0b7053bd94a188e1ca557",
+      "width": 1440,
+      "height": 3592,
+      "bytes": 70642,
+      "alt": "Service Catalog bulk-upload flow from import type and column mapping through catalog verification.",
+      "articles": ["/docs/prepare-a-service-catalog-bulk-upload-file", "/docs/bulk-upload-service-catalog-entries"],
+      "publishedUrl": "https://files.readme.io/0d2baa2be947ae20e32b6e99d3fe6f848494b4d00d7eb8e7a572598adeb1425b-catalog-bulk-upload-flow.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "blocked-end-to-end-verification"
+    }
+  ],
+  "screenshotPolicy": {
+    "status": "blocked-pending-sanitization",
+    "reason": "Current captures contain workspace URLs or documentation record identifiers. Recrop or recapture before ReadMe upload.",
+    "inventory": "media/screenshot-manifest.json"
+  }
+}

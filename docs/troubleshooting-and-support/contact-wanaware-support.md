@@ -39,7 +39,7 @@ Send one issue per email so the subject, evidence, and resolution stay together.
 
 - Company or account name
 - Affected user's business email
-- Relevant asset, integration, Asset Type, catalog entry, Element, Collection, Structure, invoice, or transaction ID
+- Relevant Asset, Integration, Asset Type, Service Catalog entry, Element, Collection, Structure, invoice, or transaction ID
 - Date, time, and time zone when the problem occurred
 - WanAware page URL
 - Steps that reproduce the problem
@@ -59,7 +59,7 @@ Send one issue per email so the subject, evidence, and resolution stay together.
 - Secret values, full environment files, database dumps, or internal source code
 - Customer data unrelated to the reported issue
 
-Support will ask for a safer, specific diagnostic item if more evidence is required.
+If Support needs more evidence, it requests a specific diagnostic item that is safe to share.
 
 ## Suggested email
 

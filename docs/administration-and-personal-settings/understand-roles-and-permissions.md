@@ -1,10 +1,10 @@
 ---
-title: Understand roles and permissions
+title: Understand Roles and Permissions
 excerpt: Learn why two members may see different pages and how to grant access safely.
 deprecated: false
 hidden: false
 metadata:
-  title: Understand roles and permissions | WanAware Documentation
+  title: Understand Roles and Permissions | WanAware Documentation
   description: Understand WanAware roles, feature access, and action permissions.
   keywords:
     - roles
@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer administrator
-permission: ROLES_VIEW
+permission: read roles
 product-area: Administration and access
 content-owner: Product
 review-owner: Support
@@ -28,7 +28,7 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Understand roles and permissions
+# Understand Roles and Permissions
 
 A role is a named set of permissions. Permissions can control whether a member sees a product area and whether they can create, view, update, delete, publish, or attach records in that area.
 
@@ -50,7 +50,7 @@ This means two members in the same company can have different navigation and act
 4. Ask an administrator to review the role's relevant permission.
 5. Sign out and back in after an approved role change.
 
-Use [Missing pages, actions, or permissions](../troubleshooting-and-support/missing-pages-actions-or-permissions) for a full recovery path.
+Use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) for a full recovery path.
 
 ## Get help
 

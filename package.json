@@ -4,6 +4,7 @@
   "private": true,
   "description": "Content-quality checks for the public WanAware customer knowledge base",
   "scripts": {
-    "check": "node scripts/validate-content.mjs"
+    "check": "node scripts/validate-content.mjs",
+    "check:media": "node scripts/validate-media-online.mjs"
   }
 }

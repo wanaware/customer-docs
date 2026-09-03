@@ -35,14 +35,16 @@ The quickest way to see that value is to open a known asset and follow one conne
 
 ## Choose a starting point
 
-- [Explore WanAware](your-first-30-minutes): find an asset, review its details, and understand one relationship.
-- [Build your environment](administrator-setup-path): configure integrations, Asset Types, Service Catalogs, Structures, Elements, and Collections.
-- [Use a shared demo safely](use-the-demo-safely): understand what you can change and how to clean up documentation records.
-- [Find a page or term](product-map-and-terminology): use the product map and glossary.
+- [Explore WanAware](https://docs.wanaware.com/docs/your-first-30-minutes): find an asset, review its details, and understand one relationship.
+- [Build your environment](https://docs.wanaware.com/docs/administrator-setup-path): configure integrations, Asset Types, Service Catalogs, Structures, Elements, and Collections.
+- [Use a shared evaluation workspace safely](https://docs.wanaware.com/docs/use-the-demo-safely): understand what you can change and how to recover from an unintended action.
+- [Find a page or term](https://docs.wanaware.com/docs/product-map-and-terminology): use the product map and glossary.
 
 ## Access varies by role
 
-WanAware uses role-based access. People in the same company may see different pages and actions. If an instruction names an action you cannot see, ask a customer administrator to check your role before treating the missing action as a product problem.
+WanAware uses Role-based access. People in the same company may see different pages and actions.
+
+If an instruction names a missing action, ask a customer administrator to check your Role. Use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) before treating the issue as a product failure.
 
 ## Get help
 

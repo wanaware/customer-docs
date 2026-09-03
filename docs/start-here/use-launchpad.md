@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: reference
 audience: customer
-permission: LAUNCHPAD
+permission: read my_launchpad
 product-area: Platform
 content-owner: Product
 review-owner: Support
@@ -33,8 +33,6 @@ Launchpad is the starting view for your workspace. Its cards summarize available
 
 Use a card to identify what deserves attention, then open the related product area to confirm the underlying records. Do not treat a card count as an editable source of truth.
 
-![Launchpad showing sanitized workspace summaries and links into detailed WanAware areas.](../../media/screenshots/launchpad-overview.png)
-
 ## If Launchpad looks different
 
 - Confirm that you are in the intended company workspace.
@@ -42,7 +40,7 @@ Use a card to identify what deserves attention, then open the related product ar
 - Refresh after a recent import finishes.
 - Compare a summary with the corresponding inventory before reporting a mismatch.
 
-Continue with [Your first 30 minutes](your-first-30-minutes) or [Find, filter, and inspect assets](../assets-and-relationships/find-filter-and-inspect-assets).
+Continue with [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes) or [Find, filter, and inspect assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets).
 
 ## Get help
 

@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, cloud administrator
-permission: ADMINISTRATION, INTEGRATIONS
+permission: read integrations and create integrations
 product-area: Integrations
 content-owner: Product
 review-owner: Support
@@ -33,9 +33,15 @@ release-status: draft
 **Outcome:** Authorize WanAware to collect supported AWS account inventory through the released role-based setup.
 
 **For:** WanAware customer administrators and AWS account administrators
-**Permission:** Manage Integrations in WanAware and create the requested stack in the AWS account
+**Permission:** `read integrations` and `create integrations` in WanAware, plus authority to deploy the generated stack in the AWS account
 **Time:** About 10–20 minutes, plus stack deployment time
 **Changes made:** Saves an AWS connection in WanAware and creates provider-side resources through CloudFormation
+
+## If you're stuck
+
+- Use the exact 12-digit account ID from the intended AWS account.
+- Generate the setup from WanAware; do not substitute long-lived access keys.
+- If **Test connection** fails, compare the Role ARN and stack status before deploying another stack.
 
 ## Before you start
 
@@ -44,7 +50,17 @@ release-status: draft
 - Use the released generated stack; do not substitute long-lived access keys.
 - Review the stack's permissions before deployment.
 
-![Integrations page showing the Amazon Web Services adapter with no account details visible.](../../../media/screenshots/integration-provider-selection.png)
+## Field and action guide
+
+| UI item | Purpose | Required value or result | Source |
+| --- | --- | --- | --- |
+| Account name | Identifies the connection in WanAware | Unique, recognizable name with no credential data | Your naming standard |
+| **AWS account ID** | Selects the source account | Exactly 12 digits | AWS account administration |
+| **Generate AWS setup** | Creates the released CloudFormation setup | Open only in the intended account and Region | WanAware setup page |
+| **Role ARN** | Identifies the deployed access role | Exact ARN created by the approved stack | CloudFormation output |
+| **Test connection** | Checks the saved role access | **AWS connection verified** | WanAware after save |
+| **Run inventory crawl** | Starts inventory collection | **crawl request submitted** | Saved integration action |
+| **Delete integration…** | Removes the saved WanAware connection | Use only after impact and source-stack review | Integration action menu |
 
 ## Complete the adapter fields
 
@@ -52,8 +68,6 @@ release-status: draft
 2. Expand **Amazon Web Services**.
 3. For **AWS Account Inventory**, select **Connect account**.
 4. Enter a recognizable account name and the 12-digit **AWS account ID**.
-
-![AWS integration setup form before any account details have been entered.](../../../media/screenshots/integration-provider-setup.png)
 
 5. Select **Generate AWS setup**.
 6. Open the generated CloudFormation setup and review it in the intended AWS account and Region.
@@ -81,12 +95,12 @@ Open one imported asset and confirm its AWS account context and source identifie
 Removing the WanAware connection does not automatically delete the CloudFormation stack. Coordinate these as separate actions:
 
 1. Confirm that no one still needs the collected inventory.
-2. Remove or disable the WanAware connection using the released action.
+2. Select **Delete integration…**, read **Delete this AWS integration? This removes the saved account connection.**, and confirm only after approval.
 3. Ask the AWS account owner to review and delete the stack if it is no longer required.
 
 ## Learn, show me, do it
 
-- **Learn:** [About integrations](../about-integrations)
+- **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
 - **Show me:** Use the general integration clip for the shared WanAware steps after publication.
 - **Do it:** Open `/administration/integrations` in your WanAware workspace.
 
