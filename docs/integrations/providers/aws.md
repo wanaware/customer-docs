@@ -15,7 +15,7 @@ metadata:
     - external ID
   robots: index
 ---
-{/* kb-meta
+<!-- kb-meta
 content-type: workflow
 audience: customer administrator, cloud administrator
 permission: read integrations and create integrations
@@ -27,7 +27,7 @@ last-verified-release: pending
 screenshot-set: integrations-provider-aws
 video-status: not-planned
 release-status: draft
-*/}
+-->
 
 # Amazon Web Services integration adapter
 

@@ -462,7 +462,23 @@ if (screenshotManifest) {
     if (/^(?:captured|approved)/.test(screenshot.status || '')) {
       const path = join(root, screenshot.file);
       if (!existsSync(path)) fail(screenshotManifestFile, `captured screenshot is missing: ${screenshot.file}`);
-      else if (statSync(path).size > 256000) fail(screenshotManifestFile, `captured screenshot exceeds 250 KB: ${screenshot.file}`);
+      else {
+        if (statSync(path).size > 256000) fail(screenshotManifestFile, `captured screenshot exceeds 250 KB: ${screenshot.file}`);
+        const dimensions = pngDimensions(path);
+        if (!dimensions) fail(screenshotManifestFile, `captured screenshot is not a valid PNG: ${screenshot.file}`);
+        else if (dimensions.width < 750 || dimensions.width > 1000) {
+          fail(screenshotManifestFile, `captured screenshot width must be 750–1000 pixels: ${screenshot.file}`);
+        }
+      }
+      if (!screenshot.sourceFile || !existsSync(join(root, screenshot.sourceFile))) {
+        fail(screenshotManifestFile, `captured screenshot is missing its safe source crop: ${screenshot.sourceFile || screenshot.file}`);
+      }
+      if (screenshot.style !== 'wanaware-framed-v1') {
+        fail(screenshotManifestFile, `captured screenshot must use wanaware-framed-v1: ${screenshot.file}`);
+      }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(screenshot.captureDate || '')) {
+        fail(screenshotManifestFile, `captured screenshot needs a YYYY-MM-DD captureDate: ${screenshot.file}`);
+      }
     }
   }
 }

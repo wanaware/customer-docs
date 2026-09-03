@@ -6,7 +6,7 @@
   "defaultTheme": "Light",
   "sourceDirectory": "media/screenshots",
   "publishedBaseUrl": null,
-  "captureStatus": "blocked-pending-sanitization-and-product-support-review",
+  "captureStatus": "partial-capture-in-progress",
   "rules": {
     "format": "png",
     "fullColumnWidthPixels": {
@@ -93,16 +93,32 @@
     {
       "id": "assets-create",
       "file": "media/screenshots/add-asset-form.png",
+      "sourceFile": "media/screenshots/source/add-asset-form.png",
       "article": "/docs/add-an-asset",
-      "alt": "Add Asset form showing a selected custom Asset Type, status, tags, required fields, and a catalog-backed field.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Add Asset form showing the selected Asset Type, status, tags, schema tabs, and catalog-backed fields.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-framed-v1",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-create-type-choice",
+      "file": "media/screenshots/add-asset-type-choice.png",
+      "sourceFile": "media/screenshots/source/add-asset-type-choice.png",
+      "article": "/docs/add-an-asset",
+      "alt": "Add Asset step for finding and selecting the Asset Type that determines the remaining fields.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-framed-v1",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-import",
       "file": "media/screenshots/bulk-import-upload.png",
+      "sourceFile": "media/screenshots/source/bulk-import-upload.png",
       "article": "/docs/bulk-upload-assets",
-      "alt": "Bulk-import uploader ready for a sanitized file based on the current template.",
-      "status": "pending-feature-verification"
+      "alt": "Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-framed-v1",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-validation",
@@ -205,9 +221,12 @@
     {
       "id": "asset-types-start",
       "file": "media/screenshots/asset-type-starting-options.png",
+      "sourceFile": "media/screenshots/source/asset-type-starting-options.png",
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
-      "status": "blocked-pending-sanitized-recapture"
+      "captureDate": "2026-09-03",
+      "style": "wanaware-framed-v1",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "asset-types-fields",
