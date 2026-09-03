@@ -13,8 +13,16 @@
       "status": "pending"
     },
     {
-      "check": "Approximately 33 current screenshots captured, optimized, reviewed, and linked with useful alt text",
-      "status": "pending"
+      "check": "All 47 screenshot slots recaptured or cropped to remove internal URLs, workspace identity, record identifiers, account menus, notifications, and sensitive data; then optimized, reviewed, uploaded to ReadMe, and linked with useful alt text",
+      "status": "blocked-pending-sanitized-recapture"
+    },
+    {
+      "check": "Service Catalog bulk upload completes end to end in a release-equivalent environment",
+      "status": "blocked-service-not-connected"
+    },
+    {
+      "check": "All ReadMe-hosted diagram URLs are public and return image/png",
+      "status": "passing"
     },
     {
       "check": "Five captioned Loom clips recorded, embedded, and matched to committed transcripts",

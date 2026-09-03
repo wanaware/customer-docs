@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, data model owner
-permission: ASSET_TYPES_BUILDER_UPDATE
+permission: update asset_types_builder
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support

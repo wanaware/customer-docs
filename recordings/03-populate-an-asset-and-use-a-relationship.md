@@ -1,13 +1,13 @@
 # Populate an asset and create or explore a relationship
 
-**Status:** Pending Harbor Meridian Systems capture, captions, Product review, and Support review
+**Status:** Pending sanitized capture, captions, Product review, and Support review
 **Target length:** 2 minutes 45 seconds
 **Embed in:** `/docs/populate-asset-details`, `/docs/add-a-network-connection`, and `/docs/view-asset-relationships`
 **Audience:** Engineers and administrators responsible for asset data
 
 ## Recording guardrails
 
-- Use eligible `Docs Demo` assets with sanitized IP and endpoint values.
+- Use eligible sample Assets with sanitized IP and endpoint values.
 - Confirm the connection can be removed safely after verification.
 - Do not show provider account identifiers, internal addresses, or unrelated assets.
 

@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, data model owner
-permission: SERVICE_CATALOG
+permission: read service_catalog; update service_catalog for changes
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support

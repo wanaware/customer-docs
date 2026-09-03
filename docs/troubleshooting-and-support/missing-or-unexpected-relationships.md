@@ -18,7 +18,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer engineer, support
-permission: ASSETS
+permission: read assets; update assets for Add Connection
 product-area: Assets
 content-owner: Product
 review-owner: Support

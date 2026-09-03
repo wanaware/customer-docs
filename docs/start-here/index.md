@@ -20,4 +20,4 @@ You do not need to learn every part of WanAware before you can get value from it
 - **Explore WanAware** if your environment already has data. In about 30 minutes, you will find an asset, review its details, and understand one useful relationship.
 - **Build your environment** if you are setting up the workspace. You will add a data source, define how assets should be described, and organize them for your team.
 
-[Choose your path](choose-your-path) explains where to begin. If you are evaluating a shared workspace, read [Use the demo safely](use-the-demo-safely) before making changes.
+[Choose your path](choose-your-path) explains where to begin. If you are evaluating a shared workspace, read [Use a shared evaluation workspace safely](use-the-demo-safely) before making changes.

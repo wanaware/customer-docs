@@ -18,7 +18,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, data model owner
-permission: SERVICE_CATALOG_UPDATE
+permission: update service_catalog
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
@@ -34,9 +34,15 @@ release-status: draft
 **Outcome:** Build the managed choices needed by a draft Asset Type and verify their compatibility relationships.
 
 **For:** Customer administrators and data model owners
-**Permission:** Update Service Catalog
+**Permission:** `update service_catalog`
 **Time:** 15–30 minutes
 **Changes made:** Adds or changes shared catalog entries and compatibility
+
+## If you're stuck
+
+- Confirm the selected Asset Type is the intended customer draft.
+- Add and save the parent entry before trying to add its Model, Module, or Software child.
+- Search by canonical name and provider ID before creating a near-duplicate.
 
 ## Before you start
 
@@ -44,6 +50,17 @@ release-status: draft
 - Agree on naming conventions and sources.
 - Start with one complete manufacturer or provider family.
 - Confirm which parent record is required before adding a Model, Module, or Software item.
+
+## Field and relationship guide
+
+| Entry or setting | Purpose | Required context | Verification |
+| --- | --- | --- | --- |
+| Provider or Manufacturer | Top-level catalog identity | Canonical name and source reference | Appears once at the catalog root |
+| Model | Product or offering under a parent | Saved Provider or Manufacturer | Appears under the intended parent |
+| Module or Software | Component or software choice | Supported saved parent | Appears under that parent, not at the catalog root |
+| Specification | Structured technical characteristic | Entry whose schema accepts that specification | Reopens with the saved value and unit |
+| Attribute | Additional managed characteristic | Entry and supported attribute key | Reopens on the intended entry |
+| Compatibility | Restricts valid combinations | Both related catalog entries must already exist | Dependent Asset field shows only approved choices |
 
 ## Add entries
 
@@ -58,8 +75,6 @@ release-status: draft
 9. Save after each coherent group of changes.
 
 **Expected result:** The hierarchy shows each entry under the intended parent with its saved details.
-
-![Service Catalog item showing a documentation-only service or circuit type and its specifications.](../../media/screenshots/service-catalog-models-components.png)
 
 If an option is absent, first select the parent that makes the child type valid. Do not create a differently named substitute.
 

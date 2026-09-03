@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer administrator, engineer
-permission: STRUCTURES, ELEMENTS
+permission: read structures and read elements
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -29,6 +29,8 @@ release-status: draft
 -->
 
 # Understand Structures, Elements, and Collections
+
+![Diagram showing Structure Tags attaching Elements and Collections while Collections group Assets.](https://files.readme.io/24a1f6eb59b16c7bd53f480d9b7c456531a2a5268b2381b83fe96294e4c735d4-organization-model.png)
 
 WanAware uses three related records for organization:
 

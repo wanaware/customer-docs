@@ -18,7 +18,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator
-permission: ADMINISTRATION, INTEGRATIONS
+permission: read integrations; create integrations or update integrations for the failed action
 product-area: Integrations
 content-owner: Product
 review-owner: Support

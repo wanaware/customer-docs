@@ -26,7 +26,7 @@ next:
 <!-- kb-meta
 content-type: quickstart
 audience: customer
-permission: LAUNCHPAD, ASSETS
+permission: read my_launchpad and read assets
 product-area: Platform
 content-owner: Product
 review-owner: Support
@@ -42,15 +42,30 @@ release-status: draft
 **Outcome:** Find one asset, confirm what it is, and identify at least one connected resource.
 
 **For:** Customer administrators, engineers, and support staff
-**Permission:** Launchpad and Assets
+**Permission:** `read my_launchpad` and `read assets`
 **Time:** 10–30 minutes
 **Changes made:** None
+
+## If you're stuck
+
+- If Launchpad is missing, ask an administrator to verify `read my_launchpad`—not a permission named `view launchpad`.
+- If Assets is missing, verify `read assets`.
+- Clear Inventory and graph filters before reporting a missing Asset or Relationship.
 
 ## Before you start
 
 - Sign in to the company workspace assigned to you.
 - Ask for the name of one known asset if the data is unfamiliar.
 - If the inventory is empty, ask an administrator to [add an integration](../integrations/add-an-integration) or [add or import assets](../assets-and-relationships/add-or-import-assets).
+
+## Page and checkpoint guide
+
+| Where | What it answers | Successful checkpoint |
+| --- | --- | --- |
+| **Launchpad** | What data and shortcuts are available to your Role? | You can identify the relevant starting card or navigation area |
+| **Functions → Assets → Inventory** | Which Assets are maintained in this workspace? | You can find one known Asset by name or unique value |
+| Asset details | What is the Asset and how is it enriched? | Name, Asset Type, source context, and tags are understandable |
+| **Relationship Graph** | What supported records connect to this Asset? | You can follow one edge to a correctly identified record |
 
 ## 1. Orient yourself
 
@@ -101,7 +116,7 @@ You have completed the Explore path when you can answer:
 ## Learn, show me, do it
 
 - **Learn:** [Product map and terminology](product-map-and-terminology)
-- **Show me:** The captioned first-30-minutes clip will be embedded after the Harbor Meridian Systems recording passes review.
+- **Show me:** The captioned first-30-minutes clip will be embedded after the recording passes review.
 - **Do it:** Open `/launchpad` in your WanAware workspace.
 
 ## Next steps

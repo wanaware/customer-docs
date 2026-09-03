@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer
-permission: ASSETS
+permission: read assets
 product-area: Assets
 content-owner: Product
 review-owner: Support

@@ -54,9 +54,9 @@ Choose this path when you administer a new or incomplete workspace.
 
 You are done with the initial setup when another user can find an asset, understand its details, and see where it fits without asking you to interpret the page.
 
-## If you are using the demo
+## If you are using a shared evaluation workspace
 
-Read [Use the demo safely](use-the-demo-safely). Prefix every record you create with `Docs Demo`, avoid real company data, and remove only records you created after checking their attachments.
+Read [Use a shared evaluation workspace safely](use-the-demo-safely). Use clearly labeled sample records, avoid real company data, and remove only records you created after checking their attachments.
 
 ## Get help
 

@@ -18,7 +18,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator
-permission: STRUCTURES_CREATE
+permission: create structures; update structures or delete structures for those actions
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -34,26 +34,39 @@ release-status: draft
 **Outcome:** Create a Structure node of the correct type and place it in the intended hierarchy.
 
 **For:** Customer administrators and environment model owners
-**Permission:** Create or update Structures
+**Permission:** `create structures`; `update structures` or `delete structures` for those actions
 **Time:** 5–10 minutes
 **Changes made:** Creates or changes a shared hierarchy node
+
+## If you're stuck
+
+- Search the complete hierarchy for the exact name before adding a node.
+- If a parent cannot be selected, confirm the new node's **Structure Type** is valid at that level.
+- Do not delete a Structure to detach an Element or Collection; remove its Structure Tag instead.
 
 ## Before you start
 
 - Search the hierarchy for the intended name and common variations.
 - Choose the supported type that matches the concept: Company, Organization, Group, or Vendor.
 - Identify the correct parent and owner.
-- In Harbor Meridian Systems, start documentation names with `Docs Demo`.
+- Use a clearly labeled test node when you are learning or validating this workflow.
+
+## Field and option guide
+
+| UI item | Purpose | What to choose or enter | Verification |
+| --- | --- | --- | --- |
+| **Structure Type** | Defines the node's role | **Company**, **Organization**, **Group**, or **Vendor**, matching the real hierarchy | Node displays the intended type |
+| **Name** | Identifies the node | Unique, durable organizational name | Search returns one node |
+| Parent or placement | Places the node in the hierarchy | Exact existing parent, confirmed by name and ID | Node appears under that parent |
+| Placement preview | Shows the pending hierarchy path | Read the complete path before save | Saved path matches the preview |
 
 ## Create a Structure
-
-![Structure hierarchy showing the sanitized Harbor Meridian company and its top-level organizational nodes.](../../media/screenshots/structure-hierarchy.png)
 
 1. Open **Functions → Structures**.
 2. Select **Add Structure**.
 3. Choose the **Structure Type**.
 4. Enter a clear **Name**.
-5. Select the intended parent or placement when the form provides that choice.
+5. Select the intended parent shown by the form for that Structure Type.
 6. Review the placement preview.
 7. Select **Save**.
 

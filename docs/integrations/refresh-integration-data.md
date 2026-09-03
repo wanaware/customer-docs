@@ -1,6 +1,6 @@
 ---
 title: Refresh integration data
-excerpt: Start an available collection run and confirm that WanAware accepted the request.
+excerpt: Start the provider adapter's documented collection action and confirm that WanAware accepted the request.
 deprecated: false
 hidden: false
 metadata:
@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator
-permission: INTEGRATIONS_UPDATE
+permission: update integrations
 product-area: Integrations
 content-owner: Product
 review-owner: Support
@@ -29,12 +29,18 @@ release-status: draft
 
 # Refresh integration data
 
-**Outcome:** Start the available collection action for an existing integration and verify that the request was accepted.
+**Outcome:** Start the provider adapter's documented collection action and verify that the request was accepted.
 
 **For:** Customer administrators and source-system owners
-**Permission:** Update Integrations
+**Permission:** `update integrations`
 **Time:** 2 minutes to start; processing time varies
 **Changes made:** Starts a background collection that may add or update asset data
+
+## If you're stuck
+
+- The page-level **Refresh** button reloads the integration list; it does not start a new collection.
+- Open the provider adapter and use the collection action named there.
+- If a run is already processing, do not submit another request.
 
 ## Before you start
 
@@ -42,17 +48,25 @@ release-status: draft
 - Check whether another collection is already in progress.
 - Avoid repeated requests; a new run may not make results arrive sooner.
 
+## Field and option guide
+
+| UI item | Purpose | Expected behavior |
+| --- | --- | --- |
+| **Refresh** | Reloads connection cards and their displayed state | Does not start collection |
+| **Test connection** | Checks whether a saved connection can be reached | Returns a success or exact failure without proving inventory was imported |
+| Provider collection action | Starts the provider's inventory workflow | Exact label and prerequisites are defined in the provider adapter |
+
 ## Start a refresh
 
 1. Open **Administration → Integrations**.
-2. Expand the correct provider card.
+2. Expand the correct provider card and locate the saved connection.
 3. Confirm the connection name and source account context.
-4. Select the available collection or refresh action.
-5. Confirm the request when prompted.
+4. Open the matching provider adapter and confirm its collection-action label.
+5. Select that collection action once.
 
 **Expected result:** WanAware acknowledges the request or shows an in-progress state.
 
-If the action is disabled, wait for the current run to finish or ask an administrator to check your permission.
+If the action is disabled, wait for the current run to finish or ask an administrator to confirm `update integrations`.
 
 ## Check your result
 

@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer administrator
-permission: ROLES_VIEW
+permission: read roles
 product-area: Administration and access
 content-owner: Product
 review-owner: Support

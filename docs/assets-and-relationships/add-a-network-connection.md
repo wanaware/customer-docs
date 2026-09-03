@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, network engineer
-permission: ASSETS_UPDATE, NETWORK_CONNECTION_CREATE
+permission: update assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -30,12 +30,20 @@ release-status: draft
 
 # Add a supported network connection
 
+![Diagram comparing Relationships discovered from supported data with the Add Connection workflow.](https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png)
+
 **Outcome:** Connect two eligible assets through the released network connection flow and verify the relationship.
 
 **For:** Customer administrators and network engineers
-**Permission:** Update Assets and create supported network connections
+**Permission:** `update assets`
 **Time:** 5–10 minutes
 **Changes made:** May create an IP block or endpoint information and creates a shared network relationship
+
+## If you're stuck
+
+- **Add Connection** appears only for eligible Assets; it is not a general relationship editor.
+- Confirm the source and target are different Assets before entering endpoint data.
+- Stop at **Preview Connection** if the IP block, endpoint direction, or Asset identity is wrong.
 
 ## Before you start
 
@@ -43,6 +51,17 @@ release-status: draft
 - Gather the approved IP block and endpoint details.
 - Check the current Relationship Graph to avoid a duplicate connection.
 - Use **Add Connection** only for eligible network relationships. WanAware does not provide a general action for arbitrary relationship drawing.
+
+## Field and option guide
+
+| UI item | Purpose | What to verify | Where it appears later |
+| --- | --- | --- | --- |
+| Source asset | Starting side of the connection | Name, Asset Type, and unique ID | Preview and Relationship Graph |
+| **Target asset** | Other side of the connection | Different eligible Asset, confirmed by unique ID | Preview and Relationship Graph |
+| **IP block** | Network range associated with the connection | Existing approved block or the exact new block details accepted by the form | Connection preview and related details |
+| **Endpoints** | Source and target interface or address context | Correct value on the correct side; no accidental reversal | Connection preview |
+| **Preview Connection** | Final pre-creation review | Source, target, block, and endpoints all match the approved design | No data change yet |
+| **Create Connection** | Creates the reviewed network relationship | Select once after preview verification | Relationship Graph |
 
 ## Create the connection
 

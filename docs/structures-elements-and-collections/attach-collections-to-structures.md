@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENT_COLLECTIONS_UPDATE, STRUCTURE_TAG_RELATIONSHIP
+permission: update element_collections
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -32,15 +32,29 @@ release-status: draft
 **Outcome:** Attach a Collection to the intended Structure node with a Structure Tag.
 
 **For:** Customer administrators and engineers
-**Permission:** Update Element Collections and Structure Tag relationships
+**Permission:** `update element_collections`
 **Time:** 3–5 minutes
 **Changes made:** Changes a shared hierarchy attachment
+
+## If you're stuck
+
+- Open the parent Element, then its **Collections** tab; Collections are not top-level records.
+- Search Structure Tags by exact name and verify the parent path.
+- Detach by clearing the selected Structure Tag, not by deleting the Collection.
 
 ## Before you start
 
 - Confirm the Collection and its parent Element.
 - Confirm the target Structure node and its ID.
 - Review existing Structure Tags on the Collection.
+
+## Field and option guide
+
+| UI item | Meaning | Safe use |
+| --- | --- | --- |
+| Parent Element | Owns the Collection | Confirm its ID before changing the child Collection |
+| **Structure Tags** | Existing Structure nodes attachable to the Collection | Select the exact node by hierarchy path |
+| Selected tag | Current attachment | Clear only the tag that should be detached |
 
 ## Add or remove the attachment
 

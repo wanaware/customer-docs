@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, billing administrator
-permission: BILLING
+permission: read billing, read billing_history, read my_subscriptions, read payment_methods
 product-area: Billing
 content-owner: Product
 review-owner: Support

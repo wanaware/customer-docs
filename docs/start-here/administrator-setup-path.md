@@ -39,7 +39,7 @@ release-status: draft
 ## Before you start
 
 - Agree on a small, representative use case.
-- Use documentation-only records prefixed with `Docs Demo` in Harbor Meridian Systems.
+- Use a small set of clearly labeled test records approved by your workspace owner.
 - Decide who owns the source system, asset model, organization model, and user access.
 - Do not publish a custom Asset Type until its Service Catalog data is ready.
 

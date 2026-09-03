@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENTS_UPDATE
+permission: update elements
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -32,15 +32,31 @@ release-status: draft
 **Outcome:** Complete the Site-specific information on a Site Element and verify its asset and location context.
 
 **For:** Customer administrators and engineers
-**Permission:** Update Elements and the related asset associations
+**Permission:** `update elements`
 **Time:** 5–15 minutes
 **Changes made:** Updates a Site Element and may attach assets
+
+## If you're stuck
+
+- Confirm **Element Type** is **Site**; Applications and Services do not expose Site-only details.
+- Search **Site Assets** by unique Asset ID to avoid attaching a similarly named record.
+- If a location value is rejected, preserve the exact field label and validation message for Support.
 
 ## Before you start
 
 - Confirm the Element Type is **Site**.
 - Gather approved Site Assets and Location information.
 - Check whether the assets already belong to another Site according to your model.
+
+## Field and option guide
+
+| UI item | Purpose | What to use | Verification |
+| --- | --- | --- | --- |
+| Site name | Identifies the location-oriented Element | Recognizable location name | Element list and Site details |
+| Data Tags | Descriptive Site labels | Existing approved tags | Site details and filters |
+| **Structure Tags** | Hierarchy attachment | Exact existing Structure node | Structure context |
+| **Site Assets** | Assets associated with this Site | Existing Inventory Assets confirmed by unique ID | Site Assets list |
+| **Location** | Structured location information | Approved values for each displayed field | Location tab after refresh |
 
 ## Complete the Site
 
@@ -50,7 +66,7 @@ release-status: draft
 4. Open **Site Assets**.
 5. Add the intended existing assets after checking each unique identifier.
 6. Open **Location**.
-7. Enter or select the supported location fields.
+7. Complete each displayed Location field from the approved location source; preserve the exact label for any field you cannot validate.
 8. Save each changed area.
 
 **Expected result:** The Site shows the intended assets and Location information after refresh.

@@ -16,9 +16,9 @@ metadata:
 ---
 
 <!-- kb-meta
-content-type: workflow
+content-type: concept
 audience: customer administrator, billing administrator
-permission: BILLING
+permission: read billing, read billing_history, read my_subscriptions, read payment_methods
 product-area: Billing
 content-owner: Product
 review-owner: Support
@@ -31,50 +31,22 @@ release-status: draft
 
 # Understand billing, usage, payments, and invoices
 
-**Outcome:** Find the current subscription, usage, payment settings, and billing history without making an unintended purchase or cancellation.
+The Billing area separates subscription information from payment details and historical invoices. Prices, limits, and renewal terms are account-specific; use the values shown in your workspace as the authority.
 
-**For:** Customer administrators and billing administrators
-**Permission:** Billing
-**Time:** 5–10 minutes
-**Changes made:** None when reviewing; plan, payment, and cancellation actions can change billing and access
+## Why Billing can be missing
 
-## Before you start
+**Administration → Billing** appears only when the role has all four navigation permissions: `read billing`, `read billing_history`, `read my_subscriptions`, and `read payment_methods`. Having only one of these permissions is not enough to display the navigation item.
 
-- Confirm the company workspace and billing owner.
-- Use the values shown in the Portal as the current account-specific source.
-- Do not rely on screenshots for prices or limits.
-- Do not expose payment details, invoices, addresses, or account identifiers in documentation captures.
+## Choose the right billing task
 
-## Review billing
+| If you need to… | Open | Guide |
+| --- | --- | --- |
+| Confirm the current plan or Asset usage | **Plans** | [View your plan and usage](view-plan-and-usage) |
+| Review billing contact details or a masked payment method | **Payment & Billing** | [Manage payment methods](manage-payment-methods) |
+| Find a prior charge or open an invoice | **Billing History** | [View billing history and invoices](view-billing-history-and-invoices) |
 
-1. Open **Administration → Billing**.
-2. Use **Plans** to review available plans, current plan, included capabilities, and displayed usage or limits.
-3. Use **Payment & Billing** to review the masked payment and billing information available to your role.
-4. Use **Billing History** to find invoices or prior charges.
-5. Open an invoice only when you are authorized to handle its information.
+## Before making a billing change
 
-**Expected result:** You can identify the current plan, relevant usage, payment status, and invoice history without changing them.
+A plan, subscription, or payment-method action can affect charges, renewal, limits, and access. Read the final confirmation in the product, obtain approval from your billing owner, and do not repeat an action when the result is uncertain. Contact Support with the timestamp and confirmation instead.
 
-## Before changing a plan or subscription
-
-Review the confirmation carefully. A plan change, trial start, payment-method change, or cancellation can affect charges, renewal, limits, and access. Confirm effective date, proration or credit information, retained data, and reactivation options shown in the released flow. Get approval from the billing owner before confirming.
-
-If the displayed impact is unclear, stop and contact Support. Do not execute a real purchase or cancellation for testing or documentation.
-
-## Check your result
-
-Return to the relevant billing tab and confirm the current plan, status, usage, payment state, or invoice you intended to review. After an approved change, retain the confirmation according to company policy.
-
-## Undo this change
-
-Some billing actions are not immediately reversible and may have account consequences. Contact Support with the confirmation and timestamp rather than repeating the action.
-
-## Learn, show me, do it
-
-- **Learn:** [Use the demo safely](../start-here/use-the-demo-safely)
-- **Show me:** This article will use masked screenshots only; no purchase or cancellation will be recorded.
-- **Do it:** Open `/administration/billing` in your WanAware workspace.
-
-## Get help
-
-Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20billing%20help) with your company, affected user, billing tab, invoice or transaction reference with sensitive details removed, page URL, timestamp and time zone, and expected versus actual result. Never send full payment details, passwords, credentials, tokens, invoices containing private data, or secret values.
+Never send passwords, credentials, access tokens, full payment details, or unredacted invoices to Support.

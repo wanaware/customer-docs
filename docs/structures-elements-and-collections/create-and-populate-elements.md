@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENTS_CREATE, ELEMENTS_UPDATE
+permission: create elements and update elements
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -33,9 +33,15 @@ release-status: draft
 **Outcome:** Create an Application, Service, or Site Element and complete the details supported by that type.
 
 **For:** Customer administrators and engineers
-**Permission:** Create and update Elements
+**Permission:** `create elements` and `update elements`
 **Time:** 5–15 minutes
 **Changes made:** Creates and edits a shared Element
+
+## If you're stuck
+
+- Search by exact **Element Name** before adding another record.
+- Choose **Site** only for a location-oriented Element; Site-only tabs do not appear on Applications or Services.
+- If a Structure Tag is missing, verify the Structure first instead of creating a duplicate tag.
 
 ## Before you start
 
@@ -44,14 +50,26 @@ release-status: draft
 - Identify any existing Structure Tags and Collections.
 - For a Site, gather approved Site Assets and Location information.
 
+## Field and option guide
+
+| UI item | Purpose | Choice or format | Where it appears later |
+| --- | --- | --- | --- |
+| **Element Name** | Identifies the operational grouping | Recognizable, unique name | Element list and details |
+| **Element Type** | Selects the record behavior | **Application**, **Service**, or **Site** | Element details and type-specific tabs |
+| Data Tags | Adds descriptive labels | Existing approved labels | Element details and filters |
+| **Structure Tags** | Attaches the Element to a hierarchy node | Exact existing Structure node | Structure context and Element details |
+| **Collections** | Groups existing Assets inside the Element | Named customer-defined groups | Element's Collections tab |
+| **Site Assets** | Associates Inventory Assets with a Site | Existing Assets confirmed by unique ID | Site details |
+| **Location** | Stores Site location details | Approved location values | Site details |
+
 ## Create the Element
 
 1. Open **Functions → Elements**.
 2. Select **+ Add Element**.
-3. Enter **Element Name**, or leave it blank only when a system-generated name is appropriate.
+3. Enter a unique **Element Name**.
 4. Select **Element Type**.
 5. Add existing **Structure Tags** when the placement is already approved.
-6. Complete the available type-specific fields.
+6. For a Site, prepare to complete **Site Assets** and **Location** after creation; Applications and Services do not use those Site-only tabs.
 7. Select **Add Element**.
 
 **Expected result:** WanAware shows **Element Added!** and provides the next actions supported for that Element type.
@@ -62,7 +80,7 @@ release-status: draft
 2. Edit the name if needed.
 3. Add approved Data Tags and **Structure Tags**.
 4. Open **Collections** to review or add asset groups.
-5. For a Site, open **Site Assets** and **Location** where available.
+5. For a Site, open **Site Assets** and **Location**.
 6. Save each changed area and refresh the page.
 
 **Expected result:** The name, tags, Collections, and supported Site information remain after refresh.

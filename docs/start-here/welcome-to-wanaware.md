@@ -37,7 +37,7 @@ The quickest way to see that value is to open a known asset and follow one conne
 
 - [Explore WanAware](your-first-30-minutes): find an asset, review its details, and understand one relationship.
 - [Build your environment](administrator-setup-path): configure integrations, Asset Types, Service Catalogs, Structures, Elements, and Collections.
-- [Use a shared demo safely](use-the-demo-safely): understand what you can change and how to clean up documentation records.
+- [Use a shared evaluation workspace safely](use-the-demo-safely): understand what you can change and how to recover from an unintended action.
 - [Find a page or term](product-map-and-terminology): use the product map and glossary.
 
 ## Access varies by role

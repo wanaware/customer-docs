@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, engineer
-permission: STRUCTURES, ELEMENTS
+permission: read structures and read elements; update the affected record for attachment changes
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support

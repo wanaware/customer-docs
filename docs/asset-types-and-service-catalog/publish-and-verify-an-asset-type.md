@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, data model owner
-permission: ASSET_TYPES_BUILDER_UPDATE
+permission: update asset_types_builder
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Publish an approved custom Asset Type and confirm that its fields and catalog choices work on an asset.
 
 **For:** Customer administrators and data model owners
-**Permission:** Update and publish Asset Types; create or update Assets for verification
+**Permission:** `update asset_types_builder`; verification also needs `create assets` or `update assets`
 **Time:** 10–20 minutes
 **Changes made:** Publishes a shared schema; the schema can become read-only
+
+## If you're stuck
+
+- Confirm the intended Asset Type has **Draft** status and the correct ID.
+- Save and reopen its Service Catalog before publishing.
+- If the confirmation says the schema becomes read-only, stop unless Product has approved that exact draft.
 
 ## Before you start
 
@@ -42,6 +48,15 @@ release-status: draft
 - Save and verify the Service Catalog and compatibility.
 - Create a record of the approved draft configuration.
 - Understand that publication can make the custom schema read-only.
+
+## Status and action guide
+
+| UI item | Meaning | Safe action |
+| --- | --- | --- |
+| **Draft** | Sections and fields can still be reviewed and corrected | Finish schema and catalog verification |
+| **Publish** | Starts the irreversible or restricted lifecycle transition | Select only for an approved draft |
+| Publication confirmation | States the impact of publication | Read the complete message before confirming |
+| **Published** | The Asset Type can be used for customer Assets | Verify fields and catalog choices on one sample Asset |
 
 ## Publish the Asset Type
 
@@ -59,7 +74,7 @@ If publication fails, do not create a replacement. Use [Asset Type save or publi
 
 ## Verify with an asset
 
-1. Open **Assets → Inventory** and create or edit a `Docs Demo` asset of the published type.
+1. Open **Assets → Inventory** and create or edit a clearly labeled test asset of the published type.
 2. Confirm its expected sections and fields appear.
 3. Select values in each catalog-backed field.
 4. Confirm dependent choices are compatible.

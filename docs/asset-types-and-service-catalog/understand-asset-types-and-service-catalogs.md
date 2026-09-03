@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer administrator, data model owner
-permission: ASSET_TYPES_BUILDER, SERVICE_CATALOG
+permission: read asset_types_builder and read service_catalog
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
@@ -28,6 +28,8 @@ release-status: draft
 -->
 
 # Understand Asset Types and Service Catalogs
+
+![Lifecycle from a draft Asset Type through catalog setup, publication, and Asset verification.](https://files.readme.io/cb7703d05cdaf6c3791c24285a2062234f2e0a0d257c241822a1b6dcd0d6b67e-asset-type-catalog-lifecycle.png)
 
 An **Asset Type** defines the structure of an asset record: its sections, fields, dependencies, and whether a field uses managed catalog data. A **Service Catalog** provides those managed choices and their relationships.
 

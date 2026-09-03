@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer
-permission: authenticated user
+permission: view my_profile; update my_profile for changes
 product-area: Profile and security
 content-owner: Product
 review-owner: Support
@@ -33,9 +33,15 @@ release-status: draft
 **Outcome:** Update a personal profile or security setting and verify that your account remains accessible.
 
 **For:** Signed-in WanAware members
-**Permission:** Authenticated user
+**Permission:** `view my_profile`; `update my_profile` for profile changes
 **Time:** 5–10 minutes
 **Changes made:** Changes your own account information or sign-in security
+
+## If you're stuck
+
+- Use **General** for **Full Name** and **Email**; use **Security** for two-factor authentication and password actions.
+- If a verification code fails, correct device time and use the newest code.
+- Keep the current session open until a second sign-in test succeeds.
 
 ## Before you start
 
@@ -44,19 +50,29 @@ release-status: draft
 - Follow your company's identity and password policy.
 - Never share a password, recovery code, or MFA code with Support.
 
+## Field and option guide
+
+| UI item | Purpose | Requirement | Verification |
+| --- | --- | --- | --- |
+| **Full Name** | Your display identity | Required | Remains after refresh |
+| **Email** | Account email shown in your profile | Required, valid email | Remains after refresh; sign-in behavior follows the released identity flow |
+| **General** | Personal profile fields | Use for name or email changes | Saved values reopen |
+| **Security** | Two-factor authentication and password actions | Keep a working sign-in method during changes | Private-window sign-in succeeds |
+| **Change Password** | Starts the password workflow | Follow your identity policy and on-screen validation | New password works in a private session |
+
 ## Update your profile
 
 1. Open your profile menu.
-2. Select the personal profile or **General** settings.
-3. Change the supported field.
-4. Save and refresh the page.
+2. Select **General**.
+3. Update **Full Name** or **Email**.
+4. Select **Save**, then refresh the page.
 
 **Expected result:** The new value remains visible for your account.
 
 ## Update a security setting
 
 1. Open your profile menu and select **Security**.
-2. Choose the released password or MFA action.
+2. Choose the two-factor authentication action shown for its current state, or select **Change Password**.
 3. Follow the on-screen verification steps.
 4. Finish the change before closing the page.
 5. Sign in again when prompted.

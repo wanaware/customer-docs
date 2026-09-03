@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENTS_UPDATE, STRUCTURE_TAG_RELATIONSHIP
+permission: update elements
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Attach an Element to the intended Structure node with a Structure Tag.
 
 **For:** Customer administrators and engineers
-**Permission:** Update Elements and Structure Tag relationships
+**Permission:** `update elements`
 **Time:** 3–5 minutes
 **Changes made:** Changes a shared hierarchy attachment
+
+## If you're stuck
+
+- Confirm you are editing the Element, not the Structure hierarchy.
+- Search Structure Tags by the exact node name and verify its parent path.
+- Do not create another Structure because the expected tag is missing.
 
 ## Before you start
 
@@ -42,15 +48,21 @@ release-status: draft
 - Confirm the Element's name, type, and ID.
 - Check current Structure Tags to avoid a duplicate or conflicting attachment.
 
-## Add or remove the attachment
+## Field and option guide
 
-![Element details showing saved Structure Tags and Collections without record identifiers.](../../media/screenshots/element-and-collection-structure-tags.png)
+| UI item | Meaning | Safe use |
+| --- | --- | --- |
+| **Structure Tags** | Existing Structure nodes attachable to the Element | Select the exact node by name and hierarchy path |
+| Selected tag | Current attachment | Clear only the tag that should be detached |
+| Unsaved-change bar | Attachment has not been stored | Save before leaving the Element |
+
+## Add or remove the attachment
 
 1. Open **Functions → Elements** and select the Element.
 2. Find **Structure Tags** in the Element details.
 3. Search for the intended Structure node.
 4. Select the tag to attach it, or clear the selected tag to detach it.
-5. Select the available save action if an unsaved-change state appears.
+5. If the unsaved-change bar appears, use its save action before leaving.
 
 **Expected result:** The intended Structure Tag remains selected after refresh.
 

@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, data model owner
-permission: SERVICE_CATALOG_UPDATE
+permission: update service_catalog
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Select a draft custom Asset Type, add an approved catalog entry, and save the catalog.
 
 **For:** Customer administrators and data model owners
-**Permission:** Update Service Catalog
+**Permission:** `update service_catalog`
 **Time:** 10–20 minutes
 **Changes made:** Creates shared catalog data for a draft Asset Type
+
+## If you're stuck
+
+- Confirm the custom Asset Type is saved and still **Draft**.
+- Select the Asset Type before selecting **Add**.
+- Search the selected catalog for the same provider or manufacturer before adding another entry.
 
 ## Before you start
 
@@ -43,7 +49,16 @@ release-status: draft
 - Gather the approved catalog names and source references.
 - Search for existing entries before adding a new one.
 
-![Service Catalog workspace showing a sanitized Harbor Meridian catalog, its provider, and service or circuit types.](../../media/screenshots/service-catalog-workspace.png)
+## Field and option guide
+
+| UI item | Purpose | What to select or enter | Where it appears later |
+| --- | --- | --- | --- |
+| Asset Type selector | Chooses the catalog workspace | The intended custom Asset Type with **Draft** status | Catalog heading and Asset fields |
+| **Add** | Starts one catalog record | Select only after confirming the Asset Type | Entry form |
+| Entry type | Establishes the record's role in the hierarchy | The supported provider, manufacturer, model, module, software, specification, or attribute type | Catalog hierarchy and compatible Asset choices |
+| Name | Identifies the entry | Canonical approved name; avoid abbreviations that create duplicates | Catalog list and Asset selector |
+| Description | Explains the entry | Short identifying context; no credentials or secret data | Entry details |
+| **Save** | Stores the entry | Submit once after reviewing parent and type | Selected catalog after refresh |
 
 ## Start the catalog
 
@@ -51,8 +66,8 @@ release-status: draft
 2. Use the catalog selector to choose the draft custom Asset Type.
 3. Confirm the selected type is the intended draft.
 4. Select **Add**.
-5. Choose the supported entry type needed by the schema.
-6. Enter a clear name and the available descriptive fields.
+5. Choose the entry type required by the schema.
+6. Enter the canonical name and description.
 7. Add only approved specifications or attributes.
 8. Select **Save**.
 

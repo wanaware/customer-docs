@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: concept
 audience: customer administrator
-permission: INTEGRATIONS
+permission: read integrations
 product-area: Integrations
 content-owner: Product
 review-owner: Support

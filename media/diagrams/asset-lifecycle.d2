@@ -1,0 +1,86 @@
+# Render with D2 v0.8.2. Keep this source environment-neutral.
+
+direction: down
+
+classes: {
+  source: {
+    style: {
+      fill: "#17233A"
+      stroke: "#486488"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#F4F7FB"
+      font-size: 20
+      bold: true
+      shadow: true
+    }
+  }
+  stage: {
+    style: {
+      fill: "#13213A"
+      stroke: "#385174"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#F4F7FB"
+      font-size: 20
+      bold: true
+      shadow: true
+    }
+  }
+  result: {
+    style: {
+      fill: "#0C5261"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#E8FCFF"
+      font-size: 20
+      bold: true
+      shadow: true
+    }
+  }
+  flow: {
+    style: {
+      stroke: "#6C87AA"
+      stroke-width: 3
+      font-color: "#C4D0E0"
+      font-size: 14
+    }
+  }
+}
+
+style: {
+  fill: "#0B1018"
+  stroke: "#202B3E"
+  stroke-width: 2
+  border-radius: 20
+}
+
+discovery: "Discovery\nFound records to review" {
+  class: stage
+  width: 250
+  height: 105
+}
+
+inventory: "Inventory\nMaintained Asset set" {
+  class: result
+  width: 250
+  height: 105
+}
+
+integration: "Integration\nConnected data source" {
+  class: source
+  width: 230
+  height: 105
+}
+
+upload: "Bulk upload\nCompleted template" {
+  class: source
+  width: 230
+  height: 105
+}
+
+integration -> discovery { class: flow }
+upload -> discovery { class: flow }
+upload -> inventory: "Create as maintained" { class: flow }
+discovery -> inventory: "Move To Inventory" { class: flow }

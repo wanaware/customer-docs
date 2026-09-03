@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator
-permission: COMPANY_UPDATE
+permission: view general, view company_information, and update company_information
 product-area: Administration and access
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Update an approved company setting and confirm the shared result.
 
 **For:** Customer administrators
-**Permission:** Update Company
+**Permission:** `view general`, `view company_information`, and `update company_information`
 **Time:** 5–10 minutes
 **Changes made:** Changes settings shared by company members
+
+## If you're stuck
+
+- **Administration → General** requires both `view general` and `view company_information`.
+- If fields are visible but read-only, confirm `update company_information`.
+- Record the current value before changing **Name** or either company logo.
 
 ## Before you start
 
@@ -43,14 +49,24 @@ release-status: draft
 - Get approval from the setting owner.
 - Do not place credentials, secrets, or unnecessary personal data in company fields.
 
+## Field and option guide
+
+| UI item | Purpose | Format or limit | Where it appears later |
+| --- | --- | --- | --- |
+| **Name** | Company display name | Required; use the approved legal or operating name | Company and account context |
+| **Subdomain** | Shows the company's workspace address | Verify the displayed value; do not assume changing the name changes it | Workspace URL |
+| **Dark Mode Logo** | Logo shown against dark surfaces | PNG or JPG preferred; file limit shown by the uploader | Dark appearance |
+| **Light Mode Logo** | Logo shown against light surfaces | PNG or JPG preferred; file limit shown by the uploader | Light appearance |
+| **Save** | Stores approved changes | Select once after previewing values and logos | General settings after refresh |
+
 ## Update a setting
 
 1. Open **Administration → General**.
-2. Select the company settings area shown in your workspace.
+2. Open **Organization Information**.
 3. Confirm the company name or identifier.
 4. Change only the approved field.
-5. Review any visible effect described by the form.
-6. Select the available save action.
+5. Preview logo cropping and contrast before accepting an uploaded image.
+6. Select **Save**.
 
 **Expected result:** WanAware confirms the save and the value remains after refresh.
 

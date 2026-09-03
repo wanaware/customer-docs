@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ASSETS_UPDATE
+permission: update assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Apply the correct kind of tag and verify the asset appears in the intended context.
 
 **For:** Customer administrators and engineers
-**Permission:** Update Assets and the relevant tag relationship
+**Permission:** `update assets`
 **Time:** 3–5 minutes
 **Changes made:** Changes a shared asset's descriptive or organizational attachments
+
+## If you're stuck
+
+- Use a Data Tag for description and a Structure Tag for hierarchy placement.
+- Search by exact tag name and verify the Structure path before selecting a similarly named tag.
+- Save the unsaved-change bar before testing the Inventory filter.
 
 ## Before you start
 
@@ -42,9 +48,15 @@ release-status: draft
 - Use a **Structure Tag** to attach the asset to an existing hierarchy node.
 - Search existing tags before creating or applying a near-duplicate.
 
-## Add or remove tags
+## Field and option guide
 
-![Asset details showing Data Tags, Structure Tags, schema-driven tabs, and editable fields.](../../media/screenshots/asset-data-and-structure-tags.png)
+| UI item | Use it for | Do not use it for | Verification |
+| --- | --- | --- | --- |
+| Data Tags | Descriptive labels such as lifecycle or ownership category | Attaching the Asset to a Structure | Asset persists in the matching Inventory filter |
+| **Structure Tags** | Attaching the Asset to an existing hierarchy node | Free-form notes or deleting a Structure | Asset shows the intended Structure context |
+| Unsaved-change bar | Saving a changed selection | Assuming the tag was stored immediately | Bar clears and tag remains after refresh |
+
+## Add or remove tags
 
 1. Open the intended asset and confirm its unique identifier.
 2. Find the Data Tags or **Structure Tags** control.

@@ -58,8 +58,10 @@ Use `release-status: draft` while any verification, screenshot, video, or review
 
 Every workflow must include:
 
+- A 30-second **If you're stuck** section with the fastest safe checks
 - Outcome, audience, permission, time, and changes made
 - Prerequisites and warnings before consequential actions
+- A field, option, action, or checkpoint table using exact released UI labels
 - Numbered steps using released UI labels
 - Expected results at important checkpoints
 - Troubleshooting beside the step where failure occurs
@@ -81,6 +83,7 @@ Keep the core integration guides provider-neutral. Put source-specific fields, p
 ## Harbor Meridian Systems media
 
 - Use only the Harbor Meridian Systems account and records whose names begin with `Docs Demo`.
+- Treat Harbor Meridian Systems as media provenance only. Customer-facing instructions, captions, search benchmarks, and support guidance must remain environment-agnostic.
 - Use Light mode by default; show Light and Dark only in the theme article.
 - Capture static PNG files at 750–1000 pixels for a full-column image and 250 KB or less.
 - Write useful alt text between 40 and 150 characters.
@@ -89,19 +92,19 @@ Keep the core integration guides provider-neutral. Put source-specific fields, p
 - Use only masked test information for billing. Never purchase, cancel, or change a real payment method to create documentation.
 - Keep `media/screenshot-manifest.json` current and remove every temporary `Docs Demo` record after verification.
 
-If relative images do not render in the ReadMe preview, keep the versioned PNG files and add their ReadMe-hosted URLs to a checked manifest before changing article links.
+Repository-relative images do not render in the ReadMe preview. Keep every source file versioned, upload the approved publishing PNG through ReadMe's image API, record its `files.readme.io` URL in `media/publishing-manifest.json`, and use that URL in customer articles. Keep the API credential in a secure environment or GitHub secret; never commit it.
 
 ## Product diagrams
 
-Keep editable D2 source beside each generated SVG in `media/diagrams/`. D2 source is authoritative; customer articles embed the generated SVG.
+Keep editable D2 source, generated review SVG, and optimized 1440-pixel publishing PNG together in `media/diagrams/`. D2 source is authoritative. Customer articles embed the ReadMe-hosted PNG recorded in `media/publishing-manifest.json`.
 
-Render the product model with D2 v0.8.2, the bundled ELK layout engine, and the pinned dark theme:
+Render each diagram with D2 v0.8.2, the bundled ELK layout engine, and the pinned dark theme:
 
 ```sh
-d2 --layout elk --theme 200 --pad 36 --omit-version media/diagrams/product-model.d2 media/diagrams/product-model.svg
+d2 --layout elk --theme 200 --pad 36 --omit-version media/diagrams/organization-model.d2 media/diagrams/organization-model.svg
 ```
 
-Review the generated SVG at the final article width, then run `npm run check`. Do not add remote icons, customer data, internal identifiers, or first-release-excluded features to a diagram.
+Review the SVG and PNG at desktop and narrow article widths. Record the local SHA-256, dimensions, byte count, alt text, article slugs, and ReadMe URL in the publishing manifest. Run `npm run check` and `npm run check:media`. Do not add remote icons, customer data, internal identifiers, or first-release-excluded features to a diagram.
 
 ## Legacy Stonly material
 

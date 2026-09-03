@@ -1,0 +1,87 @@
+# Render with D2 v0.8.2. Keep this source environment-neutral.
+
+direction: down
+
+classes: {
+  step: {
+    style: {
+      fill: "#17233A"
+      stroke: "#486488"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#F4F7FB"
+      font-size: 17
+      bold: true
+      shadow: true
+    }
+  }
+  choice: {
+    style: {
+      fill: "#13213A"
+      stroke: "#D3A23A"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#FFF4D5"
+      font-size: 16
+      bold: true
+      shadow: true
+    }
+  }
+  result: {
+    style: {
+      fill: "#0C5261"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#E8FCFF"
+      font-size: 17
+      bold: true
+      shadow: true
+    }
+  }
+  flow: {
+    style: {
+      stroke: "#6C87AA"
+      stroke-width: 3
+      font-color: "#C4D0E0"
+      font-size: 13
+    }
+  }
+  retry: {
+    style: {
+      stroke: "#D3A23A"
+      stroke-width: 3
+      stroke-dash: 5
+      font-color: "#FFF4D5"
+      font-size: 13
+    }
+  }
+}
+
+style: {
+  fill: "#0B1018"
+  stroke: "#202B3E"
+  stroke-width: 2
+  border-radius: 20
+}
+
+catalog: "Select a writable Service Catalog" { class: step; width: 275; height: 88 }
+kind: "Choose import type" { class: choice; width: 215; height: 82 }
+provider: "New providers with\nmodels or services" { class: step; width: 225; height: 94 }
+existing: "Models or services for\nexisting provider IDs" { class: step; width: 240; height: 94 }
+source: "Download template\nUpload file or paste spreadsheet" { class: step; width: 280; height: 102 }
+mapping: "Review column mapping" { class: choice; width: 235; height: 82 }
+review: "Review entries\nReady · Conflicts · Errors" { class: choice; width: 245; height: 94 }
+create: "Create N entries" { class: step; width: 190; height: 82 }
+verify: "Return to catalog and verify" { class: result; width: 250; height: 88 }
+
+catalog -> kind: { class: flow }
+kind -> provider: { class: flow }
+kind -> existing: { class: flow }
+provider -> source: { class: flow }
+existing -> source: { class: flow }
+source -> mapping: { class: flow }
+mapping -> review: { class: flow }
+review -> create: "all conflicts and errors resolved" { class: flow }
+review -> source: "replace file" { class: retry }
+create -> verify: { class: flow }

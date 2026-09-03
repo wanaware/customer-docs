@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator
-permission: ADMINISTRATION, INTEGRATIONS
+permission: read integrations and create integrations
 product-area: Integrations
 content-owner: Product
 review-owner: Support
@@ -33,9 +33,15 @@ release-status: draft
 **Outcome:** Connect and test a supported data source, then begin its first inventory collection.
 
 **For:** Customer administrators and source-system owners
-**Permission:** Administration and Integrations
+**Permission:** `read integrations` and `create integrations`
 **Time:** About 10–20 minutes, plus provider setup and processing time
 **Changes made:** Saves a connection in WanAware; the selected provider may require source-side changes
+
+## If you're stuck
+
+- Confirm **Administration → Integrations** is visible through `read integrations`.
+- If the provider is visible but its connect control is missing, confirm `create integrations`.
+- Open the matching provider adapter before entering any identifier or authorization value. Provider fields are intentionally not generalized here.
 
 ## Before you start
 
@@ -47,26 +53,36 @@ release-status: draft
 
 Only enter an authorization value in a field that the released setup explicitly identifies for that purpose. Never send that value to Support or include it in a screenshot.
 
+## Field and option guide
+
+| UI item | Purpose | What to verify | Source of the value |
+| --- | --- | --- | --- |
+| Provider card | Selects the kind of data source | Provider name and supported inventory scope | Your approved source system |
+| Connection name | Distinguishes saved connections | Unique, recognizable name with no credential data | Your internal naming standard |
+| Provider identifier fields | Identifies the source account or tenant | Exact format in the provider adapter | Source-system administration page |
+| Authorization fields | Grants the documented access | Least-privilege value requested by that exact field | Approved source-system setup |
+| **Test connection** | Checks saved access without proving inventory import | Successful connection result | WanAware after save |
+
 ## Add the integration
 
 1. Open **Administration → Integrations**.
 2. Find the provider you want to connect.
 3. Expand its card.
-4. Select the available connect or add action.
+4. Use the provider's connect action named in its adapter guide.
 5. Enter a clear, unique connection name.
 6. Complete the fields described by the provider adapter.
 7. Review any permissions and source-side resources that the setup will create.
-8. Save the integration.
+8. Select the adapter's documented save or connect button once.
 
-**Expected result:** The connection appears on the provider card. Status wording varies by provider.
+**Expected result:** The connection appears on the provider card with the account context entered during setup.
 
 If a required field is unclear, stop and check the provider adapter. Do not guess an identifier or paste a secret into a general text field.
 
 ## Test and collect
 
-1. Select **Test connection** when that action is available.
+1. If the provider card includes **Test connection**, select it once.
 2. Wait for a successful test before starting collection.
-3. Select the provider's available collection or refresh action.
+3. Select the collection action named in the provider adapter. The page-level **Refresh** button reloads the displayed integration list; it does not start inventory collection.
 4. Wait for the request confirmation.
 
 **Expected result:** WanAware accepts the collection request. Inventory collection can continue after you leave the page.
@@ -84,17 +100,12 @@ The integration is verified only when a known record appears with the expected s
 
 ## Undo this change
 
-Removing an integration stops future collection but may not remove imported assets or source-side resources.
-
-1. Review the connection's current inventory use.
-2. Use the available disable or remove action only after approval.
-3. Follow the provider adapter's source-side cleanup guidance.
-4. Verify that no expected refresh is still scheduled.
+Do not remove a connection by guessing at a control. Removal behavior, imported-Asset impact, and source-side cleanup are provider-specific. Follow the adapter's verified removal procedure or contact Support before changing the connection.
 
 ## Learn, show me, do it
 
 - **Learn:** [About integrations](about-integrations)
-- **Show me:** The captioned integration clip will be embedded after its Harbor Meridian Systems recording passes review.
+- **Show me:** The captioned integration clip will be embedded after its recording passes review.
 - **Do it:** Open `/administration/integrations` in your WanAware workspace.
 
 ## Next steps

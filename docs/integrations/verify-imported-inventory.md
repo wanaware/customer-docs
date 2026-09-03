@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ASSETS
+permission: read assets
 product-area: Integrations
 content-owner: Product
 review-owner: Support
@@ -32,15 +32,31 @@ release-status: draft
 **Outcome:** Find a known source record and confirm that WanAware imported it into the correct workspace.
 
 **For:** Customer administrators and engineers
-**Permission:** Assets
+**Permission:** `read assets`
 **Time:** 5–10 minutes after collection finishes
 **Changes made:** None
+
+## If you're stuck
+
+- Clear all Inventory filters before searching by the source identifier.
+- Check **Discovery** before assuming the record did not arrive.
+- Use a stable source identifier, not only a display name that might have changed.
 
 ## Before you start
 
 - Choose two or three known, non-sensitive source records.
 - Record their names and stable source identifiers.
 - Wait for the integration collection to finish.
+
+## Field and checkpoint guide
+
+| Value | Why it matters | Expected match |
+| --- | --- | --- |
+| Source identifier | Distinguishes similarly named records | Exact source-system value |
+| Asset name | Confirms recognizable identity | Current source name unless the value is customer-owned |
+| Asset Type | Determines details and schema | Expected released type |
+| Provider and source account context | Traces provenance | Intended saved integration |
+| Collection time | Separates stale results from a missing import | After the source change being verified |
 
 ## Verify the records
 

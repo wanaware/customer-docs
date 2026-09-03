@@ -62,9 +62,9 @@ The navigation requirement controls entry to an area. Create, update, delete, pu
 
 ## How the records fit together
 
-![Diagram showing an Integration flowing through Discovery to Inventory, then Assets organized with Structure Tags, Elements, and Collections.](../../media/diagrams/product-model.svg)
+![Diagram showing Structure Tags attaching Elements and Collections while Collections group Assets.](https://files.readme.io/24a1f6eb59b16c7bd53f480d9b7c456531a2a5268b2381b83fe96294e4c735d4-organization-model.png)
 
-An Asset can arrive from an Integration or a bulk import. A Collection groups existing Assets inside an Element. A Structure Tag attaches an Element, Collection, or other supported record to the Structure hierarchy; matching names alone do not create that attachment.
+An Asset can arrive from an Integration or a bulk upload. A Collection groups existing Assets inside an Element. A Structure Tag attaches an Element, Collection, or other supported record to the Structure hierarchy; matching names alone do not create that attachment.
 
 ## These sound alike
 

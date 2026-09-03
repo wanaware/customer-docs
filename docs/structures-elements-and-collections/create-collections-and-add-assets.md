@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENT_COLLECTIONS_CREATE, ELEMENT_COLLECTIONS_UPDATE
+permission: create element_collections and update element_collections
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -32,15 +32,30 @@ release-status: draft
 **Outcome:** Create a named Collection inside an Element and add the intended assets once.
 
 **For:** Customer administrators and engineers
-**Permission:** Create and update Element Collections
+**Permission:** `create element_collections` and `update element_collections`
 **Time:** 5–10 minutes
 **Changes made:** Creates a shared Collection and asset associations
+
+## If you're stuck
+
+- Confirm the parent Element before creating the Collection; a Collection is not a top-level record.
+- Clear Asset-selection filters and search by unique ID, not only name.
+- Removing an Asset from a Collection does not delete the Asset from Inventory.
 
 ## Before you start
 
 - Open the intended Element and confirm its ID.
 - Search its current Collections for the same purpose.
 - Gather unique identifiers for the assets you intend to add.
+
+## Field and option guide
+
+| UI item | Purpose | What to enter or select | Verification |
+| --- | --- | --- | --- |
+| Parent Element | Owns the Collection | Intended Application, Service, or Site | Collection appears only under that Element |
+| Collection name | Describes the group | Unique, purpose-based name | Collection list shows one match |
+| Asset selector | Adds existing Inventory records | Confirm name, Asset Type, and unique ID | Collection lists each selected Asset once |
+| **Structure Tags** | Attaches the Collection to a Structure | Exact existing Structure node | Structure context and Collection details |
 
 ## Create the Collection
 
@@ -57,8 +72,6 @@ release-status: draft
 If an asset is missing from the selector, clear its filters and confirm that the asset is in Inventory and visible to your role.
 
 ## Add or remove assets later
-
-![Expanded Collection showing its sanitized associated assets and the Add Asset action.](../../media/screenshots/collection-create-and-assets.png)
 
 1. Open the Collection.
 2. Use its edit or asset-selection action.

@@ -3,4 +3,6 @@
 - configure-asset-type-sections-and-fields
 - create-a-custom-service-catalog
 - add-catalog-entries-and-compatibility
+- prepare-a-service-catalog-bulk-upload-file
+- bulk-upload-service-catalog-entries
 - publish-and-verify-an-asset-type

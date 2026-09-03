@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, data model owner
-permission: ASSET_TYPES_BUILDER_CREATE
+permission: create asset_types_builder
 product-area: Asset Types and Service Catalog
 content-owner: Product
 review-owner: Support
@@ -33,18 +33,33 @@ release-status: draft
 **Outcome:** Create a named custom Asset Type and save it as a draft for further configuration.
 
 **For:** Customer administrators and data model owners
-**Permission:** Create in Asset Types
+**Permission:** `create asset_types_builder`
 **Time:** 5–15 minutes
 **Changes made:** Creates a shared draft schema
+
+## If you're stuck
+
+- Search the Asset Type list by exact name before creating another draft.
+- Keep the new type in **Draft** status until its fields and Service Catalog have been verified.
+- Treat AI- or template-generated fields as suggestions; remove anything the customer workflow does not require.
 
 ## Before you start
 
 - Search existing Asset Types for the same concept.
 - Write a one-sentence purpose and identify the first asset that will use it.
 - Choose a durable customer-facing name.
-- In Harbor Meridian Systems, begin documentation types with `Docs Demo`.
+- Use a clearly labeled test type when you are learning or validating this workflow.
 
-![Custom Asset Types list showing sanitized Harbor Meridian schemas and their published status.](../../media/screenshots/asset-types-list.png)
+## Starting option and field guide
+
+| UI item | Use it for | Required review |
+| --- | --- | --- |
+| **Generate with AI** | A suggested first schema from a written business purpose | Review every generated section, field, required setting, and dependency |
+| **Utilize a Template** | A released template close to the intended record | Remove irrelevant fields and verify terminology |
+| **Start from Scratch** | A small or purpose-built schema | Add only the required sections and fields |
+| **Name** | Customer-facing Asset Type identity | Unique, durable record-type name |
+| **Description** | Boundary for what belongs in this type | State what the type represents and excludes |
+| **Save Draft** | Saves without publishing | Confirm the result remains **Draft** |
 
 ## Choose a starting option
 
@@ -55,9 +70,7 @@ release-status: draft
    - **Utilize a Template** when an available template closely matches the use case.
    - **Start from Scratch** when you need full control or a small schema.
 
-![Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.](../../media/screenshots/asset-type-starting-options.png)
-
-4. Complete the prompts for the selected option.
+4. For **Generate with AI**, enter the business purpose and the kinds of details the Asset must store; review every suggested section and field. For **Utilize a Template**, select the closest template and remove fields the Asset will not use. For **Start from Scratch**, enter the name and description before adding sections.
 5. Enter the Asset Type **Name** and **Description**.
 6. Review the generated or copied sections and fields.
 7. Select **Save Draft**.

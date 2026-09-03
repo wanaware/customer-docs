@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ASSETS_UPDATE
+permission: update assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -33,9 +33,16 @@ release-status: draft
 **Outcome:** Complete an asset's editable information and verify that every intended change was saved.
 
 **For:** Customer administrators and engineers responsible for asset data
-**Permission:** Update Assets
+**Permission:** `update assets`
 **Time:** 5–15 minutes
 **Changes made:** Updates a shared asset record
+
+## If you're stuck
+
+- Confirm the Asset's unique identifier before editing a similarly named record.
+- Look for the unsaved-change bar before leaving a detail tab.
+- If a field is missing, confirm the Asset Type and the field's dependency selections; do not type a catalog value into another field.
+- A value supplied by an integration can return after the next collection. Fix the source rather than repeatedly overwriting it.
 
 ## Before you start
 
@@ -43,6 +50,19 @@ release-status: draft
 - Gather approved values and their source.
 - Know which fields may be refreshed by an integration.
 - Do not place credentials, personal data, or secret values in names, tags, or free-text fields.
+
+## Field and option guide
+
+| UI item | Purpose | Accepted value or choice | Where it appears later |
+| --- | --- | --- | --- |
+| Asset name edit | Corrects the customer-editable display name | A recognizable name; no passwords, tokens, or personal data | Inventory and Asset details |
+| **Data Tags** | Adds descriptive labels without placing the Asset in a hierarchy | Select an existing approved tag or create only a genuinely new label | Inventory filters and Asset details |
+| **Structure Tags** | Attaches the Asset to a Structure node | Select the exact existing hierarchy node | Structure context and Asset details |
+| Schema section tabs | Groups fields defined by the Asset Type | Open every section that applies to the record | Asset detail tabs |
+| Required field | Enforces a value before save | The format shown by the control | Saved Asset details |
+| Dependent field | Limits choices from an earlier selection | Select the parent value first, then a compatible child | Saved Asset details |
+| Catalog-backed field | Uses managed Service Catalog data | Select an existing catalog entry; do not invent a near-duplicate | Asset details and catalog reporting |
+| Unsaved-change bar | Shows that the current edits are not stored | Save or deliberately discard before leaving | Clears after a successful save |
 
 ## Edit the name and tags
 
@@ -64,7 +84,7 @@ If a Structure Tag is unavailable, confirm that the Structure exists and your ro
 4. For a Service Catalog-backed field, select an approved catalog value instead of typing a near-duplicate.
 5. Review dependent choices after changing a manufacturer, model, component, or other parent value.
 6. Check the unsaved-change bar before leaving the page.
-7. Select the available save action.
+7. Select the save action shown in the unsaved-change bar.
 
 **Expected result:** The unsaved-change bar clears and the saved values remain visible.
 
