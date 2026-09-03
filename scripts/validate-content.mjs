@@ -192,7 +192,7 @@ const highConfidenceSecretPatterns = [
 ];
 
 for (const file of allFiles) {
-  if (!['.md', '.json', '.yaml', '.yml', '.csv', '.svg'].includes(extname(file))) continue;
+  if (!['.md', '.json', '.yaml', '.yml', '.csv', '.svg', '.d2'].includes(extname(file))) continue;
   const source = readFileSync(file, 'utf8');
   for (const [pattern, label] of highConfidenceSecretPatterns) {
     if (pattern.test(source)) fail(file, `contains a forbidden ${label} pattern`);
@@ -203,7 +203,7 @@ const excludedFamilyPattern = /\b(?:workers?|observability|pulse|monitors?|monit
 const publicScopeFiles = [
   ...markdownFiles,
   ...walk(join(root, 'recordings')).filter((file) => extname(file) === '.md'),
-  ...walk(join(root, 'media/diagrams')).filter((file) => extname(file) === '.svg'),
+  ...walk(join(root, 'media/diagrams')).filter((file) => ['.d2', '.svg'].includes(extname(file))),
   join(root, 'integration/portal-help-links.json'),
   join(root, 'integration/search-quality-questions.json')
 ];
@@ -222,6 +222,10 @@ if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
 
 const productMapFile = join(docsRoot, 'start-here/product-map-and-terminology.md');
 const productMap = readFileSync(productMapFile, 'utf8');
+const productModelSource = join(root, 'media/diagrams/product-model.d2');
+const productModelSvg = join(root, 'media/diagrams/product-model.svg');
+if (!existsSync(productModelSource)) fail(productModelSource, 'missing editable D2 source');
+if (!existsSync(productModelSvg)) fail(productModelSvg, 'missing generated SVG');
 const productMapMarkers = [
   '## Navigation and permission map',
   '| Portal path | Permission that makes it visible |',

@@ -91,6 +91,18 @@ Keep the core integration guides provider-neutral. Put source-specific fields, p
 
 If relative images do not render in the ReadMe preview, keep the versioned PNG files and add their ReadMe-hosted URLs to a checked manifest before changing article links.
 
+## Product diagrams
+
+Keep editable D2 source beside each generated SVG in `media/diagrams/`. D2 source is authoritative; customer articles embed the generated SVG.
+
+Render the product model with D2 v0.8.2, the bundled ELK layout engine, and the pinned dark theme:
+
+```sh
+d2 --layout elk --theme 200 --pad 36 --omit-version media/diagrams/product-model.d2 media/diagrams/product-model.svg
+```
+
+Review the generated SVG at the final article width, then run `npm run check`. Do not add remote icons, customer data, internal identifiers, or first-release-excluded features to a diagram.
+
 ## Legacy Stonly material
 
 Every legacy Stonly guide is outdated. Use the migration register only to identify topics and redirect candidates. Never reuse its steps, screenshots, labels, permissions, or behavioral claims.
