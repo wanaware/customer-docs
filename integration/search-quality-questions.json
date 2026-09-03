@@ -36,10 +36,10 @@
       "mustNotMention": []
     },
     {
-      "question": "Why is the Bulk Upload action missing?",
-      "expectedSlug": "/docs/bulk-import-validation-failures",
-      "mustMention": ["permission", "availability"],
-      "mustNotMention": []
+      "question": "How do I set up an AWS integration and run its first inventory crawl?",
+      "expectedSlug": "/docs/add-an-integration",
+      "mustMention": ["CloudFormation", "Role ARN", "external ID", "Run inventory crawl"],
+      "mustNotMention": ["secret access key"]
     },
     {
       "question": "My CSV import failed. How do I fix it?",
