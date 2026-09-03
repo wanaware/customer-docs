@@ -10,10 +10,10 @@
   "rules": {
     "format": "png",
     "fullColumnWidthPixels": {
-      "minimum": 750,
-      "maximum": 1000
+      "minimum": 1500,
+      "maximum": 2200
     },
-    "maximumFileSizeBytes": 256000,
+    "maximumFileSizeBytes": 512000,
     "requiredReviews": [
       "Product",
       "Support"
@@ -97,17 +97,27 @@
       "article": "/docs/add-an-asset",
       "alt": "Add Asset form showing the selected Asset Type, status, tags, schema tabs, and catalog-backed fields.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v2",
+      "style": "wanaware-ai-assisted-v3",
       "status": "captured-pending-product-support-review"
     },
     {
-      "id": "assets-create-type-choice",
-      "file": "media/screenshots/add-asset-type-choice.png",
-      "sourceFile": "media/screenshots/source/add-asset-type-choice.png",
+      "id": "assets-create-type-cards",
+      "file": "media/screenshots/add-asset-type-cards.png",
+      "sourceFile": "media/screenshots/source/add-asset-type-cards.png",
       "article": "/docs/add-an-asset",
-      "alt": "Add Asset step for finding and selecting the Asset Type that determines the remaining fields.",
+      "alt": "Add Asset picker in Cards view with Network Asset-Switch selected.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v2",
+      "style": "wanaware-ai-assisted-v3",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "assets-create-type-list",
+      "file": "media/screenshots/add-asset-type-list.png",
+      "sourceFile": "media/screenshots/source/add-asset-type-list.png",
+      "article": "/docs/add-an-asset",
+      "alt": "Add Asset picker in List view with Network Asset-Switch selected.",
+      "captureDate": "2026-09-03",
+      "style": "wanaware-ai-assisted-v3",
       "status": "captured-pending-product-support-review"
     },
     {
@@ -117,7 +127,7 @@
       "article": "/docs/bulk-upload-assets",
       "alt": "Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v2",
+      "style": "wanaware-ai-assisted-v3",
       "status": "captured-pending-product-support-review"
     },
     {
@@ -225,7 +235,7 @@
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Create New Asset Type page showing AI, template, and scratch starting options.",
       "captureDate": "2026-09-03",
-      "style": "wanaware-framed-v2",
+      "style": "wanaware-ai-assisted-v3",
       "status": "captured-pending-product-support-review"
     },
     {

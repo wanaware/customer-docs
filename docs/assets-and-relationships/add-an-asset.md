@@ -65,11 +65,25 @@ release-status: draft
 
 1. Open **Functions → Assets → Inventory** (`/assets/inventory`).
 2. Select **+ Add Asset**, then **Add Manual Asset**.
-3. Choose the **Asset Type**. Recheck the form after selection because its fields can change.
+3. Find and choose the **Asset Type**. Use **Cards** when the icon and description help distinguish similar types, or switch to **List** to scan names in a compact table. **All**, **Global**, and **Custom** filter the picker; they do not change the saved Asset.
+
+![Add Asset picker in Cards view with Network Asset-Switch selected.](https://files.readme.io/6a81fea796043c45490cf7ddfab0773d7052ec11d1ebb1efdd8e5bb78621297d-add-asset-type-cards.png)
+
+The Cards view keeps each Asset Type's icon and explanation visible. The blue outline and check mark identify the current selection.
+
+![Add Asset picker in List view with Network Asset-Switch selected.](https://files.readme.io/4b613b56f181459bb711ca9eef075d8576ee7e925e6ca9500b5cce3a10a8f41e-add-asset-type-list.png)
+
+The List view shows the same Asset Types and selection in a denser layout. Switching views does not clear the selected type, search, or Global/Custom filter. Recheck the form after selection because its fields can change.
+
 4. Choose **Inventory** or **Discovery** under **Status**.
 5. Enter **Asset Name** exactly as users should search for it.
 6. Add approved **Data Tags** and **Structure Tags**. Do not create a new spelling of an existing tag.
 7. Complete the required type-specific fields. For a catalog-backed field, select an existing catalog entry rather than typing a near-duplicate.
+
+![Add Asset form showing status, name, tags, schema tabs, and catalog-backed fields for the selected Asset Type.](https://files.readme.io/a2beff1ac72a9739082291355ec9802515cb3b087f7e181e82866d51c0068041-add-asset-form.png)
+
+After the type is selected, confirm the **Selected Type** summary before entering data. In this example, **Manufacturer** and **Model** are catalog-backed choices, while **OS Version**, **Firmware Version**, **Serial Number**, and **Switch Name** are fields supplied by the Asset Type. Your fields can differ because administrators configure each Asset Type.
+
 8. Select **Add Asset**.
 
 **Expected result:** WanAware displays **Asset Added!** and identifies whether the record was added to Inventory or Discovery.

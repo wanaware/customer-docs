@@ -26,10 +26,23 @@ WanAware screenshots use a full-width product capture inside a consistent brande
      --crop 63,0,1658,760
    ```
 
-6. Inspect the source crop and framed PNG. The publishing image must be 750–1000 pixels wide, remain readable at normal article width, and be 250 KB or less.
+6. For a standard capture, inspect the source crop and framed PNG. For a retina publishing copy, run the image-generator enhancement workflow below. The publishing image must be 1500–2200 pixels wide, remain readable at normal article width, and be 500 KB or less.
 7. Record the image in `media/screenshot-manifest.json`, obtain Product and Support approval, upload the publishing PNG through ReadMe's image API, and use the resulting `files.readme.io` URL in the article.
 
 Only the safe crop and framed publishing copy belong in Git. Keep the raw full-browser capture temporary.
+
+## Image-generator enhancement
+
+Use image generation to improve the decorative frame, color balance, and apparent clarity—not to redraw the product UI. Preserve the exact sanitized source crop as the authoritative layer:
+
+```bash
+npm run media:enhance -- \
+  --input media/screenshots/source/example.png \
+  --generated /tmp/generated-style-reference.png \
+  --output media/screenshots/example.png
+```
+
+The command heavily obscures all generated UI pixels, then places the unchanged source crop over the result at its native resolution. This prevents a generated label, field, or state from becoming product documentation. Mark these files `wanaware-ai-assisted-v3` in the manifest and compare every visible label with the released UI before upload.
 
 ## Callouts
 

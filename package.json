@@ -6,7 +6,8 @@
   "scripts": {
     "check": "node scripts/validate-content.mjs",
     "check:media": "node scripts/validate-media-online.mjs",
-    "media:frame": "node scripts/frame-screenshot.mjs"
+    "media:frame": "node scripts/frame-screenshot.mjs",
+    "media:enhance": "node scripts/enhance-screenshot.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.4"

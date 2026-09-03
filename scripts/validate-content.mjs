@@ -359,7 +359,8 @@ if (publishingManifest) {
   const urls = new Set();
   for (const [index, asset] of (publishingManifest.assets || []).entries()) {
     const label = `asset ${index + 1}`;
-    for (const field of ['id', 'source', 'reviewArtifact', 'publishingFile', 'sha256', 'width', 'height', 'bytes', 'alt', 'publishedUrl', 'renderedOn', 'approvalState']) {
+    const kind = asset.kind || 'diagram';
+    for (const field of ['id', 'source', 'publishingFile', 'sha256', 'width', 'height', 'bytes', 'alt', 'publishedUrl', 'renderedOn', 'approvalState']) {
       if (asset[field] === undefined || asset[field] === '') fail(publishingManifestFile, `${label} is missing ${field}`);
     }
     if (ids.has(asset.id)) fail(publishingManifestFile, `${label} has duplicate id ${asset.id}`);
@@ -367,12 +368,14 @@ if (publishingManifest) {
     ids.add(asset.id);
     urls.add(asset.publishedUrl);
 
-    if (!String(asset.source || '').endsWith('.d2')) fail(publishingManifestFile, `${label} source must be D2`);
-    if (!String(asset.reviewArtifact || '').endsWith('.svg')) fail(publishingManifestFile, `${label} review artifact must be SVG`);
+    if (!['diagram', 'screenshot'].includes(kind)) fail(publishingManifestFile, `${label} has invalid kind ${kind}`);
+    if (kind === 'diagram' && !String(asset.source || '').endsWith('.d2')) fail(publishingManifestFile, `${label} source must be D2`);
+    if (kind === 'diagram' && !String(asset.reviewArtifact || '').endsWith('.svg')) fail(publishingManifestFile, `${label} review artifact must be SVG`);
+    if (kind === 'screenshot' && !String(asset.source || '').endsWith('.png')) fail(publishingManifestFile, `${label} source must be a safe PNG crop`);
     if (!String(asset.publishingFile || '').endsWith('.png')) fail(publishingManifestFile, `${label} publishing file must be PNG`);
     if (!String(asset.publishedUrl || '').startsWith('https://files.readme.io/')) fail(publishingManifestFile, `${label} has an unapproved publishing URL`);
 
-    for (const field of ['source', 'reviewArtifact', 'publishingFile']) {
+    for (const field of kind === 'diagram' ? ['source', 'reviewArtifact', 'publishingFile'] : ['source', 'publishingFile']) {
       const path = join(root, asset[field] || '');
       if (!existsSync(path)) fail(publishingManifestFile, `${label} ${field} does not exist: ${asset[field]}`);
     }
@@ -381,7 +384,8 @@ if (publishingManifest) {
     if (existsSync(publishingPath)) {
       const bytes = statSync(publishingPath).size;
       if (bytes !== asset.bytes) fail(publishingManifestFile, `${label} byte count does not match ${asset.publishingFile}`);
-      if (bytes > 256000) fail(publishingManifestFile, `${label} exceeds 250 KB`);
+      const maximumBytes = kind === 'diagram' ? 256000 : 512000;
+      if (bytes > maximumBytes) fail(publishingManifestFile, `${label} exceeds ${kind === 'diagram' ? '250' : '500'} KB`);
       const checksum = createHash('sha256').update(readFileSync(publishingPath)).digest('hex');
       if (checksum !== asset.sha256) fail(publishingManifestFile, `${label} checksum does not match ${asset.publishingFile}`);
       const dimensions = pngDimensions(publishingPath);
@@ -389,7 +393,10 @@ if (publishingManifest) {
       else if (dimensions.width !== asset.width || dimensions.height !== asset.height) {
         fail(publishingManifestFile, `${label} dimensions do not match ${asset.publishingFile}`);
       }
-      if (dimensions?.width !== 1440) fail(publishingManifestFile, `${label} publishing PNG must be 1440 pixels wide`);
+      if (kind === 'diagram' && dimensions?.width !== 1440) fail(publishingManifestFile, `${label} publishing PNG must be 1440 pixels wide`);
+      if (kind === 'screenshot' && (dimensions?.width < 1500 || dimensions?.width > 2200)) {
+        fail(publishingManifestFile, `${label} publishing screenshot must be 1500–2200 pixels wide`);
+      }
     }
 
     const altLength = String(asset.alt || '').trim().length;
@@ -463,18 +470,18 @@ if (screenshotManifest) {
       const path = join(root, screenshot.file);
       if (!existsSync(path)) fail(screenshotManifestFile, `captured screenshot is missing: ${screenshot.file}`);
       else {
-        if (statSync(path).size > 256000) fail(screenshotManifestFile, `captured screenshot exceeds 250 KB: ${screenshot.file}`);
+        if (statSync(path).size > 512000) fail(screenshotManifestFile, `captured screenshot exceeds 500 KB: ${screenshot.file}`);
         const dimensions = pngDimensions(path);
         if (!dimensions) fail(screenshotManifestFile, `captured screenshot is not a valid PNG: ${screenshot.file}`);
-        else if (dimensions.width < 750 || dimensions.width > 1000) {
-          fail(screenshotManifestFile, `captured screenshot width must be 750–1000 pixels: ${screenshot.file}`);
+        else if (dimensions.width < 1500 || dimensions.width > 2200) {
+          fail(screenshotManifestFile, `captured screenshot width must be 1500–2200 pixels: ${screenshot.file}`);
         }
       }
       if (!screenshot.sourceFile || !existsSync(join(root, screenshot.sourceFile))) {
         fail(screenshotManifestFile, `captured screenshot is missing its safe source crop: ${screenshot.sourceFile || screenshot.file}`);
       }
-      if (screenshot.style !== 'wanaware-framed-v2') {
-        fail(screenshotManifestFile, `captured screenshot must use wanaware-framed-v2: ${screenshot.file}`);
+      if (screenshot.style !== 'wanaware-ai-assisted-v3') {
+        fail(screenshotManifestFile, `captured screenshot must use wanaware-ai-assisted-v3: ${screenshot.file}`);
       }
       if (!/^\d{4}-\d{2}-\d{2}$/.test(screenshot.captureDate || '')) {
         fail(screenshotManifestFile, `captured screenshot needs a YYYY-MM-DD captureDate: ${screenshot.file}`);

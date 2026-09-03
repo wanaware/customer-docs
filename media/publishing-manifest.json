@@ -92,11 +92,86 @@
       "publishedUrl": "https://files.readme.io/0d2baa2be947ae20e32b6e99d3fe6f848494b4d00d7eb8e7a572598adeb1425b-catalog-bulk-upload-flow.png",
       "renderedOn": "2026-09-03",
       "approvalState": "blocked-end-to-end-verification"
+    },
+    {
+      "id": "add-asset-type-cards",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-asset-type-cards.png",
+      "publishingFile": "media/screenshots/add-asset-type-cards.png",
+      "sha256": "f5361348e0e23eccb1161974c155e6804af57291b104beabe135f3d2286fbbaa",
+      "width": 1786,
+      "height": 612,
+      "bytes": 67369,
+      "alt": "Add Asset picker in Cards view with Network Asset-Switch selected.",
+      "articles": ["/docs/add-an-asset"],
+      "publishedUrl": "https://files.readme.io/6a81fea796043c45490cf7ddfab0773d7052ec11d1ebb1efdd8e5bb78621297d-add-asset-type-cards.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "add-asset-type-list",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-asset-type-list.png",
+      "publishingFile": "media/screenshots/add-asset-type-list.png",
+      "sha256": "fed75d9716b5a8718759b24f54adba426f2c2e483b83e5017b51ec1907b4ac3c",
+      "width": 1786,
+      "height": 612,
+      "bytes": 57249,
+      "alt": "Add Asset picker in List view with Network Asset-Switch selected.",
+      "articles": ["/docs/add-an-asset"],
+      "publishedUrl": "https://files.readme.io/4b613b56f181459bb711ca9eef075d8576ee7e925e6ca9500b5cce3a10a8f41e-add-asset-type-list.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "add-asset-form",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-asset-form.png",
+      "publishingFile": "media/screenshots/add-asset-form.png",
+      "sha256": "287987c5985fe3d6f132a657e8725d750aa8755f00543052fc79227fa2c5265a",
+      "width": 1786,
+      "height": 1136,
+      "bytes": 121446,
+      "alt": "Add Asset form showing status, name, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
+      "articles": ["/docs/add-an-asset"],
+      "publishedUrl": "https://files.readme.io/a2beff1ac72a9739082291355ec9802515cb3b087f7e181e82866d51c0068041-add-asset-form.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "bulk-import-upload",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/bulk-import-upload.png",
+      "publishingFile": "media/screenshots/bulk-import-upload.png",
+      "sha256": "414a57f4576fcdc1e4826e7b31af075493e920b49d30a17f8b5098373a0351a6",
+      "width": 1786,
+      "height": 872,
+      "bytes": 77906,
+      "alt": "Bulk Upload Inventory Assets page showing file selection, template browsing, and the pre-upload safety message.",
+      "articles": ["/docs/bulk-upload-assets"],
+      "publishedUrl": "https://files.readme.io/22438bf7f61328d44117f23928b0932e2e9859cc69851a701935b7f25e0c3b2a-bulk-import-upload.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-type-starting-options",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-starting-options.png",
+      "publishingFile": "media/screenshots/asset-type-starting-options.png",
+      "sha256": "fb6c879b7218e2609a021c208c2dfd0b5cd1275fc4043bea463954568879a999",
+      "width": 1786,
+      "height": 472,
+      "bytes": 39976,
+      "alt": "Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.",
+      "articles": ["/docs/create-a-custom-asset-type"],
+      "publishedUrl": "https://files.readme.io/ecf890d0e8b860512de9981c6089aa2a54e3b611691eb9a1e14ce2c7ee3e5787-asset-type-starting-options.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
     }
   ],
   "screenshotPolicy": {
-    "status": "blocked-pending-sanitization",
-    "reason": "Current captures contain workspace URLs or documentation record identifiers. Recrop or recapture before ReadMe upload.",
+    "status": "partial-capture-in-progress",
+    "reason": "Five sanitized screenshots are hosted and mapped to their task steps. Remaining inventory entries still require capture and review.",
     "inventory": "media/screenshot-manifest.json"
   }
 }

@@ -79,6 +79,11 @@ The file is checked twice: first for recognizable columns, then row by row. **Co
 1. Open **Functions → Assets → Inventory** or **Discovery**.
 2. Select **+ Add Asset → Add Bulk Asset**.
 3. In **Add Asset in Bulk**, choose the Asset Type. Use **Custom** or **Global** to narrow the picker when helpful.
+
+![Bulk Upload Inventory Assets page showing file selection, template browsing, and the pre-upload safety message.](https://files.readme.io/22438bf7f61328d44117f23928b0932e2e9859cc69851a701935b7f25e0c3b2a-bulk-import-upload.png)
+
+Use **Select files** to stage a completed CSV or XLSX file. Use **Browse templates** when you need a current template instead; a template is not an upload result and does not create Assets by itself.
+
 4. Download the current template.
 5. Add one Asset per row. Keep headers unchanged and preserve any provided choice or format guidance.
 6. Save as CSV or XLSX and close the spreadsheet before uploading it.
