@@ -69,10 +69,14 @@ Only enter an authorization value in a field that the current setup explicitly i
 2. Find the provider you want to connect.
 3. Expand its card.
 4. Select the provider's connect action named in its adapter guide.
+
+![Integrations page showing the available provider adapter, connection count, and Connect account action.](https://files.readme.io/af342b7fc96185427330417c532aee1aaed27fbdd5956c429ee096a4f4f3dac6-integration-provider-selection.png)
 5. Enter a clear, unique connection name.
 6. Complete the fields described by the provider adapter.
 7. Review the Permissions and source-side resources listed in the setup summary.
 8. Select the adapter's documented save or connect button once.
+
+![Provider setup showing Connect, Test, and Crawl checkpoints before any account details are entered.](https://files.readme.io/57151f307e11fc71ab6b99b1b84fdd20f2701c60511699a70cc6ceb8cc792df2-integration-provider-setup.png)
 
 **Expected result:** The connection appears on the provider card with the account context entered during setup.
 

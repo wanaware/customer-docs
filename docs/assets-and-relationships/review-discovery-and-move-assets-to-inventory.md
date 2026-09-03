@@ -69,7 +69,11 @@ release-status: draft
 5. If an Inventory record represents the same resource, stop and resolve the duplicate instead of promoting another copy.
 6. Return to Discovery and select the reviewed row or rows.
 7. Select **Move To Inventory**.
+
+![Discovery table with an example row selected and the Move To Inventory action available.](https://files.readme.io/1ed89d209a497b28d71b8090b0106a3f62f4f803a9073eb98222a9bb45d94c51-discovery-move-to-inventory.png)
 8. Confirm the action when prompted.
+
+![Move Assets confirmation showing the selected Asset count and the final Move action.](https://files.readme.io/2ff36ba4421f77fb0695433eb56ac26e717eb8a0a36f1d75571c48acf62b6c59-discovery-move-confirmation.png)
 
 **Expected result:** WanAware accepts the request and processes the status change. The selected rows can remain visible briefly while background processing completes.
 

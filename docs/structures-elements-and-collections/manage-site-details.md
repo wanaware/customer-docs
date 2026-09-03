@@ -65,8 +65,12 @@ release-status: draft
 3. Add approved Data Tags and **Structure Tags**.
 4. Open **Site Assets**.
 5. Add the intended existing assets after checking each unique identifier.
+
+![Site Assets tab showing Structure Tags, search, Add Asset, association source, and detach actions.](https://files.readme.io/bc3d7635dc5a4b93aec613ef0d5ae1ee7a5c546afd437471750f5ae753b358b6-site-assets.png)
 6. Open **Location**.
 7. Complete each displayed Location field from the approved location source; preserve the exact label for any field you cannot validate.
+
+![Site Location tab showing list and map choices, mapped Asset count, Fit site, and map controls.](https://files.readme.io/9c68b865170382016a815e68e7a191201ba5726de477a561a4ff2bdab99a2f48-site-location.png)
 8. Save each changed area.
 
 **Expected result:** The Site shows the intended assets and Location information after refresh.

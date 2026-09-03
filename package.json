@@ -7,7 +7,9 @@
     "check": "node scripts/validate-content.mjs",
     "check:media": "node scripts/validate-media-online.mjs",
     "media:frame": "node scripts/frame-screenshot.mjs",
-    "media:enhance": "node scripts/enhance-screenshot.mjs"
+    "media:enhance": "node scripts/enhance-screenshot.mjs",
+    "media:publish": "node scripts/publish-screenshots-to-readme.mjs",
+    "media:place": "node scripts/place-published-screenshots.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.4"

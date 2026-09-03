@@ -45,12 +45,17 @@ function pngDimensions(file) {
 }
 
 const markdownFiles = walk(docsRoot).filter((file) => extname(file) === '.md');
+const workflowFiles = markdownFiles.filter((file) => /^content-type:\s*(?:workflow|quickstart)$/m.test(readFileSync(file, 'utf8')));
+const workflowSlugs = new Set(workflowFiles.map((file) => `/docs/${slugForMarkdown(file)}`));
 const allFiles = walk(root);
 const publicSlugs = new Set(markdownFiles.map((file) => `/docs/${slugForMarkdown(file)}`));
 const publishingManifestFile = join(root, 'media/publishing-manifest.json');
 const publishingManifest = parseJson(publishingManifestFile);
 const publishedMediaByUrl = new Map(
   (publishingManifest?.assets || []).map((asset) => [asset.publishedUrl, asset])
+);
+const publishedMediaById = new Map(
+  (publishingManifest?.assets || []).map((asset) => [asset.id, asset])
 );
 
 if (publicSlugs.size !== markdownFiles.length) {
@@ -191,6 +196,10 @@ for (const file of markdownFiles) {
     if (manifestAsset.alt !== alt) fail(file, `image alt text differs from the publishing manifest: ${path}`);
     if (!(manifestAsset.articles || []).includes(`/docs/${slugForMarkdown(file)}`)) {
       fail(file, `publishing manifest does not associate this image with the article: ${path}`);
+    }
+    const getHelpIndex = source.indexOf('\n## Get help');
+    if (getHelpIndex !== -1 && image.index > getHelpIndex) {
+      fail(file, `workflow image appears after the Get help footer: ${path}`);
     }
   }
 }
@@ -452,8 +461,8 @@ const screenshotManifestFile = join(root, 'media/screenshot-manifest.json');
 const screenshotManifest = parseJson(screenshotManifestFile);
 if (screenshotManifest) {
   const screenshots = screenshotManifest.screenshots || [];
-  if (screenshots.length < 40 || screenshots.length > 55) {
-    fail(screenshotManifestFile, 'launch screenshot inventory must stay within the approved 40–55 item range');
+  if (screenshots.length < 40) {
+    fail(screenshotManifestFile, 'launch screenshot inventory must contain at least 40 screenshot states');
   }
   const ids = new Set();
   const files = new Set();
@@ -480,11 +489,126 @@ if (screenshotManifest) {
       if (!screenshot.sourceFile || !existsSync(join(root, screenshot.sourceFile))) {
         fail(screenshotManifestFile, `captured screenshot is missing its safe source crop: ${screenshot.sourceFile || screenshot.file}`);
       }
-      if (screenshot.style !== 'wanaware-ai-assisted-v3') {
-        fail(screenshotManifestFile, `captured screenshot must use wanaware-ai-assisted-v3: ${screenshot.file}`);
+      if (screenshot.style !== 'wanaware-ai-assisted-v4') {
+        fail(screenshotManifestFile, `captured screenshot must use wanaware-ai-assisted-v4: ${screenshot.file}`);
       }
       if (!/^\d{4}-\d{2}-\d{2}$/.test(screenshot.captureDate || '')) {
         fail(screenshotManifestFile, `captured screenshot needs a YYYY-MM-DD captureDate: ${screenshot.file}`);
+      }
+    }
+  }
+}
+
+const workflowVisualCoverageFile = join(root, 'media/workflow-visual-coverage.json');
+const workflowVisualCoverage = parseJson(workflowVisualCoverageFile);
+if (workflowVisualCoverage && screenshotManifest) {
+  const screenshotById = new Map(screenshotManifest.screenshots.map((screenshot) => [screenshot.id, screenshot]));
+  const coveredArticles = new Set();
+  for (const [index, entry] of (workflowVisualCoverage.entries || []).entries()) {
+    const label = `workflow visual entry ${index + 1}`;
+    if (!workflowSlugs.has(entry.article)) fail(workflowVisualCoverageFile, `${label} points to a non-workflow article ${entry.article}`);
+    if (coveredArticles.has(entry.article)) fail(workflowVisualCoverageFile, `${label} duplicates ${entry.article}`);
+    coveredArticles.add(entry.article);
+    if (!['captured', 'capture-incomplete', 'capture-blocked'].includes(entry.status)) {
+      fail(workflowVisualCoverageFile, `${label} has invalid status ${entry.status}`);
+      continue;
+    }
+    if (entry.status === 'captured' || entry.status === 'capture-incomplete') {
+      if (!Array.isArray(entry.screenshotIds) || !entry.screenshotIds.length) {
+        fail(workflowVisualCoverageFile, `${label} must name at least one screenshot`);
+      }
+      for (const screenshotId of entry.screenshotIds || []) {
+        const screenshot = screenshotById.get(screenshotId);
+        if (!screenshot) fail(workflowVisualCoverageFile, `${label} names unknown screenshot ${screenshotId}`);
+        else if (!/^(?:captured|approved)/.test(screenshot.status || '')) {
+          fail(workflowVisualCoverageFile, `${label} names a screenshot that has not been captured: ${screenshotId}`);
+        }
+
+        const published = publishedMediaById.get(screenshotId);
+        if (!published || (published.kind || 'diagram') !== 'screenshot') {
+          fail(workflowVisualCoverageFile, `${label} screenshot is not published through ReadMe: ${screenshotId}`);
+          continue;
+        }
+        if (!(published.articles || []).includes(entry.article)) {
+          fail(workflowVisualCoverageFile, `${label} screenshot is not associated with ${entry.article}: ${screenshotId}`);
+        }
+        const articleFile = workflowFiles.find((file) => `/docs/${slugForMarkdown(file)}` === entry.article);
+        const articleSource = articleFile ? readFileSync(articleFile, 'utf8') : '';
+        if (!articleSource.includes(`![${published.alt}](${published.publishedUrl})`)) {
+          fail(workflowVisualCoverageFile, `${label} screenshot is not embedded on its workflow page: ${screenshotId}`);
+        }
+      }
+    }
+    if (entry.status === 'capture-incomplete') {
+      if (!Array.isArray(entry.pendingScreenshotIds) || !entry.pendingScreenshotIds.length) {
+        fail(workflowVisualCoverageFile, `${label} must name at least one pending action screenshot`);
+      }
+      for (const screenshotId of entry.pendingScreenshotIds || []) {
+        const screenshot = screenshotById.get(screenshotId);
+        if (!screenshot) fail(workflowVisualCoverageFile, `${label} names unknown pending screenshot ${screenshotId}`);
+        else if (/^(?:captured|approved)/.test(screenshot.status || '')) {
+          fail(workflowVisualCoverageFile, `${label} still marks a captured screenshot as pending: ${screenshotId}`);
+        }
+      }
+      if (!String(entry.blocker || '').trim()) {
+        fail(workflowVisualCoverageFile, `${label} must explain the incomplete action coverage`);
+      }
+    }
+    if (entry.status === 'capture-blocked' && !String(entry.blocker || '').trim()) {
+      fail(workflowVisualCoverageFile, `${label} must explain the capture blocker`);
+    }
+    const articleFile = workflowFiles.find((file) => `/docs/${slugForMarkdown(file)}` === entry.article);
+    if (articleFile && (entry.status === 'capture-blocked' || entry.status === 'capture-incomplete')) {
+      const source = readFileSync(articleFile, 'utf8');
+      if (/^release-status:\s*ready$/m.test(source)) {
+        fail(workflowVisualCoverageFile, `${label} cannot have incomplete or blocked action visuals when its article is release-ready`);
+      }
+    }
+  }
+  for (const slug of workflowSlugs) {
+    if (!coveredArticles.has(slug)) fail(workflowVisualCoverageFile, `workflow article is missing a visual decision: ${slug}`);
+  }
+}
+
+const screenshotPlacementsFile = join(root, 'media/screenshot-placements.json');
+const screenshotPlacements = parseJson(screenshotPlacementsFile);
+if (screenshotPlacements && screenshotManifest) {
+  const screenshotById = new Map(screenshotManifest.screenshots.map((screenshot) => [screenshot.id, screenshot]));
+  const placementKeys = new Set();
+  for (const [index, placement] of (screenshotPlacements.placements || []).entries()) {
+    const label = `screenshot placement ${index + 1}`;
+    const key = `${placement.article}|${placement.screenshotId}`;
+    if (placementKeys.has(key)) fail(screenshotPlacementsFile, `${label} duplicates ${key}`);
+    placementKeys.add(key);
+    if (!publicSlugs.has(placement.article)) fail(screenshotPlacementsFile, `${label} points to unknown article ${placement.article}`);
+    const screenshot = screenshotById.get(placement.screenshotId);
+    if (!screenshot) fail(screenshotPlacementsFile, `${label} names unknown screenshot ${placement.screenshotId}`);
+    else if (!/^(?:captured|approved)/.test(screenshot.status || '')) {
+      fail(screenshotPlacementsFile, `${label} names a screenshot that has not been captured: ${placement.screenshotId}`);
+    }
+    if (!String(placement.after || '').trim()) fail(screenshotPlacementsFile, `${label} has no action anchor`);
+    const articleFile = markdownFiles.find((file) => `/docs/${slugForMarkdown(file)}` === placement.article);
+    const articleSource = articleFile ? readFileSync(articleFile, 'utf8') : '';
+    const anchorIndex = articleSource.indexOf(placement.after || '');
+    if (anchorIndex === -1) fail(screenshotPlacementsFile, `${label} action anchor is missing from ${placement.article}`);
+    const getHelpIndex = articleSource.indexOf('\n## Get help');
+    if (getHelpIndex !== -1 && anchorIndex > getHelpIndex) {
+      fail(screenshotPlacementsFile, `${label} action anchor is below the Get help footer`);
+    }
+    const published = publishedMediaById.get(placement.screenshotId);
+    if (published) {
+      const expectedMarkdown = `![${published.alt}](${published.publishedUrl})`;
+      if (!articleSource.includes(expectedMarkdown)) {
+        fail(screenshotPlacementsFile, `${label} published screenshot is not placed beside its action`);
+      }
+    }
+  }
+
+  for (const entry of workflowVisualCoverage?.entries || []) {
+    if (entry.status !== 'captured' && entry.status !== 'capture-incomplete') continue;
+    for (const screenshotId of entry.screenshotIds || []) {
+      if (!placementKeys.has(`${entry.article}|${screenshotId}`)) {
+        fail(screenshotPlacementsFile, `${entry.article} is missing an action placement for ${screenshotId}`);
       }
     }
   }

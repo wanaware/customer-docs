@@ -64,6 +64,8 @@ Find a known asset in **Functions → Assets → Inventory** and verify its iden
 2. Locate the focused asset.
 3. Follow a connecting line to a neighboring node.
 4. Select the neighboring node to review its label and available details.
+
+![Relationship Graph showing an example Asset, grouping controls, connected nodes, and hop-depth choices.](https://files.readme.io/e7db6b94b13b42103b48e405a82aa443fbbba2af036bdbfc2996c4d8b8170c41-asset-relationship-graph.png)
 5. Change relationship depth only when more context is needed.
 6. Use search or focus controls to return to a known resource.
 
@@ -76,6 +78,8 @@ Find a known asset in **Functions → Assets → Inventory** and verify its iden
 1. Return to **Assets** and select **Graph**.
 2. Use **Filters** to narrow by supported Asset Type, Site, Structure, or Element values.
 3. Use **Group by** to organize the view.
+
+![Asset Inventory Graph showing scope, grouping controls, relationship insights, and an example Asset node.](https://files.readme.io/7513307ac9b0ffc6439cb078aa582881594b9ea1cc92b907ce734dd54d814474-asset-inventory-graph.png)
 4. Select **Clear All Filters** before treating an absent node as missing data.
 
 Grouping and filtering change only the view. They do not create or remove relationships.

@@ -13,7 +13,10 @@
       "height": 1658,
       "bytes": 35644,
       "alt": "Flow showing records moving from an Integration or bulk upload through Discovery into Inventory.",
-      "articles": ["/docs/add-or-import-assets", "/docs/review-discovery-and-move-assets-to-inventory"],
+      "articles": [
+        "/docs/add-or-import-assets",
+        "/docs/review-discovery-and-move-assets-to-inventory"
+      ],
       "publishedUrl": "https://files.readme.io/7b7bcbd448d2c8b241488410752730034e98dbafee729a7bca8d01ed4388707a-asset-lifecycle.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
@@ -28,7 +31,10 @@
       "height": 2254,
       "bytes": 53689,
       "alt": "Diagram showing Structure Tags attaching Elements and Collections while Collections group Assets.",
-      "articles": ["/docs/product-map-and-terminology", "/docs/understand-structures-elements-and-collections"],
+      "articles": [
+        "/docs/product-map-and-terminology",
+        "/docs/understand-structures-elements-and-collections"
+      ],
       "publishedUrl": "https://files.readme.io/24a1f6eb59b16c7bd53f480d9b7c456531a2a5268b2381b83fe96294e4c735d4-organization-model.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
@@ -43,7 +49,10 @@
       "height": 997,
       "bytes": 37992,
       "alt": "Diagram comparing Relationships discovered from supported data with the Add Connection workflow.",
-      "articles": ["/docs/view-asset-relationships", "/docs/add-a-network-connection"],
+      "articles": [
+        "/docs/view-asset-relationships",
+        "/docs/add-a-network-connection"
+      ],
       "publishedUrl": "https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
@@ -58,7 +67,10 @@
       "height": 2803,
       "bytes": 70670,
       "alt": "Lifecycle from a draft Asset Type through catalog setup, publication, and Asset verification.",
-      "articles": ["/docs/understand-asset-types-and-service-catalogs", "/docs/publish-and-verify-an-asset-type"],
+      "articles": [
+        "/docs/understand-asset-types-and-service-catalogs",
+        "/docs/publish-and-verify-an-asset-type"
+      ],
       "publishedUrl": "https://files.readme.io/cb7703d05cdaf6c3791c24285a2062234f2e0a0d257c241822a1b6dcd0d6b67e-asset-type-catalog-lifecycle.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
@@ -73,7 +85,9 @@
       "height": 3032,
       "bytes": 90366,
       "alt": "Asset bulk-upload flow from Asset Type selection through validation, normalization, and report review.",
-      "articles": ["/docs/bulk-upload-assets"],
+      "articles": [
+        "/docs/bulk-upload-assets"
+      ],
       "publishedUrl": "https://files.readme.io/123828476154320525ce7fe4339d9d5435fecc8ace0686d2290558040ced0ee7-asset-bulk-upload-flow.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
@@ -88,90 +102,635 @@
       "height": 3592,
       "bytes": 70642,
       "alt": "Service Catalog bulk-upload flow from import type and column mapping through catalog verification.",
-      "articles": ["/docs/prepare-a-service-catalog-bulk-upload-file", "/docs/bulk-upload-service-catalog-entries"],
+      "articles": [
+        "/docs/prepare-a-service-catalog-bulk-upload-file",
+        "/docs/bulk-upload-service-catalog-entries"
+      ],
       "publishedUrl": "https://files.readme.io/0d2baa2be947ae20e32b6e99d3fe6f848494b4d00d7eb8e7a572598adeb1425b-catalog-bulk-upload-flow.png",
       "renderedOn": "2026-09-03",
       "approvalState": "blocked-end-to-end-verification"
     },
     {
-      "id": "add-asset-type-cards",
+      "id": "assets-create-type-cards",
       "kind": "screenshot",
       "source": "media/screenshots/source/add-asset-type-cards.png",
       "publishingFile": "media/screenshots/add-asset-type-cards.png",
-      "sha256": "f5361348e0e23eccb1161974c155e6804af57291b104beabe135f3d2286fbbaa",
+      "sha256": "26c4bc4fd38bc0e04e834b6837b1a6213cf40f23ba50c2872423c03a262ad4da",
       "width": 1786,
       "height": 612,
-      "bytes": 67369,
-      "alt": "Add Asset picker in Cards view with Network Asset-Switch selected.",
-      "articles": ["/docs/add-an-asset"],
-      "publishedUrl": "https://files.readme.io/6a81fea796043c45490cf7ddfab0773d7052ec11d1ebb1efdd8e5bb78621297d-add-asset-type-cards.png",
+      "bytes": 64100,
+      "alt": "Add Asset picker in Cards view with an example Asset Type selected.",
+      "articles": [
+        "/docs/add-an-asset"
+      ],
+      "publishedUrl": "https://files.readme.io/743419e22806adfdcdba5cc4622b822cc3311facb98812330edb7817b5886759-add-asset-type-cards.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
     },
     {
-      "id": "add-asset-type-list",
+      "id": "assets-create-type-list",
       "kind": "screenshot",
       "source": "media/screenshots/source/add-asset-type-list.png",
       "publishingFile": "media/screenshots/add-asset-type-list.png",
-      "sha256": "fed75d9716b5a8718759b24f54adba426f2c2e483b83e5017b51ec1907b4ac3c",
+      "sha256": "7f9b8e82768c8a66b069ba20909cea86433a651e0ba041a5b5a0d23c9e46c53c",
       "width": 1786,
       "height": 612,
-      "bytes": 57249,
-      "alt": "Add Asset picker in List view with Network Asset-Switch selected.",
-      "articles": ["/docs/add-an-asset"],
-      "publishedUrl": "https://files.readme.io/4b613b56f181459bb711ca9eef075d8576ee7e925e6ca9500b5cce3a10a8f41e-add-asset-type-list.png",
+      "bytes": 53259,
+      "alt": "Add Asset picker in List view with an example Asset Type selected.",
+      "articles": [
+        "/docs/add-an-asset"
+      ],
+      "publishedUrl": "https://files.readme.io/b4c702e2288fed6c3e75877cbb4543af6e0e22fd26ae4f967d869cb6da735535-add-asset-type-list.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
     },
     {
-      "id": "add-asset-form",
+      "id": "assets-create",
       "kind": "screenshot",
       "source": "media/screenshots/source/add-asset-form.png",
       "publishingFile": "media/screenshots/add-asset-form.png",
-      "sha256": "287987c5985fe3d6f132a657e8725d750aa8755f00543052fc79227fa2c5265a",
+      "sha256": "25b95a3474defa6ba78057ad42d4ce937837644142bbd126e0c131e6807c27ac",
       "width": 1786,
       "height": 1136,
-      "bytes": 121446,
-      "alt": "Add Asset form showing status, name, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
-      "articles": ["/docs/add-an-asset"],
-      "publishedUrl": "https://files.readme.io/a2beff1ac72a9739082291355ec9802515cb3b087f7e181e82866d51c0068041-add-asset-form.png",
+      "bytes": 113689,
+      "alt": "Add Asset form showing status, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
+      "articles": [
+        "/docs/add-an-asset"
+      ],
+      "publishedUrl": "https://files.readme.io/3ee1b6636411448bac08983d9d9ad903511f635dff718beb436b6ba18f7632f4-add-asset-form.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
     },
     {
-      "id": "bulk-import-upload",
+      "id": "assets-bulk-import",
       "kind": "screenshot",
       "source": "media/screenshots/source/bulk-import-upload.png",
       "publishingFile": "media/screenshots/bulk-import-upload.png",
-      "sha256": "414a57f4576fcdc1e4826e7b31af075493e920b49d30a17f8b5098373a0351a6",
+      "sha256": "bd4736299d33f45cd67035fdcf8fe7c5427f8639bbdae13eb837bc3ea6c4282a",
       "width": 1786,
       "height": 872,
-      "bytes": 77906,
-      "alt": "Bulk Upload Inventory Assets page showing file selection, template browsing, and the pre-upload safety message.",
-      "articles": ["/docs/bulk-upload-assets"],
-      "publishedUrl": "https://files.readme.io/22438bf7f61328d44117f23928b0932e2e9859cc69851a701935b7f25e0c3b2a-bulk-import-upload.png",
+      "bytes": 69158,
+      "alt": "Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.",
+      "articles": [
+        "/docs/bulk-import-validation-failures",
+        "/docs/bulk-upload-assets"
+      ],
+      "publishedUrl": "https://files.readme.io/01c4b1b1bc946dedd993a89a0f20fab4cb6277fa2b964cdbb814afa983b906d3-bulk-import-upload.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
     },
     {
-      "id": "asset-type-starting-options",
+      "id": "asset-types-start",
       "kind": "screenshot",
       "source": "media/screenshots/source/asset-type-starting-options.png",
       "publishingFile": "media/screenshots/asset-type-starting-options.png",
-      "sha256": "fb6c879b7218e2609a021c208c2dfd0b5cd1275fc4043bea463954568879a999",
-      "width": 1786,
-      "height": 472,
-      "bytes": 39976,
+      "sha256": "e9a03db66c5170ab187c8a76b6616030fc1f7612831bc507cd35c41205fd5128",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 39134,
       "alt": "Create Asset Type page showing Generate with AI, Utilize a Template, and Start from Scratch.",
-      "articles": ["/docs/create-a-custom-asset-type"],
-      "publishedUrl": "https://files.readme.io/ecf890d0e8b860512de9981c6089aa2a54e3b611691eb9a1e14ce2c7ee3e5787-asset-type-starting-options.png",
+      "articles": [
+        "/docs/create-a-custom-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/1523cc67fdbfbe4f4479c6d63aacf244a13f3df11191c2279bfe88229319d8b0-asset-type-starting-options.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "start-launchpad",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/launchpad-overview.png",
+      "publishingFile": "media/screenshots/launchpad-overview.png",
+      "sha256": "e25a616a2cff863b737f47e99c861e3ddbad3ac13ff2c5d70e1a546d7a58d304",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 144764,
+      "alt": "Launchpad showing example workspace summaries, available widgets, and links into detailed product areas.",
+      "articles": [
+        "/docs/use-launchpad",
+        "/docs/use-the-demo-safely",
+        "/docs/your-first-30-minutes"
+      ],
+      "publishedUrl": "https://files.readme.io/4110fc0e44ac5a1c2e80f05909c954f86f11daaa682ef188a05aaa43d3117d03-launchpad-overview.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "integrations-selection",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/integration-provider-selection.png",
+      "publishingFile": "media/screenshots/integration-provider-selection.png",
+      "sha256": "25474b374feab422daf390766ab434c39a42d2bf501d7af3f580bd4901db1d51",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 62560,
+      "alt": "Integrations page showing the available provider adapter, connection count, and Connect account action.",
+      "articles": [
+        "/docs/add-an-integration",
+        "/docs/aws"
+      ],
+      "publishedUrl": "https://files.readme.io/af342b7fc96185427330417c532aee1aaed27fbdd5956c429ee096a4f4f3dac6-integration-provider-selection.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "integrations-setup",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/integration-provider-setup.png",
+      "publishingFile": "media/screenshots/integration-provider-setup.png",
+      "sha256": "d6dbc409306e2d108459223a88f5d6f2413a16a747f8564fbb1ce3c0cf118daf",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 113909,
+      "alt": "Provider setup showing Connect, Test, and Crawl checkpoints before any account details are entered.",
+      "articles": [
+        "/docs/add-an-integration",
+        "/docs/aws",
+        "/docs/integration-connection-failures"
+      ],
+      "publishedUrl": "https://files.readme.io/57151f307e11fc71ab6b99b1b84fdd20f2701c60511699a70cc6ceb8cc792df2-integration-provider-setup.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-inventory",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-inventory-table-and-filters.png",
+      "publishingFile": "media/screenshots/asset-inventory-table-and-filters.png",
+      "sha256": "5ec40bdae36918ea392df4ca2afc0214ed5efa930647d5e73218f1e05deb8a0f",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 60030,
+      "alt": "Asset Inventory table narrowed to one example record with search, view controls, tags, source, and row actions.",
+      "articles": [
+        "/docs/find-filter-and-inspect-assets",
+        "/docs/missing-stale-or-duplicate-assets",
+        "/docs/verify-imported-inventory",
+        "/docs/your-first-30-minutes"
+      ],
+      "publishedUrl": "https://files.readme.io/774951d14c429216eaee3e6dbd0d3669db23958ebbe371c86761a9215a279a8e-asset-inventory-table-and-filters.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-discovery-move",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/discovery-move-to-inventory.png",
+      "publishingFile": "media/screenshots/discovery-move-to-inventory.png",
+      "sha256": "97b64a4c386b897d203a02c0a1d27918dc8117e7caec49acf792edcb49d6b817",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 53791,
+      "alt": "Discovery table with an example row selected and the Move To Inventory action available.",
+      "articles": [
+        "/docs/review-discovery-and-move-assets-to-inventory"
+      ],
+      "publishedUrl": "https://files.readme.io/1ed89d209a497b28d71b8090b0106a3f62f4f803a9073eb98222a9bb45d94c51-discovery-move-to-inventory.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-details",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-details-fields.png",
+      "publishingFile": "media/screenshots/asset-details-fields.png",
+      "sha256": "0ce726029eb6af7ce2aa35ecf68aa51d15284891ded1ad85e485516bad70b22e",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 111638,
+      "alt": "Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.",
+      "articles": [
+        "/docs/manage-asset-and-structure-tags",
+        "/docs/populate-asset-details",
+        "/docs/verify-imported-inventory",
+        "/docs/your-first-30-minutes"
+      ],
+      "publishedUrl": "https://files.readme.io/f2860c4ff35f029d8eb212855afa8553adb364a83ff9dada649026d0107faff8-asset-details-fields.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-schema-fields",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-schema-fields-and-save.png",
+      "publishingFile": "media/screenshots/asset-schema-fields-and-save.png",
+      "sha256": "37816f0cfb46db71bb04eebb35a4aa31bd0e911a090a785575cb88ac043cbc34",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 143154,
+      "alt": "Asset Type-specific fields with catalog choices and the Review, Discard, and Save All change bar.",
+      "articles": [
+        "/docs/manage-asset-and-structure-tags",
+        "/docs/populate-asset-details"
+      ],
+      "publishedUrl": "https://files.readme.io/dc19a8cdd65daeff63526f23b19056842e0d385ea08ee764442a7decd06b4c41-asset-schema-fields-and-save.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-relationship-graph",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-relationship-graph.png",
+      "publishingFile": "media/screenshots/asset-relationship-graph.png",
+      "sha256": "0a32a7d9abe0865d7a084a791a997f725739f4f32b59914ff16ae1f9752391bd",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 171398,
+      "alt": "Relationship Graph showing an example Asset, grouping controls, connected nodes, and hop-depth choices.",
+      "articles": [
+        "/docs/missing-or-unexpected-relationships",
+        "/docs/view-asset-relationships",
+        "/docs/your-first-30-minutes"
+      ],
+      "publishedUrl": "https://files.readme.io/e7db6b94b13b42103b48e405a82aa443fbbba2af036bdbfc2996c4d8b8170c41-asset-relationship-graph.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "connection-target",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-connection-target-asset.png",
+      "publishingFile": "media/screenshots/add-connection-target-asset.png",
+      "sha256": "40452c28b5749ad81231506af28743c714b637abe6ab8e4fbd925be5eca39549",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 142892,
+      "alt": "Add Connection target selector filtered to one eligible example Asset with its source indicated.",
+      "articles": [
+        "/docs/add-a-network-connection"
+      ],
+      "publishedUrl": "https://files.readme.io/cd597139c0f883e6dcd23895214e8dd40516d480918d2715e5f7668fea390902-add-connection-target-asset.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "connection-ip-block",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-connection-ip-block.png",
+      "publishingFile": "media/screenshots/add-connection-ip-block.png",
+      "sha256": "6d2403cf7408ffb5f836b64e3a6365ca2b5af512216ecd757eb3a1eaaa8b2c70",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 133893,
+      "alt": "Add Connection IP block step using reserved example IPv4 addresses and a new-block selection.",
+      "articles": [
+        "/docs/add-a-network-connection"
+      ],
+      "publishedUrl": "https://files.readme.io/ef5870a56c5d23156bf89ab40502dce96693af60519f8204f96f43c59f161221-add-connection-ip-block.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "connection-endpoints",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-connection-endpoints.png",
+      "publishingFile": "media/screenshots/add-connection-endpoints.png",
+      "sha256": "24496bb416a51a61466128458d329a27b07f9be52525e20d7884d970947d0249",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 147554,
+      "alt": "Add Connection endpoint step with example source and target interfaces and reserved IP addresses.",
+      "articles": [
+        "/docs/add-a-network-connection"
+      ],
+      "publishedUrl": "https://files.readme.io/3c712ddae1a43ea23e8eac481d3670d5b7c333aea2dd8e30de6103699f375693-add-connection-endpoints.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "connection-preview",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-connection-preview-conflict.png",
+      "publishingFile": "media/screenshots/add-connection-preview-conflict.png",
+      "sha256": "62387624a83681d5d3d82929f1396d5db005bfa8bba74ed24748448901fe9acc",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 178167,
+      "alt": "Connection preview showing planned operations and a blocking assignment conflict before creation.",
+      "articles": [
+        "/docs/add-a-network-connection"
+      ],
+      "publishedUrl": "https://files.readme.io/b7260c744b42b6c1d3d4cc821f4668d78c2dbe6ba5b655a6eaa9e667462ee5c4-add-connection-preview-conflict.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-list",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-types-list.png",
+      "publishingFile": "media/screenshots/asset-types-list.png",
+      "sha256": "dab3f09ad5878f82a9789997accfec45b618b37b10c23149a9dfbb00cdc439e6",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 128843,
+      "alt": "Custom Asset Types list showing example schemas, field and catalog counts, status, and row actions.",
+      "articles": [
+        "/docs/create-a-custom-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/6a507606bff13008017d964bafa784edadad162e6f4778216f6305a767972a41-asset-types-list.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-fields",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-field-builder.png",
+      "publishingFile": "media/screenshots/asset-type-field-builder.png",
+      "sha256": "680366634012852ba582fdd811a5d33291abe31450f96bd67518bccfd173bd71",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 85539,
+      "alt": "Draft Asset Type builder showing name, description, tabs, groups, Service Catalog support, and field actions.",
+      "articles": [
+        "/docs/asset-type-save-or-publish-failures",
+        "/docs/configure-asset-type-sections-and-fields"
+      ],
+      "publishedUrl": "https://files.readme.io/857bd9b513b60ae05f4707291230a74af4ecaf6dd9ed40411e407fefe46a61c9-asset-type-field-builder.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "structures-hierarchy",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/structure-hierarchy.png",
+      "publishingFile": "media/screenshots/structure-hierarchy.png",
+      "sha256": "9b6d1fb76ba9150b4e789a6a7e21e841a16ede8f447afc80fa4e0e71bf72fbd8",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 113793,
+      "alt": "Structure hierarchy showing an example company and its top-level organizational nodes.",
+      "articles": [
+        "/docs/create-and-manage-structures"
+      ],
+      "publishedUrl": "https://files.readme.io/1b5ecefc90dd8392bcc3478cdb33897388dd8600701ba35ab5c451068066f39e-structure-hierarchy.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "elements-create-details",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/element-add.png",
+      "publishingFile": "media/screenshots/element-add.png",
+      "sha256": "b7ac5476b746ae9de844c1b43b261a3f8f30b4ffc6663a6d8c8f46d50329978a",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 122100,
+      "alt": "Add Element form showing Element Name, Structure Tags, Element Type, and the Add Element action.",
+      "articles": [
+        "/docs/create-and-populate-elements"
+      ],
+      "publishedUrl": "https://files.readme.io/d0e0c023592ec82df58171b3df7be6c2c8309df05cb6a874ae9f3cf9913fd5e4-element-add.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "collections-assets",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/collection-details-and-assets.png",
+      "publishingFile": "media/screenshots/collection-details-and-assets.png",
+      "sha256": "f8343426f350692184e020708e2db783d93216d1d9461e57513f45ac951c4727",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 137719,
+      "alt": "Collection details showing editable tags, associated example Assets, row actions, and Add Asset.",
+      "articles": [
+        "/docs/attach-collections-to-structures",
+        "/docs/create-collections-and-add-assets",
+        "/docs/structure-element-or-collection-attachment-failures"
+      ],
+      "publishedUrl": "https://files.readme.io/e1dd388be88ea2f72a8d8a63520e4e733518bfcfb32b8198abbdd52ff286b632-collection-details-and-assets.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-inventory-map",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-inventory-map.png",
+      "publishingFile": "media/screenshots/asset-inventory-map.png",
+      "sha256": "feea3ef58e10e4ddd4bb960fdd62001aeb0ec920e99ee34794b6460c84a10e43",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 479681,
+      "alt": "Asset Inventory Map showing mapped Site clusters, coverage counts, Fit assets, and map controls.",
+      "articles": [
+        "/docs/find-filter-and-inspect-assets"
+      ],
+      "publishedUrl": "https://files.readme.io/00b5db984df67ef12e5918108cb0a3441c417fcb3a3a222cf4da603a76667f17-asset-inventory-map.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-inventory-graph",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-inventory-graph.png",
+      "publishingFile": "media/screenshots/asset-inventory-graph.png",
+      "sha256": "0fc6d71172ceea9b0daab60b166a2b4c416cce14c3ba72a3a8eca56ab3209a86",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 102508,
+      "alt": "Asset Inventory Graph showing scope, grouping controls, relationship insights, and an example Asset node.",
+      "articles": [
+        "/docs/find-filter-and-inspect-assets",
+        "/docs/view-asset-relationships"
+      ],
+      "publishedUrl": "https://files.readme.io/7513307ac9b0ffc6439cb078aa582881594b9ea1cc92b907ce734dd54d814474-asset-inventory-graph.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-discovery-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/discovery-move-confirmation.png",
+      "publishingFile": "media/screenshots/discovery-move-confirmation.png",
+      "sha256": "e13994f9b198c2d9b9c320014bc5bf290b86e94790a554c06d1dda544e3edc59",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 59039,
+      "alt": "Move Assets confirmation showing the selected Asset count and the final Move action.",
+      "articles": [
+        "/docs/review-discovery-and-move-assets-to-inventory"
+      ],
+      "publishedUrl": "https://files.readme.io/2ff36ba4421f77fb0695433eb56ac26e717eb8a0a36f1d75571c48acf62b6c59-discovery-move-confirmation.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-delete-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/delete-asset-confirmation.png",
+      "publishingFile": "media/screenshots/delete-asset-confirmation.png",
+      "sha256": "a3c36bafb6a44070dd3a0d4844b750ca06943e1e2a1546726a918cc9aee8200b",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 65096,
+      "alt": "Delete Asset confirmation with the example Asset shown and record identifiers masked.",
+      "articles": [
+        "/docs/delete-assets-safely"
+      ],
+      "publishedUrl": "https://files.readme.io/d581c900bc65fd9b730dc5ced9c030effcedb3cae1d50073397820d1d35ba877-delete-asset-confirmation.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-field-types",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-field-types.png",
+      "publishingFile": "media/screenshots/asset-type-field-types.png",
+      "sha256": "9a1e7b92722a0ef1fe91301cfb7588f7d5163ea248ce2bae65a6eaf13ac18811",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 122333,
+      "alt": "Asset Type field editor showing an example field and the available field-type menu.",
+      "articles": [
+        "/docs/configure-asset-type-sections-and-fields"
+      ],
+      "publishedUrl": "https://files.readme.io/220341b66ac895f95d2496f25486006a9424a7710d41a866b16f002308ec2f52-asset-type-field-types.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-field-rule",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-field-rule.png",
+      "publishingFile": "media/screenshots/asset-type-field-rule.png",
+      "sha256": "88f8227ba04ceab779b07335e16142d21586433a0aae561463e4bfffd864b4dc",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 117314,
+      "alt": "Asset Type field editor showing required state and a conditional visibility rule builder.",
+      "articles": [
+        "/docs/configure-asset-type-sections-and-fields"
+      ],
+      "publishedUrl": "https://files.readme.io/3a08182624538ae8e04689c8168ce56f3f0b5f0e2888e21952fb70b436f9bb83-asset-type-field-rule.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "structures-actions",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/structure-actions.png",
+      "publishingFile": "media/screenshots/structure-actions.png",
+      "sha256": "de01510517590926867a258dc00f4af9db78789e6aa42f7af9ccd62ac0a86f45",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 120945,
+      "alt": "Structure actions menu showing view, attachment, child Structure, and edit choices.",
+      "articles": [
+        "/docs/create-and-manage-structures"
+      ],
+      "publishedUrl": "https://files.readme.io/5417aaec8dd89edc0762a780bff6557500e4aea23a9eef710929552ffe343aab-structure-actions.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "structures-add",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/structure-add.png",
+      "publishingFile": "media/screenshots/structure-add.png",
+      "sha256": "645dd0526f470d2f83a18854c55b5bcd8fe0876b9a60962e4247e3a9c01feb92",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 99092,
+      "alt": "Add Structure dialog showing the Structure Type and required Structure Name fields.",
+      "articles": [
+        "/docs/create-and-manage-structures"
+      ],
+      "publishedUrl": "https://files.readme.io/d4b714512e888faa25ab82f3e25aca497940fa05ac54b3ad04de8f2db553fd2f-structure-add.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "elements-type-options",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/element-type-options.png",
+      "publishingFile": "media/screenshots/element-type-options.png",
+      "sha256": "dbd57ee5483bf8947432b7b0fa53a4d9399a713ca23fdf9c46dc4a2586d34f26",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 121051,
+      "alt": "Add Element form showing Application, Service, and Site as the available Element Type choices.",
+      "articles": [
+        "/docs/create-and-populate-elements"
+      ],
+      "publishedUrl": "https://files.readme.io/37d8082f76db6a8f4d3335eb6d766b55e9e6900f56a00fb42ddfbfefab5cd029-element-type-options.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "elements-site-fields",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/element-site-location-fields.png",
+      "publishingFile": "media/screenshots/element-site-location-fields.png",
+      "sha256": "cab9bf93d5a8d60890472b0f1fa88fe9e7593d8f38f0fb2d8706a861870729b7",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 125493,
+      "alt": "Site Element location step showing Physical and Cloud choices and the released address fields.",
+      "articles": [
+        "/docs/create-and-populate-elements"
+      ],
+      "publishedUrl": "https://files.readme.io/7a189dbd74f7519f7531bb5b5ec6581c128d5ee12032e68f7a16c69033ecef27-element-site-location-fields.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "collections-add-asset",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/collection-add-asset.png",
+      "publishingFile": "media/screenshots/collection-add-asset.png",
+      "sha256": "7a00c73f289461062219c6fc975b0e158fe498f5d9d4332512e64a8168f267a7",
+      "width": 1792,
+      "height": 1140,
+      "bytes": 149745,
+      "alt": "Select Asset dialog showing search, row selection, and Associate Asset for Collection membership.",
+      "articles": [
+        "/docs/create-collections-and-add-assets"
+      ],
+      "publishedUrl": "https://files.readme.io/b98f77f4169b02437520e6cb9c5727c1eea7044f600d0509af464013123b90a1-collection-add-asset.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "site-assets",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/site-assets.png",
+      "publishingFile": "media/screenshots/site-assets.png",
+      "sha256": "8aac08de126b2aec485add10886f919f0aefc39344165bf6422db76a67a9fb2c",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 236584,
+      "alt": "Site Assets tab showing Structure Tags, search, Add Asset, association source, and detach actions.",
+      "articles": [
+        "/docs/attach-elements-to-structures",
+        "/docs/manage-site-details",
+        "/docs/structure-element-or-collection-attachment-failures"
+      ],
+      "publishedUrl": "https://files.readme.io/bc3d7635dc5a4b93aec613ef0d5ae1ee7a5c546afd437471750f5ae753b358b6-site-assets.png",
+      "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "site-location",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/site-location.png",
+      "publishingFile": "media/screenshots/site-location.png",
+      "sha256": "f128ecc1986f21c343e4ff395159b4524ff52f580c26bb6070da450d997a476f",
+      "width": 1785,
+      "height": 1136,
+      "bytes": 502506,
+      "alt": "Site Location tab showing list and map choices, mapped Asset count, Fit site, and map controls.",
+      "articles": [
+        "/docs/manage-site-details"
+      ],
+      "publishedUrl": "https://files.readme.io/9c68b865170382016a815e68e7a191201ba5726de477a561a4ff2bdab99a2f48-site-location.png",
       "renderedOn": "2026-09-03",
       "approvalState": "pending-product-support-review"
     }
   ],
   "screenshotPolicy": {
-    "status": "partial-capture-in-progress",
-    "reason": "Five sanitized screenshots are hosted and mapped to their task steps. Remaining inventory entries still require capture and review.",
-    "inventory": "media/screenshot-manifest.json"
+    "status": "action-coverage-capture-in-progress",
+    "reason": "Captured screenshots are hosted through ReadMe and mapped to the action they explain. Remaining blocked states stay draft.",
+    "inventory": "media/screenshot-manifest.json",
+    "workflowCoverage": "media/workflow-visual-coverage.json"
   }
 }

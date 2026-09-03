@@ -62,6 +62,8 @@ release-status: draft
 2. Find **Structure Tags** in the Element details.
 3. Search for the intended Structure node.
 4. Select the tag to attach the Element, or clear the tag to detach the Element.
+
+![Site Assets tab showing Structure Tags, search, Add Asset, association source, and detach actions.](https://files.readme.io/bc3d7635dc5a4b93aec613ef0d5ae1ee7a5c546afd437471750f5ae753b358b6-site-assets.png)
 5. If the unsaved-change bar appears, use its save action before leaving.
 
 **Expected result:** The intended Structure Tag remains selected after refresh.

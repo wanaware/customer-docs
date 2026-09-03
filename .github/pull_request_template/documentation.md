@@ -22,7 +22,8 @@ Describe the customer question or task this change answers.
 
 ## Media and public-data safety
 
-- [ ] Screenshots are current PNG files, 250 KB or less, with useful alt text.
+- [ ] Screenshots are current full-width PNG files, 1500–2200 pixels wide and 500 KB or less, with useful alt text.
+- [ ] Every screenshot-capable workflow action has a visual beside the relevant step, and no screenshot appears after **Get help**.
 - [ ] Screenshots and recordings show only approved, sanitized Harbor Meridian Systems data.
 - [ ] Browser profiles, unrelated tabs, emails, notifications, account menus, internal URLs, identifiers, payment details, credentials, tokens, and secrets are not visible.
 - [ ] The first-release product navigation is active; no release-excluded area is central to a capture.

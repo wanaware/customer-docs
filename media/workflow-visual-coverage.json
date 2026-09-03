@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "policy": "Every screenshot-capable action in a workflow or quickstart must map to a captured visual or an explicit capture blocker.",
+  "entries": [
+    {
+      "article": "/docs/add-a-network-connection",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "connection-target",
+        "connection-ip-block",
+        "connection-endpoints",
+        "connection-preview"
+      ],
+      "pendingScreenshotIds": ["connection-create-success"],
+      "blocker": "A safe successful connection must be created before the final confirmation can be captured."
+    },
+    {
+      "article": "/docs/add-an-asset",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "assets-create-type-cards",
+        "assets-create-type-list",
+        "assets-create"
+      ],
+      "pendingScreenshotIds": ["assets-create-success"],
+      "blocker": "The Asset Added confirmation requires a documentation-only record to be created and cleaned up."
+    },
+    {
+      "article": "/docs/add-an-integration",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "integrations-selection",
+        "integrations-setup"
+      ],
+      "pendingScreenshotIds": ["integrations-test-success", "integrations-collection-submitted"],
+      "blocker": "No safe connected sample Integration is available for test and collection result states."
+    },
+    {
+      "article": "/docs/add-catalog-entries-and-compatibility",
+      "status": "capture-blocked",
+      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+    },
+    {
+      "article": "/docs/attach-collections-to-structures",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "collections-assets"
+      ],
+      "pendingScreenshotIds": ["collections-structure-tag-save"],
+      "blocker": "The current capture shows the control but not a changed Structure Tag with Save enabled."
+    },
+    {
+      "article": "/docs/attach-elements-to-structures",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "site-assets"
+      ],
+      "pendingScreenshotIds": ["elements-structure-tag-save"],
+      "blocker": "The current capture shows saved tags but not the selector immediately before Save."
+    },
+    {
+      "article": "/docs/aws",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "integrations-selection",
+        "integrations-setup"
+      ],
+      "pendingScreenshotIds": ["integrations-test-success", "integrations-collection-submitted", "integrations-delete-confirm"],
+      "blocker": "The sample account has no safe connected Integration for test, crawl, or deletion-confirmation capture."
+    },
+    {
+      "article": "/docs/bulk-upload-assets",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "assets-bulk-import"
+      ],
+      "pendingScreenshotIds": [
+        "assets-bulk-type-template",
+        "assets-bulk-file-check",
+        "assets-bulk-validation",
+        "assets-bulk-result-states",
+        "assets-bulk-normalization",
+        "assets-bulk-completion"
+      ],
+      "blocker": "A sanitized release-equivalent file must complete every validation and normalization state without creating customer data."
+    },
+    {
+      "article": "/docs/bulk-upload-service-catalog-entries",
+      "status": "capture-blocked",
+      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+    },
+    {
+      "article": "/docs/choose-a-theme",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before the Theme Settings panel could be captured."
+    },
+    {
+      "article": "/docs/configure-asset-type-sections-and-fields",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "asset-types-fields",
+        "asset-types-field-types",
+        "asset-types-field-rule"
+      ],
+      "pendingScreenshotIds": ["asset-types-save-draft"],
+      "blocker": "The saved-draft checkpoint needs a documentation-only draft record."
+    },
+    {
+      "article": "/docs/create-a-custom-asset-type",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "asset-types-list",
+        "asset-types-start"
+      ],
+      "pendingScreenshotIds": ["asset-types-save-draft"],
+      "blocker": "The Draft result needs a documentation-only Asset Type that can be removed after capture."
+    },
+    {
+      "article": "/docs/create-a-custom-service-catalog",
+      "status": "capture-blocked",
+      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+    },
+    {
+      "article": "/docs/create-and-edit-roles",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before the safe unsaved Role editor could be captured."
+    },
+    {
+      "article": "/docs/create-and-manage-structures",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "structures-hierarchy",
+        "structures-actions",
+        "structures-add"
+      ],
+      "pendingScreenshotIds": ["structures-edit", "structures-delete-confirm"],
+      "blocker": "Edit and deletion confirmation require a disposable documentation-only Structure."
+    },
+    {
+      "article": "/docs/create-and-populate-elements",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "elements-create-details",
+        "elements-type-options",
+        "elements-site-fields"
+      ],
+      "pendingScreenshotIds": ["elements-create-success", "elements-delete-confirm"],
+      "blocker": "Success and deletion confirmation require a disposable documentation-only Element."
+    },
+    {
+      "article": "/docs/create-collections-and-add-assets",
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "collections-assets",
+        "collections-add-asset"
+      ],
+      "pendingScreenshotIds": ["collections-create", "collections-delete-confirm"],
+      "blocker": "Create and deletion states require a disposable documentation-only Collection."
+    },
+    {
+      "article": "/docs/delete-assets-safely",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-delete-confirm"
+      ]
+    },
+    {
+      "article": "/docs/find-filter-and-inspect-assets",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-inventory",
+        "assets-inventory-map",
+        "assets-inventory-graph"
+      ]
+    },
+    {
+      "article": "/docs/invite-users-and-assign-roles",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before a sanitized IAM state could be captured."
+    },
+    {
+      "article": "/docs/manage-asset-and-structure-tags",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-details",
+        "assets-schema-fields"
+      ]
+    },
+    {
+      "article": "/docs/manage-company-settings",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before identifier-safe settings could be captured."
+    },
+    {
+      "article": "/docs/manage-payment-methods",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before masked test billing data could be captured."
+    },
+    {
+      "article": "/docs/manage-pending-invitations",
+      "status": "capture-blocked",
+      "blocker": "No sanitized pending invitation is available yet for a non-email capture."
+    },
+    {
+      "article": "/docs/manage-profile-and-security",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before identifier-safe profile controls could be captured."
+    },
+    {
+      "article": "/docs/manage-site-details",
+      "status": "captured",
+      "screenshotIds": [
+        "site-assets",
+        "site-location"
+      ]
+    },
+    {
+      "article": "/docs/populate-asset-details",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-details",
+        "assets-schema-fields"
+      ]
+    },
+    {
+      "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
+      "status": "capture-blocked",
+      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+    },
+    {
+      "article": "/docs/publish-and-verify-an-asset-type",
+      "status": "capture-blocked",
+      "blocker": "Publication confirmation must be recaptured after the signed-in session is unlocked; no draft is published for a screenshot."
+    },
+    {
+      "article": "/docs/refresh-integration-data",
+      "status": "capture-blocked",
+      "blocker": "No safe connected sample integration is available for the collection-action state."
+    },
+    {
+      "article": "/docs/review-discovery-and-move-assets-to-inventory",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-discovery-move",
+        "assets-discovery-confirm"
+      ]
+    },
+    {
+      "article": "/docs/use-the-demo-safely",
+      "status": "captured",
+      "screenshotIds": [
+        "start-launchpad"
+      ]
+    },
+    {
+      "article": "/docs/verify-imported-inventory",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-inventory",
+        "assets-details"
+      ]
+    },
+    {
+      "article": "/docs/view-asset-relationships",
+      "status": "captured",
+      "screenshotIds": [
+        "assets-relationship-graph",
+        "assets-inventory-graph"
+      ]
+    },
+    {
+      "article": "/docs/view-billing-history-and-invoices",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before masked test billing history could be captured."
+    },
+    {
+      "article": "/docs/view-plan-and-usage",
+      "status": "capture-blocked",
+      "blocker": "The authenticated portal session locked before masked test usage data could be captured."
+    },
+    {
+      "article": "/docs/your-first-30-minutes",
+      "status": "captured",
+      "screenshotIds": [
+        "start-launchpad",
+        "assets-inventory",
+        "assets-details",
+        "assets-relationship-graph"
+      ]
+    }
+  ]
+}

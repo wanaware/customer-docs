@@ -14,7 +14,7 @@ Keep one primary purpose per page. Link to nearby troubleshooting instead of add
 
 ## Work on the correct branch
 
-- Use `v1.0_kb-readme-repair` for the current first-release ReadMe preview and review.
+- Use `v1.0_kb-screenshot-system` for the current first-release ReadMe preview and review.
 - Keep upcoming product behavior on an unpublished feature branch.
 - Merge to `v1.0` only after Product and Support approval.
 - Do not modify API Reference files as part of customer workflow documentation.
@@ -40,7 +40,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer
-permission: ASSETS
+permission: read assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -85,12 +85,15 @@ Keep the core integration guides provider-neutral. Put source-specific fields, p
 - Use only the Harbor Meridian Systems account and records whose names begin with `Docs Demo`.
 - Treat Harbor Meridian Systems as media provenance only. Customer-facing instructions, captions, search benchmarks, and support guidance must remain environment-agnostic.
 - Use Light mode by default; show Light and Dark only in the theme article.
-- Capture static PNG files at 750–1000 pixels for a full-column image and 250 KB or less.
+- Capture the complete useful portal width. Publish static PNG files at 1500–2200 pixels wide and 500 KB or less so controls and field labels remain legible on high-density displays.
 - Write useful alt text between 40 and 150 characters.
 - Crop browser profiles, unrelated tabs, emails, notifications, account menus, internal URLs, identifiers, payment details, credentials, tokens, and secret values.
 - Never cosmetically alter visible product UI. If a release-excluded area is central to the screen, wait for the correct product flag.
 - Use only masked test information for billing. Never purchase, cancel, or change a real payment method to create documentation.
 - Keep `media/screenshot-manifest.json` current and remove every temporary `Docs Demo` record after verification.
+- Use the `wanaware-ai-assisted-v4` frame. The generated backdrop supplies decoration only; the sanitized portal capture remains an exact, unscaled layer.
+- Place each screenshot beside the step or decision it explains. Never append a workflow screenshot after **Get help**.
+- Keep `media/workflow-visual-coverage.json` and `media/screenshot-placements.json` complete. Every screenshot-capable action must name a captured screenshot or an explicit capture blocker. A release-ready article cannot remain incomplete or blocked.
 
 Repository-relative images do not render in the ReadMe preview. Keep every source file versioned, upload the approved publishing PNG through ReadMe's image API, record its `files.readme.io` URL in `media/publishing-manifest.json`, and use that URL in customer articles. Keep the API credential in a secure environment or GitHub secret; never commit it.
 

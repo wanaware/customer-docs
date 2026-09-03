@@ -72,6 +72,8 @@ release-status: draft
 4. Add or remove Data Tags for descriptive labels.
 5. Add or remove **Structure Tags** only when the asset belongs in that hierarchy.
 
+![Example Asset details with identity metadata masked, editable tags, schema tabs, and Asset Type-specific fields.](https://files.readme.io/f2860c4ff35f029d8eb212855afa8553adb364a83ff9dada649026d0107faff8-asset-details-fields.png)
+
 **Expected result:** WanAware shows an unsaved-change state or immediately confirms the supported tag action.
 
 If a Structure Tag is unavailable, confirm that the Structure exists and your role can attach it.
@@ -85,6 +87,8 @@ If a Structure Tag is unavailable, confirm that the Structure exists and your ro
 5. Review dependent choices after changing a manufacturer, model, component, or other parent value.
 6. Check the unsaved-change bar before leaving the page.
 7. Select the save action shown in the unsaved-change bar.
+
+![Asset Type-specific fields with catalog choices and the Review, Discard, and Save All change bar.](https://files.readme.io/dc19a8cdd65daeff63526f23b19056842e0d385ea08ee764442a7decd06b4c41-asset-schema-fields-and-save.png)
 
 **Expected result:** The unsaved-change bar clears and the saved values remain visible.
 

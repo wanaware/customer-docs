@@ -69,10 +69,18 @@ release-status: draft
 2. Select **Add Connection**.
 3. If prompted for a source asset, confirm the correct source.
 4. In **Target asset**, search for and select the other asset.
+
+![Add Connection target selector filtered to one eligible example Asset with its source indicated.](https://files.readme.io/cd597139c0f883e6dcd23895214e8dd40516d480918d2715e5f7668fea390902-add-connection-target-asset.png)
 5. In **IP block**, select an existing block or enter the supported new-block details.
+
+![Add Connection IP block step using reserved example IPv4 addresses and a new-block selection.](https://files.readme.io/ef5870a56c5d23156bf89ab40502dce96693af60519f8204f96f43c59f161221-add-connection-ip-block.png)
 6. In **Endpoints**, select or enter the source and target endpoint information.
+
+![Add Connection endpoint step with example source and target interfaces and reserved IP addresses.](https://files.readme.io/3c712ddae1a43ea23e8eac481d3670d5b7c333aea2dd8e30de6103699f375693-add-connection-endpoints.png)
 7. Select **Preview Connection**.
 8. Review the source, target, IP block, and both endpoints.
+
+![Connection preview showing planned operations and a blocking assignment conflict before creation.](https://files.readme.io/b7260c744b42b6c1d3d4cc821f4668d78c2dbe6ba5b655a6eaa9e667462ee5c4-add-connection-preview-conflict.png)
 9. Select **Create Connection**.
 
 **Expected result:** WanAware shows **Network connection created**.

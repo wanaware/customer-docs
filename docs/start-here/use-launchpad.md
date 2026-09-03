@@ -33,6 +33,8 @@ Launchpad is the starting view for your workspace. Its cards summarize available
 
 Use a card to identify what deserves attention, then open the related product area to confirm the underlying records. Do not treat a card count as an editable source of truth.
 
+![Launchpad showing example workspace summaries, available widgets, and links into detailed product areas.](https://files.readme.io/4110fc0e44ac5a1c2e80f05909c954f86f11daaa682ef188a05aaa43d3117d03-launchpad-overview.png)
+
 ## If Launchpad looks different
 
 - Confirm that you are in the intended company workspace.

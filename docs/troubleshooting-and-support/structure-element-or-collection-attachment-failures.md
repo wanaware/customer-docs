@@ -41,6 +41,8 @@ Use this page when a Structure Tag or Asset cannot be selected, saved, removed, 
 5. Check both update permission and the relationship permission.
 6. Reopen the record and inspect its current attachments.
 
+![Site Assets tab showing Structure Tags, search, Add Asset, association source, and detach actions.](https://files.readme.io/bc3d7635dc5a4b93aec613ef0d5ae1ee7a5c546afd437471750f5ae753b358b6-site-assets.png)
+
 ## Common causes and fixes
 
 | Symptom | Likely cause | What to do |
@@ -61,6 +63,8 @@ Refresh the source record, confirm its selected tags or assets, then open the St
 Matching names do not create attachments. Save the Relationship through the supported Structure Tag or Asset-selection control.
 
 The record type and Permission determine which views the Portal displays.
+
+![Collection details showing editable tags, associated example Assets, row actions, and Add Asset.](https://files.readme.io/e1dd388be88ea2f72a8d8a63520e4e733518bfcfb32b8198abbdd52ff286b632-collection-details-and-assets.png)
 
 ## Get help
 

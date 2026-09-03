@@ -70,11 +70,17 @@ release-status: draft
 1. Open **Administration → Asset Types** (`/administration/asset-types`).
 2. Select the draft Asset Type.
 3. Confirm its **Name** and **Description**.
+
+![Draft Asset Type builder showing name, description, tabs, groups, Service Catalog support, and field actions.](https://files.readme.io/857bd9b513b60ae05f4707291230a74af4ecaf6dd9ed40411e407fefe46a61c9-asset-type-field-builder.png)
 4. Add or rename sections so each one represents a clear group of details.
 5. Add fields to the appropriate section.
 6. Give each field a customer-facing label and choose its supported input type.
+
+![Asset Type field editor showing an example field and the available field-type menu.](https://files.readme.io/220341b66ac895f95d2496f25486006a9424a7710d41a866b16f002308ec2f52-asset-type-field-types.png)
 7. Configure required status, validation, default behavior, and help text where available.
 8. Add dependencies only when one value legitimately controls another.
+
+![Asset Type field editor showing required state and a conditional visibility rule builder.](https://files.readme.io/3a08182624538ae8e04689c8168ce56f3f0b5f0e2888e21952fb70b436f9bb83-asset-type-field-rule.png)
 9. Enable catalog support for fields that should use managed Service Catalog choices.
 10. Review the field order from the perspective of the person completing an asset.
 11. Select **Save Draft** or **Save Changes**.

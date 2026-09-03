@@ -40,6 +40,8 @@ Use these checks when WanAware cannot start provider setup, save an integration,
 3. Confirm that the provider-side authorization or deployment finished successfully.
 4. Make sure the saved identity and trust values belong to the same provider account.
 5. If the provider card displays **Test connection**, select it before starting data collection.
+
+![Provider setup showing Connect, Test, and Crawl checkpoints before any account details are entered.](https://files.readme.io/57151f307e11fc71ab6b99b1b84fdd20f2701c60511699a70cc6ceb8cc792df2-integration-provider-setup.png)
 6. If a setup or authorization link expired, restart that part of the setup instead of reusing the old URL.
 
 ## Common causes and fixes

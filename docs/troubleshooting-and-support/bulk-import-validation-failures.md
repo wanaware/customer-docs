@@ -43,6 +43,8 @@ Use the uploader's current template. Templates and required fields can change as
 6. Confirm required fields for the selected asset type.
 7. Upload a small test file before a large import.
 
+![Bulk Upload Inventory Assets page with file selection, template browsing, and the pre-upload safety message.](https://files.readme.io/01c4b1b1bc946dedd993a89a0f20fab4cb6277fa2b964cdbb814afa983b906d3-bulk-import-upload.png)
+
 ## Common causes and fixes
 
 | Symptom | Likely cause | What to do |
