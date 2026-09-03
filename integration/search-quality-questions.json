@@ -60,10 +60,10 @@
       "mustNotMention": ["share credentials"]
     },
     {
-      "question": "My integration connection test failed.",
+      "question": "My AWS integration connection test failed.",
       "expectedSlug": "/docs/integration-connection-failures",
-      "mustMention": ["provider", "setup values"],
-      "mustNotMention": ["send credentials"]
+      "mustMention": ["Role ARN", "external ID"],
+      "mustNotMention": ["send credentials", "secret access key"]
     },
     {
       "question": "How do I organize assets by site?",
