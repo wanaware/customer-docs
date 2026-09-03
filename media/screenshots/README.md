@@ -26,6 +26,8 @@ WanAware screenshots use a full-width product capture inside a consistent brande
      --crop 63,0,1658,760
    ```
 
+   The command defaults to an 1800-pixel publishing canvas. If a different width is needed, pass `--canvas-width` with a value from 1500 through 2200; the command rejects widths outside the same range enforced by `npm run check`.
+
 6. For a standard capture, inspect the source crop and framed PNG. For a retina publishing copy, run the image-generator enhancement workflow below. The publishing image must be 1500–2200 pixels wide, remain readable at normal article width, and be 500 KB or less.
 7. Record the image in `media/screenshot-manifest.json`, obtain Product and Support approval, upload the publishing PNG through ReadMe's image API, and use the resulting `files.readme.io` URL in the article.
 

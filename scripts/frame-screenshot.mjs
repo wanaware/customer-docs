@@ -20,7 +20,7 @@ Options:
   --crop X,Y,W,H       Crop that removes browser chrome, navigation, identifiers, and empty space.
   --max-inner-width N  Maximum inner screenshot width (default: 936).
   --max-inner-height N Maximum inner screenshot height (default: 860).
-  --canvas-width N     Output width (default: 1000).
+  --canvas-width N     Output width from 1500 to 2200 pixels (default: 1800).
 `);
   process.exit(1);
 }
@@ -52,6 +52,14 @@ function integerOption(value, fallback) {
   if (value === undefined) return fallback;
   const parsed = Number(value);
   if (!Number.isInteger(parsed) || parsed <= 0) usage(`Expected a positive integer, received: ${value}`);
+  return parsed;
+}
+
+function rangedIntegerOption(value, fallback, minimum, maximum, name) {
+  const parsed = integerOption(value, fallback);
+  if (parsed < minimum || parsed > maximum) {
+    usage(`--${name} must be between ${minimum} and ${maximum}; received: ${parsed}`);
+  }
   return parsed;
 }
 
@@ -136,7 +144,7 @@ const source = await sharp(cropped).metadata();
 const maxInnerWidth = integerOption(args['max-inner-width'], 936);
 const maxInnerHeight = integerOption(args['max-inner-height'], 860);
 const sourceIsPortrait = source.height > source.width * 1.15;
-const canvasWidth = integerOption(args['canvas-width'], 1000);
+const canvasWidth = rangedIntegerOption(args['canvas-width'], 1800, 1500, 2200, 'canvas-width');
 const horizontalPadding = sourceIsPortrait ? 64 : 32;
 const verticalPadding = sourceIsPortrait ? 48 : 36;
 const availableWidth = Math.min(maxInnerWidth, canvasWidth - horizontalPadding * 2);
