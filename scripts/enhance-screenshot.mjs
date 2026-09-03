@@ -130,6 +130,9 @@ if (!source.width || !source.height) throw new Error(`Cannot read source dimensi
 
 const canvasWidth = source.width + paddingX * 2;
 const canvasHeight = source.height + paddingY * 2;
+if (canvasWidth < 1500 || canvasWidth > 2200) {
+  usage(`Output width must be between 1500 and 2200 pixels; received: ${canvasWidth}`);
+}
 
 // The generated candidate contributes only color, texture, and tone. Heavy blur plus
 // an opaque branded wash prevents invented UI from entering the documentation image.
