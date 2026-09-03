@@ -75,7 +75,7 @@ You have the correct asset when its unique identifier and source context match t
 2. Check both **Inventory** and **Discovery**.
 3. Confirm that you are in the correct company workspace.
 4. Ask an administrator whether your role includes Assets.
-5. If the asset came from AWS, confirm that the latest crawl completed.
+5. If the asset came from an integration, confirm that its latest sync, import, or crawl completed.
 6. Follow [Missing, stale, or duplicate assets](../troubleshooting-and-support/missing-stale-or-duplicate-assets).
 
 ## Learn, show me, do it

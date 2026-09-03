@@ -10,10 +10,10 @@ wKRfM0BchK,How to Access Discovery?,merge,/docs/find-filter-and-inspect-assets,E
 bNJyp0aHBu,How to Delete an Asset?,defer,,Requires destructive-action validation for each supported role
 EWj2Qy8IN2,How to Add an Asset?,rewrite,/docs/add-or-import-assets,Use the released single-asset form
 DBvmRK5pHk,How to Bulk Upload Assets?,rewrite,/docs/add-or-import-assets,Use the released import and validation flow
-fvlVj6QNg6,How to Access Integrations?,merge,/docs/connect-an-aws-account,Access is covered in the current AWS task
+fvlVj6QNg6,How to Access Integrations?,merge,/docs/add-an-integration,Access is covered in the current provider-agnostic integration task
 sZFY2jCVDK,How to Edit an Integration?,defer,,Requires validation of released edit controls and side effects
 FGvbkSSIqm,How to Delete an Integration?,defer,,Requires deletion impact and recovery validation
-m7QQcoW62p,How to Add an Integration?,rewrite,/docs/connect-an-aws-account,Initial v1 covers the verified AWS integration
+m7QQcoW62p,How to Add an Integration?,rewrite,/docs/add-an-integration,Rebuild as a provider-agnostic workflow with current provider details kept in scoped sections
 QIGHGvaK6e,How to Access Elements?,merge,/docs/create-elements-and-collections,Access belongs with the Element task
 ZuFetEAllV,How to Edit Element?,rewrite,/docs/create-elements-and-collections,Use current Element fields and actions
 vY49AAlCJV,How to Delete an Element?,defer,,Requires destructive-action validation and dependency behavior

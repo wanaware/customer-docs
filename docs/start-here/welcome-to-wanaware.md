@@ -31,7 +31,7 @@ The quickest way to understand the product is to follow one asset from inventory
 
 ## The customer journey
 
-1. **Bring in asset data.** Connect an AWS account, add an asset manually, or use bulk import when it is enabled for your account.
+1. **Bring in asset data.** [Add an integration](../assets-and-relationships/add-an-integration), add an asset manually, or use bulk import when it is enabled for your account.
 2. **Confirm the inventory.** Search for an asset and check its basic details.
 3. **Explore relationships.** Open the asset's **Relationship Graph** to see connected resources.
 4. **Organize the environment.** Use Structures, Elements, and Collections to reflect operational groupings.

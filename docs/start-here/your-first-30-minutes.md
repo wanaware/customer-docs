@@ -46,7 +46,7 @@ last-verified: pending
 
 - Sign in to the company workspace your administrator assigned to you.
 - Ask for the name of one known asset if you are unfamiliar with the demo data.
-- If your inventory is empty, follow [Connect an AWS account](../assets-and-relationships/connect-an-aws-account) or [Add or import assets](../assets-and-relationships/add-or-import-assets) first.
+- If your inventory is empty, follow [Add an integration](../assets-and-relationships/add-an-integration) or [Add or import assets](../assets-and-relationships/add-or-import-assets) first.
 
 ## 1. Orient yourself on Launchpad
 

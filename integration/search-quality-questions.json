@@ -54,15 +54,15 @@
       "mustNotMention": []
     },
     {
-      "question": "How do I add an AWS account?",
-      "expectedSlug": "/docs/connect-an-aws-account",
-      "mustMention": ["role", "test"],
-      "mustNotMention": ["secret access key"]
+      "question": "How do I add an integration?",
+      "expectedSlug": "/docs/add-an-integration",
+      "mustMention": ["provider", "test"],
+      "mustNotMention": ["share credentials"]
     },
     {
-      "question": "The AWS connection test failed.",
+      "question": "My integration connection test failed.",
       "expectedSlug": "/docs/integration-connection-failures",
-      "mustMention": ["Role ARN", "External ID"],
+      "mustMention": ["provider", "setup values"],
       "mustNotMention": ["send credentials"]
     },
     {
