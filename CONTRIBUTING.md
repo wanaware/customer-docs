@@ -14,7 +14,7 @@ Keep one primary purpose per page. Link to nearby troubleshooting instead of add
 
 ## Work on the correct branch
 
-- Use `v1.0_kb-first-release` for the first-release ReadMe preview and review.
+- Use `v1.0_kb-readme-repair` for the current first-release ReadMe preview and review.
 - Keep upcoming product behavior on an unpublished feature branch.
 - Merge to `v1.0` only after Product and Support approval.
 - Do not modify API Reference files as part of customer workflow documentation.

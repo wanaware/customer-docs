@@ -1,6 +1,6 @@
 {
   "status": "blocked-pending-release-evidence-and-approval",
-  "branch": "v1.0_kb-first-release",
+  "branch": "v1.0_kb-readme-repair",
   "publishBranch": "v1.0",
   "contentScope": "first-release-customer-guides",
   "blockingChecks": [

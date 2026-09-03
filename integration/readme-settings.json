@@ -4,7 +4,7 @@
   "publicBaseUrl": "https://docs.wanaware.com",
   "gitRepository": "wanaware/customer-docs",
   "liveBranch": "v1.0",
-  "reviewBranch": "v1.0_kb-first-release",
+  "reviewBranch": "v1.0_kb-readme-repair",
   "visibility": "public",
   "topLevelAreas": [
     "Guides",
