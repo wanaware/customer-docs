@@ -16,7 +16,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer administrator, engineer
-permission: ELEMENT_COLLECTIONS_UPDATE, STRUCTURE_TAG_RELATIONSHIP
+permission: update element_collections
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -32,9 +32,15 @@ release-status: draft
 **Outcome:** Attach a Collection to the intended Structure node with a Structure Tag.
 
 **For:** Customer administrators and engineers
-**Permission:** Update Element Collections and Structure Tag relationships
+**Permission:** `update element_collections`
 **Time:** 3–5 minutes
 **Changes made:** Changes a shared hierarchy attachment
+
+## If you're stuck
+
+- Open the parent Element, then its **Collections** tab; Collections are not top-level records.
+- Search Structure Tags by exact name and verify the parent path.
+- Detach by clearing the selected Structure Tag, not by deleting the Collection.
 
 ## Before you start
 
@@ -42,15 +48,23 @@ release-status: draft
 - Confirm the target Structure node and its ID.
 - Review existing Structure Tags on the Collection.
 
-## Add or remove the attachment
+## Field and option guide
+
+| UI item | Meaning | Safe use |
+| --- | --- | --- |
+| Parent Element | Owns the Collection | Confirm its ID before changing the child Collection |
+| **Structure Tags** | Existing Structure nodes attachable to the Collection | Select the exact node by hierarchy path |
+| Selected tag | Current attachment | Clear only the tag that should be detached |
+
+## Attach or detach the Collection
 
 1. Open **Functions → Elements** and select the parent Element.
 2. Open **Collections** and expand the intended Collection.
 3. Find **Structure Tags**.
-4. Search for and select the intended Structure node, or clear a selected tag to detach it.
+4. Select the intended Structure Tag to attach the Collection, or clear the tag to detach the Collection.
 5. Save the Collection.
 
-**Expected result:** The intended tag remains selected after the Collection is reopened.
+**Expected result:** After reopening, the Collection displays the intended Structure Tag.
 
 If the change cannot be saved, confirm both Collection update permission and Structure Tag relationship permission.
 
@@ -64,9 +78,9 @@ Remove the tag you added or reapply the one you removed, then save and verify. D
 
 ## Learn, show me, do it
 
-- **Learn:** [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections)
-- **Show me:** The organization clip will show the Collection attachment after publication.
-- **Do it:** Open `/elements`, select an Element, and expand the Collection.
+- **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- **Show me:** The Collection attachment clip is pending workflow verification and approval.
+- **Do it:** Open **Functions → Elements** (`/elements`), select an Element, and expand the Collection.
 
 ## Get help
 

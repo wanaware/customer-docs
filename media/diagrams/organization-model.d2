@@ -1,0 +1,91 @@
+# Render with D2 v0.8.2. Keep this source environment-neutral.
+
+direction: down
+
+classes: {
+  panel: {
+    style: {
+      fill: "#17233A"
+      stroke: "#385174"
+      stroke-width: 2
+      border-radius: 16
+      font-color: "#F4F7FB"
+      font-size: 21
+      bold: true
+      shadow: true
+    }
+  }
+  item: {
+    style: {
+      fill: "#13213A"
+      stroke: "#486488"
+      stroke-width: 2
+      border-radius: 12
+      font-color: "#E5ECF7"
+      font-size: 17
+    }
+  }
+  tag: {
+    style: {
+      fill: "#0C5261"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 12
+      font-color: "#E8FCFF"
+      font-size: 17
+      bold: true
+    }
+  }
+  link: {
+    style: {
+      stroke: "#28CAD8"
+      stroke-width: 3
+      font-color: "#B8F4F5"
+      font-size: 14
+    }
+  }
+  contain: {
+    style: {
+      stroke: "#6C87AA"
+      stroke-width: 3
+      font-color: "#C4D0E0"
+      font-size: 14
+    }
+  }
+}
+
+style: {
+  fill: "#0B1018"
+  stroke: "#202B3E"
+  stroke-width: 2
+  border-radius: 20
+}
+
+structure: "Structure\nA hierarchy of Structure Tags\nExample: Company → Organization → Group" {
+  class: panel
+  width: 560
+  height: 150
+}
+
+element: "Element\nAn Application, Service, or Site" {
+  class: panel
+  width: 340
+  height: 120
+}
+
+collection: "Collection\nA named group inside an Element" {
+  class: item
+  width: 330
+  height: 110
+}
+
+assets: "Assets\nExisting Inventory records" {
+  class: panel
+  width: 340
+  height: 120
+}
+
+structure -> element: "Structure Tag attaches the Element" { class: link }
+structure -> collection: "Structure Tag can also attach the Collection" { class: link }
+element -> collection: "contains" { class: contain }
+collection -> assets: "groups Assets" { class: contain }

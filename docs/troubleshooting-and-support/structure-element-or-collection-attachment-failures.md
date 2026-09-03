@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, engineer
-permission: STRUCTURES, ELEMENTS
+permission: read structures and read elements; update the affected record for attachment changes
 product-area: Structures, Elements, and Collections
 content-owner: Product
 review-owner: Support
@@ -30,14 +30,14 @@ release-status: draft
 
 # Structure, Element, or Collection attachment failures
 
-Use this page when a Structure Tag or asset cannot be selected, saved, removed, or found in the expected organizational view.
+Use this page when a Structure Tag or Asset cannot be selected, saved, removed, or found in the expected organizational view.
 
 ## Fast checks
 
 1. Confirm the company workspace and exact record IDs.
-2. Refresh and search for the Structure, Element, Collection, or asset by exact name.
+2. Refresh and search for the Structure, Element, Collection, or Asset by exact name.
 3. Confirm the Structure Tag already exists.
-4. Clear filters in the tag or asset selector.
+4. Clear filters in the tag or Asset selector.
 5. Check both update permission and the relationship permission.
 6. Reopen the record and inspect its current attachments.
 
@@ -48,7 +48,7 @@ Use this page when a Structure Tag or asset cannot be selected, saved, removed, 
 | Structure Tag is missing | Wrong company, filter, nonexistent tag, or no access | Clear the selector, verify the Structure, and ask an administrator to review permission. |
 | Element attachment does not save | Element update or Structure Tag relationship access is missing | Request the smallest required permission, then retry the same record. |
 | Collection attachment does not save | Collection update or relationship access is missing | Confirm both permissions and save after changing the tag. |
-| Asset is missing from a Collection selector | Asset is filtered, in another status, or unavailable to the role | Clear filters, search Inventory and Discovery, and confirm the asset ID. |
+| Asset is missing from a Collection selector | Filters hide the Asset, it has another status, or the Role lacks access | Clear filters, search Inventory and Discovery, and confirm the Asset ID. |
 | Attachment appears under the wrong node | A similarly named tag was selected | Compare Structure IDs, detach the incorrect tag, and apply the intended one. |
 | Removed attachment still appears | The page is stale or the save failed | Refresh, reopen the record, and verify the saved tag list. |
 
@@ -58,7 +58,9 @@ Refresh the source record, confirm its selected tags or assets, then open the St
 
 ## Known limitations
 
-Matching names do not create attachments. The relationship must be saved through the supported Structure Tag or asset-selection control. Available views can vary by record type and permission.
+Matching names do not create attachments. Save the Relationship through the supported Structure Tag or Asset-selection control.
+
+The record type and Permission determine which views the Portal displays.
 
 ## Get help
 

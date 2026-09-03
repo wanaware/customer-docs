@@ -18,4 +18,4 @@ metadata:
 
 Use **Structures** for hierarchy, **Elements** for operational units such as Applications, Services, and Sites, and **Collections** to group assets inside an Element. Structure Tags attach Elements and Collections to the hierarchy.
 
-Start with [Understand Structures, Elements, and Collections](understand-structures-elements-and-collections) before creating shared records.
+Start with [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections) before creating shared records.

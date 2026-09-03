@@ -1,0 +1,99 @@
+# Render with D2 v0.8.2. Keep this source environment-neutral.
+
+direction: down
+
+classes: {
+  stage: {
+    style: {
+      fill: "#17233A"
+      stroke: "#486488"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#F4F7FB"
+      font-size: 18
+      bold: true
+      shadow: true
+    }
+  }
+  catalog: {
+    style: {
+      fill: "#13213A"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#E8FCFF"
+      font-size: 18
+      bold: true
+      shadow: true
+    }
+  }
+  publish: {
+    style: {
+      fill: "#0C5261"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#E8FCFF"
+      font-size: 18
+      bold: true
+      shadow: true
+    }
+  }
+  flow: {
+    style: {
+      stroke: "#6C87AA"
+      stroke-width: 3
+      font-color: "#C4D0E0"
+      font-size: 14
+    }
+  }
+}
+
+style: {
+  fill: "#0B1018"
+  stroke: "#202B3E"
+  stroke-width: 2
+  border-radius: 20
+}
+
+draft: "1. Create a draft Asset Type" {
+  class: stage
+  width: 245
+  height: 88
+}
+
+schema: "2. Configure sections, fields,\ndependencies, and catalog support" {
+  class: stage
+  width: 300
+  height: 108
+}
+
+catalog: "3. Add Service Catalog data\nmanually or by bulk upload" {
+  class: catalog
+  width: 290
+  height: 108
+}
+
+verify: "4. Save and verify the catalog" {
+  class: stage
+  width: 250
+  height: 88
+}
+
+publish: "5. Publish the Asset Type\nSchema becomes read-only where applicable" {
+  class: publish
+  width: 460
+  height: 120
+}
+
+asset: "6. Create or edit an Asset\nand verify catalog-backed choices" {
+  class: publish
+  width: 295
+  height: 108
+}
+
+draft -> schema: { class: flow }
+schema -> catalog: { class: flow }
+catalog -> verify: { class: flow }
+verify -> publish: { class: flow }
+publish -> asset: { class: flow }

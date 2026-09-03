@@ -15,4 +15,4 @@ metadata:
 
 # Integrations
 
-Integrations bring data from supported providers into WanAware. Start with [About integrations](about-integrations), then use the provider-neutral [Add an integration](add-an-integration) workflow. Provider-specific requirements live in separate adapter pages so the core setup path remains stable as WanAware adds capabilities.
+Integrations bring data from supported providers into WanAware. Start with [About integrations](https://docs.wanaware.com/docs/about-integrations), then use the provider-neutral [Add an integration](https://docs.wanaware.com/docs/add-an-integration) workflow. Provider-specific requirements live in separate adapter pages so the core setup path remains stable as WanAware adds capabilities.

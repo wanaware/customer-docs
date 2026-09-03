@@ -16,6 +16,8 @@ metadata:
 
 # Troubleshooting and support
 
-Choose the page that most closely matches what you can see. Start with the fast checks before changing configuration or deleting data.
+Choose the article that matches the visible symptom or exact error. Each article starts with low-risk checks that rule out filters, access, and processing delays.
 
-If the published steps do not solve the problem, [contact WanAware Support](contact-wanaware-support). Include the requested evidence, but never send a password, access token, secret, or private key.
+Complete those checks before changing configuration or deleting data. This order protects shared records while narrowing the likely cause.
+
+If the published steps do not solve the problem, [contact WanAware Support](https://docs.wanaware.com/docs/contact-wanaware-support). Include the requested evidence, but never send a password, access token, secret, or private key.

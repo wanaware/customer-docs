@@ -1,0 +1,85 @@
+# Render with D2 v0.8.2. Keep this source environment-neutral.
+
+direction: down
+
+classes: {
+  step: {
+    style: {
+      fill: "#17233A"
+      stroke: "#486488"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#F4F7FB"
+      font-size: 17
+      bold: true
+      shadow: true
+    }
+  }
+  check: {
+    style: {
+      fill: "#13213A"
+      stroke: "#D3A23A"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#FFF4D5"
+      font-size: 17
+      bold: true
+      shadow: true
+    }
+  }
+  result: {
+    style: {
+      fill: "#0C5261"
+      stroke: "#28CAD8"
+      stroke-width: 2
+      border-radius: 14
+      font-color: "#E8FCFF"
+      font-size: 17
+      bold: true
+      shadow: true
+    }
+  }
+  flow: {
+    style: {
+      stroke: "#6C87AA"
+      stroke-width: 3
+      font-color: "#C4D0E0"
+      font-size: 13
+    }
+  }
+}
+
+style: {
+  fill: "#0B1018"
+  stroke: "#202B3E"
+  stroke-width: 2
+  border-radius: 20
+}
+
+prepare: "Prepare the file\n1. Select Asset Type\n2. Download the current template\n3. Add one Asset per row" {
+  class: step
+  width: 390
+  height: 180
+}
+
+validate: "Check and validate\n4. Stage the CSV or XLSX file\n5. Resolve Recognized · Missing · Unknown columns\n6. Select Upload & Validate" {
+  class: check
+  width: 470
+  height: 210
+}
+
+review: "Review every result\nValid · Needs Review · Invalid · Failed · Corrected\nResolve every blocking row before continuing" {
+  class: check
+  width: 470
+  height: 190
+}
+
+finish: "Create and verify\n7. Select Confirm & Normalize\n8. Find the Assets in Inventory or Discovery\n9. Download and retain the report" {
+  class: result
+  width: 450
+  height: 200
+}
+
+prepare -> validate: { class: flow }
+validate -> review: { class: flow }
+review -> finish: "blocking rows resolved" { class: flow }

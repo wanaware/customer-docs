@@ -18,7 +18,7 @@ metadata:
 <!-- kb-meta
 content-type: troubleshooting
 audience: customer administrator, engineer
-permission: ASSETS_CREATE
+permission: create assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -47,16 +47,16 @@ Use the uploader's current template. Templates and required fields can change as
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| File is rejected before preview | Unsupported format, size, or unreadable file | Save a fresh copy using the accepted format and current size limit. |
+| The uploader rejects the file before preview | Unsupported format, excessive size, or unreadable file | Save a fresh copy using the accepted format and current size limit. |
 | Required field error | A required value or header is missing | Compare the rejected row with the current asset-type template. |
 | Invalid value or type | Date, number, option, or identifier format is wrong | Use the example format and allowed option value exactly. |
-| Unknown column | Header was renamed or belongs to an older template | Move the data into a newly downloaded template. |
+| Unknown column | The file uses a renamed header or an older template | Move the data into a newly downloaded template. |
 | Duplicate error | The source identifier already exists in the file or WanAware | Remove the duplicate or update the existing record through the supported workflow. |
 | Some rows pass and some fail | Row-specific data is invalid | Correct only the rejected rows and avoid reimporting successful rows. |
 
 ## Verify the fix
 
-The corrected file should pass preview validation. After submission, search Inventory or Discovery for one accepted row and confirm its type and source values.
+Upload the corrected file and confirm that preview validation passes. After submission, find one accepted row in Inventory or Discovery and confirm its type and source values.
 
 ## Known limitations
 

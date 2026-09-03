@@ -1,10 +1,10 @@
 ---
-title: View asset relationships
+title: View Asset Relationships
 excerpt: Read an asset's Relationship Graph and open connected context.
 deprecated: false
 hidden: false
 metadata:
-  title: View asset relationships | WanAware Documentation
+  title: View Asset Relationships | WanAware Documentation
   description: Open and interpret the WanAware Relationship Graph for an asset.
   keywords:
     - Relationship Graph
@@ -17,7 +17,7 @@ metadata:
 <!-- kb-meta
 content-type: workflow
 audience: customer
-permission: ASSETS
+permission: read assets
 product-area: Assets
 content-owner: Product
 review-owner: Support
@@ -28,18 +28,35 @@ video-status: planned
 release-status: draft
 -->
 
-# View asset relationships
+# View Asset Relationships
 
-**Outcome:** Identify how one asset is connected to another resource and open the connected record.
+**Outcome:** Identify how one Asset is connected to another resource and open the connected record.
 
 **For:** Customer administrators, engineers, and support staff
-**Permission:** Assets
+**Permission:** `read assets`
 **Time:** About 5 minutes
 **Changes made:** None
+
+## If you're stuck
+
+- Clear **Filters** and reduce **Group by** before treating a node as missing.
+- Confirm both Assets exist in Inventory and use the correct unique IDs.
+- Relationship Graph is for exploring supported relationships; it does not provide arbitrary relationship drawing.
 
 ## Before you start
 
 Find a known asset in **Functions → Assets → Inventory** and verify its identity.
+
+## View and control guide
+
+| UI item | Scope | What it changes |
+| --- | --- | --- |
+| Asset **Relationship Graph** | One focused Asset and connected records | View only; selecting a node changes focus |
+| Inventory **Graph** | Broader Inventory graph | View only; can show more records |
+| Relationship depth | Number of connected levels around the focused Asset | View only; higher depth can make the graph crowded |
+| **Filters** | Visible nodes by supported record values | View only; hidden nodes still exist |
+| **Group by** | Visual organization | View only; does not create relationships |
+| **Clear All Filters** | Removes active graph filters | Restores the unfiltered visible result |
 
 ## Explore the graph
 
@@ -50,13 +67,13 @@ Find a known asset in **Functions → Assets → Inventory** and verify its iden
 5. Change relationship depth only when more context is needed.
 6. Use search or focus controls to return to a known resource.
 
-![Relationship Graph grouped by Structure around a sanitized Harbor Meridian asset.](../../media/screenshots/asset-relationship-graph.png)
+![Diagram comparing Relationships discovered from supported data with the Add Connection workflow.](https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png)
 
 **Expected result:** You can name the focused asset, one connected resource, and the represented relationship.
 
 ## Use the broader graph
 
-1. Return to **Assets** and select the Graph view when available.
+1. Return to **Assets** and select **Graph**.
 2. Use **Filters** to narrow by supported Asset Type, Site, Structure, or Element values.
 3. Use **Group by** to organize the view.
 4. Select **Clear All Filters** before treating an absent node as missing data.
@@ -67,18 +84,18 @@ Grouping and filtering change only the view. They do not create or remove relati
 
 Open the connected asset and confirm its name, Asset Type, and source context match the selected node.
 
-## If the graph is empty or surprising
+## Recover from an empty or surprising graph
 
 - Confirm both expected assets exist.
 - Wait for active ingestion and relationship processing to finish.
 - Clear graph filters and reduce grouping.
 - Compare the graph with source properties.
-- Use [Missing or unexpected relationships](../troubleshooting-and-support/missing-or-unexpected-relationships).
+- Use [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
 
 ## Learn, show me, do it
 
-- **Learn:** [Relationship Discovery Engine](relationship-discovery-engine)
-- **Show me:** The captioned relationship clip will be embedded after review.
+- **Learn:** [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine)
+- **Show me:** The captioned relationship clip is pending workflow verification and approval.
 - **Do it:** Open an asset in `/assets/inventory` and select **Relationship Graph**.
 
 ## Get help

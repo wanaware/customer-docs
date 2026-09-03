@@ -1,135 +1,31 @@
 {
-  "version": 2,
+  "version": 3,
   "minimumCorrectPercent": 90,
   "requirements": {
     "citationsRequired": true,
     "unsupportedQuestionsMustEscalate": true,
-    "forbiddenSources": [
-      "private repositories",
-      "customer data",
-      "internal engineering documentation"
-    ]
+    "forbiddenSources": ["private repositories", "customer data", "internal engineering documentation"]
   },
   "questions": [
-    {
-      "question": "I just signed in. What should I do first?",
-      "expectedSlug": "/docs/your-first-30-minutes",
-      "mustMention": ["Assets", "Relationship Graph"],
-      "mustNotMention": ["internal architecture"]
-    },
-    {
-      "question": "What am I allowed to change in the demo?",
-      "expectedSlug": "/docs/use-the-demo-safely",
-      "mustMention": ["Docs Demo", "recover"],
-      "mustNotMention": ["use production credentials"]
-    },
-    {
-      "question": "How do I add an integration?",
-      "expectedSlug": "/docs/add-an-integration",
-      "mustMention": ["provider adapter", "Test connection"],
-      "mustNotMention": ["send credentials to Support"]
-    },
-    {
-      "question": "How do I import assets?",
-      "expectedSlug": "/docs/add-or-import-assets",
-      "mustMention": ["template", "validation"],
-      "mustNotMention": ["customer file"]
-    },
-    {
-      "question": "How do I edit and save asset details?",
-      "expectedSlug": "/docs/populate-asset-details",
-      "mustMention": ["unsaved-change bar", "refresh"],
-      "mustNotMention": []
-    },
-    {
-      "question": "What is the difference between Data Tags and Structure Tags?",
-      "expectedSlug": "/docs/manage-asset-and-structure-tags",
-      "mustMention": ["descriptive", "hierarchy"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I connect assets or add a relationship?",
-      "expectedSlug": "/docs/add-a-network-connection",
-      "mustMention": ["eligible", "Preview Connection"],
-      "mustNotMention": []
-    },
-    {
-      "question": "Why is a relationship missing?",
-      "expectedSlug": "/docs/missing-or-unexpected-relationships",
-      "mustMention": ["filters", "both assets"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I create a custom Asset Type?",
-      "expectedSlug": "/docs/create-a-custom-asset-type",
-      "mustMention": ["Draft", "starting option"],
-      "mustNotMention": []
-    },
-    {
-      "question": "What happens when I publish an Asset Type?",
-      "expectedSlug": "/docs/publish-and-verify-an-asset-type",
-      "mustMention": ["read-only", "verify"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I create a Service Catalog?",
-      "expectedSlug": "/docs/create-a-custom-service-catalog",
-      "mustMention": ["draft Asset Type", "Save"],
-      "mustNotMention": []
-    },
-    {
-      "question": "Why is a catalog choice or compatible model missing?",
-      "expectedSlug": "/docs/service-catalog-failures",
-      "mustMention": ["parent", "compatibility"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I build our organization hierarchy?",
-      "expectedSlug": "/docs/create-and-manage-structures",
-      "mustMention": ["Structure Type", "parent"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I create an Application, Service, or Site?",
-      "expectedSlug": "/docs/create-and-populate-elements",
-      "mustMention": ["Element Type", "Site"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I attach an Element or Collection to a Structure?",
-      "expectedSlug": "/docs/attach-elements-to-structures",
-      "mustMention": ["Structure Tags", "save"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I invite a teammate and assign a role?",
-      "expectedSlug": "/docs/invite-users-and-assign-roles",
-      "mustMention": ["IAM", "smallest role"],
-      "mustNotMention": []
-    },
-    {
-      "question": "Why can my teammate not see a page or action?",
-      "expectedSlug": "/docs/missing-pages-actions-or-permissions",
-      "mustMention": ["role", "permission"],
-      "mustNotMention": []
-    },
-    {
-      "question": "How do I switch between Light and Dark mode?",
-      "expectedSlug": "/docs/choose-a-theme",
-      "mustMention": ["Theme Settings", "preset"],
-      "mustNotMention": []
-    },
-    {
-      "question": "Where do I find billing, payments, usage, or invoices?",
-      "expectedSlug": "/docs/understand-billing",
-      "mustMention": ["Plans", "Billing History"],
-      "mustNotMention": ["price"]
-    },
-    {
-      "question": "The documentation did not solve my issue. What should I send Support?",
-      "expectedSlug": "/docs/contact-wanaware-support",
-      "mustMention": ["timestamp", "page URL", "password"],
-      "mustNotMention": ["include a password value", "include an access token value"]
-    }
+    { "question": "I just signed in. What should I do first?", "expectedSlug": "/docs/your-first-30-minutes", "mustMention": ["Assets", "Relationship Graph"], "mustNotMention": ["internal architecture"] },
+    { "question": "What can I safely change in a trial or shared evaluation workspace?", "expectedSlug": "/docs/use-the-demo-safely", "mustMention": ["sample records", "recover"], "mustNotMention": ["production credentials"] },
+    { "question": "How do I add an integration?", "expectedSlug": "/docs/add-an-integration", "mustMention": ["provider adapter", "connection"], "mustNotMention": ["send credentials to Support"] },
+    { "question": "How do I bulk upload Assets?", "expectedSlug": "/docs/bulk-upload-assets", "mustMention": ["Upload & Validate", "Confirm & Normalize"], "mustNotMention": ["resubmit successful rows"] },
+    { "question": "Why did my Asset upload fail?", "expectedSlug": "/docs/bulk-import-validation-failures", "mustMention": ["row", "exact error"], "mustNotMention": ["guess"] },
+    { "question": "How do I move Discovery records to Inventory?", "expectedSlug": "/docs/review-discovery-and-move-assets-to-inventory", "mustMention": ["Move To Inventory", "duplicate"], "mustNotMention": [] },
+    { "question": "How do I edit and save Asset details?", "expectedSlug": "/docs/populate-asset-details", "mustMention": ["unsaved-change", "refresh"], "mustNotMention": [] },
+    { "question": "How do I connect Assets or add a Relationship?", "expectedSlug": "/docs/add-a-network-connection", "mustMention": ["eligible", "preview"], "mustNotMention": ["arbitrary relationship"] },
+    { "question": "Why is a Relationship missing?", "expectedSlug": "/docs/missing-or-unexpected-relationships", "mustMention": ["filters", "both Assets"], "mustNotMention": [] },
+    { "question": "How do I create a custom Asset Type?", "expectedSlug": "/docs/create-a-custom-asset-type", "mustMention": ["Draft", "starting option"], "mustNotMention": [] },
+    { "question": "What happens when I publish an Asset Type?", "expectedSlug": "/docs/publish-and-verify-an-asset-type", "mustMention": ["read-only", "verify"], "mustNotMention": [] },
+    { "question": "How do I create a Service Catalog?", "expectedSlug": "/docs/create-a-custom-service-catalog", "mustMention": ["draft Asset Type", "Save"], "mustNotMention": [] },
+    { "question": "How do I bulk upload Service Catalog entries?", "expectedSlug": "/docs/bulk-upload-service-catalog-entries", "mustMention": ["column mapping", "Create N entries"], "mustNotMention": ["verified in every environment"] },
+    { "question": "Where do I find an existing provider ID for a catalog upload?", "expectedSlug": "/docs/prepare-a-service-catalog-bulk-upload-file", "mustMention": ["existing Service Catalog", "stable ID"], "mustNotMention": ["provider name is the ID"] },
+    { "question": "How do I fix a Service Catalog import conflict?", "expectedSlug": "/docs/bulk-upload-service-catalog-entries", "mustMention": ["Conflicts", "revalidate"], "mustNotMention": ["ignore the conflict"] },
+    { "question": "How do I attach an Element or Collection to a Structure?", "expectedSlug": "/docs/attach-elements-to-structures", "mustMention": ["Structure Tags", "save"], "mustNotMention": [] },
+    { "question": "How do I invite a teammate and assign a Role?", "expectedSlug": "/docs/invite-users-and-assign-roles", "mustMention": ["IAM", "Role"], "mustNotMention": [] },
+    { "question": "Why can my teammate not see a page or action?", "expectedSlug": "/docs/missing-pages-actions-or-permissions", "mustMention": ["Role", "Permission"], "mustNotMention": [] },
+    { "question": "Where do I find billing, payment methods, usage, or invoices?", "expectedSlug": "/docs/understand-billing", "mustMention": ["Plans", "Billing History"], "mustNotMention": ["fixed price"] },
+    { "question": "The docs did not solve my issue. What should I send Support?", "expectedSlug": "/docs/contact-wanaware-support", "mustMention": ["timestamp", "page URL", "exact error"], "mustNotMention": ["password value", "access token value"] }
   ]
 }

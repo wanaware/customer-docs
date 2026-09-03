@@ -17,4 +17,6 @@ metadata:
 
 # Administration and personal settings
 
-Company administrators manage shared settings, access, and billing. Each user manages their own profile, security choices, and Theme Settings. If an action is unavailable, check the required role before changing company configuration.
+Company administrators manage shared settings, access, and Billing. Each user manages their own profile, security settings, and theme.
+
+If an action is unavailable, ask an administrator to compare your active Roles with its required Permission. Start with [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).

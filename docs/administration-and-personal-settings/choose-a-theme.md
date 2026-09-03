@@ -33,26 +33,39 @@ release-status: draft
 **Outcome:** Change your personal appearance without changing another member's settings.
 
 **For:** Signed-in WanAware members
-**Permission:** Authenticated user
+**Permission:** Signed-in user; no company-administration permission is required
 **Time:** About 2 minutes
 **Changes made:** Changes your personal display preference
+
+## If you're stuck
+
+- **Theme Settings** changes only your account's display.
+- Use **Light** or **Dark** for contrast first, then choose an assigned or color theme.
+- If a preset makes controls difficult to read, return to the drawer immediately and select the prior preset.
 
 ## Before you start
 
 Theme changes affect your view. They do not change company data or another member's preference.
 
+## Option guide
+
+| UI item | Purpose | Result |
+| --- | --- | --- |
+| **Light** | Uses the light appearance | Tables, cards, and navigation use light surfaces |
+| **Dark** | Uses the dark appearance | Tables, cards, and navigation use dark surfaces |
+| **Assigned Themes** | Uses company-assigned presets | The selected assigned palette is applied to your view |
+| **Color Themes** | Uses the standard preset list when no assigned set is shown | The selected color palette is applied to your view |
+
 ## Choose the appearance
 
 1. Select **Theme Settings**.
 2. Choose **Light** or **Dark** mode.
-3. Select an available assigned or color preset.
+3. Under **Assigned Themes** or **Color Themes**, select the intended preset.
 4. Close the Theme Settings panel.
-
-![Theme Settings showing the available Light and Dark modes and color presets.](../../media/screenshots/theme-settings-light-and-dark.png)
 
 **Expected result:** The Portal updates immediately and keeps your selection when you move to another page.
 
-If the selected preset makes text difficult to read, return to Theme Settings and choose another available option.
+If the selected preset makes text difficult to read, return to Theme Settings and choose another preset.
 
 ## Check your result
 
@@ -64,8 +77,8 @@ Open **Theme Settings** and choose the previous mode and preset.
 
 ## Learn, show me, do it
 
-- **Learn:** [Product map and terminology](../start-here/product-map-and-terminology)
-- **Show me:** This article will show approved Light and Dark screenshots after capture.
+- **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
+- **Show me:** Approved Light and Dark screenshots are pending capture and privacy review.
 - **Do it:** Select **Theme Settings** in your WanAware workspace.
 
 ## Get help
