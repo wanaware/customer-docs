@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 metadata:
   title: Assets and relationships | WanAware Documentation
-  description: Connect AWS, add assets, search inventory, and explore relationships in WanAware.
+  description: Add integrations and assets, search inventory, and explore relationships in WanAware.
   keywords:
     - assets
     - inventory
@@ -16,6 +16,6 @@ metadata:
 
 # Assets and relationships
 
-Assets are the resources WanAware tracks. Start by connecting an AWS account or adding an asset, then confirm that the resource appears in **Functions → Assets → Inventory**.
+Assets are the resources WanAware tracks. Start by [adding an integration](add-an-integration) or adding an asset, then confirm that the resource appears in **Functions → Assets → Inventory**.
 
 Open an asset to review its details and **Relationship Graph**. If the data is missing or looks wrong, use the troubleshooting pages linked from each workflow.

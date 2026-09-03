@@ -5,12 +5,13 @@ deprecated: false
 hidden: false
 metadata:
   title: Product map and terminology | WanAware Documentation
-  description: Understand Launchpad, Assets, Structures, Elements, Collections, Observability, Workers, Pulse, and IAM.
+  description: Understand Launchpad, Integrations, Assets, Structures, Elements, Collections, Observability, Workers, Pulse, and IAM.
   keywords:
     - product map
     - glossary
     - terminology
     - navigation
+    - integrations
   robots: index
 ---
 
@@ -41,9 +42,12 @@ The left navigation shows only the areas included in your subscription and role.
 | **Pulse** | Review diagnostic executions, evidence, root-cause context, and recommended actions when Pulse access is enabled. |
 | **Administration → General** | Review company details and permitted workspace settings. |
 | **Administration → IAM** | Invite members and manage roles and permissions. |
-| **Administration → Integrations** | Connect and manage supported provider accounts, including AWS inventory crawls. |
+| **Administration → Integrations** | Add and manage supported data sources, test their connections, and start available collection jobs. |
 
 ## Core terms
+
+**Integration**
+A managed connection between WanAware and a supported data source. Each provider can have its own setup and collection steps without changing the core integration workflow.
 
 **Asset**
 A resource tracked by WanAware. An asset has a type, status, properties, and relationships. Examples depend on the connected provider and your custom asset types.
