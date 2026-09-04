@@ -30,7 +30,7 @@
     },
     {
       "check": "Product approval for behavioral accuracy",
-      "status": "pending"
+      "status": "passing"
     },
     {
       "check": "Support approval for clarity, diagnostic value, and escalation instructions",
