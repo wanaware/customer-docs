@@ -85,6 +85,8 @@ release-status: draft
 
 **Expected result:** The saved draft reopens with the intended sections, field order, dependencies, and catalog support.
 
+![Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.](https://files.readme.io/a946bbbb205a2a7a7c43a2187d9e0b6fea6b71362cff2fd1badbdc70d0205334-asset-type-draft-result.png)
+
 If a dependent field has no valid parent or a required setting conflicts with the input type, correct the field before continuing. Do not publish to test an unfinished configuration.
 
 ## Check your result

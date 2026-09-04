@@ -71,6 +71,8 @@ release-status: draft
 2. Select **General**.
 3. Change **Full Name**, **Timezone**, the time format, or the date format.
 4. To change your avatar, select **Change avatar** and choose a supported image no larger than 1 MB.
+
+![Personal General settings showing Timezone, time and date formats, and the Profile Avatar upload control.](https://files.readme.io/f5ddd02942292f774e059689d4404b4b25f3e068bab35590e561fea2f52a0eb2-profile-preferences.png)
 5. Select **Save**.
 
 **Expected result:** WanAware displays **Profile updated successfully**.
@@ -87,6 +89,8 @@ This option appears only when WanAware manages your password.
 
 1. Open your profile menu and select **Security**.
 2. In **Change Password**, enter your **Current Password**.
+
+![Security settings showing enabled Authenticator App status and blank Current and New Password fields.](https://files.readme.io/cd9790ffdfe6cc294d24e83a90dda42d817dc61ce5bb94fe828a64ba7f24632e-profile-security.png)
 3. Enter a **New Password** with at least 12 characters.
 4. Include at least one uppercase letter, one lowercase letter, one digit, and one special character.
 5. Enter the same value in **Confirm New Password**.

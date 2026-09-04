@@ -64,6 +64,8 @@ release-status: draft
 4. Confirm catalog-backed fields have usable values in **Service Catalog**.
 5. Select **Publish**.
 6. Read the confirmation, including the read-only consequence.
+
+![Asset Type publication confirmation showing the read-only consequence before the destructive action is confirmed.](https://files.readme.io/16b43df026c7b93507620c29fdff3e6a818160ef714343fd402d5aa824138b72-asset-type-publish-confirmation.png)
 7. Confirm publication only when the configuration is approved.
 
 **Expected result:** The Asset Type appears with **Published** status.

@@ -64,6 +64,8 @@ release-status: draft
 3. Confirm the company name or identifier.
 4. Change only the approved field.
 5. Preview logo cropping and contrast before accepting an uploaded image.
+
+![Platform Customization settings showing Dark Mode Logo and Light Mode Logo upload controls.](https://files.readme.io/86716aa8e278f798f5e6bba4691e8f856f7e7ad6431ec1bc1e67dcc5d03621b6-company-branding.png)
 6. Select **Save**.
 
 **Expected result:** WanAware confirms the save and the value remains after refresh.

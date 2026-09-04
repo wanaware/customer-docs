@@ -85,6 +85,8 @@ All three paths create a custom draft. The difference is how the first set of se
 
 **Expected result:** The Asset Type appears in the list with **Draft** status.
 
+![Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.](https://files.readme.io/a946bbbb205a2a7a7c43a2187d9e0b6fea6b71362cff2fd1badbdc70d0205334-asset-type-draft-result.png)
+
 If generation fails or produces unsuitable fields, return to the starting options or remove the unwanted draft fields before saving. Do not publish unreviewed generated content.
 
 ## Check your result
@@ -111,7 +113,17 @@ If generation fails or produces unsuitable fields, return to the starting option
 
 ## Undo this change
 
-Delete only an unused draft after confirming it has no catalog entries or test assets. Do not use deletion to revise a field; edit the draft instead.
+Delete only an unused draft after confirming it has no catalog entries or test Assets. Do not use deletion to revise a field; edit the draft instead.
+
+1. Return to **Administration → Asset Types**.
+2. Search for the draft by its exact name.
+3. Open the row actions menu and select **Delete asset type**.
+4. Wait for the usage check. Continue only when no Assets or dependent catalog data use the draft.
+5. Read the permanent-deletion warning and select **Delete** only when the displayed Asset Type is the intended unused draft.
+
+![Delete Asset Type confirmation showing the affected draft name and the permanent deletion warning.](https://files.readme.io/80ad09ada788d5988de28bc39206ae2b75af43f42c925d6a0b2664d09ca3987f-asset-type-delete-confirmation.png)
+
+**Expected result:** The draft no longer appears after the list refreshes. If the usage check reports dependencies, cancel the deletion and remove or correct those dependencies before trying again.
 
 ## Learn and continue
 

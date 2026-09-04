@@ -20,7 +20,7 @@ permission: read roles and create roles; update roles for edits
 product-area: Administration and access
 content-owner: Product
 review-owner: Support
-last-verified: pending
+last-verified: 2026-09-04
 last-verified-release: pending
 screenshot-set: administration-roles
 video-status: not-planned
@@ -50,22 +50,28 @@ release-status: draft
 
 | UI label | Purpose | What to enter or select | Where it appears later |
 | --- | --- | --- | --- |
-| **Role Name** | Identifies the access profile | A unique, job-based name such as `Asset reviewer` | Role list and member assignment |
+| **Name** | Identifies the access profile | A unique, job-based name such as `Asset reviewer` | Role list and member assignment |
 | **Permissions** | Controls visible areas and allowed actions | Only the `action resource` pairs the job requires | The member's navigation and available controls |
 | **Create Role** | Saves a new customer Role | Select after reviewing the name and Permissions | Role list |
 
 ## Create a Role
 
 1. Open **Administration → IAM → Roles**.
+
+![IAM Roles list showing system and customer Roles, member counts, Permissions, and the Create Role action.](https://files.readme.io/3431077d146ae19f5296ef7967e8f70f01c4b0ea784da2adb5f81cc739f95869-iam-roles-list.png)
 2. Select **Create Role**.
-3. Enter **Role Name** using a job or responsibility, not a person's name.
+3. Enter **Name** using a job or responsibility, not a person's name.
 4. In **Permissions**, expand each product area and select the required actions.
+
+![Create Role page showing the Name field and grouped action-resource Permission selections.](https://files.readme.io/0534e10ef59e6fdbdafd9fc2c149bf61b655dc11eaa9d3bf2132d6bc2ddaaa0a-iam-role-editor.png)
 5. Recheck navigation dependencies. For example, Billing requires all four read permissions listed in [Understand billing](https://docs.wanaware.com/docs/understand-billing).
 6. Select **Create Role**.
 
 **Expected result:** The Role opens or appears in the Roles list with the selected Permissions.
 
-If saving fails, keep the page open, copy the Role Name and selected Permission list, and check for a duplicate name or a permission that your own account cannot assign.
+![Saved customer Role showing one selected read Assets Permission on the Permissions tab.](https://files.readme.io/1b40d0ecb3506785ef2487af33918fc84bf3819e3e83e24de677b90e04ac6cd8-image.png)
+
+If saving fails, keep the page open, copy the **Name** and selected Permission list, and check for a duplicate name or a Permission that your own account cannot assign.
 
 ## Edit a customer Role
 
@@ -84,7 +90,20 @@ Assign the Role to a test member with the intended responsibilities. Have that m
 
 ## Undo this change
 
-Restore the previous Permission list and save again. If the Role is no longer needed, first move assigned members to an approved Role; do not delete a Role while its impact is unknown.
+To reverse a Permission change, restore the previous Permission list and save again.
+
+To remove a customer Role that is no longer needed:
+
+1. Move every assigned member to an approved replacement Role.
+2. Open the unused Role from **Administration → IAM → Roles**.
+3. Select **Delete Role**.
+4. Confirm that the dialog names the intended customer Role and states that deletion cannot be undone.
+
+![Delete Role confirmation identifying the selected customer Role and warning that deletion cannot be undone.](https://files.readme.io/606771bd138d3b448d60a4885c49d19e58c77eead82c98aec7a9c38fdb95d5ce-iam-role-delete-confirmation.png)
+
+5. Select **Delete**.
+
+**Expected result:** WanAware reports **Role deleted**, returns to the Roles list, and the deleted Role no longer appears. If members still depend on the Role or its impact is unclear, select **Cancel** and review the **Users** tab first.
 
 ## Learn and continue
 

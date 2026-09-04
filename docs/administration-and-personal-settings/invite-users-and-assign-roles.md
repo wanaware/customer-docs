@@ -65,6 +65,8 @@ release-status: draft
 3. Enter the person's business name in **User name**.
 4. Enter the exact company address in **Email**.
 5. Under **Roles**, select at least one approved Role. If none is selected, the form reports **Select at least one role**.
+
+![Create User form showing the User name, Email, Role selection, and Create User action with sample values.](https://files.readme.io/d36aede7c22d78f94ef1b914ecab0697bee19100c324c60c78a07f387c4f8d17-invite-user-form.png)
 6. Review the address and Roles, then select **Create User** once.
 
 **Expected result:** WanAware reports **Invitation sent**, and the member appears with **Invite Status** set to **Pending** until they accept.
