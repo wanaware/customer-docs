@@ -1,10 +1,10 @@
 ---
-title: Missing pages, actions, or permissions
+title: A page or action is missing
 excerpt: Determine whether a missing feature is caused by role access, company context, subscription, or product availability.
 deprecated: false
 hidden: false
 metadata:
-  title: Missing pages, actions, or permissions | WanAware Documentation
+  title: A page or action is missing | WanAware Documentation
   description: Troubleshoot missing WanAware navigation, buttons, actions, and permission errors.
   keywords:
     - missing page
@@ -13,6 +13,8 @@ metadata:
     - 403
     - role access
     - feature not visible
+    - cannot see page
+    - cannot see action
   robots: index
 ---
 
@@ -29,8 +31,6 @@ screenshot-set: troubleshoot-permissions
 video-status: not-planned
 release-status: draft
 -->
-
-# Missing pages, actions, or permissions
 
 WanAware hides navigation and actions that are not available to the current Role. A missing button is often an access or subscription question, not a loading failure.
 

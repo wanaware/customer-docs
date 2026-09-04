@@ -29,8 +29,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Amazon Web Services integration adapter
-
 **Outcome:** Authorize WanAware to collect supported AWS account inventory through the released role-based setup.
 
 **For:** WanAware customer administrators and AWS account administrators
@@ -103,11 +101,15 @@ Removing the WanAware connection does not automatically delete the CloudFormatio
 2. Select **Delete integration…**, read **Delete this AWS integration? This removes the saved account connection.**, and confirm only after approval.
 3. Ask the AWS account owner to review and delete the stack if it is no longer required.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
-- **Show me:** Use the general integration clip for the shared WanAware steps after publication.
-- **Do it:** Open `/administration/integrations` in your WanAware workspace.
+- **In WanAware:** Open `/administration/integrations` in your WanAware workspace.
+
+## Next steps
+
+- [Verify imported Inventory](https://docs.wanaware.com/docs/verify-imported-inventory)
+- [Fix an Integration that does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures)
 
 ## Get help
 

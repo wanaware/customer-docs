@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Attach Elements to Structures
-
 **Outcome:** Attach an Element to the intended Structure node with a Structure Tag.
 
 **For:** Customer administrators and engineers
@@ -80,11 +78,15 @@ To detach the Element, clear the Structure Tag and save. To restore the attachme
 
 Detaching an Element does not delete the Element or the Structure.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** The Element attachment clip is pending workflow verification and approval.
-- **Do it:** Open **Functions → Elements** (`/elements`) and select the intended Element.
+- **In WanAware:** Open **Functions → Elements** (`/elements`) and select the intended Element.
+
+## Next steps
+
+- [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
+- [Fix an Element or Collection attachment](https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures)
 
 ## Get help
 

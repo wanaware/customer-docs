@@ -30,8 +30,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Product map and terminology
-
 The left navigation shows only the areas included in your company's subscription and allowed by your active Role. Opening a direct URL does not bypass those checks.
 
 Throughout this knowledge base, capitalized words such as **Asset**, **Asset Type**, **Structure**, **Element**, **Discovery**, and **Inventory** are WanAware product labels or record types. Lowercase words are generic. Permission names remain lowercase because they match their IAM identifiers.
@@ -58,7 +56,7 @@ Permissions are written as `action resource`. When a row lists more than one per
 | **Theme Settings** | Choose your personal Light or Dark appearance and an available preset. | Top-bar drawer; no page URL | Available to a signed-in user; there is no separate feature permission. |
 | **Support** | Open the in-product Support area. | `/support` | `view support` |
 
-The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## How the records fit together
 
@@ -187,13 +185,12 @@ A named set of Permissions assigned to members. A Role controls which pages and 
 An allowed action on a resource, such as `read assets`. Permissions are collected into Roles rather than assigned as navigation labels.
 
 - **Where:** **Administration → IAM → Roles → [Role]** (`/administration/iam/roles/{roleKey}`)
-- **See also:** [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
+- **See also:** [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** Use this page as the glossary and navigation map for the first release.
-- **Show me:** Use the short clips linked from the matching task guides after publication.
-- **Do it:** Start with [Choose your path](https://docs.wanaware.com/docs/choose-your-path).
+- **In WanAware:** Start with [Choose your path](https://docs.wanaware.com/docs/choose-your-path).
 
 ## Get help
 

@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Understand Roles and Permissions
-
 A role is a named set of permissions. Permissions can control whether a member sees a product area and whether they can create, view, update, delete, publish, or attach records in that area.
 
 This means two members in the same company can have different navigation and actions. A missing button is often an access question, not a display failure.
@@ -50,7 +48,13 @@ This means two members in the same company can have different navigation and act
 4. Ask an administrator to review the role's relevant permission.
 5. Sign out and back in after an approved role change.
 
-Use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) for a full recovery path.
+Use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) for a full recovery path.
+
+## Related tasks
+
+- [Create and edit Roles](https://docs.wanaware.com/docs/create-and-edit-roles)
+- [Invite users and assign Roles](https://docs.wanaware.com/docs/invite-users-and-assign-roles)
+- [Manage pending invitations](https://docs.wanaware.com/docs/manage-pending-invitations)
 
 ## Get help
 

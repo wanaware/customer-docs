@@ -14,8 +14,24 @@ metadata:
   robots: index
 ---
 
-# Structures, Elements, and Collections
-
 Use **Structures** for hierarchy, **Elements** for operational units such as Applications, Services, and Sites, and **Collections** to group assets inside an Element. Structure Tags attach Elements and Collections to the hierarchy.
 
-Start with [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections) before creating shared records.
+## Learn
+
+- [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections): choose the correct record and attachment path.
+
+## Set up
+
+1. [Create and manage Structures](https://docs.wanaware.com/docs/create-and-manage-structures).
+2. [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements).
+3. [Attach Elements to Structures](https://docs.wanaware.com/docs/attach-elements-to-structures).
+4. [Create Collections and add Assets](https://docs.wanaware.com/docs/create-collections-and-add-assets).
+5. [Attach Collections to Structures](https://docs.wanaware.com/docs/attach-collections-to-structures).
+
+## Manage
+
+- [Manage Site details](https://docs.wanaware.com/docs/manage-site-details)
+
+## Fix a problem
+
+- [An Element or Collection does not attach to a Structure](https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures)

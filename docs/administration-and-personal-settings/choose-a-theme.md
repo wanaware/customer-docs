@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Choose a theme
-
 **Outcome:** Change your personal appearance without changing another member's settings.
 
 **For:** Signed-in WanAware members
@@ -61,6 +59,9 @@ Theme changes affect your view. They do not change company data or another membe
 1. Select **Theme Settings**.
 2. Choose **Light** or **Dark** mode.
 3. Under **Assigned Themes** or **Color Themes**, select the intended preset.
+
+![Theme Settings showing the available Light and Dark modes and color presets.](https://files.readme.io/bababdfbea8a1fbebc998a60a50586adea6315925cc1016f5a2705f1cc642cfe-theme-settings-light-and-dark.png)
+
 4. Close the Theme Settings panel.
 
 **Expected result:** The Portal updates immediately and keeps your selection when you move to another page.
@@ -75,11 +76,14 @@ Open Assets and Administration, then confirm text, controls, tables, and dialogs
 
 Open **Theme Settings** and choose the previous mode and preset.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** Approved Light and Dark screenshots are pending capture and privacy review.
-- **Do it:** Select **Theme Settings** in your WanAware workspace.
+- **In WanAware:** Select **Theme Settings** in your WanAware workspace.
+
+## Next steps
+
+- [Manage your profile and security](https://docs.wanaware.com/docs/manage-profile-and-security)
 
 ## Get help
 

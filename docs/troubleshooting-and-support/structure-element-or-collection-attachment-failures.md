@@ -1,16 +1,17 @@
 ---
-title: Structure, Element, or Collection attachment failures
+title: An Element or Collection does not attach to a Structure
 excerpt: Fix missing Structure Tags, unavailable assets, failed saves, and unexpected attachments.
 deprecated: false
 hidden: false
 metadata:
-  title: Organization attachment failures | WanAware Documentation
+  title: An Element or Collection does not attach to a Structure | WanAware Documentation
   description: Troubleshoot WanAware Structure Tag, Element, Collection, and asset attachments.
   keywords:
     - attach Element to Structure failed
     - attach Collection to Structure failed
     - Structure Tag missing
     - asset missing from Collection
+    - attach asset to structure
   robots: index
 ---
 
@@ -27,8 +28,6 @@ screenshot-set: troubleshoot-organization-attachments
 video-status: not-planned
 release-status: draft
 -->
-
-# Structure, Element, or Collection attachment failures
 
 Use this page when a Structure Tag or Asset cannot be selected, saved, removed, or found in the expected organizational view.
 

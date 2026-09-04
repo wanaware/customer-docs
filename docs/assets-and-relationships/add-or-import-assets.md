@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Add or import Assets
-
 Choose the workflow that matches the number of Assets and the source of truth. Both paths require `create assets`.
 
 ![Flow showing records moving from an Integration or bulk upload through Discovery into Inventory.](https://files.readme.io/7b7bcbd448d2c8b241488410752730034e98dbafee729a7bca8d01ed4388707a-asset-lifecycle.png)
@@ -45,11 +43,10 @@ Use manual creation for a small number of records or a one-off correction. Use b
 
 Regardless of path, search first. A matching display name is not enough to prove two records are different; compare Asset Type, source, and stable identifiers.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The captioned add-or-import clip is pending workflow verification and approval.
-- **Do it:** Open `/assets/inventory`, then select **+ Add Asset**.
+- **In WanAware:** Open `/assets/inventory`, then select **+ Add Asset**.
 
 ## Next steps
 

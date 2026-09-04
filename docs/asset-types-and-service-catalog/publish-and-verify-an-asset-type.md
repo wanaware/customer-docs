@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Publish and verify an Asset Type
-
 **Outcome:** Publish an approved custom Asset Type and confirm that its fields and catalog choices work on an asset.
 
 **For:** Customer administrators and data model owners
@@ -66,11 +64,13 @@ release-status: draft
 4. Confirm catalog-backed fields have usable values in **Service Catalog**.
 5. Select **Publish**.
 6. Read the confirmation, including the read-only consequence.
+
+![Asset Type publication confirmation showing the read-only consequence before the destructive action is confirmed.](https://files.readme.io/16b43df026c7b93507620c29fdff3e6a818160ef714343fd402d5aa824138b72-asset-type-publish-confirmation.png)
 7. Confirm publication only when the configuration is approved.
 
 **Expected result:** The Asset Type appears with **Published** status.
 
-If publication fails, do not create a replacement. Use [Asset Type save or publish failures](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures).
+If publication fails, do not create a replacement. Use [An Asset Type does not save or publish](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures).
 
 ## Verify with an asset
 
@@ -89,16 +89,15 @@ Ask a member with `read assets` to open the test Asset. Confirm that the member 
 
 Publication may not be reversible through the customer interface. Do not delete a published Asset Type or its test assets to simulate an undo. Contact Support with the Asset Type ID if the published schema is wrong.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The publication and Asset verification clip is pending workflow verification and approval.
-- **Do it:** Open **Administration → Asset Types** (`/administration/asset-types`).
+- **In WanAware:** Open **Administration → Asset Types** (`/administration/asset-types`).
 
 ## Next steps
 
 - [Populate asset details](https://docs.wanaware.com/docs/populate-asset-details)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

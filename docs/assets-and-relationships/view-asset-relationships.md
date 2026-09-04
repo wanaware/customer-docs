@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# View Asset Relationships
-
 **Outcome:** Identify how one Asset is connected to another resource and open the connected record.
 
 **For:** Customer administrators, engineers, and support staff
@@ -94,13 +92,17 @@ Open the connected asset and confirm its name, Asset Type, and source context ma
 - Wait for active ingestion and relationship processing to finish.
 - Clear graph filters and reduce grouping.
 - Compare the graph with source properties.
-- Use [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
+- Use [A Relationship is missing or unexpected](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine)
-- **Show me:** The captioned relationship clip is pending workflow verification and approval.
-- **Do it:** Open an asset in `/assets/inventory` and select **Relationship Graph**.
+- **In WanAware:** Open an asset in `/assets/inventory` and select **Relationship Graph**.
+
+## Next steps
+
+- [Add a supported network connection](https://docs.wanaware.com/docs/add-a-network-connection)
+- [Fix a missing or unexpected Relationship](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

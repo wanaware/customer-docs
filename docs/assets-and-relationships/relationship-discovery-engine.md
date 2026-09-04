@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Relationship Discovery Engine
-
 The Relationship Discovery Engine (RDE) builds supported connections after WanAware receives and normalizes asset data. Its results appear in relationship views across the asset experience.
 
 ## What RDE uses
@@ -57,7 +55,7 @@ Search, filters, grouping, focus, and depth change what you can see. They do not
 
 - [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
 - [Add a supported network connection](https://docs.wanaware.com/docs/add-a-network-connection)
-- [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
+- [A Relationship is missing or unexpected](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

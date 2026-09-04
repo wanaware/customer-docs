@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Administrator setup path
-
 **Outcome:** Prepare a workspace that another user can explore without needing you to explain the model.
 
 **For:** Customer administrators and implementation leads
@@ -64,11 +62,10 @@ Use a Role with `read assets` to complete [Your first 30 minutes](https://docs.w
 
 Remove documentation-only records in reverse order: detach Structure Tags, remove test Collections and Elements, remove test assets, and only then remove their draft configuration. Never delete a published Asset Type or shared integration without reviewing its current use.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** Use the five short clips linked from each core workflow after they are published.
-- **Do it:** Open `/administration/integrations` in your WanAware workspace.
+- **In WanAware:** Open `/administration/integrations` in your WanAware workspace.
 
 ## Get help
 

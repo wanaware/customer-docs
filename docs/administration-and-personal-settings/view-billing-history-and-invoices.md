@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# View billing history and invoices
-
 **Outcome:** Locate a billing-history entry and open the associated invoice for an authorized business purpose.
 
 **For:** Billing administrators
@@ -66,11 +64,15 @@ Invoices can contain private company and billing information. Follow your compan
 
 Match the invoice date and amount to the **Billing History** row you selected. If the row exists but the invoice is missing or mismatched, record the row values and timestamp without sending the full document.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand billing](https://docs.wanaware.com/docs/understand-billing)
-- **Show me:** Billing visuals require masked test data and privacy approval before publication.
-- **Do it:** Open `/administration/billing` in your WanAware workspace and select **Billing History**.
+- **In WanAware:** Open `/administration/billing` in your WanAware workspace and select **Billing History**.
+
+## Next steps
+
+- [View your plan and usage](https://docs.wanaware.com/docs/view-plan-and-usage)
+- [Fix a billing or payment action](https://docs.wanaware.com/docs/billing-and-payment-failures)
 
 ## Get help
 

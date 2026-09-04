@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Add an integration
-
 **Outcome:** Connect and test a supported data source, then begin its first inventory collection.
 
 **For:** Customer administrators and source-system owners
@@ -72,7 +70,7 @@ Only enter an authorization value in a field that the current setup explicitly i
 
 ![Integrations page showing the available provider adapter, connection count, and Connect account action.](https://files.readme.io/af342b7fc96185427330417c532aee1aaed27fbdd5956c429ee096a4f4f3dac6-integration-provider-selection.png)
 5. Enter a clear, unique connection name.
-6. Complete the fields described by the provider adapter.
+6. Enter each value marked required in the provider adapter. Copy account, tenant, region, role, or authorization identifiers from the source-system page named in that guide; do not infer them from a display name.
 7. Review the Permissions and source-side resources listed in the setup summary.
 8. Select the adapter's documented save or connect button once.
 
@@ -91,7 +89,7 @@ If a required field is unclear, stop and check the provider adapter. Do not gues
 
 **Expected result:** WanAware accepts the collection request. Inventory collection can continue after you leave the page.
 
-If the test or request fails, use [Integration connection failures](https://docs.wanaware.com/docs/integration-connection-failures).
+If the test or request fails, use [An Integration does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures).
 
 ## Check your result
 
@@ -106,11 +104,10 @@ Consider the integration verified after a known record appears with the expected
 
 Do not remove a connection by guessing at a control. Removal behavior, imported-Asset impact, and source-side cleanup are provider-specific. Follow the adapter's verified removal procedure or contact Support before changing the connection.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
-- **Show me:** The captioned Integration clip is pending workflow verification and approval.
-- **Do it:** Open **Administration → Integrations** (`/administration/integrations`).
+- **In WanAware:** Open **Administration → Integrations** (`/administration/integrations`).
 
 ## Next steps
 

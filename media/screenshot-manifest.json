@@ -97,11 +97,11 @@
     },
     {
       "id": "assets-create",
-      "file": "media/screenshots/add-asset-form.png",
-      "sourceFile": "media/screenshots/source/add-asset-form.png",
+      "file": "media/screenshots/add-asset-input-state.png",
+      "sourceFile": "media/screenshots/source/add-asset-input-state.png",
       "article": "/docs/add-an-asset",
-      "alt": "Add Asset form showing status, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
-      "captureDate": "2026-09-03",
+      "alt": "Add Asset form showing a sample name, Inventory status, and required IP Block fields before submission.",
+      "captureDate": "2026-09-04",
       "style": "wanaware-ai-assisted-v4",
       "status": "captured-pending-product-support-review"
     },
@@ -288,25 +288,44 @@
       "status": "pending-product-approval"
     },
     {
+      "id": "asset-types-actions",
+      "file": "media/screenshots/asset-type-actions-menu.png",
+      "sourceFile": "media/screenshots/source/asset-type-actions-menu.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Asset Type actions menu showing view, open, clone, visibility, copy, and delete actions for a published example row.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
       "id": "catalog-workspace",
       "file": "media/screenshots/service-catalog-workspace.png",
+      "sourceFile": "media/screenshots/source/service-catalog-workspace.png",
       "article": "/docs/create-a-custom-service-catalog",
-      "alt": "Service Catalog workspace with a sanitized draft Asset Type selected.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Service Catalog workspace showing an example catalog, provider hierarchy, services, search, refresh, and add actions.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-entry",
       "file": "media/screenshots/service-catalog-entry-form.png",
+      "sourceFile": "media/screenshots/source/service-catalog-entry-form.png",
       "article": "/docs/create-a-custom-service-catalog",
-      "alt": "Service Catalog entry form with sanitized name, description, and attribute fields.",
-      "status": "pending-demo-records"
+      "alt": "Add Provider form showing entry type, source, name, description, linked service type, version, and specifications.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-components",
       "file": "media/screenshots/service-catalog-models-components.png",
+      "sourceFile": "media/screenshots/source/service-catalog-models-components.png",
       "article": "/docs/add-catalog-entries-and-compatibility",
-      "alt": "Service Catalog item showing a documentation-only service or circuit type and its specifications.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Service Catalog item showing an example service name, description, prefix, routing type, scope, and update action.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-compatibility",
@@ -318,9 +337,12 @@
     {
       "id": "catalog-bulk-import-choice",
       "file": "media/screenshots/catalog-bulk-import-choice.png",
+      "sourceFile": "media/screenshots/source/catalog-bulk-import-choice.png",
       "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
-      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider import choices.",
-      "status": "pending-release-equivalent-verification"
+      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-bulk-column-mapping",
@@ -388,11 +410,44 @@
       "status": "pending-sanitized-user"
     },
     {
-      "id": "administration-roles",
-      "file": "media/screenshots/role-permission-builder.png",
+      "id": "administration-roles-list",
+      "file": "media/screenshots/iam-roles-list.png",
+      "sourceFile": "media/screenshots/source/iam-roles-list.png",
       "article": "/docs/create-and-edit-roles",
-      "alt": "Role editor showing a sample role name and grouped action-resource Permission selections.",
-      "status": "pending-sanitized-user"
+      "alt": "IAM Roles list showing system and customer Roles, member counts, Permissions, and the Create Role action.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "administration-roles",
+      "file": "media/screenshots/iam-role-editor.png",
+      "sourceFile": "media/screenshots/source/iam-role-editor.png",
+      "article": "/docs/create-and-edit-roles",
+      "alt": "Create Role page showing the Name field and grouped action-resource Permission selections.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "administration-role-create-result",
+      "file": "media/screenshots/iam-role-created-result.png",
+      "sourceFile": "media/screenshots/source/iam-role-created-result.png",
+      "article": "/docs/create-and-edit-roles",
+      "alt": "Saved customer Role showing one selected read Assets Permission on the Permissions tab.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "administration-role-delete-confirm",
+      "file": "media/screenshots/iam-role-delete-confirmation.png",
+      "sourceFile": "media/screenshots/source/iam-role-delete-confirmation.png",
+      "article": "/docs/create-and-edit-roles",
+      "alt": "Delete Role confirmation identifying the selected customer Role and warning that deletion cannot be undone.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "administration-pending-invitation",
@@ -411,9 +466,12 @@
     {
       "id": "personal-theme",
       "file": "media/screenshots/theme-settings-light-and-dark.png",
+      "sourceFile": "media/screenshots/source/theme-settings-light-and-dark.png",
       "article": "/docs/choose-a-theme",
       "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
-      "status": "blocked-pending-sanitized-recapture"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "administration-billing-plan",
@@ -597,9 +655,12 @@
     {
       "id": "assets-create-success",
       "file": "media/screenshots/add-asset-success.png",
+      "sourceFile": "media/screenshots/source/add-asset-success.png",
       "article": "/docs/add-an-asset",
       "alt": "Asset Added confirmation showing the saved status and the View Asset, Add Another, and Done next actions.",
-      "status": "pending-documentation-record"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-normalization",
@@ -617,17 +678,33 @@
     },
     {
       "id": "asset-types-save-draft",
-      "file": "media/screenshots/asset-type-save-draft-result.png",
+      "file": "media/screenshots/asset-type-draft-result.png",
+      "sourceFile": "media/screenshots/source/asset-type-draft-result.png",
       "article": "/docs/create-a-custom-asset-type",
       "alt": "Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.",
-      "status": "pending-documentation-record"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "asset-types-publish-confirm",
       "file": "media/screenshots/asset-type-publish-confirmation.png",
+      "sourceFile": "media/screenshots/source/asset-type-publish-confirmation.png",
       "article": "/docs/publish-and-verify-an-asset-type",
       "alt": "Asset Type publication confirmation showing the read-only consequence before the destructive action is confirmed.",
-      "status": "pending-product-approval"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "asset-types-delete-confirm",
+      "file": "media/screenshots/asset-type-delete-confirmation.png",
+      "sourceFile": "media/screenshots/source/asset-type-delete-confirmation.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Delete Asset Type confirmation showing the affected draft name and the permanent deletion warning.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "structures-edit",
@@ -687,31 +764,43 @@
     },
     {
       "id": "administration-user-create",
-      "file": "media/screenshots/iam-create-user.png",
+      "file": "media/screenshots/invite-user-form.png",
+      "sourceFile": "media/screenshots/source/invite-user-form.png",
       "article": "/docs/invite-users-and-assign-roles",
-      "alt": "Create User form showing sanitized name, email, Role selection, validation, and the Create User action.",
-      "status": "pending-sanitized-user"
+      "alt": "Create User form showing the User name, Email, Role selection, and Create User action with sample values.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "administration-company-logo",
-      "file": "media/screenshots/company-logo-preview.png",
+      "file": "media/screenshots/company-branding.png",
+      "sourceFile": "media/screenshots/source/company-branding.png",
       "article": "/docs/manage-company-settings",
-      "alt": "Organization Information showing the company logo preview and Save control with identifiers removed.",
-      "status": "pending-identifier-safe-capture"
+      "alt": "Platform Customization settings showing Dark Mode Logo and Light Mode Logo upload controls.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "personal-profile-general",
-      "file": "media/screenshots/profile-general-settings.png",
+      "file": "media/screenshots/profile-preferences.png",
+      "sourceFile": "media/screenshots/source/profile-preferences.png",
       "article": "/docs/manage-profile-and-security",
-      "alt": "Personal General settings showing name, timezone, time and date formats, avatar control, and Save action.",
-      "status": "pending-identifier-safe-capture"
+      "alt": "Personal General settings showing Timezone, time and date formats, and the Profile Avatar upload control.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "personal-password",
-      "file": "media/screenshots/profile-change-password.png",
+      "file": "media/screenshots/profile-security.png",
+      "sourceFile": "media/screenshots/source/profile-security.png",
       "article": "/docs/manage-profile-and-security",
-      "alt": "Change Password form showing password requirements and action controls with every entered value blank.",
-      "status": "pending-identifier-safe-capture"
+      "alt": "Security settings showing enabled Authenticator App status and blank Current and New Password fields.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "personal-mfa-setup",

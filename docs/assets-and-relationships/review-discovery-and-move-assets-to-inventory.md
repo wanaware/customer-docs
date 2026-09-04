@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Review Discovery and move Assets to Inventory
-
 **Outcome:** Confirm found records belong in the maintained set and move only the intended Assets to Inventory.
 
 **For:** Customer administrators and engineers
@@ -53,12 +51,19 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label | Purpose | Required state or format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **Discovery** | Holds found or review-stage Assets. | Record has Discovery status. | Integration, upload, or manual creation. | Found router | Discovery tab. |
-| Search | Narrows visible records. | Use a name, stable identifier, or other visible identity value. | Source record. | edge-router-01 | Current view only. |
-| Row selection | Chooses records for the action. | Select only records you have reviewed. | Discovery table. | One checked row | Action bar count. |
-| **Move To Inventory** | Promotes selected records. | Requires selection and `update assets`. | Discovery action bar. | — | Inventory after processing. |
+### Select records safely
+
+| Control | What to check | Example |
+| --- | --- | --- |
+| **Discovery** | Confirm you are reviewing found or imported records, not maintained Inventory. | Found router |
+| Search | Use a name, stable identifier, or another visible identity value. | `edge-router-01` |
+| Row selection | Compare the full identity of every selected record and check for an existing Inventory match. | One reviewed row |
+
+### What happens next
+
+| Action | Requirement | Expected result |
+| --- | --- | --- |
+| **Move To Inventory** | At least one reviewed row and `update assets`. | The action enters background processing, then the Asset appears in Inventory and leaves Discovery. |
 
 ## Review and move records
 
@@ -90,16 +95,15 @@ If only some rows move, record the remaining IDs and refresh before retrying. A 
 
 Do not delete the Asset to reverse an accidental promotion. First confirm whether your released workspace provides an approved status-edit path for that record. If it does not, contact Support with the Asset ID and promotion timestamp so the record can be assessed without losing Relationships or attachments.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** The Discovery review clip is pending workflow verification and approval.
-- **Do it:** Open `/assets/discovery`.
+- **In WanAware:** Open `/assets/discovery`.
 
 ## Next steps
 
 - [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
 
 ## Get help
 

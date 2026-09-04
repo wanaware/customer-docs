@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Attach Collections to Structures
-
 **Outcome:** Attach a Collection to the intended Structure node with a Structure Tag.
 
 **For:** Customer administrators and engineers
@@ -78,11 +76,15 @@ Refresh the Collection and confirm the Structure Tag. Open **Structures**, expan
 
 Remove the tag you added or reapply the one you removed, then save and verify. Detaching a Collection should not delete the Collection, its Element, or its assets.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** The Collection attachment clip is pending workflow verification and approval.
-- **Do it:** Open **Functions → Elements** (`/elements`), select an Element, and expand the Collection.
+- **In WanAware:** Open **Functions → Elements** (`/elements`), select an Element, and expand the Collection.
+
+## Next steps
+
+- [Create Collections and add Assets](https://docs.wanaware.com/docs/create-collections-and-add-assets)
+- [Fix an Element or Collection attachment](https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures)
 
 ## Get help
 

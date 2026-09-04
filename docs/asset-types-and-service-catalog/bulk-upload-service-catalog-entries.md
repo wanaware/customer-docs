@@ -2,7 +2,7 @@
 title: Bulk upload Service Catalog entries
 excerpt: Map columns, resolve conflicts and errors, create catalog entries, and reconcile a bulk-upload job.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: Bulk upload Service Catalog entries | WanAware Documentation
   description: Validate and create Service Catalog providers, models, or services from a file or pasted spreadsheet.
@@ -11,7 +11,7 @@ metadata:
     - catalog conflict
     - create catalog entries
     - existing provider id
-  robots: index
+  robots: noindex
 ---
 
 <!-- kb-meta
@@ -27,10 +27,6 @@ screenshot-set: service-catalog-bulk-upload
 video-status: blocked
 release-status: draft
 -->
-
-# Bulk upload Service Catalog entries
-
-> **Publication blocker:** The released UI and field contract have been reviewed, but the current release-equivalent verification workspace reports **Catalog bulk upload is not connected in this environment.** This draft must not be marked ready until a full job succeeds and Product and Support approve the results.
 
 **Outcome:** Validate a prepared file, resolve mapping and row issues, create accepted catalog entries, and verify the final hierarchy.
 
@@ -59,21 +55,31 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label or result | Purpose | Required state or accepted format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **CSV or XLSX** | Uploads a saved spreadsheet file. | Current template; maximum 100 MB. | Prepared local file. | `catalog-import.xlsx` | Mapping and job summary. |
-| **Paste spreadsheet** | Accepts a copied tabular range. | Include one header row and a rectangular data range. | Spreadsheet clipboard. | Header plus 10 rows | Mapping and validation. |
-| Column mapping | Connects source headers to catalog fields. | Map required fields once; choose **Ignore** for unrelated columns. | File headers and current schema. | `Provider Name` → Provider name | Entry fields. |
-| **Ready** | Entry has no blocking issue. | Review the final name and description. | Validation result. | — | Eligible for creation. |
-| **Conflicts** | Entry collides with existing or submitted data. | Resolve the named identity or parent conflict. | Validation result. | Duplicate provider name | Blocks affected entry. |
-| **Errors** | Entry violates a required format or relationship. | Correct the named field and revalidate. | Validation result. | Unknown provider ID | Blocks affected entry. |
-| Editable name and description | Corrects a reviewed entry before creation. | Use approved customer-facing text. | Data owner. | Corrected model name | Catalog entry. |
-| **Create N entries** | Submits the currently accepted set. | `N` must match the reviewed count. | Review summary. | Create 12 entries | Processing job. |
+### Provide the data
+
+| Choice | Accepted input | What appears next |
+| --- | --- | --- |
+| **CSV or XLSX** | A current template file up to 100 MB, such as `catalog-import.xlsx`. | Column mapping and the job summary. |
+| **Paste spreadsheet** | One header row and a rectangular copied range. | Column mapping and validation. |
+| Column mapping | Map each required header to one catalog field; choose **Ignore** for unrelated columns. | Mapped values in the entry review. |
+
+### Review the results
+
+| Result or action | What it means | What to do next |
+| --- | --- | --- |
+| **Ready** | The entry has no blocking issue. | Review its final name and description. |
+| **Conflicts** | The entry collides with existing or submitted data. | Resolve the named identity or parent conflict. |
+| **Errors** | A required format or relationship failed. | Correct the named field and revalidate. |
+| Editable name and description | The reviewed entry can still be corrected. | Enter approved customer-facing text, then revalidate. |
+| **Create N entries** | Submits the accepted set shown in the summary. | Confirm that `N` matches the reviewed count before selecting it. |
 
 ## Upload and map the data
 
 1. Open the bulk-upload page for the selected Asset Type and writable catalog.
 2. Choose the correct option under **What are you adding?**
+
+![Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.](https://files.readme.io/db24e54e650041262b05f564439f74233545b657469d92f2b788a487d70c4a04-catalog-bulk-import-choice.png)
+
 3. Choose **CSV or XLSX** and select a file no larger than 100 MB, or choose **Paste spreadsheet** and paste the header plus data rows.
 4. Select **Upload & validate**.
 5. Review the automatic column mapping.
@@ -116,16 +122,15 @@ If the outcome is partial, do not resubmit the entire source. Build a retry set 
 - For an uncertain result, search the catalog by stable parent and entry identity before retrying.
 - To remove or correct a created entry, first check dependent Asset Types, catalog children, compatibility, and Assets; use only a released edit or delete action approved for that entry.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Prepare a Service Catalog bulk-upload file](https://docs.wanaware.com/docs/prepare-a-service-catalog-bulk-upload-file)
-- **Show me:** This video remains blocked until the complete workflow succeeds in a release-equivalent environment.
-- **Do it:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
+- **In WanAware:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
 
 ## Next steps
 
 - [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

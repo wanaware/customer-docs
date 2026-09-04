@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage payment methods
-
 **Outcome:** Add, update, or remove an authorized payment method and confirm only its masked details are displayed.
 
 **For:** Billing administrators
@@ -76,11 +74,15 @@ Refresh **Payment & Billing**, reopen **View details**, and confirm the expected
 
 Restore the prior billing contact or approved method and verify again. Removing a payment method can affect renewal; do not remove the only method unless the product confirmation and your billing policy permit it.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand billing](https://docs.wanaware.com/docs/understand-billing)
-- **Show me:** Billing visuals require masked test data and privacy approval before publication.
-- **Do it:** Open `/administration/billing` in your WanAware workspace and select **Payment & Billing**.
+- **In WanAware:** Open `/administration/billing` in your WanAware workspace and select **Payment & Billing**.
+
+## Next steps
+
+- [View your plan and usage](https://docs.wanaware.com/docs/view-plan-and-usage)
+- [View billing history and invoices](https://docs.wanaware.com/docs/view-billing-history-and-invoices)
 
 ## Get help
 

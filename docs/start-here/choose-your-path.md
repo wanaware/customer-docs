@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Choose your path
-
 Choose one path now. You can return for the other later.
 
 ## Explore WanAware

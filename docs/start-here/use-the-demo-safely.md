@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Use a shared evaluation workspace safely
-
 **Outcome:** Explore the product and create approved test records without disrupting a shared workspace.
 
 **For:** Anyone using a shared trial, sandbox, or evaluation workspace
@@ -95,11 +93,15 @@ Never enter production credentials, passwords, tokens, private keys, real custom
 
 Continue after you can identify the read-only actions and the actions that require approval. Record how to remove every temporary record you create.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** The first-30-minutes safety clip is pending workflow verification and approval.
-- **Do it:** Open `/launchpad` and follow [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes).
+- **In WanAware:** Open `/launchpad` and follow [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes).
+
+## Next steps
+
+- [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes)
+- [Administrator setup path](https://docs.wanaware.com/docs/administrator-setup-path)
 
 ## Get help
 

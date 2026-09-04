@@ -16,14 +16,13 @@
     },
     {
       "article": "/docs/add-an-asset",
-      "status": "capture-incomplete",
+      "status": "captured",
       "screenshotIds": [
         "assets-create-type-cards",
         "assets-create-type-list",
-        "assets-create"
-      ],
-      "pendingScreenshotIds": ["assets-create-success"],
-      "blocker": "The Asset Added confirmation requires a documentation-only record to be created and cleaned up."
+        "assets-create",
+        "assets-create-success"
+      ]
     },
     {
       "article": "/docs/add-an-integration",
@@ -37,8 +36,12 @@
     },
     {
       "article": "/docs/add-catalog-entries-and-compatibility",
-      "status": "capture-blocked",
-      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-components"
+      ],
+      "pendingScreenshotIds": ["catalog-compatibility", "catalog-save-result"],
+      "blocker": "The released catalog details are captured, but compatibility selection and a safe saved result still need documentation-only records."
     },
     {
       "article": "/docs/attach-collections-to-structures",
@@ -86,44 +89,64 @@
     },
     {
       "article": "/docs/bulk-upload-service-catalog-entries",
-      "status": "capture-blocked",
-      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-bulk-import-choice"
+      ],
+      "pendingScreenshotIds": [
+        "catalog-bulk-column-mapping",
+        "catalog-bulk-review-results",
+        "catalog-bulk-completion"
+      ],
+      "blocker": "The import choice is captured, but the backing service must complete a safe end-to-end job before mapping, review, and completion can be captured."
     },
     {
       "article": "/docs/choose-a-theme",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before the Theme Settings panel could be captured."
+      "status": "captured",
+      "screenshotIds": [
+        "personal-theme"
+      ]
     },
     {
       "article": "/docs/configure-asset-type-sections-and-fields",
-      "status": "capture-incomplete",
+      "status": "captured",
       "screenshotIds": [
         "asset-types-fields",
         "asset-types-field-types",
-        "asset-types-field-rule"
-      ],
-      "pendingScreenshotIds": ["asset-types-save-draft"],
-      "blocker": "The saved-draft checkpoint needs a documentation-only draft record."
+        "asset-types-field-rule",
+        "asset-types-save-draft"
+      ]
     },
     {
       "article": "/docs/create-a-custom-asset-type",
-      "status": "capture-incomplete",
+      "status": "captured",
       "screenshotIds": [
         "asset-types-list",
-        "asset-types-start"
-      ],
-      "pendingScreenshotIds": ["asset-types-save-draft"],
-      "blocker": "The Draft result needs a documentation-only Asset Type that can be removed after capture."
+        "asset-types-start",
+        "asset-types-actions",
+        "asset-types-save-draft",
+        "asset-types-delete-confirm"
+      ]
     },
     {
       "article": "/docs/create-a-custom-service-catalog",
-      "status": "capture-blocked",
-      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-workspace",
+        "catalog-entry"
+      ],
+      "pendingScreenshotIds": ["catalog-save-result"],
+      "blocker": "The catalog workspace and entry form are captured; a safe saved-entry result still requires a disposable documentation record."
     },
     {
       "article": "/docs/create-and-edit-roles",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before the safe unsaved Role editor could be captured."
+      "status": "captured",
+      "screenshotIds": [
+        "administration-roles-list",
+        "administration-roles",
+        "administration-role-create-result",
+        "administration-role-delete-confirm"
+      ]
     },
     {
       "article": "/docs/create-and-manage-structures",
@@ -175,8 +198,10 @@
     },
     {
       "article": "/docs/invite-users-and-assign-roles",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before a sanitized IAM state could be captured."
+      "status": "capture-incomplete",
+      "screenshotIds": ["administration-user-create"],
+      "pendingScreenshotIds": ["administration-iam"],
+      "blocker": "The safe Create User form is captured; a sanitized sent-invitation result still requires an approved documentation-only address."
     },
     {
       "article": "/docs/manage-asset-and-structure-tags",
@@ -188,8 +213,10 @@
     },
     {
       "article": "/docs/manage-company-settings",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before identifier-safe settings could be captured."
+      "status": "capture-incomplete",
+      "screenshotIds": ["administration-company-logo"],
+      "pendingScreenshotIds": ["administration-company-profile"],
+      "blocker": "The logo controls are captured without workspace identifiers; a safe Organization Information capture still requires approved sample values."
     },
     {
       "article": "/docs/manage-payment-methods",
@@ -203,8 +230,16 @@
     },
     {
       "article": "/docs/manage-profile-and-security",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before identifier-safe profile controls could be captured."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "personal-profile-general",
+        "personal-password"
+      ],
+      "pendingScreenshotIds": [
+        "personal-mfa-setup",
+        "personal-recovery-codes"
+      ],
+      "blocker": "General preferences and password controls are captured without identifiers; the active account is already enrolled in MFA, and recovery codes must never appear in documentation media."
     },
     {
       "article": "/docs/manage-site-details",
@@ -224,13 +259,19 @@
     },
     {
       "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
-      "status": "capture-blocked",
-      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-bulk-import-choice"
+      ],
+      "pendingScreenshotIds": ["catalog-bulk-column-mapping"],
+      "blocker": "The import choices and template entry point are captured; end-to-end service verification is still required before publishing the workflow."
     },
     {
       "article": "/docs/publish-and-verify-an-asset-type",
-      "status": "capture-blocked",
-      "blocker": "Publication confirmation must be recaptured after the signed-in session is unlocked; no draft is published for a screenshot."
+      "status": "capture-incomplete",
+      "screenshotIds": ["asset-types-publish-confirm"],
+      "pendingScreenshotIds": ["asset-types-lifecycle"],
+      "blocker": "The publication warning is captured; no Asset Type is published solely to obtain documentation media."
     },
     {
       "article": "/docs/refresh-integration-data",

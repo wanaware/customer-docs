@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Refresh integration data
-
 **Outcome:** Start the provider adapter's documented collection action and confirm that WanAware accepted the request.
 
 **For:** Customer administrators and source-system owners
@@ -81,11 +79,15 @@ WanAware does not provide one action that reverses a completed collection. Corre
 
 Contact Support before deleting multiple records.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
-- **Show me:** The integration clip shows the refresh checkpoint after publication.
-- **Do it:** Open **Administration → Integrations** (`/administration/integrations`).
+- **In WanAware:** Open **Administration → Integrations** (`/administration/integrations`).
+
+## Next steps
+
+- [Verify imported Inventory](https://docs.wanaware.com/docs/verify-imported-inventory)
+- [Fix an Integration that does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures)
 
 ## Get help
 

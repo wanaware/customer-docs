@@ -147,18 +147,18 @@
     {
       "id": "assets-create",
       "kind": "screenshot",
-      "source": "media/screenshots/source/add-asset-form.png",
-      "publishingFile": "media/screenshots/add-asset-form.png",
-      "sha256": "25b95a3474defa6ba78057ad42d4ce937837644142bbd126e0c131e6807c27ac",
-      "width": 1786,
-      "height": 1136,
-      "bytes": 113689,
-      "alt": "Add Asset form showing status, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
+      "source": "media/screenshots/source/add-asset-input-state.png",
+      "publishingFile": "media/screenshots/add-asset-input-state.png",
+      "sha256": "d8b4a66801013f6748c10498793f8041e5ae3c6a78c03d91dcf883884520f387",
+      "width": 1800,
+      "height": 1132,
+      "bytes": 99261,
+      "alt": "Add Asset form showing a sample name, Inventory status, and required IP Block fields before submission.",
       "articles": [
         "/docs/add-an-asset"
       ],
-      "publishedUrl": "https://files.readme.io/3ee1b6636411448bac08983d9d9ad903511f635dff718beb436b6ba18f7632f4-add-asset-form.png",
-      "renderedOn": "2026-09-03",
+      "publishedUrl": "https://files.readme.io/07a0242867fc88b01afff516ad5e33ee3a0f95c1f9f75e1459a25ea0691f05cd-add-asset-input-state.png",
+      "renderedOn": "2026-09-04",
       "approvalState": "pending-product-support-review"
     },
     {
@@ -340,6 +340,7 @@
       "articles": [
         "/docs/missing-or-unexpected-relationships",
         "/docs/view-asset-relationships",
+        "/docs/welcome-to-wanaware",
         "/docs/your-first-30-minutes"
       ],
       "publishedUrl": "https://files.readme.io/e7db6b94b13b42103b48e405a82aa443fbbba2af036bdbfc2996c4d8b8170c41-asset-relationship-graph.png",
@@ -724,6 +725,314 @@
       ],
       "publishedUrl": "https://files.readme.io/9c68b865170382016a815e68e7a191201ba5726de477a561a4ff2bdab99a2f48-site-location.png",
       "renderedOn": "2026-09-03",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "assets-create-success",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/add-asset-success.png",
+      "publishingFile": "media/screenshots/add-asset-success.png",
+      "sha256": "5e9a2abafb86eac266824fa6cbafc4680e12f1b3a158116444b1ea058bc0bfe7",
+      "width": 1800,
+      "height": 972,
+      "bytes": 52729,
+      "alt": "Asset Added confirmation showing the saved status and the View Asset, Add Another, and Done next actions.",
+      "articles": [
+        "/docs/add-an-asset"
+      ],
+      "publishedUrl": "https://files.readme.io/2a73c1f7d75aa61f97ba7502ec7564b2d42ee9b528728c0b4b860093de90c6c2-add-asset-success.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-actions",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-actions-menu.png",
+      "publishingFile": "media/screenshots/asset-type-actions-menu.png",
+      "sha256": "f5a70a0da8dfcd47f24451fe4b8e391138df692d9477db3d3de40070f2e3b73d",
+      "width": 1800,
+      "height": 672,
+      "bytes": 148894,
+      "alt": "Asset Type actions menu showing view, open, clone, visibility, copy, and delete actions for a published example row.",
+      "articles": [
+        "/docs/create-a-custom-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/a59349bb53972422d7a34c194c1347083629dddfbf31c4548438f1740378e059-asset-type-actions-menu.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "personal-theme",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/theme-settings-light-and-dark.png",
+      "publishingFile": "media/screenshots/theme-settings-light-and-dark.png",
+      "sha256": "66ccd72e7435c7c0712c0d913f353a7811e62f83010b6c2cfebca0193eb28504",
+      "width": 1800,
+      "height": 1022,
+      "bytes": 146462,
+      "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
+      "articles": [
+        "/docs/choose-a-theme"
+      ],
+      "publishedUrl": "https://files.readme.io/bababdfbea8a1fbebc998a60a50586adea6315925cc1016f5a2705f1cc642cfe-theme-settings-light-and-dark.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "catalog-workspace",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/service-catalog-workspace.png",
+      "publishingFile": "media/screenshots/service-catalog-workspace.png",
+      "sha256": "c1c626fb4534585cbced4f44ac785afd115f0ae529a9d620369889989f2fa53b",
+      "width": 1800,
+      "height": 692,
+      "bytes": 105063,
+      "alt": "Service Catalog workspace showing an example catalog, provider hierarchy, services, search, refresh, and add actions.",
+      "articles": [
+        "/docs/create-a-custom-service-catalog"
+      ],
+      "publishedUrl": "https://files.readme.io/109fd5e29eabcb97c7f0402dbe6ec95ccc4701290d0f68f1e5d6c58e7e05e169-service-catalog-workspace.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "catalog-entry",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/service-catalog-entry-form.png",
+      "publishingFile": "media/screenshots/service-catalog-entry-form.png",
+      "sha256": "bc992e19ca0dc3ffacb831df72d2d7056e6ad0ddacc3d03f734e68a5e96da815",
+      "width": 1800,
+      "height": 1096,
+      "bytes": 137044,
+      "alt": "Add Provider form showing entry type, source, name, description, linked service type, version, and specifications.",
+      "articles": [
+        "/docs/create-a-custom-service-catalog"
+      ],
+      "publishedUrl": "https://files.readme.io/96bdabdeee105efdffb65447085562aba19e2d4b43a5b9b7157d1f403680ea6c-service-catalog-entry-form.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "catalog-components",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/service-catalog-models-components.png",
+      "publishingFile": "media/screenshots/service-catalog-models-components.png",
+      "sha256": "44c4009502c9da70f17dd8e6f8c44a958f0efaa876c55d50dd131997a764959e",
+      "width": 1800,
+      "height": 692,
+      "bytes": 102865,
+      "alt": "Service Catalog item showing an example service name, description, prefix, routing type, scope, and update action.",
+      "articles": [
+        "/docs/add-catalog-entries-and-compatibility"
+      ],
+      "publishedUrl": "https://files.readme.io/361cc34e9a8827f7539cc31abcea175ff8c1d7a2c9bc6efe82a989ce4b7fe5fe-service-catalog-models-components.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "catalog-bulk-import-choice",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/catalog-bulk-import-choice.png",
+      "publishingFile": "media/screenshots/catalog-bulk-import-choice.png",
+      "sha256": "e8c07c4830ed3bd6d4e77f4de5266df7d3e4a898db0c2e0e9d534fea7e2cc0a3",
+      "width": 1800,
+      "height": 1022,
+      "bytes": 110127,
+      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.",
+      "articles": [
+        "/docs/bulk-upload-service-catalog-entries",
+        "/docs/prepare-a-service-catalog-bulk-upload-file"
+      ],
+      "publishedUrl": "https://files.readme.io/db24e54e650041262b05f564439f74233545b657469d92f2b788a487d70c4a04-catalog-bulk-import-choice.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-roles-list",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/iam-roles-list.png",
+      "publishingFile": "media/screenshots/iam-roles-list.png",
+      "sha256": "18ceb6f9be2e36b5ae1c2eb4a52c7341a402495c4f196d192ea9dfc8b887d61d",
+      "width": 1786,
+      "height": 632,
+      "bytes": 41518,
+      "alt": "IAM Roles list showing system and customer Roles, member counts, Permissions, and the Create Role action.",
+      "articles": [
+        "/docs/create-and-edit-roles"
+      ],
+      "publishedUrl": "https://files.readme.io/3431077d146ae19f5296ef7967e8f70f01c4b0ea784da2adb5f81cc739f95869-iam-roles-list.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-roles",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/iam-role-editor.png",
+      "publishingFile": "media/screenshots/iam-role-editor.png",
+      "sha256": "67a7f6ab4b404dd90c374ab3c0b17319efc9e92931b7158f3e19b4b6d5eeee62",
+      "width": 1786,
+      "height": 1136,
+      "bytes": 138255,
+      "alt": "Create Role page showing the Name field and grouped action-resource Permission selections.",
+      "articles": [
+        "/docs/create-and-edit-roles"
+      ],
+      "publishedUrl": "https://files.readme.io/0534e10ef59e6fdbdafd9fc2c149bf61b655dc11eaa9d3bf2132d6bc2ddaaa0a-iam-role-editor.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-save-draft",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-draft-result.png",
+      "publishingFile": "media/screenshots/asset-type-draft-result.png",
+      "sha256": "a2b5189fef5bc087b64b0205db2443258b458868b840620044678a047e269902",
+      "width": 1786,
+      "height": 452,
+      "bytes": 48795,
+      "alt": "Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.",
+      "articles": [
+        "/docs/configure-asset-type-sections-and-fields",
+        "/docs/create-a-custom-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/a946bbbb205a2a7a7c43a2187d9e0b6fea6b71362cff2fd1badbdc70d0205334-asset-type-draft-result.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-publish-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-publish-confirmation.png",
+      "publishingFile": "media/screenshots/asset-type-publish-confirmation.png",
+      "sha256": "f2d9ac04a58bca9c65db167f8600afe946d043e7a259e33170099199498bbd04",
+      "width": 1793,
+      "height": 872,
+      "bytes": 60222,
+      "alt": "Asset Type publication confirmation showing the read-only consequence before the destructive action is confirmed.",
+      "articles": [
+        "/docs/publish-and-verify-an-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/16b43df026c7b93507620c29fdff3e6a818160ef714343fd402d5aa824138b72-asset-type-publish-confirmation.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "asset-types-delete-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/asset-type-delete-confirmation.png",
+      "publishingFile": "media/screenshots/asset-type-delete-confirmation.png",
+      "sha256": "01d1aa487c72596633a8f6426a825f10691648a954756b5926e37a6dff568f1a",
+      "width": 1793,
+      "height": 872,
+      "bytes": 51569,
+      "alt": "Delete Asset Type confirmation showing the affected draft name and the permanent deletion warning.",
+      "articles": [
+        "/docs/create-a-custom-asset-type"
+      ],
+      "publishedUrl": "https://files.readme.io/80ad09ada788d5988de28bc39206ae2b75af43f42c925d6a0b2664d09ca3987f-asset-type-delete-confirmation.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-user-create",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/invite-user-form.png",
+      "publishingFile": "media/screenshots/invite-user-form.png",
+      "sha256": "acf7c4a24311ba110513792b55fb80940b442282c6fc0cc6583e31ef3fbe4f48",
+      "width": 1500,
+      "height": 522,
+      "bytes": 41852,
+      "alt": "Create User form showing the User name, Email, Role selection, and Create User action with sample values.",
+      "articles": [
+        "/docs/invite-users-and-assign-roles"
+      ],
+      "publishedUrl": "https://files.readme.io/d36aede7c22d78f94ef1b914ecab0697bee19100c324c60c78a07f387c4f8d17-invite-user-form.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-company-logo",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/company-branding.png",
+      "publishingFile": "media/screenshots/company-branding.png",
+      "sha256": "7d0b9e6ace664d9b6ff4a8122891f2b90c9d998978a3dac10b5fd3ca543da5b6",
+      "width": 1786,
+      "height": 432,
+      "bytes": 24177,
+      "alt": "Platform Customization settings showing Dark Mode Logo and Light Mode Logo upload controls.",
+      "articles": [
+        "/docs/manage-company-settings"
+      ],
+      "publishedUrl": "https://files.readme.io/86716aa8e278f798f5e6bba4691e8f856f7e7ad6431ec1bc1e67dcc5d03621b6-company-branding.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "personal-profile-general",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/profile-preferences.png",
+      "publishingFile": "media/screenshots/profile-preferences.png",
+      "sha256": "cfb7453fb38a2e65eac6a4626ab97d8db6c4c92f188fd404269fe41258016c3f",
+      "width": 1786,
+      "height": 397,
+      "bytes": 28379,
+      "alt": "Personal General settings showing Timezone, time and date formats, and the Profile Avatar upload control.",
+      "articles": [
+        "/docs/manage-profile-and-security"
+      ],
+      "publishedUrl": "https://files.readme.io/f5ddd02942292f774e059689d4404b4b25f3e068bab35590e561fea2f52a0eb2-profile-preferences.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "personal-password",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/profile-security.png",
+      "publishingFile": "media/screenshots/profile-security.png",
+      "sha256": "96037be59ded3576954dda86cd2d8eeb511de1fc58d0d169f8dba5a091d1b8b9",
+      "width": 1786,
+      "height": 872,
+      "bytes": 51009,
+      "alt": "Security settings showing enabled Authenticator App status and blank Current and New Password fields.",
+      "articles": [
+        "/docs/manage-profile-and-security"
+      ],
+      "publishedUrl": "https://files.readme.io/cd9790ffdfe6cc294d24e83a90dda42d817dc61ce5bb94fe828a64ba7f24632e-profile-security.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-role-create-result",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/iam-role-created-result.png",
+      "publishingFile": "media/screenshots/iam-role-created-result.png",
+      "sha256": "28d6ac20c46c6401f6de6adc7dceb46100c5b832b2e5833d1b0f2d13df817672",
+      "width": 1800,
+      "height": 497,
+      "bytes": 54183,
+      "alt": "Saved customer Role showing one selected read Assets Permission on the Permissions tab.",
+      "articles": [
+        "/docs/create-and-edit-roles"
+      ],
+      "publishedUrl": "https://files.readme.io/1b40d0ecb3506785ef2487af33918fc84bf3819e3e83e24de677b90e04ac6cd8-image.png",
+      "renderedOn": "2026-09-04",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "administration-role-delete-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/iam-role-delete-confirmation.png",
+      "publishingFile": "media/screenshots/iam-role-delete-confirmation.png",
+      "sha256": "e46b0da05123373c3e5e0bc87700e57222bbf0f2cfd89ebf0596a41a7e6342fd",
+      "width": 1800,
+      "height": 452,
+      "bytes": 69777,
+      "alt": "Delete Role confirmation identifying the selected customer Role and warning that deletion cannot be undone.",
+      "articles": [
+        "/docs/create-and-edit-roles"
+      ],
+      "publishedUrl": "https://files.readme.io/606771bd138d3b448d60a4885c49d19e58c77eead82c98aec7a9c38fdb95d5ce-iam-role-delete-confirmation.png",
+      "renderedOn": "2026-09-04",
       "approvalState": "pending-product-support-review"
     }
   ],

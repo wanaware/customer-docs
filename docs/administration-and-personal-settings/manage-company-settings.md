@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage company settings
-
 **Outcome:** Update an approved company setting and confirm the shared result.
 
 **For:** Customer administrators
@@ -66,6 +64,8 @@ release-status: draft
 3. Confirm the company name or identifier.
 4. Change only the approved field.
 5. Preview logo cropping and contrast before accepting an uploaded image.
+
+![Platform Customization settings showing Dark Mode Logo and Light Mode Logo upload controls.](https://files.readme.io/86716aa8e278f798f5e6bba4691e8f856f7e7ad6431ec1bc1e67dcc5d03621b6-company-branding.png)
 6. Select **Save**.
 
 **Expected result:** WanAware confirms the save and the value remains after refresh.
@@ -80,11 +80,15 @@ Refresh the page and confirm the saved value. Ask a second permitted user to che
 
 Restore the recorded value and save again. Contact Support if the setting has no edit control or its effect cannot be reversed safely.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until a company-settings clip is approved.
-- **Do it:** Open `/administration/general/company` in your WanAware workspace.
+- **In WanAware:** Open `/administration/general/company` in your WanAware workspace.
+
+## Next steps
+
+- [Invite users and assign Roles](https://docs.wanaware.com/docs/invite-users-and-assign-roles)
+- [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 
 ## Get help
 

@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# View your plan and usage
-
 **Outcome:** Identify the current plan and the Asset usage shown for the company without changing the subscription.
 
 **For:** Customer administrators and billing administrators
@@ -69,11 +67,15 @@ Use the plan, quota, and renewal values displayed in your own workspace. Documen
 
 Refresh **Plans** and confirm the same plan and usage return. If usage differs from Inventory, record both counts and the time zone; background processing can make observations taken at different times hard to compare.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand billing](https://docs.wanaware.com/docs/understand-billing)
-- **Show me:** Billing visuals require masked test data and privacy approval before publication.
-- **Do it:** Open `/administration/billing` in your WanAware workspace and select **Plans**.
+- **In WanAware:** Open `/administration/billing` in your WanAware workspace and select **Plans**.
+
+## Next steps
+
+- [Manage payment methods](https://docs.wanaware.com/docs/manage-payment-methods)
+- [View billing history and invoices](https://docs.wanaware.com/docs/view-billing-history-and-invoices)
 
 ## Get help
 

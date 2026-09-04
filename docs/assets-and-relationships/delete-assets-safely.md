@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Delete Assets safely
-
 **Outcome:** Remove only confirmed obsolete Assets after recording their dependencies and verify that no unintended record was affected.
 
 **For:** Customer administrators
@@ -52,12 +50,19 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label | Purpose | Required state or format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| Selection checkbox | Marks an Asset for a bulk action. | Verify each selected row by ID. | Inventory or Discovery table. | One obsolete Asset | Selected count. |
-| **Actions** | Opens row-level actions. | Use only after identity and dependencies are checked. | Asset row. | — | Row action menu. |
-| **Delete** | Removes the selected record or records. | Requires `delete assets` and confirmation. | Row or selection action. | — | Record disappears after completion. |
-| Confirmation count | Shows deletion scope. | Must match the reviewed selection. | Delete dialog. | 1 Asset | Final confirmation. |
+### Before opening Delete
+
+| UI label | What to verify | Where to verify it |
+| --- | --- | --- |
+| Selection checkbox | Every selected row has the intended Asset name and ID. | Inventory or Discovery table. |
+| **Actions** | You have checked Relationships, Structure Tags, Collection membership, and source ownership. | Asset row and Asset details. |
+
+### Confirmation
+
+| UI label | Required check | Expected result |
+| --- | --- | --- |
+| **Delete** | Your Role has `delete assets`, and the Asset is safe to remove. | The confirmation dialog opens; nothing is deleted yet. |
+| Confirmation count | The count exactly matches the reviewed selection. | After confirmation and processing, the record no longer appears in the original result set. |
 
 ## Delete the Asset
 
@@ -86,15 +91,14 @@ If the confirmation scope is wrong, cancel without making changes and clear the 
 
 There is no documented self-service restore for this release. If deletion was accidental, stop making related changes and contact Support immediately with the deleted Asset ID, source, page URL, and timestamp. If the source Integration recreates the record, compare its new identity and attachments before treating it as the same Asset.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
-- **Show me:** No deletion video is planned because the action is consequential.
-- **Do it:** Open `/assets/inventory` or `/assets/discovery` and select only the reviewed record.
+- **In WanAware:** Open `/assets/inventory` or `/assets/discovery` and select only the reviewed record.
 
 ## Next steps
 
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
 - [Contact WanAware Support](https://docs.wanaware.com/docs/contact-wanaware-support)
 
 ## Get help

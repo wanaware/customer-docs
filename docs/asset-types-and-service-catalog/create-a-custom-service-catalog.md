@@ -8,6 +8,7 @@ metadata:
   description: Create and save Service Catalog data for a draft custom WanAware Asset Type.
   keywords:
     - create Service Catalog
+    - create catalog
     - custom catalog
     - draft Asset Type catalog
   robots: index
@@ -26,8 +27,6 @@ screenshot-set: service-catalog-create
 video-status: planned
 release-status: draft
 -->
-
-# Create a custom Service Catalog
 
 **Outcome:** Select a draft custom Asset Type, add an approved catalog entry, and save the catalog.
 
@@ -65,10 +64,16 @@ release-status: draft
 1. Open **Administration → Service Catalog**.
 2. Use the catalog selector to choose the draft custom Asset Type.
 3. Confirm the selected type is the intended draft.
+
+![Service Catalog workspace showing an example catalog, provider hierarchy, services, search, refresh, and add actions.](https://files.readme.io/109fd5e29eabcb97c7f0402dbe6ec95ccc4701290d0f68f1e5d6c58e7e05e169-service-catalog-workspace.png)
+
 4. Select **Add**.
 5. Choose the entry type required by the schema.
 6. Enter the canonical name and description.
 7. Add only approved specifications or attributes.
+
+![Add Provider form showing entry type, source, name, description, linked service type, version, and specifications.](https://files.readme.io/96bdabdeee105efdffb65447085562aba19e2d4b43a5b9b7157d1f403680ea6c-service-catalog-entry-form.png)
+
 8. Select **Save**.
 
 **Expected result:** The entry appears in the selected Asset Type's catalog after a refresh.
@@ -86,11 +91,10 @@ If the Asset Type is unavailable, confirm that it was saved as a customer draft 
 
 Edit or remove an unused custom entry only while the draft lifecycle permits it and after checking dependencies and compatibility. Do not remove an entry already selected by test or customer assets without an impact review.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The first-entry clip is pending workflow verification and approval.
-- **Do it:** Open `/administration/service-catalog` in your WanAware workspace.
+- **In WanAware:** Open `/administration/service-catalog` in your WanAware workspace.
 
 ## Next steps
 

@@ -1,10 +1,10 @@
 ---
-title: Bulk-import validation failures
+title: An Asset upload has validation errors
 excerpt: Correct file, schema, field, and duplicate errors before importing assets.
 deprecated: false
 hidden: false
 metadata:
-  title: Bulk-import validation failures | WanAware Documentation
+  title: An Asset upload has validation errors | WanAware Documentation
   description: Fix WanAware asset bulk-upload file and row validation errors.
   keywords:
     - bulk upload error
@@ -12,6 +12,7 @@ metadata:
     - CSV validation
     - rejected rows
     - schema error
+    - upload inventory failed
   robots: index
 ---
 
@@ -28,8 +29,6 @@ screenshot-set: troubleshoot-bulk-import
 video-status: not-planned
 release-status: draft
 -->
-
-# Bulk-import validation failures
 
 Use the uploader's current template. Templates and required fields can change as asset types change.
 

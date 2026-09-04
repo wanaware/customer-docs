@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Verify imported Inventory
-
 **Outcome:** Find a known source record and confirm that WanAware imported it into the correct workspace.
 
 **For:** Customer administrators and engineers
@@ -79,11 +77,15 @@ If a record is missing, also check **Discovery** and wait for active processing 
 
 Compare the source and WanAware side by side. Record the source identifier, WanAware asset ID, and collection time for each verified example.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [About integrations](https://docs.wanaware.com/docs/about-integrations)
-- **Show me:** The Integration verification clip is pending workflow verification and approval.
-- **Do it:** Open **Functions → Assets → Inventory** (`/assets/inventory`).
+- **In WanAware:** Open **Functions → Assets → Inventory** (`/assets/inventory`).
+
+## Next steps
+
+- [Review Discovery and move Assets to Inventory](https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory)
+- [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ## Get help
 

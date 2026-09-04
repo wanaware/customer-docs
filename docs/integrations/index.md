@@ -13,6 +13,23 @@ metadata:
   robots: index
 ---
 
-# Integrations
+Integrations bring data from supported providers into WanAware. The general workflow stays the same across providers; credentials and provider-specific options belong in the matching adapter guide.
 
-Integrations bring data from supported providers into WanAware. Start with [About integrations](https://docs.wanaware.com/docs/about-integrations), then use the provider-neutral [Add an integration](https://docs.wanaware.com/docs/add-an-integration) workflow. Provider-specific requirements live in separate adapter pages so the core setup path remains stable as WanAware adds capabilities.
+## Learn
+
+- [About integrations](https://docs.wanaware.com/docs/about-integrations): understand connections, collection, Discovery, and Inventory.
+- [Provider adapters](https://docs.wanaware.com/docs/providers): find requirements for a specific provider.
+
+## Set up
+
+- [Add an integration](https://docs.wanaware.com/docs/add-an-integration): choose a provider, enter its configuration, test the connection, and start collection.
+
+## Manage
+
+- [Refresh integration data](https://docs.wanaware.com/docs/refresh-integration-data): run collection again and understand its status.
+- [Verify imported Inventory](https://docs.wanaware.com/docs/verify-imported-inventory): confirm the expected Assets reached WanAware.
+
+## Fix a problem
+
+- [An Integration does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)

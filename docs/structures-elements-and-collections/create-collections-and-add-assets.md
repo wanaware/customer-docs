@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Create Collections and add Assets
-
 **Outcome:** Create a named Collection inside an Element and add the intended assets once.
 
 **For:** Customer administrators and engineers
@@ -92,11 +90,10 @@ Open the Collection and compare every listed asset ID with the intended set. Con
 
 Remove an incorrect Asset from the Collection. Before deleting the Collection, review its Assets and Structure Tags. Do not delete the Assets themselves.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** The Collection workflow clip is pending workflow verification and approval.
-- **Do it:** Open `/elements`, choose an Element, and select **Collections**.
+- **In WanAware:** Open `/elements`, choose an Element, and select **Collections**.
 
 ## Next steps
 

@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Populate Asset details
-
 **Outcome:** Complete an Asset's editable information and verify that every intended change was saved.
 
 **For:** Customer administrators and engineers responsible for asset data
@@ -92,7 +90,7 @@ If a Structure Tag is unavailable, confirm that the Structure exists and your ro
 
 **Expected result:** The unsaved-change bar clears and the saved values remain visible.
 
-If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures).
+If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures).
 
 ## Check your result
 
@@ -105,11 +103,10 @@ If the page rejects a field, correct the value before navigating away. If an exp
 
 Restore the previous editable value and save again. Remove only the tag you added. If the source integration overwrites the field, correct the source or ask Support which value is authoritative before repeating the edit.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The Asset detail clip is pending workflow verification and approval.
-- **Do it:** Open **Functions → Assets → Inventory** (`/assets/inventory`), select an Asset, and use its editable detail tabs.
+- **In WanAware:** Open **Functions → Assets → Inventory** (`/assets/inventory`), select an Asset, and use its editable detail tabs.
 
 ## Next steps
 

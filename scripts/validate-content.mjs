@@ -6,6 +6,7 @@ import process from 'node:process';
 const root = process.cwd();
 const docsRoot = join(root, 'docs');
 const errors = [];
+const releaseMode = process.env.DOCS_RELEASE_MODE === 'live';
 
 function walk(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -85,11 +86,21 @@ for (const file of markdownFiles) {
     if (!frontmatter[1].includes(field)) fail(file, `frontmatter is missing ${field}`);
   }
 
-  if (!/^# .+/m.test(source.slice(frontmatter[0].length))) {
-    fail(file, 'missing an H1 heading');
+  const customerBody = source.slice(frontmatter[0].length).replace(/<!--[^]*?-->/g, '');
+  for (const [index, line] of customerBody.split('\n').entries()) {
+    if (!/^\|.*\|$/.test(line)) continue;
+    const columnCount = line.split('|').length - 2;
+    if (columnCount > 4) {
+      fail(file, `line ${index + 1} has ${columnCount} table columns; use four or fewer for narrow ReadMe layouts`);
+    }
+  }
+
+  if (/^# .+/m.test(customerBody)) {
+    fail(file, 'body H1 duplicates the title that ReadMe renders from frontmatter; begin body sections at H2');
   }
 
   const isCategory = file.endsWith('/index.md');
+  const isHidden = /^hidden:\s*true$/m.test(frontmatter[1]);
   if (!isCategory) {
     const metadata = source.match(/<!-- kb-meta\n([\s\S]*?)\n-->/);
     if (!metadata) {
@@ -126,13 +137,26 @@ for (const file of markdownFiles) {
         }
       }
 
+      if (releaseMode && !isHidden && releaseStatus !== 'ready') {
+        fail(file, 'visible pages must have release-status ready before publishing to v1.0');
+      }
+
       const contentType = metadataValue(metadata[1], 'content-type');
       if (contentType === 'workflow' || contentType === 'quickstart') {
         for (const label of ['**Outcome:**', '**For:**', '**Permission:**', '**Time:**', '**Changes made:**']) {
           if (!source.includes(label)) fail(file, `workflow is missing ${label}`);
         }
-        for (const heading of ['## If you\'re stuck', '## Before you start', '## Learn, show me, do it', '## Get help']) {
+        for (const heading of ['## If you\'re stuck', '## Before you start', '## Learn and continue', '## Next steps', '## Get help']) {
           if (!source.includes(heading)) fail(file, `workflow is missing ${heading}`);
+        }
+        if (!source.includes('**In WanAware:**')) {
+          fail(file, 'workflow is missing an exact in-product navigation path');
+        }
+        if (/\*\*Show me:\*\*/.test(source)) {
+          fail(file, 'workflow exposes an unapproved Show me placeholder');
+        }
+        if (/\b(?:publication blocker|pending (?:workflow )?verification|pending (?:Product|Support|approval)|until .* approved)\b/i.test(customerBody)) {
+          fail(file, 'workflow exposes internal publication or approval language');
         }
         if (!/^## (?:Field|Option|Starting option|Status and action|View and control|Field and relationship|Field and checkpoint|Page and checkpoint|Action-safety).+guide$/m.test(source)) {
           fail(file, 'workflow is missing a concrete field, option, action, or checkpoint guide');
@@ -145,7 +169,7 @@ for (const file of markdownFiles) {
           fail(file, 'workflow changes data but is missing undo or recovery guidance');
         }
         if (!source.includes('support@wanaware.com')) fail(file, 'workflow is missing the support handoff');
-        const vagueInstruction = source.match(/\b(?:complete the prompts|fill out (?:the )?descriptive fields|select the appropriate option|when available|available save action|available collection|available option)\b/i);
+        const vagueInstruction = source.match(/\b(?:complete the prompts|complete (?:all |the )?fields|fill (?:in|out) (?:the )?fields|fill out (?:the )?descriptive fields|select (?:the |an )?appropriate (?:option|parent)|choose (?:the |an )?appropriate option|follow the prompts|when available|available save action|available collection|available option)\b/i);
         if (vagueInstruction) fail(file, `contains vague instructional wording: ${vagueInstruction[0]}`);
 
         const permission = metadataValue(metadata[1], 'permission') || '';
@@ -563,10 +587,26 @@ if (workflowVisualCoverage && screenshotManifest) {
       if (/^release-status:\s*ready$/m.test(source)) {
         fail(workflowVisualCoverageFile, `${label} cannot have incomplete or blocked action visuals when its article is release-ready`);
       }
+      if (releaseMode && !/^hidden:\s*true$/m.test(source)) {
+        fail(workflowVisualCoverageFile, `${label} must be captured or hidden before publishing to v1.0`);
+      }
     }
   }
   for (const slug of workflowSlugs) {
     if (!coveredArticles.has(slug)) fail(workflowVisualCoverageFile, `workflow article is missing a visual decision: ${slug}`);
+  }
+}
+
+const publicationGateFile = join(root, 'integration/publication-gate.json');
+const publicationGate = parseJson(publicationGateFile);
+if (releaseMode && publicationGate) {
+  if (publicationGate.status !== 'ready-for-release') {
+    fail(publicationGateFile, 'status must be ready-for-release before publishing to v1.0');
+  }
+  for (const [index, check] of (publicationGate.blockingChecks || []).entries()) {
+    if (check.status !== 'passing') {
+      fail(publicationGateFile, `blocking check ${index + 1} is not passing: ${check.check}`);
+    }
   }
 }
 

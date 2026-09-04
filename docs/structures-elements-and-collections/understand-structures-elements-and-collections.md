@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Understand Structures, Elements, and Collections
-
 ![Diagram showing Structure Tags attaching Elements and Collections while Collections group Assets.](https://files.readme.io/24a1f6eb59b16c7bd53f480d9b7c456531a2a5268b2381b83fe96294e4c735d4-organization-model.png)
 
 WanAware uses three related records for organization:
@@ -50,6 +48,14 @@ A **Structure Tag** connects an Element or Collection to one node in a Structure
 | Which Assets are at a Site? | A Site Element and Site Assets |
 
 Start with the smallest model that answers a real question. Avoid creating separate records with nearly identical names to represent the same concept.
+
+## Related tasks
+
+- [Create and manage Structures](https://docs.wanaware.com/docs/create-and-manage-structures)
+- [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
+- [Attach Elements to Structures](https://docs.wanaware.com/docs/attach-elements-to-structures)
+- [Create Collections and add Assets](https://docs.wanaware.com/docs/create-collections-and-add-assets)
+- [Attach Collections to Structures](https://docs.wanaware.com/docs/attach-collections-to-structures)
 
 ## Get help
 

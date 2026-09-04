@@ -2,7 +2,7 @@
 title: Prepare a Service Catalog bulk-upload file
 excerpt: Choose the correct import type and prepare current template data for catalog validation.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: Prepare a Service Catalog bulk-upload file | WanAware Documentation
   description: Prepare a CSV, XLSX, or pasted spreadsheet for the Service Catalog bulk uploader.
@@ -10,7 +10,7 @@ metadata:
     - service catalog template
     - existing provider id
     - catalog spreadsheet
-  robots: index
+  robots: noindex
 ---
 
 <!-- kb-meta
@@ -26,8 +26,6 @@ screenshot-set: service-catalog-bulk-prepare
 video-status: planned
 release-status: draft
 -->
-
-# Prepare a Service Catalog bulk-upload file
 
 **Outcome:** Produce a current, correctly scoped spreadsheet that is ready for column mapping and entry validation.
 
@@ -55,16 +53,25 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label or column | Purpose | Required state or accepted format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **New providers with models or services** | Creates new parent providers and their child rows. | Choose when the provider does not exist in this catalog. | Catalog review. | New provider plus two models | Provider and child hierarchy. |
-| **Models or services for existing providers** | Adds children beneath an existing provider. | Choose when a provider record already exists. | Current catalog. | Two services for one provider ID | Existing provider hierarchy. |
-| Provider name | Names a new provider. | Required for new-provider rows; use the approved display name. | Approved source list. | Example Networks | Catalog picker. |
-| Existing provider ID | Identifies the exact parent for child-only rows. | Required for existing-provider imports; copy the stable ID, not the name. | Existing Service Catalog entry. | `provider-id-from-catalog` | Parent linkage after creation. |
-| Model or service name | Names the child entry. | Non-empty, consistent spelling; one logical item per row. | Approved source list. | Edge 1000 | Child entry and Asset choices. |
-| Description | Explains the entry for users choosing it. | Plain language; no credentials or sensitive data. | Product or data owner. | Branch edge appliance | Entry details. |
-| Specifications or attributes | Supplies supported structured values. | Match the downloaded template's columns and format. | Approved technical data. | Throughput tier | Catalog details and supported Asset fields. |
-| Compatibility | Relates supported catalog choices. | Use identifiers or choices required by the current template. | Approved compatibility matrix. | Supported module | Dependent catalog choices. |
+### Choose the import type
+
+| Choice | Use it when | Result |
+| --- | --- | --- |
+| **New providers with models or services** | The provider does not exist in the selected catalog. | Creates the provider and its child rows. |
+| **Models or services for existing providers** | The provider already exists in the selected catalog. | Adds children beneath the provider identified in the file. |
+
+### Prepare the columns
+
+| Column | Required value | Where it comes from |
+| --- | --- | --- |
+| Provider name | Required for new-provider rows. Use the approved display name, such as Example Networks. | Approved source list. |
+| Existing provider ID | Required for existing-provider imports. Copy the stable ID, not the display name. | Existing Service Catalog entry. |
+| Model or service name | Enter one non-empty, consistently spelled child item per row, such as Edge 1000. | Approved source list. |
+| Description | Write plain-language selection help without credentials or sensitive data. | Product or data owner. |
+| Specifications or attributes | Match the columns and format in the template downloaded for this run. | Approved technical data. |
+| Compatibility | Use the identifiers or choices required by the current template. | Approved compatibility matrix. |
+
+These values appear in the provider hierarchy, catalog picker, entry details, dependent choices, and supported Asset fields after creation.
 
 ## Choose the import type and template
 
@@ -74,6 +81,9 @@ release-status: draft
 4. Under **What are you adding?**, choose:
    - **New providers with models or services** when the spreadsheet creates parent providers.
    - **Models or services for existing providers** when every child row belongs to an existing provider ID.
+
+![Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.](https://files.readme.io/db24e54e650041262b05f564439f74233545b657469d92f2b788a487d70c4a04-catalog-bulk-import-choice.png)
+
 5. Select **Download template** for the chosen import type.
 
 **Expected result:** The downloaded template matches both the selected catalog and import type.
@@ -106,16 +116,15 @@ For **Paste spreadsheet**, copy a rectangular range including the header row. Do
 
 Delete or archive the local prepared file according to your data-handling policy. No Service Catalog record is created until the later **Create N entries** action.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** This clip requires successful end-to-end service verification before publication.
-- **Do it:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
+- **In WanAware:** Open `/administration/service-catalog/{assetTypeId}/bulk-upload`.
 
 ## Next steps
 
 - [Bulk upload Service Catalog entries](https://docs.wanaware.com/docs/bulk-upload-service-catalog-entries)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

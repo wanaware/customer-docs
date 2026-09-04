@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Find, filter, and inspect Assets
-
 **Outcome:** Locate the intended Asset, prove its identity, and choose the view that answers your question.
 
 **For:** Customers who inspect Assets
@@ -52,16 +50,23 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label | Purpose | Required state or accepted input | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **Discovery** | Shows found or review-stage records. | Select when the Asset has not entered the maintained set. | Asset status. | Found router | Discovery results. |
-| **Inventory** | Shows maintained Assets. | Select for normal asset work. | Asset status. | Production router | Inventory results. |
-| Search | Narrows the current view. | Use a visible name or identifier; search scope can differ by view. | Asset identity. | edge-router-01 | Current result set. |
-| Filters | Narrows by supported properties. | Clear old filters before diagnosing a missing result. | Current Asset data. | Asset Type = Router | Current result set. |
-| **Table** | Compares identity, tags, source, and row actions. | Best first view for exact record selection. | Current tab and filters. | — | Rows and actions. |
-| **Map** | Shows Assets with usable location information. | An Asset without supported location data may not appear. | Saved location fields. | — | Geographic view. |
-| **Graph** | Shows supported connections or groupings for the current scope. | Absence from the graph does not prove the Asset is absent from Inventory. | Relationship and view data. | — | Visual graph. |
-| **Actions** | Opens released row-level actions. | Actions depend on Role and record state. | Asset row. | Delete for an authorized administrator | Action menu. |
+### Find the correct record set
+
+| Control | Use it when | Important limit |
+| --- | --- | --- |
+| **Discovery** | The record was found or imported but still needs review. | A Discovery record does not appear in Inventory until it is moved. |
+| **Inventory** | You need a maintained Asset for normal work. | Inventory does not include records that remain in Discovery. |
+| Search | You know a visible name or identifier, such as `edge-router-01`. | Search scope can differ between Table, Map, and Graph. |
+| Filters | You want a supported property such as Asset Type = Router. | Clear old filters before reporting a missing Asset. |
+
+### Choose a view
+
+| View | Best for | Important limit |
+| --- | --- | --- |
+| **Table** | Comparing identity, tags, source, and row actions. | Use the full Asset ID before acting on similar names. |
+| **Map** | Finding Assets with saved location information. | An Asset without usable location data may not appear. |
+| **Graph** | Exploring supported connections or groupings in the current scope. | Absence from Graph does not prove the Asset is absent from Inventory. |
+| **Actions** | Opening released row-level actions. | Available actions depend on Role and record state. |
 
 ## Find the correct record in Table
 
@@ -76,7 +81,7 @@ release-status: draft
 
 **Expected result:** One record matches both the visible identity and its stable source or Asset ID.
 
-If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
+If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
 
 ## Use Map
 
@@ -108,11 +113,10 @@ Refresh the Asset detail page and confirm its ID, Asset Type, source, status, ta
 
 Search and filter changes do not alter Assets. To recover from a confusing view, return to Table, clear search and filters, and reopen the correct tab. If a row action was used accidentally, follow the recovery guidance for that action immediately.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** The Table search clip is pending workflow verification and approval.
-- **Do it:** Open `/assets/inventory`.
+- **In WanAware:** Open `/assets/inventory`.
 
 ## Next steps
 

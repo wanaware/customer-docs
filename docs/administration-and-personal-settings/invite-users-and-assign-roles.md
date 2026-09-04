@@ -8,6 +8,7 @@ metadata:
   description: Invite WanAware members, assign roles, and verify their access.
   keywords:
     - invite user
+    - invite teammate
     - IAM
     - assign role
     - member access
@@ -27,8 +28,6 @@ screenshot-set: administration-invite-roles
 video-status: not-planned
 release-status: draft
 -->
-
-# Invite users and assign roles
 
 **Outcome:** Invite a company member and assign the smallest role that supports their work.
 
@@ -66,6 +65,8 @@ release-status: draft
 3. Enter the person's business name in **User name**.
 4. Enter the exact company address in **Email**.
 5. Under **Roles**, select at least one approved Role. If none is selected, the form reports **Select at least one role**.
+
+![Create User form showing the User name, Email, Role selection, and Create User action with sample values.](https://files.readme.io/d36aede7c22d78f94ef1b914ecab0697bee19100c324c60c78a07f387c4f8d17-invite-user-form.png)
 6. Review the address and Roles, then select **Create User** once.
 
 **Expected result:** WanAware reports **Invitation sent**, and the member appears with **Invite Status** set to **Pending** until they accept.
@@ -79,7 +80,7 @@ If the email already belongs to a member, update the existing record rather than
 3. Ask them to sign in and open one page required for their work.
 4. Confirm they do not see unrelated administration actions.
 
-If the expected page is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+If the expected page is missing, use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## Check your result
 
@@ -89,11 +90,15 @@ The member is active in the correct company, has the intended role, can complete
 
 Do not share an invitation with a different person. If the wrong Role was assigned, correct the existing user record before resending. If the wrong email was invited, stop and contact Support rather than assuming an unverified cancellation or deletion control exists. Before reducing your own administrator access, verify another active administrator can manage IAM.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until an access-management clip is approved.
-- **Do it:** Open `/administration/iam` in your WanAware workspace.
+- **In WanAware:** Open `/administration/iam` in your WanAware workspace.
+
+## Next steps
+
+- [Manage pending invitations](https://docs.wanaware.com/docs/manage-pending-invitations)
+- [Create and edit Roles](https://docs.wanaware.com/docs/create-and-edit-roles)
 
 ## Get help
 

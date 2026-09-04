@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Create a custom Asset Type
-
 **Outcome:** Create a named custom Asset Type and save it as a draft for further configuration.
 
 **For:** Customer administrators and data model owners
@@ -87,6 +85,8 @@ All three paths create a custom draft. The difference is how the first set of se
 
 **Expected result:** The Asset Type appears in the list with **Draft** status.
 
+![Custom Asset Type list showing the newly saved example schema with Draft status and its available actions.](https://files.readme.io/a946bbbb205a2a7a7c43a2187d9e0b6fea6b71362cff2fd1badbdc70d0205334-asset-type-draft-result.png)
+
 If generation fails or produces unsuitable fields, return to the starting options or remove the unwanted draft fields before saving. Do not publish unreviewed generated content.
 
 ## Check your result
@@ -95,16 +95,40 @@ If generation fails or produces unsuitable fields, return to the starting option
 2. Search for the exact name.
 3. Confirm the status is **Draft**.
 4. Reopen it and verify the name and description.
+5. Open the row actions menu and confirm the actions match the Asset Type's status and your permissions. A manageable draft can show **Edit asset type** and **Publish asset type**; a published customer type shows **View asset type** instead.
+
+![Asset Type actions menu showing view, open, clone, visibility, copy, and delete actions for a published example row.](https://files.readme.io/a59349bb53972422d7a34c194c1347083629dddfbf31c4548438f1740378e059-asset-type-actions-menu.png)
+
+### What the row actions do
+
+| Action | Permission | Result |
+| --- | --- | --- |
+| **View asset type** or **Edit asset type** | `view asset_types_builder` or `update asset_types_builder` | Opens the selected schema. Published customer schemas can be view-only. |
+| **Open in new tab** | Same access as View or Edit | Opens the same Asset Type without closing the list. |
+| **Clone asset type** | `create asset_types_builder` | Creates a named custom draft from the selected schema. |
+| **Publish asset type** | `update asset_types_builder` | Starts the publication preflight for an unpublished manageable type. Review the read-only consequence before confirming. |
+| **Hide asset type** or **Restore asset type** | `update asset_types_builder` | Changes customer visibility without deleting the schema. |
+| **Copy name** or **Copy ID** | Access to the Asset Type list | Copies the displayed identity for search or Support. |
+| **Delete asset type** | `delete asset_types_builder` | Opens an impact check and confirmation. Do not continue until affected Assets and dependencies are understood. |
 
 ## Undo this change
 
-Delete only an unused draft after confirming it has no catalog entries or test assets. Do not use deletion to revise a field; edit the draft instead.
+Delete only an unused draft after confirming it has no catalog entries or test Assets. Do not use deletion to revise a field; edit the draft instead.
 
-## Learn, show me, do it
+1. Return to **Administration → Asset Types**.
+2. Search for the draft by its exact name.
+3. Open the row actions menu and select **Delete asset type**.
+4. Wait for the usage check. Continue only when no Assets or dependent catalog data use the draft.
+5. Read the permanent-deletion warning and select **Delete** only when the displayed Asset Type is the intended unused draft.
+
+![Delete Asset Type confirmation showing the affected draft name and the permanent deletion warning.](https://files.readme.io/80ad09ada788d5988de28bc39206ae2b75af43f42c925d6a0b2664d09ca3987f-asset-type-delete-confirmation.png)
+
+**Expected result:** The draft no longer appears after the list refreshes. If the usage check reports dependencies, cancel the deletion and remove or correct those dependencies before trying again.
+
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The starting-options clip is pending workflow verification and approval.
-- **Do it:** Open `/administration/asset-types/create` in your WanAware workspace.
+- **In WanAware:** Open `/administration/asset-types/create` in your WanAware workspace.
 
 ## Next steps
 

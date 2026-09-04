@@ -1,15 +1,16 @@
 ---
-title: Asset Type save or publish failures
+title: An Asset Type does not save or publish
 excerpt: Resolve draft validation, dependency, permission, and publication problems.
 deprecated: false
 hidden: false
 metadata:
-  title: Asset Type save or publish failures | WanAware Documentation
+  title: An Asset Type does not save or publish | WanAware Documentation
   description: Fix errors when saving or publishing a custom WanAware Asset Type.
   keywords:
     - Asset Type save failed
     - publish Asset Type failed
     - field validation
+    - cannot save Asset Type
   robots: index
 ---
 
@@ -26,8 +27,6 @@ screenshot-set: troubleshoot-asset-types
 video-status: not-planned
 release-status: draft
 -->
-
-# Asset Type save or publish failures
 
 Use this page when **Save Draft**, **Save Changes**, or **Publish** is unavailable or returns an error.
 
