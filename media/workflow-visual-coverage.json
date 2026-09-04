@@ -16,14 +16,13 @@
     },
     {
       "article": "/docs/add-an-asset",
-      "status": "capture-incomplete",
+      "status": "captured",
       "screenshotIds": [
         "assets-create-type-cards",
         "assets-create-type-list",
-        "assets-create"
-      ],
-      "pendingScreenshotIds": ["assets-create-success"],
-      "blocker": "The Asset Added confirmation requires a documentation-only record to be created and cleaned up."
+        "assets-create",
+        "assets-create-success"
+      ]
     },
     {
       "article": "/docs/add-an-integration",
@@ -37,8 +36,12 @@
     },
     {
       "article": "/docs/add-catalog-entries-and-compatibility",
-      "status": "capture-blocked",
-      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-components"
+      ],
+      "pendingScreenshotIds": ["catalog-compatibility", "catalog-save-result"],
+      "blocker": "The released catalog details are captured, but compatibility selection and a safe saved result still need documentation-only records."
     },
     {
       "article": "/docs/attach-collections-to-structures",
@@ -86,13 +89,23 @@
     },
     {
       "article": "/docs/bulk-upload-service-catalog-entries",
-      "status": "capture-blocked",
-      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-bulk-import-choice"
+      ],
+      "pendingScreenshotIds": [
+        "catalog-bulk-column-mapping",
+        "catalog-bulk-review-results",
+        "catalog-bulk-completion"
+      ],
+      "blocker": "The import choice is captured, but the backing service must complete a safe end-to-end job before mapping, review, and completion can be captured."
     },
     {
       "article": "/docs/choose-a-theme",
-      "status": "capture-blocked",
-      "blocker": "The authenticated portal session locked before the Theme Settings panel could be captured."
+      "status": "captured",
+      "screenshotIds": [
+        "personal-theme"
+      ]
     },
     {
       "article": "/docs/configure-asset-type-sections-and-fields",
@@ -110,15 +123,21 @@
       "status": "capture-incomplete",
       "screenshotIds": [
         "asset-types-list",
-        "asset-types-start"
+        "asset-types-start",
+        "asset-types-actions"
       ],
       "pendingScreenshotIds": ["asset-types-save-draft"],
       "blocker": "The Draft result needs a documentation-only Asset Type that can be removed after capture."
     },
     {
       "article": "/docs/create-a-custom-service-catalog",
-      "status": "capture-blocked",
-      "blocker": "The current sample workspace does not expose a writable verified catalog flow."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-workspace",
+        "catalog-entry"
+      ],
+      "pendingScreenshotIds": ["catalog-save-result"],
+      "blocker": "The catalog workspace and entry form are captured; a safe saved-entry result still requires a disposable documentation record."
     },
     {
       "article": "/docs/create-and-edit-roles",
@@ -224,8 +243,12 @@
     },
     {
       "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
-      "status": "capture-blocked",
-      "blocker": "Catalog bulk upload reports that its backing service is not connected."
+      "status": "capture-incomplete",
+      "screenshotIds": [
+        "catalog-bulk-import-choice"
+      ],
+      "pendingScreenshotIds": ["catalog-bulk-column-mapping"],
+      "blocker": "The import choices and template entry point are captured; end-to-end service verification is still required before publishing the workflow."
     },
     {
       "article": "/docs/publish-and-verify-an-asset-type",

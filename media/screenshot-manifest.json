@@ -97,11 +97,11 @@
     },
     {
       "id": "assets-create",
-      "file": "media/screenshots/add-asset-form.png",
-      "sourceFile": "media/screenshots/source/add-asset-form.png",
+      "file": "media/screenshots/add-asset-input-state.png",
+      "sourceFile": "media/screenshots/source/add-asset-input-state.png",
       "article": "/docs/add-an-asset",
-      "alt": "Add Asset form showing status, tags, schema tabs, and catalog-backed fields for the selected Asset Type.",
-      "captureDate": "2026-09-03",
+      "alt": "Add Asset form showing a sample name, Inventory status, and required IP Block fields before submission.",
+      "captureDate": "2026-09-04",
       "style": "wanaware-ai-assisted-v4",
       "status": "captured-pending-product-support-review"
     },
@@ -288,25 +288,44 @@
       "status": "pending-product-approval"
     },
     {
+      "id": "asset-types-actions",
+      "file": "media/screenshots/asset-type-actions-menu.png",
+      "sourceFile": "media/screenshots/source/asset-type-actions-menu.png",
+      "article": "/docs/create-a-custom-asset-type",
+      "alt": "Asset Type actions menu showing view, open, clone, visibility, copy, and delete actions for a published example row.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
+    },
+    {
       "id": "catalog-workspace",
       "file": "media/screenshots/service-catalog-workspace.png",
+      "sourceFile": "media/screenshots/source/service-catalog-workspace.png",
       "article": "/docs/create-a-custom-service-catalog",
-      "alt": "Service Catalog workspace with a sanitized draft Asset Type selected.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Service Catalog workspace showing an example catalog, provider hierarchy, services, search, refresh, and add actions.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-entry",
       "file": "media/screenshots/service-catalog-entry-form.png",
+      "sourceFile": "media/screenshots/source/service-catalog-entry-form.png",
       "article": "/docs/create-a-custom-service-catalog",
-      "alt": "Service Catalog entry form with sanitized name, description, and attribute fields.",
-      "status": "pending-demo-records"
+      "alt": "Add Provider form showing entry type, source, name, description, linked service type, version, and specifications.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-components",
       "file": "media/screenshots/service-catalog-models-components.png",
+      "sourceFile": "media/screenshots/source/service-catalog-models-components.png",
       "article": "/docs/add-catalog-entries-and-compatibility",
-      "alt": "Service Catalog item showing a documentation-only service or circuit type and its specifications.",
-      "status": "blocked-pending-sanitized-recapture"
+      "alt": "Service Catalog item showing an example service name, description, prefix, routing type, scope, and update action.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-compatibility",
@@ -318,9 +337,12 @@
     {
       "id": "catalog-bulk-import-choice",
       "file": "media/screenshots/catalog-bulk-import-choice.png",
+      "sourceFile": "media/screenshots/source/catalog-bulk-import-choice.png",
       "article": "/docs/prepare-a-service-catalog-bulk-upload-file",
-      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider import choices.",
-      "status": "pending-release-equivalent-verification"
+      "alt": "Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.",
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "catalog-bulk-column-mapping",
@@ -411,9 +433,12 @@
     {
       "id": "personal-theme",
       "file": "media/screenshots/theme-settings-light-and-dark.png",
+      "sourceFile": "media/screenshots/source/theme-settings-light-and-dark.png",
       "article": "/docs/choose-a-theme",
       "alt": "Theme Settings showing the available Light and Dark modes and color presets.",
-      "status": "blocked-pending-sanitized-recapture"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "administration-billing-plan",
@@ -597,9 +622,12 @@
     {
       "id": "assets-create-success",
       "file": "media/screenshots/add-asset-success.png",
+      "sourceFile": "media/screenshots/source/add-asset-success.png",
       "article": "/docs/add-an-asset",
       "alt": "Asset Added confirmation showing the saved status and the View Asset, Add Another, and Done next actions.",
-      "status": "pending-documentation-record"
+      "captureDate": "2026-09-04",
+      "style": "wanaware-ai-assisted-v4",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "assets-bulk-normalization",

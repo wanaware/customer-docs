@@ -93,6 +93,21 @@ If generation fails or produces unsuitable fields, return to the starting option
 2. Search for the exact name.
 3. Confirm the status is **Draft**.
 4. Reopen it and verify the name and description.
+5. Open the row actions menu and confirm the actions match the Asset Type's status and your permissions. A manageable draft can show **Edit asset type** and **Publish asset type**; a published customer type shows **View asset type** instead.
+
+![Asset Type actions menu showing view, open, clone, visibility, copy, and delete actions for a published example row.](https://files.readme.io/a59349bb53972422d7a34c194c1347083629dddfbf31c4548438f1740378e059-asset-type-actions-menu.png)
+
+### What the row actions do
+
+| Action | Permission | Result |
+| --- | --- | --- |
+| **View asset type** or **Edit asset type** | `view asset_types_builder` or `update asset_types_builder` | Opens the selected schema. Published customer schemas can be view-only. |
+| **Open in new tab** | Same access as View or Edit | Opens the same Asset Type without closing the list. |
+| **Clone asset type** | `create asset_types_builder` | Creates a named custom draft from the selected schema. |
+| **Publish asset type** | `update asset_types_builder` | Starts the publication preflight for an unpublished manageable type. Review the read-only consequence before confirming. |
+| **Hide asset type** or **Restore asset type** | `update asset_types_builder` | Changes customer visibility without deleting the schema. |
+| **Copy name** or **Copy ID** | Access to the Asset Type list | Copies the displayed identity for search or Support. |
+| **Delete asset type** | `delete asset_types_builder` | Opens an impact check and confirmation. Do not continue until affected Assets and dependencies are understood. |
 
 ## Undo this change
 

@@ -81,6 +81,9 @@ These values appear in the provider hierarchy, catalog picker, entry details, de
 4. Under **What are you adding?**, choose:
    - **New providers with models or services** when the spreadsheet creates parent providers.
    - **Models or services for existing providers** when every child row belongs to an existing provider ID.
+
+![Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.](https://files.readme.io/db24e54e650041262b05f564439f74233545b657469d92f2b788a487d70c4a04-catalog-bulk-import-choice.png)
+
 5. Select **Download template** for the chosen import type.
 
 **Expected result:** The downloaded template matches both the selected catalog and import type.

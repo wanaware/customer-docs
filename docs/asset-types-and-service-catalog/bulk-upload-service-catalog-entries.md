@@ -77,6 +77,9 @@ release-status: draft
 
 1. Open the bulk-upload page for the selected Asset Type and writable catalog.
 2. Choose the correct option under **What are you adding?**
+
+![Service Catalog bulk uploader showing new-provider and existing-provider choices, file and paste inputs, and validation actions.](https://files.readme.io/db24e54e650041262b05f564439f74233545b657469d92f2b788a487d70c4a04-catalog-bulk-import-choice.png)
+
 3. Choose **CSV or XLSX** and select a file no larger than 100 MB, or choose **Paste spreadsheet** and paste the header plus data rows.
 4. Select **Upload & validate**.
 5. Review the automatic column mapping.

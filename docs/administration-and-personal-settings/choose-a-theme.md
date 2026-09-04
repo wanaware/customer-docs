@@ -59,6 +59,9 @@ Theme changes affect your view. They do not change company data or another membe
 1. Select **Theme Settings**.
 2. Choose **Light** or **Dark** mode.
 3. Under **Assigned Themes** or **Color Themes**, select the intended preset.
+
+![Theme Settings showing the available Light and Dark modes and color presets.](https://files.readme.io/bababdfbea8a1fbebc998a60a50586adea6315925cc1016f5a2705f1cc642cfe-theme-settings-light-and-dark.png)
+
 4. Close the Theme Settings panel.
 
 **Expected result:** The Portal updates immediately and keeps your selection when you move to another page.

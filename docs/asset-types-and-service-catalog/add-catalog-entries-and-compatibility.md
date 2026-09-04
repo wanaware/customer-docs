@@ -70,6 +70,9 @@ release-status: draft
 6. Select the saved **Provider** or **Manufacturer** that owns the product, then add **Model** if that parent exposes the action.
 7. Under the required manufacturer context, add **Module** or **Software** where supported.
 8. Add the available specifications and catalog attributes.
+
+![Service Catalog item showing an example service name, description, prefix, routing type, scope, and update action.](https://files.readme.io/361cc34e9a8827f7539cc31abcea175ff8c1d7a2c9bc6efe82a989ce4b7fe5fe-service-catalog-models-components.png)
+
 9. Save after each coherent group of changes.
 
 **Expected result:** The hierarchy shows each entry under the intended parent with its saved details.
