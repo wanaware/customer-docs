@@ -81,7 +81,7 @@ release-status: draft
 
 **Expected result:** One record matches both the visible identity and its stable source or Asset ID.
 
-If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
+If no record matches, repeat the same search in the other Asset tab. Do not create a replacement until [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets) rules out a delayed or filtered record.
 
 ## Use Map
 

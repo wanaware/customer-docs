@@ -90,7 +90,7 @@ If a Structure Tag is unavailable, confirm that the Structure exists and your ro
 
 **Expected result:** The unsaved-change bar clears and the saved values remain visible.
 
-If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures).
+If the page rejects a field, correct the value before navigating away. If an expected catalog choice is missing, see [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures).
 
 ## Check your result
 

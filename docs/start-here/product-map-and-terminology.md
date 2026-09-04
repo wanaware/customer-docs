@@ -56,7 +56,7 @@ Permissions are written as `action resource`. When a row lists more than one per
 | **Theme Settings** | Choose your personal Light or Dark appearance and an available preset. | Top-bar drawer; no page URL | Available to a signed-in user; there is no separate feature permission. |
 | **Support** | Open the in-product Support area. | `/support` | `view support` |
 
-The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+The navigation requirement controls entry to an area. Create, update, delete, publish, attach, and other actions can require additional permissions. If a page or action is missing, use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## How the records fit together
 
@@ -185,7 +185,7 @@ A named set of Permissions assigned to members. A Role controls which pages and 
 An allowed action on a resource, such as `read assets`. Permissions are collected into Roles rather than assigned as navigation labels.
 
 - **Where:** **Administration → IAM → Roles → [Role]** (`/administration/iam/roles/{roleKey}`)
-- **See also:** [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
+- **See also:** [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
 
 ## Learn and continue
 

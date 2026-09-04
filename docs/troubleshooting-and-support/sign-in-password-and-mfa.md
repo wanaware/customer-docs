@@ -55,7 +55,7 @@ Use this page when sign-in fails, a reset email does not arrive, an invitation d
 
 ## Verify the fix
 
-Sign in, confirm the company workspace, and open one page required for your role. If only the page is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+Sign in, confirm the company workspace, and open one page required for your role. If only the page is missing, use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## Known limitations
 

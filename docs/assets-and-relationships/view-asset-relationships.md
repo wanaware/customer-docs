@@ -92,7 +92,7 @@ Open the connected asset and confirm its name, Asset Type, and source context ma
 - Wait for active ingestion and relationship processing to finish.
 - Clear graph filters and reduce grouping.
 - Compare the graph with source properties.
-- Use [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
+- Use [A Relationship is missing or unexpected](https://docs.wanaware.com/docs/missing-or-unexpected-relationships).
 
 ## Learn and continue
 

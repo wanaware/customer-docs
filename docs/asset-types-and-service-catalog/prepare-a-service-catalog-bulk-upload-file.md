@@ -121,7 +121,7 @@ Delete or archive the local prepared file according to your data-handling policy
 ## Next steps
 
 - [Bulk upload Service Catalog entries](https://docs.wanaware.com/docs/bulk-upload-service-catalog-entries)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

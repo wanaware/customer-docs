@@ -127,7 +127,7 @@ If the outcome is partial, do not resubmit the entire source. Build a retry set 
 ## Next steps
 
 - [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

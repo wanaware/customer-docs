@@ -39,6 +39,6 @@ Company administrators manage shared settings, access, and Billing. Each user ma
 
 ## Fix a problem
 
-- [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
-- [Sign-in, password, and MFA problems](https://docs.wanaware.com/docs/sign-in-password-and-mfa)
-- [Billing and payment failures](https://docs.wanaware.com/docs/billing-and-payment-failures)
+- [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
+- [I cannot sign in, reset my password, or complete MFA](https://docs.wanaware.com/docs/sign-in-password-and-mfa)
+- [A billing or payment action fails](https://docs.wanaware.com/docs/billing-and-payment-failures)

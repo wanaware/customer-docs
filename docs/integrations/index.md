@@ -31,5 +31,5 @@ Integrations bring data from supported providers into WanAware. The general work
 
 ## Fix a problem
 
-- [Integration connection failures](https://docs.wanaware.com/docs/integration-connection-failures)
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Integration does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)

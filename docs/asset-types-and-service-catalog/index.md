@@ -35,5 +35,5 @@ Keep a custom Asset Type as a draft while you configure its schema and catalog. 
 
 ## Fix a problem
 
-- [Asset Type save or publish failures](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [An Asset Type does not save or publish](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)

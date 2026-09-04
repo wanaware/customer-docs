@@ -55,7 +55,7 @@ Search, filters, grouping, focus, and depth change what you can see. They do not
 
 - [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
 - [Add a supported network connection](https://docs.wanaware.com/docs/add-a-network-connection)
-- [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
+- [A Relationship is missing or unexpected](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

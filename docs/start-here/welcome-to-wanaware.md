@@ -79,7 +79,7 @@ Before changing shared data, read [Use a shared evaluation workspace safely](htt
 
 WanAware uses Role-based access. People in the same company may see different pages and actions.
 
-If an instruction names a missing action, ask a customer administrator to check your Role. Use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) before treating the issue as a product failure.
+If an instruction names a missing action, ask a customer administrator to check your Role. Use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) before treating the issue as a product failure.
 
 ## Something is not working
 

@@ -68,7 +68,7 @@ release-status: draft
 
 **Expected result:** The Asset Type appears with **Published** status.
 
-If publication fails, do not create a replacement. Use [Asset Type save or publish failures](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures).
+If publication fails, do not create a replacement. Use [An Asset Type does not save or publish](https://docs.wanaware.com/docs/asset-type-save-or-publish-failures).
 
 ## Verify with an asset
 
@@ -95,7 +95,7 @@ Publication may not be reversible through the customer interface. Do not delete 
 ## Next steps
 
 - [Populate asset details](https://docs.wanaware.com/docs/populate-asset-details)
-- [Service Catalog failures](https://docs.wanaware.com/docs/service-catalog-failures)
+- [A Service Catalog entry does not save](https://docs.wanaware.com/docs/service-catalog-failures)
 
 ## Get help
 

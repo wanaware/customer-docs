@@ -103,7 +103,7 @@ Do not delete the Asset to reverse an accidental promotion. First confirm whethe
 ## Next steps
 
 - [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
 
 ## Get help
 

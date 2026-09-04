@@ -98,7 +98,7 @@ There is no documented self-service restore for this release. If deletion was ac
 
 ## Next steps
 
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
 - [Contact WanAware Support](https://docs.wanaware.com/docs/contact-wanaware-support)
 
 ## Get help

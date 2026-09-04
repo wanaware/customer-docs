@@ -78,7 +78,7 @@ If the email already belongs to a member, update the existing record rather than
 3. Ask them to sign in and open one page required for their work.
 4. Confirm they do not see unrelated administration actions.
 
-If the expected page is missing, use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+If the expected page is missing, use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## Check your result
 

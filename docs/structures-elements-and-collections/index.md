@@ -34,4 +34,4 @@ Use **Structures** for hierarchy, **Elements** for operational units such as App
 
 ## Fix a problem
 
-- [Structure, Element, or Collection attachment failures](https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures)
+- [An Element or Collection does not attach to a Structure](https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures)

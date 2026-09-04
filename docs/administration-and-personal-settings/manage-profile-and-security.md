@@ -150,7 +150,7 @@ If **Disable** is unavailable, your organization requires MFA. Ask an administra
 
 Open a private browser session and sign in with the updated password or authenticator. Keep the original session open until this test succeeds.
 
-If the new sign-in fails, return to the original session and review [Sign-in, password, and MFA problems](https://docs.wanaware.com/docs/sign-in-password-and-mfa).
+If the new sign-in fails, return to the original session and review [I cannot sign in, reset my password, or complete MFA](https://docs.wanaware.com/docs/sign-in-password-and-mfa).
 
 ## Undo this change
 

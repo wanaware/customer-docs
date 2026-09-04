@@ -76,7 +76,7 @@ release-status: draft
 
 **Expected result:** The inventory opens. Counts and Launchpad cards can vary by role and company configuration.
 
-If a page is missing, see [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
+If a page is missing, see [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions).
 
 ## 2. Find a known asset
 

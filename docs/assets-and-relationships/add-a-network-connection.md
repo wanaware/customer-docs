@@ -110,7 +110,7 @@ If **Remove Connection** is absent, contact Support before changing an endpoint 
 ## Next steps
 
 - [View asset relationships](https://docs.wanaware.com/docs/view-asset-relationships)
-- [Missing or unexpected relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
+- [A Relationship is missing or unexpected](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)
 
 ## Get help
 

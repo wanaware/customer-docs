@@ -41,6 +41,6 @@ An Asset represents a resource that your company tracks, such as a device, servi
 
 ## Fix a problem
 
-- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
-- [Bulk-import validation failures](https://docs.wanaware.com/docs/bulk-import-validation-failures)
+- [An Asset is missing, stale, or duplicated](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [An Asset upload has validation errors](https://docs.wanaware.com/docs/bulk-import-validation-failures)
 - [Missing or unexpected Relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)

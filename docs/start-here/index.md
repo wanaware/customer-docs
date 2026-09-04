@@ -32,5 +32,5 @@ Choose the shortest path to a useful result. You do not need to learn the entire
 
 ## Fix a problem
 
-- [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
+- [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
 - [Troubleshooting and support](https://docs.wanaware.com/docs/troubleshooting-and-support)

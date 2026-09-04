@@ -48,7 +48,7 @@ This means two members in the same company can have different navigation and act
 4. Ask an administrator to review the role's relevant permission.
 5. Sign out and back in after an approved role change.
 
-Use [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) for a full recovery path.
+Use [A page or action is missing](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions) for a full recovery path.
 
 ## Related tasks
 

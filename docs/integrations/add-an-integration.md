@@ -89,7 +89,7 @@ If a required field is unclear, stop and check the provider adapter. Do not gues
 
 **Expected result:** WanAware accepts the collection request. Inventory collection can continue after you leave the page.
 
-If the test or request fails, use [Integration connection failures](https://docs.wanaware.com/docs/integration-connection-failures).
+If the test or request fails, use [An Integration does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures).
 
 ## Check your result
 

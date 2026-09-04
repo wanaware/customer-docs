@@ -151,7 +151,7 @@ If the browser closes or the outcome is uncertain, search for several unique nam
 ## Next steps
 
 - [Review Discovery and move Assets to Inventory](https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory)
-- [Bulk-import validation failures](https://docs.wanaware.com/docs/bulk-import-validation-failures)
+- [An Asset upload has validation errors](https://docs.wanaware.com/docs/bulk-import-validation-failures)
 
 ## Get help
 
