@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Choose a theme
-
 **Outcome:** Change your personal appearance without changing another member's settings.
 
 **For:** Signed-in WanAware members
@@ -75,11 +73,14 @@ Open Assets and Administration, then confirm text, controls, tables, and dialogs
 
 Open **Theme Settings** and choose the previous mode and preset.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** Approved Light and Dark screenshots are pending capture and privacy review.
-- **Do it:** Select **Theme Settings** in your WanAware workspace.
+- **In WanAware:** Select **Theme Settings** in your WanAware workspace.
+
+## Next steps
+
+- [Manage your profile and security](https://docs.wanaware.com/docs/manage-profile-and-security)
 
 ## Get help
 

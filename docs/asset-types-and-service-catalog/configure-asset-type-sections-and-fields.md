@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Configure Asset Type sections and fields
-
 **Outcome:** Build a draft Asset Type that collects the right information in a clear order.
 
 **For:** Customer administrators and data model owners
@@ -97,11 +95,10 @@ Reopen the draft and verify every section and field. Then open **Administration 
 
 While the Asset Type is a draft, restore the previous setting or remove an unused field after confirming no test data depends on it. After publication, schema editing may be unavailable; contact Support before attempting a replacement strategy.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The field-builder clip is pending workflow verification and approval.
-- **Do it:** Open **Administration → Asset Types** (`/administration/asset-types`) and select a draft Asset Type.
+- **In WanAware:** Open **Administration → Asset Types** (`/administration/asset-types`) and select a draft Asset Type.
 
 ## Next steps
 

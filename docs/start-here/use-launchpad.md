@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Use Launchpad
-
 Launchpad is the starting view for your workspace. Its cards summarize available information and provide a route into detailed records. The exact cards and counts depend on your role, company configuration, and current data.
 
 Use a card to identify what deserves attention, then open the related product area to confirm the underlying records. Do not treat a card count as an editable source of truth.

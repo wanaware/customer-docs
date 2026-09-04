@@ -10,6 +10,7 @@ metadata:
     - Data Tags
     - Structure Tags
     - tag asset
+    - attach asset to structure
   robots: index
 ---
 
@@ -26,8 +27,6 @@ screenshot-set: assets-tags
 video-status: not-planned
 release-status: draft
 -->
-
-# Manage Data Tags and Structure Tags on an Asset
 
 **Outcome:** Apply the correct kind of tag and verify the Asset appears in the intended context.
 
@@ -80,11 +79,15 @@ Refresh the Asset, then use the Inventory filter for the selected tag. Confirm t
 
 Remove the tag you added or reapply the tag you removed. Save and verify the Asset again. To remove a Structure, follow the Structure deletion guidance instead.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** Use the written steps until a tag-specific clip is approved.
-- **Do it:** Open an Asset from **Functions → Assets → Inventory** (`/assets/inventory`).
+- **In WanAware:** Open an Asset from **Functions → Assets → Inventory** (`/assets/inventory`).
+
+## Next steps
+
+- [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
+- [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
 
 ## Get help
 

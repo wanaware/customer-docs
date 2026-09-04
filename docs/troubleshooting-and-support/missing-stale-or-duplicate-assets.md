@@ -1,10 +1,10 @@
 ---
-title: Missing, stale, or duplicate Assets
+title: An Asset is missing, stale, or duplicated
 excerpt: Determine whether filters, workspace context, crawl timing, status, or source identity explains an asset problem.
 deprecated: false
 hidden: false
 metadata:
-  title: Missing, stale, or duplicate assets | WanAware Documentation
+  title: An Asset is missing, stale, or duplicated | WanAware Documentation
   description: Troubleshoot missing, outdated, or duplicated WanAware asset records.
   keywords:
     - missing asset
@@ -12,6 +12,7 @@ metadata:
     - duplicate asset
     - inventory not updated
     - discovery
+    - cannot find asset
   robots: index
 ---
 
@@ -28,8 +29,6 @@ screenshot-set: troubleshoot-assets
 video-status: not-planned
 release-status: draft
 -->
-
-# Missing, stale, or duplicate Assets
 
 Do not delete or recreate an Asset until you have checked its source identity and processing state.
 

@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Create and edit Roles
-
 **Outcome:** Create or update a customer Role with the smallest set of Permissions needed for a job.
 
 **For:** Customer administrators
@@ -88,11 +86,15 @@ Assign the Role to a test member with the intended responsibilities. Have that m
 
 Restore the previous Permission list and save again. If the Role is no longer needed, first move assigned members to an approved Role; do not delete a Role while its impact is unknown.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until an IAM recording is approved.
-- **Do it:** Open `/administration/iam/roles` in your WanAware workspace.
+- **In WanAware:** Open `/administration/iam/roles` in your WanAware workspace.
+
+## Next steps
+
+- [Invite users and assign Roles](https://docs.wanaware.com/docs/invite-users-and-assign-roles)
+- [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
 
 ## Get help
 

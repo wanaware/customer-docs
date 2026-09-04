@@ -37,8 +37,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Your first 30 minutes
-
 **Outcome:** Find one asset, confirm what it is, and identify at least one connected resource.
 
 **For:** Customer administrators, engineers, and support staff
@@ -121,11 +119,10 @@ You have completed the Explore path when you can answer:
 - Which resource is connected to it?
 - Why is that connection useful to your work?
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology)
-- **Show me:** The captioned first-30-minutes clip is pending workflow verification and approval.
-- **Do it:** Open `/launchpad` in your WanAware workspace.
+- **In WanAware:** Open `/launchpad` in your WanAware workspace.
 
 ## Next steps
 

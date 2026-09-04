@@ -14,7 +14,7 @@ Keep one primary purpose per page. Link to nearby troubleshooting instead of add
 
 ## Work on the correct branch
 
-- Use `v1.0_kb-screenshot-system` for the current first-release ReadMe preview and review.
+- Use `v1.0_kb-customer-docs-improvements` for the current customer-experience preview and review.
 - Keep upcoming product behavior on an unpublished feature branch.
 - Merge to `v1.0` only after Product and Support approval.
 - Do not modify API Reference files as part of customer workflow documentation.
@@ -54,6 +54,8 @@ release-status: draft
 
 Use `release-status: draft` while any verification, screenshot, video, or review evidence is pending. Change it to `ready` only when the page has a verified release and date, approved media, and both required reviews.
 
+ReadMe renders the page title from frontmatter. Do not repeat it as a body H1; begin body sections at H2.
+
 ## Workflow page contract
 
 Every workflow must include:
@@ -61,16 +63,16 @@ Every workflow must include:
 - A 30-second **If you're stuck** section with the fastest safe checks
 - Outcome, audience, permission, time, and changes made
 - Prerequisites and warnings before consequential actions
-- A field, option, action, or checkpoint table using exact released UI labels
+- Compact field, option, action, or checkpoint tables using exact released UI labels; keep tables to four columns or fewer
 - Numbered steps using released UI labels
 - Expected results at important checkpoints
 - Troubleshooting beside the step where failure occurs
 - A final verification procedure
 - Undo, detach, or deletion guidance when data changes
-- Learn, Show me, and Do it links where available
+- A **Learn and continue** section with a relevant concept and the exact **In WanAware** navigation path
 - Related next steps and the standard Support footer
 
-The article is authoritative. Hide an embedded clip as soon as its UI or behavior becomes inaccurate.
+The article is authoritative. Add **Show me** only when an approved clip exists, and hide the clip as soon as its UI or behavior becomes inaccurate.
 
 ## Troubleshooting page contract
 
@@ -119,7 +121,7 @@ Before publication:
 
 1. Run every procedure in Harbor Meridian Systems with a normal customer role and the appropriate administrator role.
 2. Verify permissions, side effects, background processing, messages, recovery, links, media, and cleanup.
-3. Run `npm run check`.
+3. Run `npm run check`. For a pull request targeting `v1.0`, also run `npm run check:release`.
 4. Render the ReadMe branch preview and run Docs Audit.
 5. Obtain Product approval for behavior and Support approval for clarity, diagnosis, and escalation.
 6. Confirm the complete pull request does not contain planning, agent instruction, handoff, or status documents.

@@ -12,6 +12,4 @@ metadata:
   robots: index
 ---
 
-# Provider adapters
-
 Use the adapter that matches the provider shown in **Administration → Integrations**. Each adapter covers provider-specific fields, permissions, source-side resources, verification, and cleanup. Return to [Add an integration](https://docs.wanaware.com/docs/add-an-integration) for the shared workflow.

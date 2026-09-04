@@ -29,8 +29,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Understand billing, usage, payments, and invoices
-
 The Billing area separates subscription information from payment details and historical invoices. Prices, limits, and renewal terms are account-specific; use the values shown in your workspace as the authority.
 
 ## Why Billing is missing

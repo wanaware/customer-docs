@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage your profile and security
-
 **Outcome:** Update a personal profile or security setting and verify that your account remains accessible.
 
 **For:** Signed-in WanAware members
@@ -160,11 +158,15 @@ Restore an editable profile value through **General**.
 
 You cannot recover a previous password or recovery-code set. If you lose every working sign-in method, contact Support from a trusted company address.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until a profile clip is approved.
-- **Do it:** Open `/profile/general` or `/profile/security` in your WanAware workspace.
+- **In WanAware:** Open `/profile/general` or `/profile/security` in your WanAware workspace.
+
+## Next steps
+
+- [Choose a theme](https://docs.wanaware.com/docs/choose-a-theme)
+- [Fix sign-in, password, or MFA problems](https://docs.wanaware.com/docs/sign-in-password-and-mfa)
 
 ## Get help
 

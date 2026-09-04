@@ -1,10 +1,10 @@
 ---
-title: Sign-in, password, and MFA problems
+title: I cannot sign in, reset my password, or complete MFA
 excerpt: Recover access when sign-in, password reset, invitation, or multi-factor authentication does not work.
 deprecated: false
 hidden: false
 metadata:
-  title: Sign-in, password, and MFA problems | WanAware Documentation
+  title: I cannot sign in, reset my password, or complete MFA | WanAware Documentation
   description: Troubleshoot WanAware sign-in, password reset, invitations, Google sign-in, and MFA.
   keywords:
     - cannot sign in
@@ -12,6 +12,7 @@ metadata:
     - reset password
     - MFA problem
     - invitation expired
+    - login failed
   robots: index
 ---
 
@@ -28,8 +29,6 @@ screenshot-set: troubleshoot-authentication
 video-status: not-planned
 release-status: draft
 -->
-
-# Sign-in, password, and MFA problems
 
 Use this page when sign-in fails, a reset email does not arrive, an invitation does not work, or MFA blocks access.
 

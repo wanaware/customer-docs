@@ -8,6 +8,7 @@ metadata:
   description: Create and save Service Catalog data for a draft custom WanAware Asset Type.
   keywords:
     - create Service Catalog
+    - create catalog
     - custom catalog
     - draft Asset Type catalog
   robots: index
@@ -26,8 +27,6 @@ screenshot-set: service-catalog-create
 video-status: planned
 release-status: draft
 -->
-
-# Create a custom Service Catalog
 
 **Outcome:** Select a draft custom Asset Type, add an approved catalog entry, and save the catalog.
 
@@ -86,11 +85,10 @@ If the Asset Type is unavailable, confirm that it was saved as a customer draft 
 
 Edit or remove an unused custom entry only while the draft lifecycle permits it and after checking dependencies and compatibility. Do not remove an entry already selected by test or customer assets without an impact review.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The first-entry clip is pending workflow verification and approval.
-- **Do it:** Open `/administration/service-catalog` in your WanAware workspace.
+- **In WanAware:** Open `/administration/service-catalog` in your WanAware workspace.
 
 ## Next steps
 

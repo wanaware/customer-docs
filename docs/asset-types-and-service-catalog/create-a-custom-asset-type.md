@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Create a custom Asset Type
-
 **Outcome:** Create a named custom Asset Type and save it as a draft for further configuration.
 
 **For:** Customer administrators and data model owners
@@ -100,11 +98,10 @@ If generation fails or produces unsuitable fields, return to the starting option
 
 Delete only an unused draft after confirming it has no catalog entries or test assets. Do not use deletion to revise a field; edit the draft instead.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The starting-options clip is pending workflow verification and approval.
-- **Do it:** Open `/administration/asset-types/create` in your WanAware workspace.
+- **In WanAware:** Open `/administration/asset-types/create` in your WanAware workspace.
 
 ## Next steps
 

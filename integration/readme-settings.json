@@ -4,7 +4,7 @@
   "publicBaseUrl": "https://docs.wanaware.com",
   "gitRepository": "wanaware/customer-docs",
   "liveBranch": "v1.0",
-  "reviewBranch": "v1.0_kb-readme-repair",
+  "reviewBranch": "v1.0_kb-customer-docs-improvements",
   "visibility": "public",
   "topLevelAreas": [
     "Guides",
@@ -19,6 +19,15 @@
     "Administration and Personal Settings",
     "Troubleshooting and Support"
   ],
+  "guideCategoryTitles": {
+    "start-here": "Start Here",
+    "integrations": "Integrations",
+    "assets-and-relationships": "Assets and Relationships",
+    "asset-types-and-service-catalog": "Asset Types and Service Catalog",
+    "structures-elements-and-collections": "Structures, Elements, and Collections",
+    "administration-and-personal-settings": "Administration and Personal Settings",
+    "troubleshooting-and-support": "Troubleshooting and Support"
+  },
   "launchSettings": {
     "goalOrientedLandingPage": true,
     "search": true,

@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Add an Asset
-
 **Outcome:** Create one Asset in the intended workspace and reopen it to confirm the saved values.
 
 **For:** Customer administrators and engineers
@@ -52,14 +50,27 @@ release-status: draft
 
 ## Field and option guide
 
-| UI label | Purpose | Required state or format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **Asset Type** | Selects the schema and icon for the Asset. | Required; choose one existing type. | Your data model or administrator. | Router | Asset header, Inventory Type column, and detail tabs. |
-| **Status** | Chooses the initial workspace. | Required; **Inventory** or **Discovery**. | Your review process. | Discovery | The matching Assets tab. |
-| **Asset Name** | Gives the record its searchable identity. | Required; use a durable, unique name. | Approved inventory or source system. | edge-router-01 | Search, tables, Map, Graph, and Relationship Graph. |
-| **Data Tags** | Adds descriptive labels for searching and filtering. | Optional; use an agreed `key:value` or team naming convention. | Your tagging standard. | environment:production | Asset details and supported filters. |
-| **Structure Tags** | Attaches the Asset to a supported Structure node. | Optional; select an existing Structure Tag. | **Functions → Structures**. | East Region | Asset details and Structure context. |
-| Type-specific fields | Stores details defined by the Asset Type. | Complete every required field; formats and choices come from the schema. | Source records, approved owner, or Service Catalog. | Serial number or model | Schema-specific detail tabs. |
+### Information you need
+
+| UI label | What to enter or choose | Where the value comes from |
+| --- | --- | --- |
+| **Asset Type** | Required. Choose the existing type that defines the Asset's fields and icon. | Your data model or administrator. |
+| **Status** | Required. Choose **Inventory** for a maintained Asset or **Discovery** for a record that still needs review. | Your team's review process. |
+| **Asset Name** | Required. Enter a durable name that distinguishes this Asset from similar records. | Approved inventory or source system. |
+| **Data Tags** | Optional. Add searchable labels using your team's naming convention. | Your tagging standard. |
+| **Structure Tags** | Optional. Select an existing Structure Tag that places the Asset in the intended hierarchy. | **Functions → Structures**. |
+| Type-specific fields | Complete every field marked required. Formats and choices come from the selected Asset Type. | Source records, the accountable owner, or a Service Catalog. |
+
+### What happens next
+
+| UI label | Example | Where it appears after saving |
+| --- | --- | --- |
+| **Asset Type** | Router | Asset header, Type column, and detail tabs. |
+| **Status** | Discovery | The matching **Discovery** or **Inventory** tab. |
+| **Asset Name** | `edge-router-01` | Search, Table, Map, Graph, and Relationship Graph. |
+| **Data Tags** | `environment:production` | Asset details and supported filters. |
+| **Structure Tags** | East Region | Asset details and Structure context. |
+| Type-specific fields | Serial number or model | Asset Type-specific detail tabs. |
 
 ## Create the Asset
 
@@ -104,11 +115,10 @@ If the save fails, keep the form open, record the exact error, and correct only 
 
 Correct an editable value and save again. If the record should not exist, follow [Delete Assets safely](https://docs.wanaware.com/docs/delete-assets-safely) after checking Relationships, Structure Tags, and Collection membership. Do not delete a record merely to change a field.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Add or import Assets](https://docs.wanaware.com/docs/add-or-import-assets)
-- **Show me:** The add-or-import clip is pending Product and Support review.
-- **Do it:** Open `/assets/inventory`, then select **+ Add Asset → Add Manual Asset**.
+- **In WanAware:** Open `/assets/inventory`, then select **+ Add Asset → Add Manual Asset**.
 
 ## Next steps
 

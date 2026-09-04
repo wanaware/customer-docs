@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Publish and verify an Asset Type
-
 **Outcome:** Publish an approved custom Asset Type and confirm that its fields and catalog choices work on an asset.
 
 **For:** Customer administrators and data model owners
@@ -89,11 +87,10 @@ Ask a member with `read assets` to open the test Asset. Confirm that the member 
 
 Publication may not be reversible through the customer interface. Do not delete a published Asset Type or its test assets to simulate an undo. Contact Support with the Asset Type ID if the published schema is wrong.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The publication and Asset verification clip is pending workflow verification and approval.
-- **Do it:** Open **Administration → Asset Types** (`/administration/asset-types`).
+- **In WanAware:** Open **Administration → Asset Types** (`/administration/asset-types`).
 
 ## Next steps
 

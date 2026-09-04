@@ -1,10 +1,10 @@
 ---
-title: Integration connection failures
+title: An Integration does not connect or collect
 excerpt: Diagnose setup, authorization, connection-test, and data-collection failures for supported integrations.
 deprecated: false
 hidden: false
 metadata:
-  title: Integration connection failures | WanAware Documentation
+  title: An Integration does not connect or collect | WanAware Documentation
   description: Fix WanAware integration setup, authorization, connection-test, and collection errors.
   keywords:
     - integration failed
@@ -12,6 +12,7 @@ metadata:
     - data collection failed
     - sync failed
     - inventory collection failed
+    - integration not connecting
   robots: index
 ---
 
@@ -28,8 +29,6 @@ screenshot-set: troubleshoot-integrations
 video-status: not-planned
 release-status: draft
 -->
-
-# Integration connection failures
 
 Use these checks when WanAware cannot start provider setup, save an integration, verify access, or collect data.
 

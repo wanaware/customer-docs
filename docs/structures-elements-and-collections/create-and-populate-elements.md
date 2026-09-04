@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Create and populate Elements
-
 **Outcome:** Create an Application, Service, or Site Element and complete the details supported by that type.
 
 **For:** Customer administrators and engineers
@@ -81,7 +79,7 @@ release-status: draft
 ## Populate its details
 
 1. Select **View Element**.
-2. Edit the name if needed.
+2. Compare **Element Name** with the approved name. Change it only when the saved value is incorrect or no longer uniquely identifies the Element.
 3. Add approved Data Tags and **Structure Tags**.
 4. Open **Collections** to review or add asset groups.
 5. For a Site, open **Site Assets** and **Location**.
@@ -101,11 +99,10 @@ Search for the Element by exact name, open it, and confirm its type, tags, Colle
 
 Remove an incorrect tag or asset attachment from the Element. Before deleting the Element, review its Collections, Site Assets, Location, and Structure Tags. Do not delete attached assets to remove the Element.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** The Element creation clip is pending workflow verification and approval.
-- **Do it:** Open **Functions → Elements** (`/elements`).
+- **In WanAware:** Open **Functions → Elements** (`/elements`).
 
 ## Next steps
 

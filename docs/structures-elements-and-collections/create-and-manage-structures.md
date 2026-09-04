@@ -29,8 +29,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Create and manage Structures
-
 **Outcome:** Create a Structure node of the correct type and place it in the intended hierarchy.
 
 **For:** Customer administrators and environment model owners
@@ -96,11 +94,10 @@ Search for the exact name, expand its parent, and confirm the type, location, an
 
 Restore the previous editable value when possible. Before removing a Structure, detach its Elements and Collections and review its child nodes. Do not delete the attached assets themselves.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** The Structure hierarchy clip is pending workflow verification and approval.
-- **Do it:** Open `/structures` in your WanAware workspace.
+- **In WanAware:** Open `/structures` in your WanAware workspace.
 
 ## Next steps
 

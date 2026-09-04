@@ -27,8 +27,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Understand Asset Types and Service Catalogs
-
 ![Lifecycle from a draft Asset Type through catalog setup, publication, and Asset verification.](https://files.readme.io/cb7703d05cdaf6c3791c24285a2062234f2e0a0d257c241822a1b6dcd0d6b67e-asset-type-catalog-lifecycle.png)
 
 An **Asset Type** defines the structure of an asset record: its sections, fields, dependencies, and whether a field uses managed catalog data. A **Service Catalog** provides those managed choices and their relationships.
@@ -62,6 +60,14 @@ Publishing can make a custom schema read-only. Treat publication as a release de
 Start with the fields needed for one real workflow. Use familiar names and assign an owner.
 
 Before publication, test the draft with non-customer sample data.
+
+## Related tasks
+
+- [Create a custom Asset Type](https://docs.wanaware.com/docs/create-a-custom-asset-type)
+- [Configure Asset Type sections and fields](https://docs.wanaware.com/docs/configure-asset-type-sections-and-fields)
+- [Create a custom Service Catalog](https://docs.wanaware.com/docs/create-a-custom-service-catalog)
+- [Add catalog entries and compatibility](https://docs.wanaware.com/docs/add-catalog-entries-and-compatibility)
+- [Publish and verify an Asset Type](https://docs.wanaware.com/docs/publish-and-verify-an-asset-type)
 
 ## Get help
 

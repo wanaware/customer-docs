@@ -28,8 +28,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Relationship Discovery Engine
-
 The Relationship Discovery Engine (RDE) builds supported connections after WanAware receives and normalizes asset data. Its results appear in relationship views across the asset experience.
 
 ## What RDE uses

@@ -10,6 +10,7 @@ metadata:
     - bulk upload assets
     - asset upload failed
     - import assets
+    - upload inventory
     - confirm and normalize
   robots: index
 ---
@@ -27,8 +28,6 @@ screenshot-set: assets-bulk-upload
 video-status: planned
 release-status: draft
 -->
-
-# Bulk upload Assets
 
 **Outcome:** Create multiple Assets from a validated CSV or XLSX file, retain a result report, and find the new records.
 
@@ -59,20 +58,29 @@ The file is checked twice: first for recognizable columns, then row by row. **Co
 
 ## Field and option guide
 
-| UI label or state | Purpose | Required state or accepted format | Where the value comes from | Example | Where it appears later |
-| --- | --- | --- | --- | --- | --- |
-| **Asset Type** | Selects the template and row schema. | Required; **All**, **Custom**, and **Global** are picker filters, not saved values. | Existing Asset Types. | Router | Type column and Asset details. |
-| **Download template** | Gets the current columns for the selected type. | Use the copy downloaded for this run. | WanAware uploader. | `.xlsx` template | Uploaded file and validation. |
-| **Status** column | Chooses Discovery or Inventory when included by the template. | Use only values allowed by the downloaded template. | Your review process. | Discovery | Assets workspace tab. |
-| Asset name column | Supplies the searchable Asset identity. | One non-empty value per row; avoid duplicates. | Approved source data. | edge-router-01 | Asset tables and details. |
-| **Recognized** | Column matched the selected template. | All intended columns should be recognized. | File check. | Asset Name | Row validation. |
-| **Missing** | A required template column is absent. | Must be resolved before upload. | File check. | Required Asset Name column absent | Blocks validation. |
-| **Unknown** | A header is not part of the selected template. | Rename or remove it; do not map by guesswork. | File check. | `Device title` | Blocks or excludes data. |
-| **Valid** | Row can proceed. | No blocking issue. | Row validation. | — | Eligible for normalization. |
-| **Needs Review** | Row has a suggested correction or a value needing confirmation. | Review and accept or correct it. | Row validation. | Normalized spelling suggestion | Must be resolved before final creation. |
-| **Invalid** | Row violates a field or dependency rule. | Correct the named field. | Row validation. | Missing required model | Not created until valid. |
-| **Failed** | Row could not be processed. | Record the error; correct and retry only that row. | Processing result. | Unreadable value | Report and retry file. |
-| **Corrected** | A reviewed row now passes. | Recheck the changed values. | Your correction. | Fixed status | Eligible for normalization. |
+### Information you need
+
+| UI label | What to enter or choose | Where the value comes from |
+| --- | --- | --- |
+| **Asset Type** | Required. Select the type that defines the template and row schema. **All**, **Custom**, and **Global** only filter the picker. | Existing Asset Types. |
+| **Download template** | Download a new copy after selecting the Asset Type. Use that copy for this upload. | WanAware bulk uploader. |
+| **Status** column | Use a value allowed by the template to place each row in Discovery or Inventory. | Your team's review process. |
+| Asset name column | Enter one non-empty, durable identity per row and check for duplicates before uploading. | Approved source data. |
+
+### File and row results
+
+| Result | What it means | What to do next |
+| --- | --- | --- |
+| **Recognized** | The column matches the selected template. | Confirm every intended column appears here. |
+| **Missing** | A required template column is absent. | Add the named column before continuing. |
+| **Unknown** | A header does not belong to the selected template. | Rename or remove it; do not map it by guesswork. |
+| **Valid** | The row has no blocking issue. | Continue to normalization after reviewing the values. |
+| **Needs Review** | WanAware suggests a correction or needs confirmation. | Accept the suggestion or enter the correct value. |
+| **Invalid** | A field or dependency rule failed. | Correct the field named in the row result. |
+| **Failed** | The row could not be processed. | Save the error and retry only the failed row after correction. |
+| **Corrected** | A reviewed row now passes. | Recheck the changed values before normalization. |
+
+After creation, the selected Asset Type appears in the Asset's Type column and details. The Status value determines whether the Asset appears in **Discovery** or **Inventory**.
 
 ## Prepare and check the file
 
@@ -135,11 +143,10 @@ If the browser closes or the outcome is uncertain, search for several unique nam
 - For a failed row, preserve its error and row number for Support.
 - To stop before **Confirm & Normalize**, close the uploader; no normalized Assets should be created. After confirmation, treat created records as real shared data and use [Delete Assets safely](https://docs.wanaware.com/docs/delete-assets-safely) only after checking dependencies.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Add or import Assets](https://docs.wanaware.com/docs/add-or-import-assets)
-- **Show me:** The add-or-import clip requires a successful release-equivalent test before publication.
-- **Do it:** Open `/assets/inventory` and select **+ Add Asset → Add Bulk Asset**. Contextual help may also open from `/assets/inventory/bulk/upload` or `/assets/discovery/bulk/upload`.
+- **In WanAware:** Open `/assets/inventory` and select **+ Add Asset → Add Bulk Asset**. Contextual help may also open from `/assets/inventory/bulk/upload` or `/assets/discovery/bulk/upload`.
 
 ## Next steps
 

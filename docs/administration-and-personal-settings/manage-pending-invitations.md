@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage pending invitations
-
 **Outcome:** Confirm whether a member accepted an invitation and resend the existing invitation when it remains Pending.
 
 **For:** Customer administrators
@@ -74,11 +72,15 @@ Ask the member to open the newest email and complete the invitation. Refresh the
 
 A sent email cannot be recalled. If the address or Role is wrong, do not forward the invitation; contact Support with the member email and timestamp so the access path can be reviewed safely.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until an IAM recording is approved.
-- **Do it:** Open `/administration/iam` in your WanAware workspace.
+- **In WanAware:** Open `/administration/iam` in your WanAware workspace.
+
+## Next steps
+
+- [Invite users and assign Roles](https://docs.wanaware.com/docs/invite-users-and-assign-roles)
+- [Fix sign-in, password, or MFA problems](https://docs.wanaware.com/docs/sign-in-password-and-mfa)
 
 ## Get help
 

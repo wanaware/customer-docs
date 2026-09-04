@@ -1,15 +1,16 @@
 ---
-title: Service Catalog failures
+title: A Service Catalog entry does not save
 excerpt: Resolve missing Asset Types, unavailable entry actions, invalid compatibility, and save failures.
 deprecated: false
 hidden: false
 metadata:
-  title: Service Catalog failures | WanAware Documentation
+  title: A Service Catalog entry does not save | WanAware Documentation
   description: Fix missing entries, compatibility, and save problems in WanAware Service Catalog.
   keywords:
     - Service Catalog failed
     - catalog entry missing
     - compatibility missing
+    - cannot save catalog entry
   robots: index
 ---
 
@@ -26,8 +27,6 @@ screenshot-set: troubleshoot-service-catalog
 video-status: not-planned
 release-status: draft
 -->
-
-# Service Catalog failures
 
 Use this page when a draft Asset Type, catalog action, entry, compatible choice, or saved value is missing.
 
@@ -46,7 +45,7 @@ Use this page when a draft Asset Type, catalog action, entry, compatible choice,
 | --- | --- | --- |
 | Draft Asset Type is absent | The save failed, the wrong company is selected, or access is missing | Reopen **Asset Types**, confirm **Draft** status, then check the Permission. |
 | Model action is absent | A compatible parent has not been selected | Select the required provider or manufacturer context first. |
-| Module or Software is absent | The selected context does not support that child type | Select the appropriate manufacturer and use only the available entry types. |
+| Module or Software is absent | The selected context does not support that child type | Open the saved **Manufacturer**, then check whether that parent exposes **Module** or **Software**. If it does not, do not create a substitute entry type. |
 | Save fails | A required name, source, specification, or attribute is invalid | Correct the labeled field and save again. |
 | Expected compatible choice is missing | The catalog entry lacks the compatibility selection, or its parent value differs | Reopen the Service Catalog entry, correct compatibility, save, and refresh the Asset. |
 | Entry appears twice | A near-duplicate was added | Preserve both records, identify current usage, and remove only the unused custom entry after review. |

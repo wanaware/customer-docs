@@ -27,7 +27,6 @@
     { "portalRoute": "/administration/asset-types/edit/:assetTypeId", "article": "/docs/configure-asset-type-sections-and-fields", "label": "Configure an Asset Type" },
     { "portalRoute": "/administration/service-catalog", "article": "/docs/create-a-custom-service-catalog", "label": "Configure Service Catalog" },
     { "portalRoute": "/administration/service-catalog/:assetTypeId", "article": "/docs/add-catalog-entries-and-compatibility", "label": "Manage catalog entries" },
-    { "portalRoute": "/administration/service-catalog/:assetTypeId/bulk-upload", "article": "/docs/bulk-upload-service-catalog-entries", "label": "Bulk upload Service Catalog entries" },
     { "portalRoute": "/administration/iam", "article": "/docs/invite-users-and-assign-roles", "label": "Manage users and Roles" },
     { "portalRoute": "/administration/iam/roles", "article": "/docs/create-and-edit-roles", "label": "Create and edit Roles" },
     { "portalRoute": "ui:iam-resend-invitation", "article": "/docs/manage-pending-invitations", "label": "Manage a pending invitation" },

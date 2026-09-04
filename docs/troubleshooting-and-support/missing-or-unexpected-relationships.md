@@ -1,10 +1,10 @@
 ---
-title: Missing or unexpected relationships
+title: A Relationship is missing or unexpected
 excerpt: Check processing, source identity, graph filters, and relationship inputs before reporting a graph problem.
 deprecated: false
 hidden: false
 metadata:
-  title: Missing or unexpected relationships | WanAware Documentation
+  title: A Relationship is missing or unexpected | WanAware Documentation
   description: Troubleshoot empty, missing, duplicated, or incorrect WanAware asset relationships.
   keywords:
     - relationship missing
@@ -12,6 +12,8 @@ metadata:
     - wrong relationship
     - graph data
     - RDE
+    - connect assets
+    - add relationship
   robots: index
 ---
 
@@ -28,8 +30,6 @@ screenshot-set: troubleshoot-relationships
 video-status: not-planned
 release-status: draft
 -->
-
-# Missing or unexpected relationships
 
 A relationship can appear after both assets are present and the applicable relationship processing has finished.
 

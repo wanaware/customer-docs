@@ -5,6 +5,7 @@
   "description": "Content-quality checks for the public WanAware customer knowledge base",
   "scripts": {
     "check": "node scripts/validate-content.mjs",
+    "check:release": "DOCS_RELEASE_MODE=live node scripts/validate-content.mjs",
     "check:media": "node scripts/validate-media-online.mjs",
     "media:frame": "node scripts/frame-screenshot.mjs",
     "media:enhance": "node scripts/enhance-screenshot.mjs",

@@ -29,8 +29,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Contact WanAware Support
-
 Email [support@wanaware.com](mailto:support@wanaware.com?subject=WanAware%20support%20request) when the published checks do not solve the problem.
 
 Send one issue per email so the subject, evidence, and resolution stay together.

@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# About integrations
-
 An integration is a managed connection between WanAware and a supported data source. It is responsible for authentication or authorization, collection, and the source context attached to imported assets.
 
 The core process is the same for each provider:
@@ -49,7 +47,12 @@ Provider adapters explain fields, source-side resources, permissions, and cleanu
 - Understand which source-side resources remain if the WanAware integration is removed.
 - Never send authorization values to Support.
 
-Continue with [Add an integration](https://docs.wanaware.com/docs/add-an-integration).
+## Related tasks
+
+- [Add an integration](https://docs.wanaware.com/docs/add-an-integration)
+- [Refresh integration data](https://docs.wanaware.com/docs/refresh-integration-data)
+- [Verify imported Inventory](https://docs.wanaware.com/docs/verify-imported-inventory)
+- [Fix an Integration that does not connect or collect](https://docs.wanaware.com/docs/integration-connection-failures)
 
 ## Get help
 

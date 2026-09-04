@@ -8,6 +8,7 @@ metadata:
   description: Invite WanAware members, assign roles, and verify their access.
   keywords:
     - invite user
+    - invite teammate
     - IAM
     - assign role
     - member access
@@ -27,8 +28,6 @@ screenshot-set: administration-invite-roles
 video-status: not-planned
 release-status: draft
 -->
-
-# Invite users and assign roles
 
 **Outcome:** Invite a company member and assign the smallest role that supports their work.
 
@@ -89,11 +88,15 @@ The member is active in the correct company, has the intended role, can complete
 
 Do not share an invitation with a different person. If the wrong Role was assigned, correct the existing user record before resending. If the wrong email was invited, stop and contact Support rather than assuming an unverified cancellation or deletion control exists. Before reducing your own administrator access, verify another active administrator can manage IAM.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Roles and Permissions](https://docs.wanaware.com/docs/understand-roles-and-permissions)
-- **Show me:** Use the written steps until an access-management clip is approved.
-- **Do it:** Open `/administration/iam` in your WanAware workspace.
+- **In WanAware:** Open `/administration/iam` in your WanAware workspace.
+
+## Next steps
+
+- [Manage pending invitations](https://docs.wanaware.com/docs/manage-pending-invitations)
+- [Create and edit Roles](https://docs.wanaware.com/docs/create-and-edit-roles)
 
 ## Get help
 

@@ -27,8 +27,6 @@ video-status: not-planned
 release-status: draft
 -->
 
-# Manage Site details
-
 **Outcome:** Complete the Site-specific information on a Site Element and verify its asset and location context.
 
 **For:** Customer administrators and engineers
@@ -85,11 +83,15 @@ Refresh the Site, confirm its tags, open **Site Assets**, and verify each asset.
 
 Detach an incorrect Site Asset rather than deleting the asset. Restore the previous Location value and save. Review Collections and Structure Tags before deleting the Site.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Structures, Elements, and Collections](https://docs.wanaware.com/docs/understand-structures-elements-and-collections)
-- **Show me:** Use the written steps until a Site-specific clip is approved.
-- **Do it:** Open `/elements`, select a Site, and use **Site Assets** and **Location**.
+- **In WanAware:** Open `/elements`, select a Site, and use **Site Assets** and **Location**.
+
+## Next steps
+
+- [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
+- [Create Collections and add Assets](https://docs.wanaware.com/docs/create-collections-and-add-assets)
 
 ## Get help
 

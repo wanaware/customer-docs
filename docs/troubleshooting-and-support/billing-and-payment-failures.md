@@ -1,16 +1,17 @@
 ---
-title: Billing and payment failures
+title: A billing or payment action fails
 excerpt: Diagnose missing billing access, unsuccessful payment actions, invoice problems, and unclear subscription state.
 deprecated: false
 hidden: false
 metadata:
-  title: Billing and payment failures | WanAware Documentation
+  title: A billing or payment action fails | WanAware Documentation
   description: Troubleshoot WanAware plan, usage, payment, invoice, and subscription issues safely.
   keywords:
     - billing failed
     - payment failed
     - invoice missing
     - plan change failed
+    - cannot download invoice
   robots: index
 ---
 
@@ -27,8 +28,6 @@ screenshot-set: troubleshoot-billing
 video-status: not-planned
 release-status: draft
 -->
-
-# Billing and payment failures
 
 Use this page when Billing is missing, a payment or plan action fails, an invoice is unavailable, or the displayed subscription state is unclear.
 

@@ -14,12 +14,33 @@ metadata:
   robots: index
 ---
 
-# Assets and Relationships
-
 An Asset represents a resource that your company tracks, such as a device, service, application, or other supported record. Inventory contains maintained Assets. Discovery holds found records that still need review.
 
-Add one Asset manually when you know its identity and Asset Type. Use bulk upload for many records of the same Asset Type. Use an Integration when an external system remains the source.
+## Learn
 
-After an Asset reaches Inventory, complete the sections defined by its Asset Type. Use **Relationship Graph** to investigate its supported connections.
+- [Add or import Assets](https://docs.wanaware.com/docs/add-or-import-assets): choose manual creation, bulk upload, or an Integration.
+- [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine): understand how supported source data produces Relationships.
 
-WanAware discovers some Relationships from supported source data. **Add Connection** creates specific supported network Relationships. It is not a general drawing tool.
+## Add and review
+
+- [Add an Asset](https://docs.wanaware.com/docs/add-an-asset)
+- [Bulk upload Assets](https://docs.wanaware.com/docs/bulk-upload-assets)
+- [Review Discovery and move Assets to Inventory](https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory)
+
+## Manage
+
+- [Find, filter, and inspect Assets](https://docs.wanaware.com/docs/find-filter-and-inspect-assets)
+- [Populate Asset details](https://docs.wanaware.com/docs/populate-asset-details)
+- [Manage Data Tags and Structure Tags](https://docs.wanaware.com/docs/manage-asset-and-structure-tags)
+- [Delete Assets safely](https://docs.wanaware.com/docs/delete-assets-safely)
+
+## Relationships
+
+- [View Asset Relationships](https://docs.wanaware.com/docs/view-asset-relationships)
+- [Add a supported network connection](https://docs.wanaware.com/docs/add-a-network-connection)
+
+## Fix a problem
+
+- [Missing, stale, or duplicate Assets](https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets)
+- [Bulk-import validation failures](https://docs.wanaware.com/docs/bulk-import-validation-failures)
+- [Missing or unexpected Relationships](https://docs.wanaware.com/docs/missing-or-unexpected-relationships)

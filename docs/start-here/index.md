@@ -13,11 +13,24 @@ metadata:
   robots: index
 ---
 
-# Start here
+Choose the shortest path to a useful result. You do not need to learn the entire product first.
 
-You do not need to learn every part of WanAware before you can get value from it.
+## Explore
 
-- **Explore WanAware** if your environment already has data. Find an Asset, review its details, and understand one useful Relationship in about 30 minutes.
-- **Build your environment** if you are setting up the workspace. Add a data source, define your Asset model, and organize Assets for your team.
+- [Your first 30 minutes](https://docs.wanaware.com/docs/your-first-30-minutes): find an Asset and follow one Relationship.
+- [Use Launchpad](https://docs.wanaware.com/docs/use-launchpad): understand the cards and routes available to your Role.
 
-[Choose your path](https://docs.wanaware.com/docs/choose-your-path) explains where to begin. If you are evaluating a shared workspace, read [Use a shared evaluation workspace safely](https://docs.wanaware.com/docs/use-the-demo-safely) before making changes.
+## Set up
+
+- [Administrator setup path](https://docs.wanaware.com/docs/administrator-setup-path): add data, define the Asset model, and organize the workspace.
+- [Use a shared evaluation workspace safely](https://docs.wanaware.com/docs/use-the-demo-safely): understand changes, cleanup, and actions that require approval.
+
+## Learn
+
+- [Choose your path](https://docs.wanaware.com/docs/choose-your-path): compare the Explore and Build paths.
+- [Product map and terminology](https://docs.wanaware.com/docs/product-map-and-terminology): find product areas, paths, permissions, and definitions.
+
+## Fix a problem
+
+- [Missing pages, actions, or permissions](https://docs.wanaware.com/docs/missing-pages-actions-or-permissions)
+- [Troubleshooting and support](https://docs.wanaware.com/docs/troubleshooting-and-support)

@@ -28,8 +28,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Add a supported network connection
-
 ![Diagram comparing Relationships discovered from supported data with the Add Connection workflow.](https://files.readme.io/fd3b4ca4a6cbc14ce30fbdb256acbdc5e4570a96df168cb255f3c880254076e0-relationship-sources.png)
 
 **Outcome:** Connect two supported network Assets through **Add Connection** and verify the Relationship.
@@ -104,11 +102,10 @@ Use the **Remove Connection** action only after confirming the affected Relation
 
 If **Remove Connection** is absent, contact Support before changing an endpoint or shared IP block.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Relationship Discovery Engine](https://docs.wanaware.com/docs/relationship-discovery-engine)
-- **Show me:** The connection preview clip is pending workflow verification and approval.
-- **Do it:** Open a supported Asset in **Functions → Assets → Inventory** (`/assets/inventory`) and select **Add Connection**.
+- **In WanAware:** Open a supported Asset in **Functions → Assets → Inventory** (`/assets/inventory`) and select **Add Connection**.
 
 ## Next steps
 

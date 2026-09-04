@@ -29,8 +29,6 @@ video-status: planned
 release-status: draft
 -->
 
-# Add catalog entries and compatibility
-
 **Outcome:** Build the managed choices needed by a draft Asset Type and verify their compatibility relationships.
 
 **For:** Customer administrators and data model owners
@@ -69,7 +67,7 @@ release-status: draft
 3. Choose an available top-level type such as **Manufacturer**, **Provider**, **Carrier**, or **Carrier Loop**.
 4. Enter its name, description, and approved custom data.
 5. Save the entry.
-6. Select the appropriate parent, then add **Model** where supported.
+6. Select the saved **Provider** or **Manufacturer** that owns the product, then add **Model** if that parent exposes the action.
 7. Under the required manufacturer context, add **Module** or **Software** where supported.
 8. Add the available specifications and catalog attributes.
 9. Save after each coherent group of changes.
@@ -96,11 +94,10 @@ Use a documentation-only asset after the catalog is saved. Select the parent cat
 
 Remove an incorrect compatibility selection and save again. Before editing or removing a catalog record, confirm whether it is used by any asset or dependent entry.
 
-## Learn, show me, do it
+## Learn and continue
 
 - **Learn:** [Understand Asset Types and Service Catalogs](https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs)
-- **Show me:** The compatibility clip is pending workflow verification and approval.
-- **Do it:** Open `/administration/service-catalog` and select the draft Asset Type.
+- **In WanAware:** Open `/administration/service-catalog` and select the draft Asset Type.
 
 ## Next steps
 
