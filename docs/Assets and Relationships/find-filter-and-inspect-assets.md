@@ -1,11 +1,15 @@
 ---
 title: Find, filter, and inspect Assets
-excerpt: Use the Table, Map, and Graph views without confusing a visual match with record identity.
+excerpt: >-
+  Use the Table, Map, and Graph views without confusing a visual match with
+  record identity.
 deprecated: false
 hidden: false
 metadata:
   title: Find, filter, and inspect Assets | WanAware Documentation
-  description: Search, filter, and inspect WanAware Assets across the released Inventory views.
+  description: >-
+    Search, filter, and inspect WanAware Assets across the released Inventory
+    views.
   keywords:
     - find assets
     - asset table
@@ -13,8 +17,7 @@ metadata:
     - asset graph
   robots: index
 ---
-
-<!-- kb-meta
+{/* kb-meta
 content-type: workflow
 audience: customer
 permission: read assets
@@ -26,7 +29,7 @@ last-verified-release: pending
 screenshot-set: assets-find-filter-inspect
 video-status: planned
 release-status: draft
--->
+*/}
 
 **Outcome:** Locate the intended Asset, prove its identity, and choose the view that answers your question.
 
@@ -52,21 +55,29 @@ release-status: draft
 
 ### Find the correct record set
 
-| Control | Use it when | Important limit |
-| --- | --- | --- |
-| **Discovery** | The record was found or imported but still needs review. | A Discovery record does not appear in Inventory until it is moved. |
-| **Inventory** | You need a maintained Asset for normal work. | Inventory does not include records that remain in Discovery. |
-| Search | You know a visible name or identifier, such as `edge-router-01`. | Search scope can differ between Table, Map, and Graph. |
-| Filters | You want a supported property such as Asset Type = Router. | Clear old filters before reporting a missing Asset. |
+| Control       | Use it when                                                      | Important limit                                                    |
+| ------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Discovery** | The record was found or imported but still needs review.         | A Discovery record does not appear in Inventory until it is moved. |
+| **Inventory** | You need a maintained Asset for normal work.                     | Inventory does not include records that remain in Discovery.       |
+| Search        | You know a visible name or identifier, such as `edge-router-01`. | Search scope can differ between Table, Map, and Graph.             |
+| Filters       | You want a supported property such as Asset Type = Router.       | Clear old filters before reporting a missing Asset.                |
 
 ### Choose a view
 
-| View | Best for | Important limit |
-| --- | --- | --- |
-| **Table** | Comparing identity, tags, source, and row actions. | Use the full Asset ID before acting on similar names. |
-| **Map** | Finding Assets with saved location information. | An Asset without usable location data may not appear. |
-| **Graph** | Exploring supported connections or groupings in the current scope. | Absence from Graph does not prove the Asset is absent from Inventory. |
-| **Actions** | Opening released row-level actions. | Available actions depend on Role and record state. |
+| View        | Best for                                                           | Important limit                                                       |
+| ----------- | ------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| **Table**   | Comparing identity, tags, source, and row actions.                 | Use the full Asset ID before acting on similar names.                 |
+| **Map**     | Finding Assets with saved location information.                    | An Asset without usable location data may not appear.                 |
+| **Graph**   | Exploring supported connections or groupings in the current scope. | Absence from Graph does not prove the Asset is absent from Inventory. |
+| **Actions** | Opening released row-level actions.                                | Available actions depend on Role and record state.                    |
+
+## Interactive walkthrough
+
+<HTMLBlock>{`
+<div style="position:relative;width:100%;padding-bottom:46%;"><iframe title="Find an Asset and inspect relationships interactive walkthrough" src="https://app.storylane.io/demo/dzuvh00swzbm?embed=inline" loading="lazy" allow="fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:1px solid #dce5ed;border-radius:10px;"></iframe></div>
+`}</HTMLBlock>
+
+[Open the walkthrough in a new window](https://demo.wanaware.com/share/dzuvh00swzbm).
 
 ## Find the correct record in Table
 
