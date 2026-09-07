@@ -35,7 +35,9 @@ function metadataValue(block, field) {
 
 function slugForMarkdown(file) {
   const name = basename(file, '.md');
-  return name === 'index' ? basename(dirname(file)) : name;
+  return name === 'index'
+    ? basename(dirname(file)).toLowerCase().replace(/,/g, '').replace(/\s+/g, '-')
+    : name;
 }
 
 function pngDimensions(file) {
@@ -294,13 +296,13 @@ for (const file of publicScopeFiles) {
   }
 }
 
-const genericIntegration = join(docsRoot, 'integrations/add-an-integration.md');
+const genericIntegration = markdownFiles.find((file) => basename(file) === 'add-an-integration.md');
 const providerNamePattern = /\b(?:AWS|Amazon Web Services|Azure|Google Cloud|GCP|Oracle Cloud|VMware)\b/i;
 if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
   fail(genericIntegration, 'provider-neutral integration guide contains a provider name');
 }
 
-const productMapFile = join(docsRoot, 'start-here/product-map-and-terminology.md');
+const productMapFile = markdownFiles.find((file) => basename(file) === 'product-map-and-terminology.md');
 const productMap = readFileSync(productMapFile, 'utf8');
 const productModelSource = join(root, 'media/diagrams/organization-model.d2');
 const productModelSvg = join(root, 'media/diagrams/organization-model.svg');
@@ -401,7 +403,8 @@ if (publishingManifest) {
     ids.add(asset.id);
     urls.add(asset.publishedUrl);
 
-    if (!['diagram', 'screenshot'].includes(kind)) fail(publishingManifestFile, `${label} has invalid kind ${kind}`);
+    if (!['diagram', 'screenshot', 'icon'].includes(kind)) fail(publishingManifestFile, `${label} has invalid kind ${kind}`);
+    if (kind === 'icon' && !String(asset.source || '').endsWith('.svg')) fail(publishingManifestFile, `${label} icon source must be SVG`);
     if (kind === 'diagram' && !String(asset.source || '').endsWith('.d2')) fail(publishingManifestFile, `${label} source must be D2`);
     if (kind === 'diagram' && !String(asset.reviewArtifact || '').endsWith('.svg')) fail(publishingManifestFile, `${label} review artifact must be SVG`);
     if (kind === 'screenshot' && !String(asset.source || '').endsWith('.png')) fail(publishingManifestFile, `${label} source must be a safe PNG crop`);
@@ -513,8 +516,8 @@ if (screenshotManifest) {
       if (!screenshot.sourceFile || !existsSync(join(root, screenshot.sourceFile))) {
         fail(screenshotManifestFile, `captured screenshot is missing its safe source crop: ${screenshot.sourceFile || screenshot.file}`);
       }
-      if (screenshot.style !== 'wanaware-ai-assisted-v4') {
-        fail(screenshotManifestFile, `captured screenshot must use wanaware-ai-assisted-v4: ${screenshot.file}`);
+      if (!['wanaware-ai-assisted-v4', 'wanaware-navy-teal-v5'].includes(screenshot.style)) {
+        fail(screenshotManifestFile, `captured screenshot must use an approved WanAware frame style: ${screenshot.file}`);
       }
       if (!/^\d{4}-\d{2}-\d{2}$/.test(screenshot.captureDate || '')) {
         fail(screenshotManifestFile, `captured screenshot needs a YYYY-MM-DD captureDate: ${screenshot.file}`);

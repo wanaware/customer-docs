@@ -1,0 +1,74 @@
+/* WanAware staging Help: decorative, pedestal-free network artwork.
+   Article labels remain the accessible source of meaning. */
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/"]::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  flex: 0 0 44px;
+  margin-right: 12px;
+  background: var(--wanaware-help-icon) center / contain no-repeat;
+  pointer-events: none;
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/your-first-30-minutes "] {
+  --wanaware-help-icon: url("https://files.readme.io/98ac97db4c2c90ecbcf5b65b3b024c9879590a5960083c72aa19bae3e19a1496-explore-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/administrator-setup-path "] {
+  --wanaware-help-icon: url("https://files.readme.io/50e780bdf04c2a132761fd7d0443d3e07b65210d283d7e35cd859485fbec4423-build-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/find-filter-and-inspect-assets "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/add-an-asset "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/bulk-upload-assets "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/missing-stale-or-duplicate-assets "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/review-discovery-and-move-assets-to-inventory "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/bulk-import-validation-failures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/populate-asset-details "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-asset-and-structure-tags "] {
+  --wanaware-help-icon: url("https://files.readme.io/ef570547e1bf5492e110661da61848b9d1994678d4a674659acc8f9cb6532e8d-assets-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/add-an-integration "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/refresh-integration-data "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/integration-connection-failures "] {
+  --wanaware-help-icon: url("https://files.readme.io/42b0aa03d1397f430ecf414e971d43725513e6f08cfaf8b588881e1f4b7472dd-integrations-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/view-asset-relationships "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/add-a-network-connection "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/missing-or-unexpected-relationships "] {
+  --wanaware-help-icon: url("https://files.readme.io/564d462cc3fd1059b0f0af717d90db0d04f3a48edc971eea6ea13a80c0152727-relationships-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-a-custom-asset-type "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/configure-asset-type-sections-and-fields "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/publish-and-verify-an-asset-type "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/asset-type-save-or-publish-failures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-a-custom-service-catalog "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/add-catalog-entries-and-compatibility "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/understand-asset-types-and-service-catalogs "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/service-catalog-failures "] {
+  --wanaware-help-icon: url("https://files.readme.io/90954bd00c01194a48549629fa3cb6458bc98046f1b692e3aa7561cd354df746-catalog-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-and-manage-structures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-and-populate-elements "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/attach-elements-to-structures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-collections-and-add-assets "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/attach-collections-to-structures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/structure-element-or-collection-attachment-failures "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-site-details "] {
+  --wanaware-help-icon: url("https://files.readme.io/405bfe07d529d0ea156b39a414f7fd47a72a8bc20a9aa23e54bf70e6bc2f4804-organization-network-v2.png");
+}
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/welcome-to-wanaware "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/contact-wanaware-support "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/product-map-and-terminology "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/invite-users-and-assign-roles "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-pending-invitations "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/create-and-edit-roles "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/missing-pages-actions-or-permissions "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-company-settings "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-profile-and-security "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/choose-a-theme "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/view-plan-and-usage "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/manage-payment-methods "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/view-billing-history-and-invoices "],
+#userpilot-resource-centre .row[role="link"][aria-label*="https://docs.wanaware.com/docs/billing-and-payment-failures "] {
+  --wanaware-help-icon: url("https://files.readme.io/1fbcc1e22043d174cae24da2038c9ae4bd5f901e1f05e4abe08343eda63d8d7d-support-network-v2.png");
+}

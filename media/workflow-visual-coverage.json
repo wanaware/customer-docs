@@ -154,10 +154,12 @@
       "screenshotIds": [
         "structures-hierarchy",
         "structures-actions",
-        "structures-add"
+        "structures-add",
+        "structures-edit",
+        "structures-delete-confirm"
       ],
-      "pendingScreenshotIds": ["structures-edit", "structures-delete-confirm"],
-      "blocker": "Edit and deletion confirmation require a disposable documentation-only Structure."
+      "pendingScreenshotIds": ["structures-save-result"],
+      "blocker": "Edit and deletion dialogs captured on 2026-09-07, uploaded to ReadMe, and placed beside the corresponding steps. A safe saved-result capture and rendered preview verification remain outstanding. Create, rename, refresh, and empty test-node deletion succeeded under one authorized account; normal-role verification remains pending."
     },
     {
       "article": "/docs/create-and-populate-elements",
