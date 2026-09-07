@@ -403,7 +403,8 @@ if (publishingManifest) {
     ids.add(asset.id);
     urls.add(asset.publishedUrl);
 
-    if (!['diagram', 'screenshot'].includes(kind)) fail(publishingManifestFile, `${label} has invalid kind ${kind}`);
+    if (!['diagram', 'screenshot', 'icon'].includes(kind)) fail(publishingManifestFile, `${label} has invalid kind ${kind}`);
+    if (kind === 'icon' && !String(asset.source || '').endsWith('.svg')) fail(publishingManifestFile, `${label} icon source must be SVG`);
     if (kind === 'diagram' && !String(asset.source || '').endsWith('.d2')) fail(publishingManifestFile, `${label} source must be D2`);
     if (kind === 'diagram' && !String(asset.reviewArtifact || '').endsWith('.svg')) fail(publishingManifestFile, `${label} review artifact must be SVG`);
     if (kind === 'screenshot' && !String(asset.source || '').endsWith('.png')) fail(publishingManifestFile, `${label} source must be a safe PNG crop`);

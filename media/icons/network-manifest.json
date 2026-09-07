@@ -1,0 +1,63 @@
+{
+  "style": "wanaware-connected-device-v2",
+  "background": "transparent",
+  "pedestal": false,
+  "icons": [
+    {
+      "id": "explore",
+      "label": "Explore WanAware",
+      "source": "media/icons/explore-network-v2.svg",
+      "file": "media/icons/explore-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "build",
+      "label": "Build your environment",
+      "source": "media/icons/build-network-v2.svg",
+      "file": "media/icons/build-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "assets",
+      "label": "Assets",
+      "source": "media/icons/assets-network-v2.svg",
+      "file": "media/icons/assets-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "integrations",
+      "label": "Integrations",
+      "source": "media/icons/integrations-network-v2.svg",
+      "file": "media/icons/integrations-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "relationships",
+      "label": "Relationships",
+      "source": "media/icons/relationships-network-v2.svg",
+      "file": "media/icons/relationships-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "catalog",
+      "label": "Asset Types and Service Catalog",
+      "source": "media/icons/catalog-network-v2.svg",
+      "file": "media/icons/catalog-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "organization",
+      "label": "Structures, Elements, and Collections",
+      "source": "media/icons/organization-network-v2.svg",
+      "file": "media/icons/organization-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    },
+    {
+      "id": "support",
+      "label": "Support and access",
+      "source": "media/icons/support-network-v2.svg",
+      "file": "media/icons/support-network-v2.png",
+      "publication": "hosted-pending-rendered-preview"
+    }
+  ]
+}

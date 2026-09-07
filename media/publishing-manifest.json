@@ -1068,6 +1068,142 @@
       "publishedUrl": "https://files.readme.io/749c93ecb82657c024e30f1f5ba7c1fddb0a4ae23991fa52fefeeaa5867ca7b6-structure-delete-confirmation.png",
       "renderedOn": "2026-09-07",
       "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-explore",
+      "kind": "icon",
+      "source": "media/icons/explore-network-v2.svg",
+      "publishingFile": "media/icons/explore-network-v2.png",
+      "sha256": "a14671c9ec8c39212c3578f1d2bf6300fa0c724e87a9788560548ada66f5aafa",
+      "width": 352,
+      "height": 352,
+      "bytes": 21707,
+      "alt": "Network-device illustration for Explore WanAware, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/98ac97db4c2c90ecbcf5b65b3b024c9879590a5960083c72aa19bae3e19a1496-explore-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-build",
+      "kind": "icon",
+      "source": "media/icons/build-network-v2.svg",
+      "publishingFile": "media/icons/build-network-v2.png",
+      "sha256": "460396f5ae21018860b1416aa81191ca82648c7e27ce252729db331869b5e78b",
+      "width": 352,
+      "height": 352,
+      "bytes": 25805,
+      "alt": "Network-device illustration for Build your environment, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/50e780bdf04c2a132761fd7d0443d3e07b65210d283d7e35cd859485fbec4423-build-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-assets",
+      "kind": "icon",
+      "source": "media/icons/assets-network-v2.svg",
+      "publishingFile": "media/icons/assets-network-v2.png",
+      "sha256": "1214cf1a09ca26a8bbdebfb3081bf4adabaccde242ce2ab1cd207f99f70269ee",
+      "width": 352,
+      "height": 352,
+      "bytes": 27476,
+      "alt": "Network-device illustration for Assets, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/ef570547e1bf5492e110661da61848b9d1994678d4a674659acc8f9cb6532e8d-assets-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-integrations",
+      "kind": "icon",
+      "source": "media/icons/integrations-network-v2.svg",
+      "publishingFile": "media/icons/integrations-network-v2.png",
+      "sha256": "9aaf881fd8e896db8142f7aaef07bc0a0812a153117b7682c3143f1e6076b19c",
+      "width": 352,
+      "height": 352,
+      "bytes": 22715,
+      "alt": "Network-device illustration for Integrations, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/42b0aa03d1397f430ecf414e971d43725513e6f08cfaf8b588881e1f4b7472dd-integrations-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-relationships",
+      "kind": "icon",
+      "source": "media/icons/relationships-network-v2.svg",
+      "publishingFile": "media/icons/relationships-network-v2.png",
+      "sha256": "992bdf4697f969618e7fcf04005a68b50bcd08a2bf2c78e5cf9f24d30cca09b4",
+      "width": 352,
+      "height": 352,
+      "bytes": 25729,
+      "alt": "Network-device illustration for Relationships, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/564d462cc3fd1059b0f0af717d90db0d04f3a48edc971eea6ea13a80c0152727-relationships-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-catalog",
+      "kind": "icon",
+      "source": "media/icons/catalog-network-v2.svg",
+      "publishingFile": "media/icons/catalog-network-v2.png",
+      "sha256": "4c219adfffc8f4935b72c95137f70e341d8f36408282095b55b2fb5cb2ded38e",
+      "width": 352,
+      "height": 352,
+      "bytes": 17459,
+      "alt": "Network-device illustration for Asset Types and Service Catalog, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/90954bd00c01194a48549629fa3cb6458bc98046f1b692e3aa7561cd354df746-catalog-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-organization",
+      "kind": "icon",
+      "source": "media/icons/organization-network-v2.svg",
+      "publishingFile": "media/icons/organization-network-v2.png",
+      "sha256": "8966d6d3b07ce0fff67be82bb5292cef99c4f8758476ef24ba42896f4088f8a0",
+      "width": 352,
+      "height": 352,
+      "bytes": 25081,
+      "alt": "Network-device illustration for Structures, Elements, and Collections, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/405bfe07d529d0ea156b39a414f7fd47a72a8bc20a9aa23e54bf70e6bc2f4804-organization-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "help-icon-support",
+      "kind": "icon",
+      "source": "media/icons/support-network-v2.svg",
+      "publishingFile": "media/icons/support-network-v2.png",
+      "sha256": "d59c25f5c2a529e2aa9d9b991da55b8d9e6d9210ea8261003c62386e9744ccce",
+      "width": 352,
+      "height": 352,
+      "bytes": 19148,
+      "alt": "Network-device illustration for Support and access, without a pedestal.",
+      "articles": [
+        "/docs/welcome-to-wanaware"
+      ],
+      "publishedUrl": "https://files.readme.io/1fbcc1e22043d174cae24da2038c9ae4bd5f901e1f05e4abe08343eda63d8d7d-support-network-v2.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
     }
   ],
   "screenshotPolicy": {
