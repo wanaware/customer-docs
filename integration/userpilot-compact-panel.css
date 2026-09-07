@@ -1,0 +1,62 @@
+/* Append after the network icon stylesheet in Userpilot Custom CSS.
+   Staging Resource Center: compact overlay, not a native docked panel. */
+#userpilot-resource-centre:not([aria-hidden="true"]) {
+  display: flex !important;
+  flex-direction: column;
+  width: 420px !important;
+  max-width: calc(100vw - 24px) !important;
+  height: 560px !important;
+  max-height: calc(100dvh - 32px) !important;
+  top: auto !important;
+  bottom: 16px !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+#userpilot-resource-centre #widget-headers {
+  flex: 0 0 auto;
+}
+#userpilot-resource-centre .widget-header {
+  padding: 16px 20px !important;
+}
+#userpilot-resource-centre #widget-title {
+  font-size: 20px !important;
+  line-height: 28px !important;
+  padding-right: 36px;
+}
+#userpilot-resource-centre #widget-desc {
+  font-size: 13px !important;
+  line-height: 19px !important;
+  margin-top: 4px !important;
+}
+#userpilot-resource-centre #widget-close {
+  width: 32px !important;
+  height: 32px !important;
+  top: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#userpilot-resource-centre .userpilot-resource-centre-container:not(.active) {
+  display: none !important;
+}
+#userpilot-resource-centre .userpilot-resource-centre-container.active {
+  position: relative !important;
+  top: auto !important;
+  flex: 1 1 auto;
+  height: auto !important;
+  min-height: 0;
+  overflow: hidden;
+}
+#userpilot-resource-centre .userpilot-resource-centre-container.active #widget-content,
+#userpilot-resource-centre .userpilot-resource-centre-container.active #main-content {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0;
+  box-sizing: border-box;
+}
+#userpilot-resource-centre .userpilot-resource-centre-container.active #main-content {
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding-bottom: 16px;
+}
