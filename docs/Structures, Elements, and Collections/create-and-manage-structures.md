@@ -121,6 +121,7 @@ Restore the previous editable value when possible. Before removing a Structure, 
 
 - [Create and populate Elements](https://docs.wanaware.com/docs/create-and-populate-elements)
 - [Attach Elements to Structures](https://docs.wanaware.com/docs/attach-elements-to-structures)
+- [Attach Collections to Structures](https://docs.wanaware.com/docs/attach-collections-to-structures)
 
 ## Get help
 

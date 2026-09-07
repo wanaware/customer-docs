@@ -93,7 +93,7 @@ Keep the core integration guides provider-neutral. Put source-specific fields, p
 - Never cosmetically alter visible product UI. If a release-excluded area is central to the screen, wait for the correct product flag.
 - Use only masked test information for billing. Never purchase, cancel, or change a real payment method to create documentation.
 - Keep `media/screenshot-manifest.json` current and remove every temporary `Docs Demo` record after verification.
-- Use the `wanaware-ai-assisted-v4` frame. The generated backdrop supplies decoration only; the sanitized portal capture remains an exact, unscaled layer.
+- Use the theme-neutral frame produced by `scripts/frame-screenshot.mjs` for new captures: transparent surroundings, generous margins, and a subtle neutral border and shadow. Preserve the captured UI without regenerating text, controls, icons, or product state. Existing `wanaware-ai-assisted-v4` and `wanaware-navy-teal-v5` images remain accepted during migration; do not relabel them as theme-neutral until they have been re-rendered and visually checked.
 - Place each screenshot beside the step or decision it explains. Never append a workflow screenshot after **Get help**.
 - Keep `media/workflow-visual-coverage.json` and `media/screenshot-placements.json` complete. Every screenshot-capable action must name a captured screenshot or an explicit capture blocker. A release-ready article cannot remain incomplete or blocked.
 
