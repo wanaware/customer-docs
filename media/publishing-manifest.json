@@ -1034,6 +1034,40 @@
       "publishedUrl": "https://files.readme.io/606771bd138d3b448d60a4885c49d19e58c77eead82c98aec7a9c38fdb95d5ce-iam-role-delete-confirmation.png",
       "renderedOn": "2026-09-04",
       "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "structures-edit",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/structure-edit.png",
+      "publishingFile": "media/screenshots/structure-edit.png",
+      "sha256": "af7c79e4fbf4cd8600cc3817c336e0befec84a482ae81bbf4a08ebe9beced746",
+      "width": 1500,
+      "height": 932,
+      "bytes": 113895,
+      "alt": "Edit Structure dialog showing Structure Type, Structure Name, Cancel, and Update for an example node.",
+      "articles": [
+        "/docs/create-and-manage-structures"
+      ],
+      "publishedUrl": "https://files.readme.io/d02b99d04f3fa0695a7e2ade3fdfd685988147ca5ee6a562d0a707c7eeccf157-structure-edit.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
+    },
+    {
+      "id": "structures-delete-confirm",
+      "kind": "screenshot",
+      "source": "media/screenshots/source/structure-delete-confirmation.png",
+      "publishingFile": "media/screenshots/structure-delete-confirmation.png",
+      "sha256": "7c7d9de87e804216e0c8fb315689735bf32220f2cd83fb099062f94d2cebe596",
+      "width": 1500,
+      "height": 533,
+      "bytes": 67974,
+      "alt": "Delete Structure dialog showing an example node name, Structure Type, sub-structure count, and Cancel.",
+      "articles": [
+        "/docs/create-and-manage-structures"
+      ],
+      "publishedUrl": "https://files.readme.io/749c93ecb82657c024e30f1f5ba7c1fddb0a4ae23991fa52fefeeaa5867ca7b6-structure-delete-confirmation.png",
+      "renderedOn": "2026-09-07",
+      "approvalState": "pending-product-support-review"
     }
   ],
   "screenshotPolicy": {

@@ -709,16 +709,29 @@
     {
       "id": "structures-edit",
       "file": "media/screenshots/structure-edit.png",
+      "sourceFile": "media/screenshots/source/structure-edit.png",
       "article": "/docs/create-and-manage-structures",
-      "alt": "Edit Structure dialog showing the selected node, editable name, hierarchy context, and Save action.",
-      "status": "pending-documentation-record"
+      "alt": "Edit Structure dialog showing Structure Type, Structure Name, Cancel, and Update for an example node.",
+      "captureDate": "2026-09-07",
+      "style": "wanaware-navy-teal-v5",
+      "status": "captured-pending-product-support-review"
     },
     {
       "id": "structures-delete-confirm",
       "file": "media/screenshots/structure-delete-confirmation.png",
+      "sourceFile": "media/screenshots/source/structure-delete-confirmation.png",
       "article": "/docs/create-and-manage-structures",
-      "alt": "Structure deletion confirmation showing the selected example node and the impact warning before confirmation.",
-      "status": "pending-documentation-record"
+      "alt": "Delete Structure dialog showing an example node name, Structure Type, sub-structure count, and Cancel.",
+      "captureDate": "2026-09-07",
+      "style": "wanaware-navy-teal-v5",
+      "status": "captured-pending-product-support-review"
+    },
+    {
+      "id": "structures-save-result",
+      "file": "media/screenshots/structure-save-result.png",
+      "article": "/docs/create-and-manage-structures",
+      "alt": "Refreshed Structure hierarchy showing a saved example Group beneath its intended parent Organization.",
+      "status": "pending-safe-capture"
     },
     {
       "id": "elements-create-success",

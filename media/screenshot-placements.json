@@ -64,8 +64,10 @@
     { "article": "/docs/manage-profile-and-security", "screenshotId": "personal-password", "after": "2. In **Change Password**, enter your **Current Password**." },
 
     { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-hierarchy", "after": "1. Open **Functions → Structures**." },
-    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-add", "after": "4. Enter a clear **Name**." },
-    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-actions", "after": "2. Open its edit action." },
+    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-add", "after": "4. Enter the required **Structure Name**." },
+    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-actions", "after": "2. Open its actions menu and select **Edit structure**." },
+    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-edit", "after": "3. In **Edit Structure**, review **Structure Type** and **Structure Name**. The dialog does not contain a parent picker; renaming a node does not move it." },
+    { "article": "/docs/create-and-manage-structures", "screenshotId": "structures-delete-confirm", "after": "2. Review the name, **Structure Type**, and **Sub-structures** count in **Delete Structure**." },
     { "article": "/docs/create-and-populate-elements", "screenshotId": "elements-create-details", "after": "3. Enter a unique **Element Name**." },
     { "article": "/docs/create-and-populate-elements", "screenshotId": "elements-type-options", "after": "4. Select **Element Type**." },
     { "article": "/docs/create-and-populate-elements", "screenshotId": "elements-site-fields", "after": "5. For a Site, open **Site Assets** and **Location**." },
