@@ -5,15 +5,16 @@ deprecated: false
 hidden: false
 metadata:
   title: Add an Asset | WanAware Documentation
-  description: Create a single Asset with the correct Asset Type, status, name, tags, and required details.
+  description: >-
+    Create a single Asset with the correct Asset Type, status, name, tags, and
+    required details.
   keywords:
     - add asset
     - manual asset
     - create asset
   robots: index
 ---
-
-<!-- kb-meta
+{/* kb-meta
 content-type: workflow
 audience: customer administrator, engineer
 permission: create assets
@@ -25,7 +26,7 @@ last-verified-release: pending
 screenshot-set: assets-add-manual
 video-status: planned
 release-status: draft
--->
+*/}
 
 **Outcome:** Create one Asset in the intended workspace and reopen it to confirm the saved values.
 
@@ -52,25 +53,33 @@ release-status: draft
 
 ### Information you need
 
-| UI label | What to enter or choose | Where the value comes from |
-| --- | --- | --- |
-| **Asset Type** | Required. Choose the existing type that defines the Asset's fields and icon. | Your data model or administrator. |
-| **Status** | Required. Choose **Inventory** for a maintained Asset or **Discovery** for a record that still needs review. | Your team's review process. |
-| **Asset Name** | Required. Enter a durable name that distinguishes this Asset from similar records. | Approved inventory or source system. |
-| **Data Tags** | Optional. Add searchable labels using your team's naming convention. | Your tagging standard. |
-| **Structure Tags** | Optional. Select an existing Structure Tag that places the Asset in the intended hierarchy. | **Functions → Structures**. |
-| Type-specific fields | Complete every field marked required. Formats and choices come from the selected Asset Type. | Source records, the accountable owner, or a Service Catalog. |
+| UI label             | What to enter or choose                                                                                      | Where the value comes from                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Asset Type**       | Required. Choose the existing type that defines the Asset's fields and icon.                                 | Your data model or administrator.                            |
+| **Status**           | Required. Choose **Inventory** for a maintained Asset or **Discovery** for a record that still needs review. | Your team's review process.                                  |
+| **Asset Name**       | Required. Enter a durable name that distinguishes this Asset from similar records.                           | Approved inventory or source system.                         |
+| **Data Tags**        | Optional. Add searchable labels using your team's naming convention.                                         | Your tagging standard.                                       |
+| **Structure Tags**   | Optional. Select an existing Structure Tag that places the Asset in the intended hierarchy.                  | **Functions → Structures**.                                  |
+| Type-specific fields | Complete every field marked required. Formats and choices come from the selected Asset Type.                 | Source records, the accountable owner, or a Service Catalog. |
 
 ### What happens next
 
-| UI label | Example | Where it appears after saving |
-| --- | --- | --- |
-| **Asset Type** | Router | Asset header, Type column, and detail tabs. |
-| **Status** | Discovery | The matching **Discovery** or **Inventory** tab. |
-| **Asset Name** | `edge-router-01` | Search, Table, Map, Graph, and Relationship Graph. |
-| **Data Tags** | `environment:production` | Asset details and supported filters. |
-| **Structure Tags** | East Region | Asset details and Structure context. |
-| Type-specific fields | Serial number or model | Asset Type-specific detail tabs. |
+| UI label             | Example                  | Where it appears after saving                      |
+| -------------------- | ------------------------ | -------------------------------------------------- |
+| **Asset Type**       | Router                   | Asset header, Type column, and detail tabs.        |
+| **Status**           | Discovery                | The matching **Discovery** or **Inventory** tab.   |
+| **Asset Name**       | `edge-router-01`         | Search, Table, Map, Graph, and Relationship Graph. |
+| **Data Tags**        | `environment:production` | Asset details and supported filters.               |
+| **Structure Tags**   | East Region              | Asset details and Structure context.               |
+| Type-specific fields | Serial number or model   | Asset Type-specific detail tabs.                   |
+
+## Interactive walkthrough
+
+<HTMLBlock>{`
+<div style="position:relative;width:100%;padding-bottom:62%;"><iframe title="Add an Asset interactive walkthrough" src="https://app.storylane.io/demo/1vzxsvjerhpt?embed=inline" loading="lazy" allow="fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:1px solid #dce5ed;border-radius:10px;"></iframe></div>
+`}</HTMLBlock>
+
+[Open the walkthrough in a new window](https://demo.wanaware.com/share/1vzxsvjerhpt).
 
 ## Create the Asset
 
