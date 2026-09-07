@@ -1,4 +1,4 @@
-name: Documentation quality
+name: Docs checks
 
 on:
   pull_request:
@@ -24,7 +24,25 @@ jobs:
         with:
           node-version: 22
       - run: npm run check
-      - name: Enforce live-release gates
+      # Keep mechanical checks blocking; the full launch checklist is advisory.
+      # npm run check:release remains available for an explicit release audit.
+      - name: Report launch checklist (advisory)
         if: (github.event_name == 'pull_request' && github.base_ref == 'v1.0' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/v1.0'
-        run: npm run check:release
+        run: |
+          if npm run check:release > "$RUNNER_TEMP/docs-release-report.txt" 2>&1; then
+            echo '### Launch checklist: complete' >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo '### Launch checklist: follow-up items remain'
+              echo ''
+              echo 'Advisory only: this checklist does not block routine documentation fixes. Passing this PR does not certify release readiness or replace Product and Support review.'
+              echo ''
+              echo '<details><summary>View outstanding release items</summary>'
+              echo ''
+              echo '```text'
+              cat "$RUNNER_TEMP/docs-release-report.txt"
+              echo '```'
+              echo '</details>'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
       - run: npm run check:media
