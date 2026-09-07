@@ -35,7 +35,9 @@ function metadataValue(block, field) {
 
 function slugForMarkdown(file) {
   const name = basename(file, '.md');
-  return name === 'index' ? basename(dirname(file)) : name;
+  return name === 'index'
+    ? basename(dirname(file)).toLowerCase().replace(/,/g, '').replace(/\s+/g, '-')
+    : name;
 }
 
 function pngDimensions(file) {
@@ -294,13 +296,13 @@ for (const file of publicScopeFiles) {
   }
 }
 
-const genericIntegration = join(docsRoot, 'integrations/add-an-integration.md');
+const genericIntegration = markdownFiles.find((file) => basename(file) === 'add-an-integration.md');
 const providerNamePattern = /\b(?:AWS|Amazon Web Services|Azure|Google Cloud|GCP|Oracle Cloud|VMware)\b/i;
 if (providerNamePattern.test(readFileSync(genericIntegration, 'utf8'))) {
   fail(genericIntegration, 'provider-neutral integration guide contains a provider name');
 }
 
-const productMapFile = join(docsRoot, 'start-here/product-map-and-terminology.md');
+const productMapFile = markdownFiles.find((file) => basename(file) === 'product-map-and-terminology.md');
 const productMap = readFileSync(productMapFile, 'utf8');
 const productModelSource = join(root, 'media/diagrams/organization-model.d2');
 const productModelSvg = join(root, 'media/diagrams/organization-model.svg');
